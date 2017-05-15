@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="noopener">
+<meta name="description" content="I'm a nomadic developer. This is where I put all the words about coding that don't fit on Twitter.">
+
+<base href="https://vickylai.io/">
+<title>
+
+
+
+    When 30 Seconds, StackOverflow, and Sed Saves 30 Minutes
+
+
+</title>
+<link rel="canonical" href="https://vickylai.io/blog/when-stackoverflow-sed-saves-30mins/">
+
+
+<script type="text/javascript">
+    var host = 'vickylai.io';
+    if ((host == window.location.host) && (window.location.protocol != "https:"))
+        window.location.protocol = "https";
+</script>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+<script src="/js/tagline.js?t=1494824922"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Work+Sans|Inconsolata" rel="stylesheet"> 
+
+
+    
+    <link rel="stylesheet" href="https://vickylai.io/css/blog.css?t=1494824922">
+    
+
+
+<link rel="shortcut icon"
+
+    href="https://vickylai.io/img/code.ico"
+
+>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-98623582-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+</head>
+
+<div class="section" id="top">
+
+<section class="hero">
+    <div class="container hero-body">
+    <div class="bold-title title">-verbose</div>
+    <div class="subtitle-box">
+        <span class="subtitle" id="tagline">Vicky&#39;s Blog</span>
+    </div>
+    </div>
+
+    <div class="container hero-foot">
+    
+<nav class="nav nav-center">
+    <span id="nav-toggle" class="nav-toggle"  onclick="document.getElementById('nav-menu').classList.toggle('is-active');">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div id="nav-menu" class="nav-left nav-menu">
+      <span class="nav-item">
+        <a href="/">VickyLai.io</a>
+      </span>
+      <span class="nav-item">
+        <a href="https://vickylai.io/blog">Blog Posts</a>
+      </span>
+      <span class="nav-item">
+        <a href="https://tinyletter.com/vickylai" target="_blank">Subscribe</a>
+      </span>
+    
+      <span class="nav-item">
+        <a href="https://vickylai.io/index.xml">RSS</a>
+      </span>
+    
+    </div>
+</nav>
+
+    </div>
+</section>
+
+    <div class="container">
+        <h1 class="title is-1 top-pad post-title"><a href="/blog/when-stackoverflow-sed-saves-30mins/">When 30 Seconds, StackOverflow, and Sed Saves 30 Minutes</a></h1>
+            <div class="post-data">
+                May 6, 2017 |
+                2 minutes read
+            </div>
+            
+            
+                <div class="blog-share">
+                Share this:
+                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20When%2030%20Seconds%2c%20StackOverflow%2c%20and%20Sed%20Saves%2030%20Minutes%20https%3a%2f%2fvickylai.io%2fblog%2fwhen-stackoverflow-sed-saves-30mins%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                twitter
+                <span class="hidden">Twitter</span>
+                </a> //
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fvickylai.io%2fblog%2fwhen-stackoverflow-sed-saves-30mins%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                facebook
+                <span class="hidden">Facebook</span>
+                </a> //
+                <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://vickylai.io/&title=When%2030%20Seconds%2c%20StackOverflow%2c%20and%20Sed%20Saves%2030%20Minutes&source=Vicky%20Lai"
+                onclick="window.open(this.href, 'linkedin-share','width=980,height=980');return false;">
+                linkedin
+                <span class="hidden">LinkedIn</span>
+                </a> //
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fvickylai.io%2fblog%2fwhen-stackoverflow-sed-saves-30mins%2f"
+                onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                google+
+                <span class="hidden">Google+</span>
+                </a>
+                </div>
+            
+            
+    </div>
+
+    <div class="container markdown top-pad">
+        
+
+<p>This week, I launched my new website and changed my Twitter username to match. I was about to spend time going through all my old blog posts to find and update the URLs when this very future blog post popped up on my screen like <a href="http://knowyourmeme.com/memes/clippy">Clippy</a> and shook its pixelated head disapprovingly.</p>
+
+<p>Here&rsquo;s a worthwhile new habit for you: anytime you find yourself going &ldquo;Ughhh I have to do <em>that?</em> It&rsquo;ll take forever!&rdquo; head on over to</p>
+
+<p><img src="/verbose/blogimg/so.gif" alt="Sparkly StackOverflow, Savior of Devs" /></p>
+
+<p>and search for &ldquo;terminal command [the thing you&rsquo;re trying to do]”.</p>
+
+<p>Voila! I&rsquo;ve just saved you x amount of time. (You&rsquo;ll just spend it browsing gifs on Twitter - why do I bother?!)</p>
+
+<h1 id="update-dozens-of-previous-blog-posts-in-milliseconds-with-sed">Update dozens of previous blog posts in milliseconds with sed</h1>
+
+<p>Sed is your friend. This amazingly powerful tool lives in your terminal and is available to be totally underused for things like finding and replacing strings in files. (I seem to have a habit of suggesting ways to totally underuse powerful tools - I previously outlined how to <a href="https://vickylai.io/verbose/blog/create-desktop-notifications-cron/">use cron to create desktop notifications</a>, but I digress.)</p>
+
+<p>Run this command to search all the files in your current directory and replace a given string.</p>
+
+<pre><code class="language-sh">// to replace 'foo' with 'bar'
+$ sed -i -- 's/foo/bar/g' *
+</code></pre>
+
+<p>The above is <strong>non-recursive</strong>, meaning it won&rsquo;t look in subdirectories. There are ways to do this recursively, as well as limit the search to specific file extensions: <a href="https://unix.stackexchange.com/questions/112023/how-can-i-replace-a-string-in-a-files">see the full answer on StackOverflow</a>.</p>
+
+<h2 id="break-it-down">Break it down:</h2>
+
+<p><code>-i</code> will change the original, and stands for &ldquo;in-place.&rdquo;<br />
+<code>s</code> is for substitute, so we can find and replace.<br />
+<code>foo</code> is the string we&rsquo;ll be taking away,<br />
+<code>bar</code> is the string we&rsquo;ll use instead today.<br />
+<code>g</code> as in &ldquo;global&rdquo; means &ldquo;all occurrences, please.&rdquo;<br />
+<code>*</code> denotes all file types. (No more rhymes. What a tease.)</p>
+
+<p><a href="http://www.folkstalk.com/2012/01/sed-command-in-unix-examples.html">Here are some more examples</a> for using sed that you may find handy.</p>
+
+    </div>
+
+    
+    <div class="container top-pad"> Like this post? <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hey%20@vickylaiio:%20I%20just%20read%20https%3a%2f%2fvickylai.io%2fblog%2fwhen-stackoverflow-sed-saves-30mins%2f%20and..."
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></div>
+            
+    <div class="disqus">
+        
+    </div>
+
+<div class="container top-pad"><hr>
+    <div class="pagination columns is-mobile top-pad">
+        <div class="column is-one-third has-text-centered no-padding">
+            
+            <a class="btn inactive">Prev</a>
+            
+        </div>
+        <div class="column is-one-third has-text-centered no-padding">
+            <a class="btn up" href="/blog/when-stackoverflow-sed-saves-30mins/#top">UP, JEEVES.</a>
+        </div>
+        <div class="column is-one-third has-text-centered no-padding">
+            <a class="btn next" href="/blog/free-resources-for-coding-superpowers/">Next</a>
+            
+        </div>
+    </div>
+<hr></div>
+
+<div class="section" id="footer">
+<div class="container columns">
+    <div class="column is-one-quarter av-box"><img class="avatar" src="https://vickylai.io/img/portrait.jpg"></div>
+    <div class="column bio">
+        <p class="strong">About Vicky Lai</p>
+        <p class="footer-text">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.</p>
+        <p class="top-pad">
+            
+            <a href="https://github.com/vickylaiio">
+            <img class="noborder" width="24" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADvElEQVR4nO1a23XqMBB0CZRACekgdBBJX9r5ogPSAS4hHUAHSQehg9ABdAAd5H4gEz9kPdayZc5lztEPx0g7o9WuVlJRPDENJNGrBN4UsFXAVhJ919v9d&#43;BNEr3mtncwBPBSEVXAL6dVwgjgJTefIAghFgLYSOCHS7pXDOBHABshxCI3zw6EEAvjvpfUxC1CXBSwnY0QUxHvEyIbcQG8jOHqzKUxbYwQwCY38XYTwGZ84re1vstN1tF2o5Kfg8sHLYnUAfJRyI8iwqORr4uQRAA17zXva8NigiJ6nwGJYY3onUXe7OXzE0jQWPsESXQKVPiqgFIBpSQ6KOA8IpmzGaNUQGnG9v4vOh6YAcLU1Xpl8x5JtPcaRnSURMcQgYXWy844RCJCvDKIvIn6QXt7SXRw9qX1svIKI8jalZ7MRmttvj1LooMvnZn&#43;Q7zgEpQaY2Y/WNURkdTemNnvc/&#43;pIbRehdrr9YLYtPdoApiY0p8WY3d8gkhMyNWKyEDYnxGYeb&#43;clm4XkTHgNnG2fQGnIwl8ZeDcgAS&#43;kkxcaDppCEB0mp5yx&#43;4Tw&#43;5DpyOGivPwAMbEKeC30Ul0JK3WkmV3NjWE1kum7au/TiIj6VxmvwLHCxoZjBMAFbDOR7kJZtle/nWQKpVkwuAUznGhfHTtGLSE/0sB6qnwKQDRR3QMmMvlZHE/R4gV4OPeASsIzqASrMBJ42poFmgomBkcD24LsGYIkL0OqMCpBxoboQFH4Ot8tG/gTJ6CZR8TesTc9oKcwVAIseDMviK6djpj1tW/iugzA/eiKIpCEX1ybLbWMYpXD1RtvHv5PvLD7izLToe&#43;OCCJjkLrpSk/O7cyEviZojwWWi&#43;H3lb31jHOW5rWaapZf7bvR3nBleolmiQ69g6iHBFVEn3bjLKJYIzcpXjxaTxzl/Al2tqtsjsbdNa6wxPca84DBZTJn98RXb3e6b3UtFws1O4Abf85c84OhNZLTmr2uP/eP7DHC1w7QBMkV1WLJd2Ga0mOMvv3gf1HTOuh5EKhUr03iH0p4lrXtoA4FpiFTtve/sjfB99R&#43;VTlMPfIPomtrqUwZR0wqeu34coKErhI4C0Rz14McP19EgN8eV4SnUxhsq23JIMXzGs7omPa16L&#43;zU6nJRm8YB14piNfgSNCqrGzk68j5PlbLgFGJ18zKOjsIOF4IeSnPaQ1jyGdSyLVWE7yRNesR/TK8WQ14RjW7bAEvmZxQWMOKxpCpHTJ9pKTRPs5PM7o4C7ECMWSuj3GnifxJ554XPwDjW/NMUHzxh4AAAAASUVORK5CYII=">
+            </a>
+            
+            <a href="https://codepen.io/vickylaiio">
+            <img class="noborder" width="24" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADpklEQVR4nO1a0VXrMAzNCIzACIyQEWR/WfqhG8AGZIOyAWwAG5QNYIOyQdmg74OkL02T6MqxE&#43;DknpMfSBTpWtGV5RbFihUrVqyYH0R05Zm3nnlLRFdL&#43;zMrKITSMe&#43;9yNGLHB3znkIol/YrO&#43;pVf2kCv7iYX/5sNjjmWydyGAy&#43;yQaRg2O&#43;XdrfZKAQrh3zTgv8ggjmHYVwvbT/k&#43;BFHqyBd7PBizwsHYcZFELpRN6nBN8h4v1XFMmTtGlBMX9Bf7u85&#43;dKJjFTW9qGAidm8iJVz/8rYiaNCMe8J2ZaOt4TVGn77/hjs3pDBDT2HPMjkA3LSyaJ3AHS9tn9fscIONkOofQin1qRJJG7OWNunEOlrep7HiFAuXc5yfSAtDnmNxK5GbEBE1AURUEiN475DSA8n2RC0sb85ZnvNVtWAk7PMd&#43;rRTK1ZKLS5kRe0TSMJaAo6s9P5BUoktMl0yJtFrtTCGj7lk0yY6TNghQENH5mkcwYabOgl1zml1h7qGTiDo6v&#43;nO0oyI3Y4XUibyPqYcGx/w85jtsSE2pCLkhkTvA7tGLHGOaGw/Is8WY6iTafOSeB1jsJyWg&#43;a7GVgtslWezn5yA09WpsuCqfFIIJVTAOtmAqlRSArRW1Ikc6q3uRluVrnwiclbb3BAzAfZ7fZ1EAIVQIs2HkimjTVMq&#43;3VWpSfgtFpIK3q5gq9IM5LCflYCWvdswDGWuVUuCkM2fN&#43;zOXt2DgLq3SEy549qbrSmqWX/0Odb1k8AGnx2nzc0N5amqZUJ2&#43;yfQPdMz/ydKs1NbNPUsr9vSWtaAlTH6mGIV0ZYjZz1vFOVTy9SQUORAV8nEaC88OOsUQGam6Z5Apuas91nnSkfVj9zEVD12aibm9HdmRM5WJumjp/qwDQbAY75A6nu0c0NKJ/1wBTKhpQEVLCxwt7coE1Tx2c1G1IR8GRx7MyuVsDAqfKI309pCECGjZEjsaEC1i2kRpu6PDN/4QbRlI0cPQ&#43;ka2W1YxrZx4zI6&#43;2tfj630FgcGt5OPUk2jZ5nOhjJObIfe3GpyQ16WhtLADICq2tJmSJmi/NdJ3YZDkd3ahZG1JEo1JU8&#43;rTWQoBHT6OX&#43;EUZuDG5kEyEAFTapvQNSRAjmWMEZJe2XLBI5hABs0lbLqCS2RckNF5LLW25gEim5coubbkwkOr49V1gq6XjmASDZP4MacsFbzhH8D0zwz8BTTJ/nLTlQs/QdNJPbn4lGsn8NdK2YsWKFX8R/wDe0D7CofVUkgAAAABJRU5ErkJggg==">
+            </a>
+            
+            <a href="https://twitter.com/vickylaiio">
+            <img class="noborder" width="24" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADFUlEQVR4nO1a23XqMBCkBEpICe7g0kF29aWZH&#43;ggdIA7SDqADpIOTAdJB0kH0EHuhwXXFxD4IcmG4zlnvzjH7Ix2pdVqJ5MRI0aMGDFixFAhZCbkiyHXChQHM8CrAnMRmfbtYxQoMFfg25C/Nw14F2tnTb7tFU6sfQrEoRWEzGoTP7e1j5iITIV8UeBbge3lPxeZKvAtZBaTpA&#43;GXCi5a0n&#43;15C/Sn4eFlFEpko&#43;G3Jd/a43WgyZu4/sUotgyEUX4ici7JT8vPgb8OZ1ohp6KUUQMuu68rWEAb78uS8yvaRkChE65Hxr8o7v4p8A1s584SSAxCIfMvSvpMSH2wQzBeYGeD/bC3wCVGwVQ4DYq6/kToHi7Ddg2XglFChCFh5CZrFX38Njc&#43;7M7QioKjoPIYBxp07v5NushgJFk&#43;rrEpT8GAT544oA&#43;xYfXrc9KRTYJhRgUcehTQd1CyWfBypAXsuhuvvAVSHKgmZdR4zBCRDaqcoRtFLgz&#43;kJ0iXiogmQ4mhyN7IiRQXYWIDJZDIxwDKRY6nstgBCZtUQTRie0a1WKW/IvLqBicj0USKhVr3ivQyly9NodpP8IQX6djSKAftaArg0&#43;Ond4cCm5EdtAR5p46tYXlsAsfZpAA4HtcYXNgXe&#43;nY6mDXJ/2MUlK3xr96dD2A3r79eEcis5dV4UNapl/kAIvy0Jn8UoXxZSdq1CWh5ZwGOQlg7S9y96WxBmrenH3Fp8d43uVvWevM7xb0WRsFeuO/0fpAHIX/AXUUBsA8&#43;MeL6AndxHEZ7w7yHmqDRre/hRIgR&#43;j4RhnhPSD7SY8qX5KE0TxZJyVchgCjw5qrE5IIEK3hCQMiXFHM&#43;gyMv1j5dnMB4dPKufbZKueqGPB9tSU68LI/XqfPdAPuYw1pXoeSzAV59w4cJQv4r2givexFa/WflJHaROrc9lkchfirC0AocBTbJB7fNAAocBbZdh686QwBJ2gsE9gps&#43;ppS9&#43;LwRB6lH&#43;hImz5L2aYQa2cGWLroqJ8qJdmtAhsDLAe30l0hZCbWzi5Z376NGDFixDX8BVc7QzrBVv75AAAAAElFTkSuQmCC">
+            </a>
+            
+    </div>
+</div>
+</div>
+</div>
+
+
+<script>
+$('a[href^="\/blog\/when-stackoverflow-sed-saves-30mins\/#"]').click(function(e) {
+    e.preventDefault();
+    var target = this.hash;
+    $('html, body').animate({
+    scrollTop: $(target).offset().top
+    }, 500);
+    return false;
+})
+</script>

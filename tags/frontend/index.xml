@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Frontend on VickyLai.io</title>
+    <link>https://vickylai.io/tags/frontend/</link>
+    <description>Recent content in Frontend on VickyLai.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Apr 2017 08:14:09 +0800</lastBuildDate>
+    
+	<atom:link href="https://vickylai.io/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Top Free Resources for Developing Coding Superpowers</title>
+      <link>https://vickylai.io/blog/free-resources-for-coding-superpowers/</link>
+      <pubDate>Thu, 27 Apr 2017 08:14:09 +0800</pubDate>
+      
+      <guid>https://vickylai.io/blog/free-resources-for-coding-superpowers/</guid>
+      <description>I&amp;rsquo;m frequently asked for my opinion on how to get started on being a freelance developer. If you&amp;rsquo;re hoping to live the life of a remote working digital nomad, whichever career you choose, having a little coding expertise in your back pocket will be a big benefit.
+Here&amp;rsquo;s a quick list of resources that you should definitely look at first if you&amp;rsquo;re hoping to gain some coding superpowers for free.</description>
+    </item>
+    
+    <item>
+      <title>How to Get a Custom Domain Website with HTTPS for (Almost) Free</title>
+      <link>https://vickylai.io/blog/free-custom-domain-website-https/</link>
+      <pubDate>Sat, 28 Jan 2017 13:16:17 +0700</pubDate>
+      
+      <guid>https://vickylai.io/blog/free-custom-domain-website-https/</guid>
+      <description>&lt;p&gt;I got annoyed with WordPress.com. While using the service has its pros (like https and a mobile responsive website, and being very visual and beginner-friendly) it&amp;rsquo;s limiting. For someone who&amp;rsquo;s comfortable enough to be tweaking CSS but who&amp;rsquo;s not interested in creating their own theme (or paying upwards of $50 for one), I felt I wasn&amp;rsquo;t really the type of consumer WordPress.com was suited to.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

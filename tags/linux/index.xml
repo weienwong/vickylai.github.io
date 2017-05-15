@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on VickyLai.io</title>
+    <link>https://vickylai.io/tags/linux/</link>
+    <description>Recent content in Linux on VickyLai.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 May 2017 20:04:53 +0800</lastBuildDate>
+    
+	<atom:link href="https://vickylai.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>When 30 Seconds, StackOverflow, and Sed Saves 30 Minutes</title>
+      <link>https://vickylai.io/blog/when-stackoverflow-sed-saves-30mins/</link>
+      <pubDate>Sat, 06 May 2017 20:04:53 +0800</pubDate>
+      
+      <guid>https://vickylai.io/blog/when-stackoverflow-sed-saves-30mins/</guid>
+      <description>This week, I launched my new website and changed my Twitter username to match. I was about to spend time going through all my old blog posts to find and update the URLs when this very future blog post popped up on my screen like Clippy and shook its pixelated head disapprovingly.
+Here&amp;rsquo;s a worthwhile new habit for you: anytime you find yourself going &amp;ldquo;Ughhh I have to do that?</description>
+    </item>
+    
+    <item>
+      <title>How to Turn Unity into a Tiling Window Manager</title>
+      <link>https://vickylai.io/blog/turn-unity-into-tiling-windows-manager/</link>
+      <pubDate>Wed, 22 Mar 2017 16:10:10 +0800</pubDate>
+      
+      <guid>https://vickylai.io/blog/turn-unity-into-tiling-windows-manager/</guid>
+      <description>After a long and loving battle experience using i3 as my workhorse window manager on my old laptop, I&amp;rsquo;ve decided to mainly use Unity on my new laptop instead. I&amp;rsquo;m a huge fan of tiling window managers as a result of my i3 experience, however, the time it took to configure everything is longer than I wanted to spend getting set up before getting to work with my new laptop.</description>
+    </item>
+    
+    <item>
+      <title>How to Use the Same Dropbox Folder on Dual-boot Windows and Linux</title>
+      <link>https://vickylai.io/blog/same-dropbox-dual-boot/</link>
+      <pubDate>Fri, 17 Mar 2017 10:58:01 +0800</pubDate>
+      
+      <guid>https://vickylai.io/blog/same-dropbox-dual-boot/</guid>
+      <description>I&amp;rsquo;ve now set up two different laptops to dual-boot Windows 10 and different Linux distributions. Here&amp;rsquo;s how to ensure you maintain one Dropbox folder over both operating systems.
+Assuming Windows was there first:
+ Mount the Windows drive in Linux Install Dropbox in Linux Sign in to link to Dropbox Immediately change Dropbox folder location to the mounted drive (same Dropbox folder as Windows)  Get it right the first time Dropbox will automatically set up your Dropbox folder when you run it the first time.</description>
+    </item>
+    
+    <item>
+      <title>Create Desktop Notifications with Terminal and Cron</title>
+      <link>https://vickylai.io/blog/create-desktop-notifications-cron/</link>
+      <pubDate>Tue, 21 Feb 2017 10:48:38 +0700</pubDate>
+      
+      <guid>https://vickylai.io/blog/create-desktop-notifications-cron/</guid>
+      <description>In my last post I talked about moving from Windows 10 to running i3 on Linux, built up from Debian Base System. Among other things, this change has taught me about the benefits of using basic tools and running a minimal, lightweight system. You can achieve a lot of functionality with just command line tools and simple utilities. One example I&amp;rsquo;d like to illustrate in this post is setting up desktop notifications.</description>
+    </item>
+    
+    <item>
+      <title>How a Lifelong Windows User Switched to Linux (The Hard Way)</title>
+      <link>https://vickylai.io/blog/how-windows-user-switched-to-linux/</link>
+      <pubDate>Mon, 06 Feb 2017 14:23:59 +0700</pubDate>
+      
+      <guid>https://vickylai.io/blog/how-windows-user-switched-to-linux/</guid>
+      <description>&lt;p&gt;Let me preface this by saying that I&amp;rsquo;ve always been interested in finding out how things work. If a thing does something, I want to know why, how, and if I can customize it.&lt;/p&gt;
+
+&lt;p&gt;It should come as no surprise that Windows 10 drove me crazy.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="noopener">
+<meta name="description" content="I'm a nomadic developer. This is where I put all the words about coding that don't fit on Twitter.">
+
+<base href="https://vickylai.io/">
+<title>
+
+
+
+    How a Lifelong Windows User Switched to Linux (The Hard Way)
+
+
+</title>
+<link rel="canonical" href="https://vickylai.io/blog/how-windows-user-switched-to-linux/">
+
+
+<script type="text/javascript">
+    var host = 'vickylai.io';
+    if ((host == window.location.host) && (window.location.protocol != "https:"))
+        window.location.protocol = "https";
+</script>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+<script src="/js/tagline.js?t=1494824922"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Work+Sans|Inconsolata" rel="stylesheet"> 
+
+
+    
+    <link rel="stylesheet" href="https://vickylai.io/css/blog.css?t=1494824922">
+    
+
+
+<link rel="shortcut icon"
+
+    href="https://vickylai.io/img/code.ico"
+
+>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-98623582-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+</head>
+
+<div class="section" id="top">
+
+<section class="hero">
+    <div class="container hero-body">
+    <div class="bold-title title">-verbose</div>
+    <div class="subtitle-box">
+        <span class="subtitle" id="tagline">Vicky&#39;s Blog</span>
+    </div>
+    </div>
+
+    <div class="container hero-foot">
+    
+<nav class="nav nav-center">
+    <span id="nav-toggle" class="nav-toggle"  onclick="document.getElementById('nav-menu').classList.toggle('is-active');">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div id="nav-menu" class="nav-left nav-menu">
+      <span class="nav-item">
+        <a href="/">VickyLai.io</a>
+      </span>
+      <span class="nav-item">
+        <a href="https://vickylai.io/blog">Blog Posts</a>
+      </span>
+      <span class="nav-item">
+        <a href="https://tinyletter.com/vickylai" target="_blank">Subscribe</a>
+      </span>
+    
+      <span class="nav-item">
+        <a href="https://vickylai.io/index.xml">RSS</a>
+      </span>
+    
+    </div>
+</nav>
+
+    </div>
+</section>
+
+    <div class="container">
+        <h1 class="title is-1 top-pad post-title"><a href="/blog/how-windows-user-switched-to-linux/">How a Lifelong Windows User Switched to Linux (The Hard Way)</a></h1>
+            <div class="post-data">
+                Feb 6, 2017 |
+                7 minutes read
+            </div>
+            
+            
+                <div class="blog-share">
+                Share this:
+                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20How%20a%20Lifelong%20Windows%20User%20Switched%20to%20Linux%20%28The%20Hard%20Way%29%20https%3a%2f%2fvickylai.io%2fblog%2fhow-windows-user-switched-to-linux%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                twitter
+                <span class="hidden">Twitter</span>
+                </a> //
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fvickylai.io%2fblog%2fhow-windows-user-switched-to-linux%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                facebook
+                <span class="hidden">Facebook</span>
+                </a> //
+                <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://vickylai.io/&title=How%20a%20Lifelong%20Windows%20User%20Switched%20to%20Linux%20%28The%20Hard%20Way%29&source=Vicky%20Lai"
+                onclick="window.open(this.href, 'linkedin-share','width=980,height=980');return false;">
+                linkedin
+                <span class="hidden">LinkedIn</span>
+                </a> //
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fvickylai.io%2fblog%2fhow-windows-user-switched-to-linux%2f"
+                onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                google+
+                <span class="hidden">Google+</span>
+                </a>
+                </div>
+            
+            
+    </div>
+
+    <div class="container markdown top-pad">
+        <p>Let me preface this by saying that I&rsquo;ve always been interested in finding out how things work. If a thing does something, I want to know why, how, and if I can customize it.</p>
+
+<p>It should come as no surprise that Windows 10 drove me crazy.</p>
+
+<p>Seemingly arbitrary updates that made for a long start-up process on any given day, surprise restarts that meant I&rsquo;d lose my session and thus my thought process from the day before, and the worst part was I never knew what purpose they served. Windows 10 was an impenetrable mysterious hunk of blue screens and decisions I had no part in.</p>
+
+<p>Thankfully for me and others like me, there is an alternative. Well, there are several - many <a href="https://en.wikipedia.org/wiki/Linux_distribution">Linux distros</a> exist and the majority are familiar and totally usable when freshly installed. Perhaps one of the most well-known &ldquo;Windows-like&rdquo; distros is Ubuntu. It has a desktop similar to Windows 10 and is very graphical and geared generally towards those new to Linux.</p>
+
+<p>I went with Debian, the distro that Ubuntu was forked off of. It doesn&rsquo;t hold your hand as much as other feature-rich distributions, and is more customizable. I started with the <a href="https://www.debian.org/distrib/">small installation image found here</a> which you can download and use to create a bootable USB.</p>
+
+<p>Not entirely on purpose, thanks mostly to a crappy Internet connection (I&rsquo;m a digital nomad in Southeast Asia - it&rsquo;s par for the course) I ended up starting with Debian base system. It&rsquo;s the most basic Debian install available, and excludes things that I as a previous Windows user take for granted. Among other things, I had to find and install (or at least configure):</p>
+
+<ul>
+<li>A <a href="https://wiki.debian.org/WindowManager">window manager</a> (i3)</li>
+<li>An application to let me connect to the Internet (NetworkManager/nm-applet)</li>
+<li>A program that lets me control the brightness of my screen (xrandr)</li>
+<li>A program that handles sound, called a <a href="https://en.wikipedia.org/wiki/Sound_server">sound server</a> (pulseaudio)</li>
+<li>Event handlers, like telling my laptop to suspend when I close the lid</li>
+<li>A display for basic status information (i3bar)</li>
+<li>Desktop notifications (dunst)</li>
+<li>Basic programs like a graphical file manager (PCmanFM), pdf viewer (Okular), and image editor (Darktable)</li>
+</ul>
+
+<p>If unlike me you&rsquo;d rather start with a more fully-featured desktop environment, Debian&rsquo;s Net Install gives you a &ldquo;Standard system&rdquo; with the GNOME desktop environment by default. There&rsquo;s a <a href="https://www.debian.org/releases/stable/installmanual">full installation guide</a> available for Debian that walks you through the process.</p>
+
+<p>I learned a lot doing it the hard way, however. After starting with the base system, I have a much better perspective on what&rsquo;s going on under the surface. If in the future I run into a problem with one component, I&rsquo;m much more likely to have an idea of how to begin fixing it, since I put it together in the first place.</p>
+
+<p>I did hit a few potholes along the way, as well as find some things that worked better than others. I&rsquo;ve discussed some of these events in this post. But first, for motivation, the fully riced screenshot:</p>
+
+<p><img src="/verbose/blogimg/screenshot-asakusa-stats.png" alt="So worth it." /></p>
+
+<p>I posted all <a href="https://github.com/vickylaiio/i3-linux-config">my config files on GitHub</a> in case you want to swipe my sweet, sweet rice.</p>
+
+<h2 id="topics-covered-below">Topics covered below:</h2>
+
+<ul>
+<li>What are config files in the first place?</li>
+<li>Where the heck do all these config files go?</li>
+<li>I picked a stupid user name, how do I change it?</li>
+<li>How do I get NetworkManager and Dropbox to start automatically?</li>
+<li>How do I set up OpenVPN with NetworkManager?</li>
+<li>How do I get my VPN status to show in i3bar?</li>
+<li>How do I get my Print Screen/backlight control/volume keys to work?</li>
+<li>I edited my config file, but I don&rsquo;t see any changes. WTF?</li>
+</ul>
+
+<h2 id="what-are-config-files-in-the-first-place">What are config files in the first place?</h2>
+
+<p>If you&rsquo;re new to Linux or to coding, these are basically the technical user&rsquo;s version of &ldquo;File &gt; Preferences&rdquo; in <a href="https://en.wikipedia.org/wiki/Graphical_user_interface">GUI programs</a>. Depending on the application you&rsquo;re configuring, there are a few different formats and languages. Thankfully, there are ample config file samples available with a simple web search.</p>
+
+<h2 id="where-the-heck-do-all-these-config-files-go">Where the heck do all these config files go?</h2>
+
+<p>I found some differing file paths. The below are mine and work:</p>
+
+<pre><code class="language-conf">systemd event handlers:   /etc/systemd/logind.conf
+For URxvt:                ~/.Xdefaults
+For i3wm:                 ~/.config/i3/config 
+For i3bar:                ~/.config/i3status/config/i3status.conf
+For dunst:                ~/.config/dunst/dunstrc 
+for Compton:              ~/.config/compton.conf
+</code></pre>
+
+<h2 id="i-picked-a-stupid-user-name-how-do-i-change-it">I picked a stupid user name, how do I change it?</h2>
+
+<p>This was a fun one. Turns out changing my user name messed up a whole bunch of stuff that I then had to go fix/reinstall, among them:</p>
+
+<ul>
+<li>Dropbox</li>
+<li>Anaconda and pip</li>
+<li>Filepaths written in full in config files</li>
+</ul>
+
+<p>To avoid the hassle I experienced, change your user name before you set up most of your programs. If it&rsquo;s too late for that, just be aware that many programs involving a filepath with <code>/home/oldusername/...</code> are affected.</p>
+
+<p>To change your user name via the terminal, login as root, then:</p>
+
+<pre><code>$ killall -u oldusername
+$ id oldusername
+&gt;&gt;&gt; uid=1000(oldusername) gid=1000(oldusername) groups=1000(oldusername),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),108(netdev)
+# change login name
+$ usermod -l newusername oldusername
+# change group name
+$ groupmod -n newusername oldusername 
+# modify home directory
+$ usermod -d /home/newusername -m newusername
+# add comment with full name
+$ usermod -c &quot;New Full Name&quot; newusername 
+# check that &quot;newusername&quot; replaces &quot;oldusername&quot; in all fields
+$ id newusername 
+&gt;&gt;&gt; uid=1000(newusername) gid=1000(newusername) groups=1000(newusername),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),108(netdev)
+</code></pre>
+
+<p>If you previously set your background image in i3 and it disappears, don&rsquo;t forget to check the filepath in your config file.</p>
+
+<h2 id="how-do-i-get-networkmanager-and-dropbox-to-start-automatically">How do I get NetworkManager and Dropbox to start automatically?</h2>
+
+<p>Dropbox for Linux supposedly has an autostart setting where you can type <code>dropbox autostart y</code> into a terminal and it&rsquo;ll listen. This didn&rsquo;t work for me. Instead, I added any applications I wanted to start automatically upon login to my i3 config file with this syntax:</p>
+
+<pre><code class="language-conf"># start apps automatically
+exec --no-startup-id /usr/bin/nm-applet
+exec --no-startup-id dropbox start
+</code></pre>
+
+<p>In the above, <code>exec</code> is &ldquo;execute&rdquo;, <code>--no-startup-id</code> basically saves you from watching your cursor do the spinny loading thing, and the last component of the command is the filepath to the program or the syntax to start it, as if typing it into the terminal.</p>
+
+<h2 id="how-do-i-set-up-openvpn-with-networkmanager">How do I set up OpenVPN with NetworkManager?</h2>
+
+<p>First, make sure you&rsquo;ve done <code>apt-get install network-manager-openvpn</code> to get the plugin.</p>
+
+<p>You&rsquo;ll need your client.ovpn file. In my case, I set up my own VPN using Amazon EC2, and downloaded the client.ovpn file from my OpenVPN console page.</p>
+
+<p>Open client.ovpn with a text editor (like vim or gedit) and change any instances of &ldquo;remote openvpn port xxxx&rdquo; to read &ldquo;remote &lt; your ip address &gt; port xxxx&rdquo; instead.</p>
+
+<p>Use nm-applet to set up a new VPN connection. If you&rsquo;ve installed the OpenVPN plugin, you&rsquo;ll see OpenVPN as an option in the dropdown. Choose the option to &ldquo;Import a saved VPN configuration&rdquo;.</p>
+
+<p><img src="/verbose/blogimg/openvpnimport.jpg" alt="This GUI stuff is really easy!" /></p>
+
+<p>Once you load up your client.ovpn file and click &ldquo;Create,&rdquo; all the settings will be filled out for you except for your user name and password. Plug those in and you&rsquo;re good to go.</p>
+
+<h2 id="how-do-i-get-my-vpn-status-to-show-in-i3bar">How do I get my VPN status to show in i3bar?</h2>
+
+<p>Locate your i3status config file. If you don&rsquo;t have one yet, you can use an awesome template like <a href="https://github.com/vickylaiio/i3-linux-config">mine</a>.</p>
+
+<p>Edit the filepath in the following section of code:</p>
+
+<pre><code>run_watch VPN {
+        pidfile = &quot;sys/class/net/yourspecialsetting0&quot;
+}
+</code></pre>
+
+<p>Where &ldquo;yourspecialsetting&rdquo; is any one of <code>tap</code>/<code>tun</code>/<code>tun tap</code> depending on your VPN settings. If you don&rsquo;t know which it is, you can find out in the VPN configuration settings under VPN &gt; Advanced &gt; &ldquo;Set virtual device type&rdquo;.</p>
+
+<h2 id="how-do-i-get-my-print-screen-backlight-control-volume-keys-to-work">How do I get my Print Screen/backlight control/volume keys to work?</h2>
+
+<p>I used key bindings in my i3 config file. The tricky part was finding out what controlled the particular function (and on some occassions, having to install something to control the function).</p>
+
+<pre><code># brightness adjustment (pre-defined levels)
+bindsym $mod+Shift+F6 exec xrandr --output eDP-1 --brightness 1
+bindsym $mod+F6       exec xrandr --output eDP-1 --brightness 0.8
+bindsym $mod+F5       exec xrandr --output eDP-1 --brightness 0.5
+bindsym $mod+F7       exec xrandr --output eDP-1 --brightness 0.1
+
+# volume control (increment)
+bindsym $mod+F12 exec amixer -q sset Master 3%+
+bindsym $mod+F11 exec amixer -q sset Master 3%-
+bindsym $mod+F10 exec amixer -q sset Master toggle
+</code></pre>
+
+<p>As you can see, in the case of xrandr I could only find a way to set certain levels. For volume control, amixer seems to offer increments.</p>
+
+<h2 id="i-edited-my-config-file-but-i-don-t-see-any-changes-wtf">I edited my config file, but I don&rsquo;t see any changes. WTF?</h2>
+
+<p>For some things, like the wallpaper in i3 and dunst notifications, I found I had to either reload the application (for i3, type <code>i3-msg restart</code> in the terminal) or restart my X session (logout and log back in) to see the changes.</p>
+
+<p>&nbsp;&nbsp;</p>
+
+<p>The switch to Linux has definitely been worth it. Though some of the process of learning and discovery was finicky and frustrating, I honestly enjoyed every minute. Nothing beats the feeling of figuring something out and making it work!</p>
+
+<p>I hope you&rsquo;ve found this post useful! Questions or issues? Let me know on Twitter: <a href="https://twitter.com/vickylaiio">@vickylaiio</a>.</p>
+
+<p>Thanks for reading!</p>
+    </div>
+
+    
+    <div class="container top-pad"> Like this post? <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hey%20@vickylaiio:%20I%20just%20read%20https%3a%2f%2fvickylai.io%2fblog%2fhow-windows-user-switched-to-linux%2f%20and..."
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></div>
+            
+    <div class="disqus">
+        
+    </div>
+
+<div class="container top-pad"><hr>
+    <div class="pagination columns is-mobile top-pad">
+        <div class="column is-one-third has-text-centered no-padding">
+            <a class="btn previous" href="/blog/create-desktop-notifications-cron/">Prev</a>
+            
+        </div>
+        <div class="column is-one-third has-text-centered no-padding">
+            <a class="btn up" href="/blog/how-windows-user-switched-to-linux/#top">UP, JEEVES.</a>
+        </div>
+        <div class="column is-one-third has-text-centered no-padding">
+            <a class="btn next" href="/blog/free-custom-domain-website-https/">Next</a>
+            
+        </div>
+    </div>
+<hr></div>
+
+<div class="section" id="footer">
+<div class="container columns">
+    <div class="column is-one-quarter av-box"><img class="avatar" src="https://vickylai.io/img/portrait.jpg"></div>
+    <div class="column bio">
+        <p class="strong">About Vicky Lai</p>
+        <p class="footer-text">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.</p>
+        <p class="top-pad">
+            
+            <a href="https://github.com/vickylaiio">
+            <img class="noborder" width="24" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADvElEQVR4nO1a23XqMBB0CZRACekgdBBJX9r5ogPSAS4hHUAHSQehg9ABdAAd5H4gEz9kPdayZc5lztEPx0g7o9WuVlJRPDENJNGrBN4UsFXAVhJ919v9d&#43;BNEr3mtncwBPBSEVXAL6dVwgjgJTefIAghFgLYSOCHS7pXDOBHABshxCI3zw6EEAvjvpfUxC1CXBSwnY0QUxHvEyIbcQG8jOHqzKUxbYwQwCY38XYTwGZ84re1vstN1tF2o5Kfg8sHLYnUAfJRyI8iwqORr4uQRAA17zXva8NigiJ6nwGJYY3onUXe7OXzE0jQWPsESXQKVPiqgFIBpSQ6KOA8IpmzGaNUQGnG9v4vOh6YAcLU1Xpl8x5JtPcaRnSURMcQgYXWy844RCJCvDKIvIn6QXt7SXRw9qX1svIKI8jalZ7MRmttvj1LooMvnZn&#43;Q7zgEpQaY2Y/WNURkdTemNnvc/&#43;pIbRehdrr9YLYtPdoApiY0p8WY3d8gkhMyNWKyEDYnxGYeb&#43;clm4XkTHgNnG2fQGnIwl8ZeDcgAS&#43;kkxcaDppCEB0mp5yx&#43;4Tw&#43;5DpyOGivPwAMbEKeC30Ul0JK3WkmV3NjWE1kum7au/TiIj6VxmvwLHCxoZjBMAFbDOR7kJZtle/nWQKpVkwuAUznGhfHTtGLSE/0sB6qnwKQDRR3QMmMvlZHE/R4gV4OPeASsIzqASrMBJ42poFmgomBkcD24LsGYIkL0OqMCpBxoboQFH4Ot8tG/gTJ6CZR8TesTc9oKcwVAIseDMviK6djpj1tW/iugzA/eiKIpCEX1ybLbWMYpXD1RtvHv5PvLD7izLToe&#43;OCCJjkLrpSk/O7cyEviZojwWWi&#43;H3lb31jHOW5rWaapZf7bvR3nBleolmiQ69g6iHBFVEn3bjLKJYIzcpXjxaTxzl/Al2tqtsjsbdNa6wxPca84DBZTJn98RXb3e6b3UtFws1O4Abf85c84OhNZLTmr2uP/eP7DHC1w7QBMkV1WLJd2Ga0mOMvv3gf1HTOuh5EKhUr03iH0p4lrXtoA4FpiFTtve/sjfB99R&#43;VTlMPfIPomtrqUwZR0wqeu34coKErhI4C0Rz14McP19EgN8eV4SnUxhsq23JIMXzGs7omPa16L&#43;zU6nJRm8YB14piNfgSNCqrGzk68j5PlbLgFGJ18zKOjsIOF4IeSnPaQ1jyGdSyLVWE7yRNesR/TK8WQ14RjW7bAEvmZxQWMOKxpCpHTJ9pKTRPs5PM7o4C7ECMWSuj3GnifxJ554XPwDjW/NMUHzxh4AAAAASUVORK5CYII=">
+            </a>
+            
+            <a href="https://codepen.io/vickylaiio">
+            <img class="noborder" width="24" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADpklEQVR4nO1a0VXrMAzNCIzACIyQEWR/WfqhG8AGZIOyAWwAG5QNYIOyQdmg74OkL02T6MqxE&#43;DknpMfSBTpWtGV5RbFihUrVqyYH0R05Zm3nnlLRFdL&#43;zMrKITSMe&#43;9yNGLHB3znkIol/YrO&#43;pVf2kCv7iYX/5sNjjmWydyGAy&#43;yQaRg2O&#43;XdrfZKAQrh3zTgv8ggjmHYVwvbT/k&#43;BFHqyBd7PBizwsHYcZFELpRN6nBN8h4v1XFMmTtGlBMX9Bf7u85&#43;dKJjFTW9qGAidm8iJVz/8rYiaNCMe8J2ZaOt4TVGn77/hjs3pDBDT2HPMjkA3LSyaJ3AHS9tn9fscIONkOofQin1qRJJG7OWNunEOlrep7HiFAuXc5yfSAtDnmNxK5GbEBE1AURUEiN475DSA8n2RC0sb85ZnvNVtWAk7PMd&#43;rRTK1ZKLS5kRe0TSMJaAo6s9P5BUoktMl0yJtFrtTCGj7lk0yY6TNghQENH5mkcwYabOgl1zml1h7qGTiDo6v&#43;nO0oyI3Y4XUibyPqYcGx/w85jtsSE2pCLkhkTvA7tGLHGOaGw/Is8WY6iTafOSeB1jsJyWg&#43;a7GVgtslWezn5yA09WpsuCqfFIIJVTAOtmAqlRSArRW1Ikc6q3uRluVrnwiclbb3BAzAfZ7fZ1EAIVQIs2HkimjTVMq&#43;3VWpSfgtFpIK3q5gq9IM5LCflYCWvdswDGWuVUuCkM2fN&#43;zOXt2DgLq3SEy549qbrSmqWX/0Odb1k8AGnx2nzc0N5amqZUJ2&#43;yfQPdMz/ydKs1NbNPUsr9vSWtaAlTH6mGIV0ZYjZz1vFOVTy9SQUORAV8nEaC88OOsUQGam6Z5Apuas91nnSkfVj9zEVD12aibm9HdmRM5WJumjp/qwDQbAY75A6nu0c0NKJ/1wBTKhpQEVLCxwt7coE1Tx2c1G1IR8GRx7MyuVsDAqfKI309pCECGjZEjsaEC1i2kRpu6PDN/4QbRlI0cPQ&#43;ka2W1YxrZx4zI6&#43;2tfj630FgcGt5OPUk2jZ5nOhjJObIfe3GpyQ16WhtLADICq2tJmSJmi/NdJ3YZDkd3ahZG1JEo1JU8&#43;rTWQoBHT6OX&#43;EUZuDG5kEyEAFTapvQNSRAjmWMEZJe2XLBI5hABs0lbLqCS2RckNF5LLW25gEim5coubbkwkOr49V1gq6XjmASDZP4MacsFbzhH8D0zwz8BTTJ/nLTlQs/QdNJPbn4lGsn8NdK2YsWKFX8R/wDe0D7CofVUkgAAAABJRU5ErkJggg==">
+            </a>
+            
+            <a href="https://twitter.com/vickylaiio">
+            <img class="noborder" width="24" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADFUlEQVR4nO1a23XqMBCkBEpICe7g0kF29aWZH&#43;ggdIA7SDqADpIOTAdJB0kH0EHuhwXXFxD4IcmG4zlnvzjH7Ix2pdVqJ5MRI0aMGDFixFAhZCbkiyHXChQHM8CrAnMRmfbtYxQoMFfg25C/Nw14F2tnTb7tFU6sfQrEoRWEzGoTP7e1j5iITIV8UeBbge3lPxeZKvAtZBaTpA&#43;GXCi5a0n&#43;15C/Sn4eFlFEpko&#43;G3Jd/a43WgyZu4/sUotgyEUX4ici7JT8vPgb8OZ1ohp6KUUQMuu68rWEAb78uS8yvaRkChE65Hxr8o7v4p8A1s584SSAxCIfMvSvpMSH2wQzBeYGeD/bC3wCVGwVQ4DYq6/kToHi7Ddg2XglFChCFh5CZrFX38Njc&#43;7M7QioKjoPIYBxp07v5NushgJFk&#43;rrEpT8GAT544oA&#43;xYfXrc9KRTYJhRgUcehTQd1CyWfBypAXsuhuvvAVSHKgmZdR4zBCRDaqcoRtFLgz&#43;kJ0iXiogmQ4mhyN7IiRQXYWIDJZDIxwDKRY6nstgBCZtUQTRie0a1WKW/IvLqBicj0USKhVr3ivQyly9NodpP8IQX6djSKAftaArg0&#43;Ond4cCm5EdtAR5p46tYXlsAsfZpAA4HtcYXNgXe&#43;nY6mDXJ/2MUlK3xr96dD2A3r79eEcis5dV4UNapl/kAIvy0Jn8UoXxZSdq1CWh5ZwGOQlg7S9y96WxBmrenH3Fp8d43uVvWevM7xb0WRsFeuO/0fpAHIX/AXUUBsA8&#43;MeL6AndxHEZ7w7yHmqDRre/hRIgR&#43;j4RhnhPSD7SY8qX5KE0TxZJyVchgCjw5qrE5IIEK3hCQMiXFHM&#43;gyMv1j5dnMB4dPKufbZKueqGPB9tSU68LI/XqfPdAPuYw1pXoeSzAV59w4cJQv4r2givexFa/WflJHaROrc9lkchfirC0AocBTbJB7fNAAocBbZdh686QwBJ2gsE9gps&#43;ppS9&#43;LwRB6lH&#43;hImz5L2aYQa2cGWLroqJ8qJdmtAhsDLAe30l0hZCbWzi5Z376NGDFixDX8BVc7QzrBVv75AAAAAElFTkSuQmCC">
+            </a>
+            
+    </div>
+</div>
+</div>
+</div>
+
+
+<script>
+$('a[href^="\/blog\/how-windows-user-switched-to-linux\/#"]').click(function(e) {
+    e.preventDefault();
+    var target = this.hash;
+    $('html, body').animate({
+    scrollTop: $(target).offset().top
+    }, 500);
+    return false;
+})
+</script>

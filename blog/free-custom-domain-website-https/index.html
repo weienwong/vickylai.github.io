@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="noopener">
+<meta name="description" content="I'm a nomadic developer. This is where I put all the words about coding that don't fit on Twitter.">
+
+<base href="https://vickylai.io/">
+<title>
+
+
+
+    How to Get a Custom Domain Website with HTTPS for (Almost) Free
+
+
+</title>
+<link rel="canonical" href="https://vickylai.io/blog/free-custom-domain-website-https/">
+
+
+<script type="text/javascript">
+    var host = 'vickylai.io';
+    if ((host == window.location.host) && (window.location.protocol != "https:"))
+        window.location.protocol = "https";
+</script>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+<script src="/js/tagline.js?t=1494824922"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Work+Sans|Inconsolata" rel="stylesheet"> 
+
+
+    
+    <link rel="stylesheet" href="https://vickylai.io/css/blog.css?t=1494824922">
+    
+
+
+<link rel="shortcut icon"
+
+    href="https://vickylai.io/img/code.ico"
+
+>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-98623582-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+</head>
+
+<div class="section" id="top">
+
+<section class="hero">
+    <div class="container hero-body">
+    <div class="bold-title title">-verbose</div>
+    <div class="subtitle-box">
+        <span class="subtitle" id="tagline">Vicky&#39;s Blog</span>
+    </div>
+    </div>
+
+    <div class="container hero-foot">
+    
+<nav class="nav nav-center">
+    <span id="nav-toggle" class="nav-toggle"  onclick="document.getElementById('nav-menu').classList.toggle('is-active');">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div id="nav-menu" class="nav-left nav-menu">
+      <span class="nav-item">
+        <a href="/">VickyLai.io</a>
+      </span>
+      <span class="nav-item">
+        <a href="https://vickylai.io/blog">Blog Posts</a>
+      </span>
+      <span class="nav-item">
+        <a href="https://tinyletter.com/vickylai" target="_blank">Subscribe</a>
+      </span>
+    
+      <span class="nav-item">
+        <a href="https://vickylai.io/index.xml">RSS</a>
+      </span>
+    
+    </div>
+</nav>
+
+    </div>
+</section>
+
+    <div class="container">
+        <h1 class="title is-1 top-pad post-title"><a href="/blog/free-custom-domain-website-https/">How to Get a Custom Domain Website with HTTPS for (Almost) Free</a></h1>
+            <div class="post-data">
+                Jan 28, 2017 |
+                5 minutes read
+            </div>
+            
+            
+                <div class="blog-share">
+                Share this:
+                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20How%20to%20Get%20a%20Custom%20Domain%20Website%20with%20HTTPS%20for%20%28Almost%29%20Free%20https%3a%2f%2fvickylai.io%2fblog%2ffree-custom-domain-website-https%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                twitter
+                <span class="hidden">Twitter</span>
+                </a> //
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fvickylai.io%2fblog%2ffree-custom-domain-website-https%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                facebook
+                <span class="hidden">Facebook</span>
+                </a> //
+                <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://vickylai.io/&title=How%20to%20Get%20a%20Custom%20Domain%20Website%20with%20HTTPS%20for%20%28Almost%29%20Free&source=Vicky%20Lai"
+                onclick="window.open(this.href, 'linkedin-share','width=980,height=980');return false;">
+                linkedin
+                <span class="hidden">LinkedIn</span>
+                </a> //
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fvickylai.io%2fblog%2ffree-custom-domain-website-https%2f"
+                onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                google+
+                <span class="hidden">Google+</span>
+                </a>
+                </div>
+            
+            
+    </div>
+
+    <div class="container markdown top-pad">
+        <p>I got annoyed with WordPress.com. While using the service has its pros (like https and a mobile responsive website, and being very visual and beginner-friendly) it&rsquo;s limiting. For someone who&rsquo;s comfortable enough to be tweaking CSS but who&rsquo;s not interested in creating their own theme (or paying upwards of $50 for one), I felt I wasn&rsquo;t really the type of consumer WordPress.com was suited to.</p>
+
+<p>To start with, if you want to remove WordPress advertising and use a custom domain name, it&rsquo;s a minimum of $3 per month. If, like me, the free Themes provided aren&rsquo;t just what you&rsquo;re looking for, you&rsquo;re stuck with two choices: buy a theme for $50+, or pay $8.25 per month to do <em>some</em> css customization. I don&rsquo;t know about you, but I feel like there should be a hack for this.</p>
+
+<h2 id="how-i-ditched-wordpress-and-got-everything-i-wanted-for-free">How I ditched WordPress and got everything I wanted for free</h2>
+
+<p>Okay, <em>almost</em> free. You still have to pay <a href="https://www.namecheap.com/promos/2016/crazy-88.aspx?aff=109417">at least $0.88</a> for a domain name.</p>
+
+<p>For those of you technical enough to skip reading a long post, the recipe is this:</p>
+
+<ol>
+<li><a href="https://www.namecheap.com/?aff=109417">Buy a custom domain via this Namecheap affiliate link</a> (Thanks! :))</li>
+<li>Install <a href="https://www.gohugo.io/">Hugo</a>, my favorite static site generator</li>
+<li>Host with <a href="https://pages.github.com/">GitHub Pages</a></li>
+<li>Put your <a href="https://help.github.com/articles/setting-up-an-apex-domain/#configuring-an-alias-or-aname-record-with-your-dns-provider">custom domain to work with GitHub Pages</a></li>
+<li>Use <a href="https://www.cloudflare.com/">Cloudflare&rsquo;s free plan</a></li>
+</ol>
+
+<p>Let&rsquo;s do the nitty gritty:</p>
+
+<h3 id="1-buy-a-custom-domain">1. Buy a custom domain</h3>
+
+<p>This one&rsquo;s pretty simple. Head on over to <a href="https://www.namecheap.com/?aff=109417">Namecheap</a>, <a href="https://www.gandi.net">Gandi</a>, or if you&rsquo;re rolling in dough, <a href="https://www.godaddy.com/">GoDaddy</a>. Find your perfect web address and buy it up.</p>
+
+<p>If it&rsquo;s a <a href="https://www.namecheap.com/domains/personal.aspx?aff=109417">personal domain</a> like <em>yourname.com,</em> it&rsquo;s a pretty good idea to pay upfront for five years or even ten years, if you&rsquo;ve got the cash. It&rsquo;ll save you the trouble of remembering to renew, allow you to build your personal brand, and prevent someone else from buying up your URL.</p>
+
+<p>If you&rsquo;re just trying out an idea, you can go with a one-year <a href="https://www.namecheap.com/promos/2016/crazy-88.aspx?aff=109417">$0.88 domain</a>. After the ICANN fee, it&rsquo;ll cost you a whopping $1.06. Namecheap also gives you WhoisGuard (domain registration privacy) free for one year.</p>
+
+<h3 id="2-install-hugo">2. Install Hugo</h3>
+
+<p>I&rsquo;m a big fan of <a href="https://www.gohugo.io/">Hugo</a> so far. Admittedly, those who feel more comfortable with a visual, WYSIWYG editor may feel like a fish out of water at first. As long as you&rsquo;re not afraid of using command line, though, using Hugo is pretty straightforward. The fact that I have access to all my code is my favorite part. It&rsquo;s only as simple or complicated as I want it to be.</p>
+
+<p>Hugo is open source and free. They&rsquo;ve got great documentation, and following their <a href="https://gohugo.io/overview/quickstart/">Quickstart guide</a> line-by-line will get you set up with your new site in minutes.</p>
+
+<p>If you&rsquo;re not used to the idea of your site existing as files and folders, the basic premise is this: Hugo, along with the themes available, helps you to create all the pages and files that your site needs to run. Blog posts can be written in Markdown and saved in your <code>/content/blog/</code> folder; preferences for your site and theme can be set in the <code>config.toml</code> file. After that, generating all your site&rsquo;s pages is as quick and easy as typing the command <code>hugo --theme=&lt;your theme&gt;</code>. You&rsquo;ll be able to see a live version of your site in your browser as you&rsquo;re editing it (go to <a href="http://localhost:1313/">http://localhost:1313/</a> in your browser, as described in Step 5) so you&rsquo;re not flying blind.</p>
+
+<p>Confused? Ask me on Twitter <a href="https://twitter.com/vickylaiio">@vickylaiio</a> and I&rsquo;ll help you out!</p>
+
+<h3 id="3-host-with-github-pages">3. Host with GitHub Pages</h3>
+
+<p>If you read to Step 12 of Hugo&rsquo;s Quickstart Guide, you&rsquo;ll see that they even provided instructions for hosting your files on GitHub pages. If you&rsquo;re new to Git, you&rsquo;ll first need to <a href="https://github.com/">sign up at GitHub</a> and then <a href="https://help.github.com/articles/set-up-git/">set up Git</a>. GitHub is a very friendly resource, and you can find a multitude of code examples and guides in connection with it. The <a href="https://guides.github.com/activities/hello-world/">Hello World Guide</a> will take you through all you need to know to use GitHub.com.</p>
+
+<p>Once you&rsquo;re comfortable with the way GitHub works generally, setting up a site by following <a href="https://pages.github.com/">the guide on GitHub Pages</a> is no big deal. If you followed the Hugo Quickstart Guide up to Step 11, you&rsquo;ll want to jump to Step 12 after creating the repository on GitHub.</p>
+
+<p>In case it&rsquo;s not clear, once you set up your new repository on GitHub called <em>yourusername</em>.github.io, grab the HTTPS link at the top. From there it&rsquo;s just a few simple commands to create the git repository for your site and push it to your new web address:</p>
+
+<pre><code class="language-system"># from yoursite/public folder:
+$ git init
+$ git remote add origin &lt;paste that https url here!&gt;
+$ git add --all
+$ git commit -m &quot;Initial commit.&quot;
+$ git push origin master
+</code></pre>
+
+<p>Have a little celebration - your site is already up at <code>https://yourusername.github.io</code>! Now for the pizza-de-resiliance: the custom domain.</p>
+
+<h3 id="4-point-your-custom-domain-to-github-pages">4. Point your custom domain to GitHub Pages</h3>
+
+<p>To set up your site at apex (meaning <code>yourname.com</code> will replace <code>yourusername.github.io</code>), there&rsquo;s just four steps:</p>
+
+<ol>
+<li><a href="https://help.github.com/articles/adding-or-removing-a-custom-domain-for-your-github-pages-site/">Add your domain to your GitHub Pages site repository</a></li>
+<li>In your domain registrar&rsquo;s DNS settings, <a href="https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider">create A records pointing to GitHub&rsquo;s IP addresses</a></li>
+<li>In your domain registrar&rsquo;s DNS settings, create a CNAME record pointing to <code>yourusername.github.io</code></li>
+<li>Make sure there&rsquo;s a CNAME file in the root directory of your GitHub repository containing <code>yourname.com</code> (your custom domain)</li>
+</ol>
+
+<h3 id="5-get-https-with-cloudflare">5. Get HTTPS with Cloudflare</h3>
+
+<p><em>Why do I need a SSL certificate anyway?</em> For one, it&rsquo;ll <a href="http://searchengineland.com/google-starts-giving-ranking-boost-secure-httpsssl-sites-199446/">give your site a little boost on Google</a>.</p>
+
+<p><a href="https://www.cloudflare.com/">Sign up with Cloudflare</a> and follow their set up guide. The site will collect your custom domain&rsquo;s DNS settings and set everything up automagically. Once the set up is complete, Cloudflare provides you with two new nameserver addresses. Go to your domain registrar&rsquo;s DNS settings and change the Domain Name Servers to the ones Cloudflare gives you.</p>
+
+<p>In your <code>config.toml</code>, <code>config.yaml</code>, or <code>config.json</code> file, ensure these lines are present:</p>
+
+<pre><code class="language-toml">baseURL = &quot;https://yourname.com/&quot;
+canonifyURLs = true
+enforce_ssl = www.yoursite.com
+</code></pre>
+
+<p>To redirect users to HTTPS, add this script to the top of your <code>&lt;head&gt;</code> file:</p>
+
+<pre><code class="language-html">&lt;script type=&quot;text/javascript&quot;&gt;
+    var host = &quot;yourname.com&quot;;
+    if ((host == window.location.host) &amp;&amp; (window.location.protocol != &quot;https:&quot;))
+        window.location.protocol = &quot;https&quot;;
+&lt;/script&gt;
+</code></pre>
+
+<p>&nbsp;&nbsp;</p>
+
+<p>That&rsquo;s pretty much it! In a couple hours or so, your site will be up and running at <code>https://yourname.com</code>.</p>
+
+<p>Questions or issues? Let me know on Twitter: <a href="https://twitter.com/vickylaiio">@vickylaiio</a>.</p>
+
+<p>Thanks for reading!</p>
+    </div>
+
+    
+    <div class="container top-pad"> Like this post? <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hey%20@vickylaiio:%20I%20just%20read%20https%3a%2f%2fvickylai.io%2fblog%2ffree-custom-domain-website-https%2f%20and..."
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></div>
+            
+    <div class="disqus">
+        
+    </div>
+
+<div class="container top-pad"><hr>
+    <div class="pagination columns is-mobile top-pad">
+        <div class="column is-one-third has-text-centered no-padding">
+            <a class="btn previous" href="/blog/how-windows-user-switched-to-linux/">Prev</a>
+            
+        </div>
+        <div class="column is-one-third has-text-centered no-padding">
+            <a class="btn up" href="/blog/free-custom-domain-website-https/#top">UP, JEEVES.</a>
+        </div>
+        <div class="column is-one-third has-text-centered no-padding">
+            <a class="btn next" href="/blog/python-programming-fundamentals-iterations/">Next</a>
+            
+        </div>
+    </div>
+<hr></div>
+
+<div class="section" id="footer">
+<div class="container columns">
+    <div class="column is-one-quarter av-box"><img class="avatar" src="https://vickylai.io/img/portrait.jpg"></div>
+    <div class="column bio">
+        <p class="strong">About Vicky Lai</p>
+        <p class="footer-text">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.</p>
+        <p class="top-pad">
+            
+            <a href="https://github.com/vickylaiio">
+            <img class="noborder" width="24" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADvElEQVR4nO1a23XqMBB0CZRACekgdBBJX9r5ogPSAS4hHUAHSQehg9ABdAAd5H4gEz9kPdayZc5lztEPx0g7o9WuVlJRPDENJNGrBN4UsFXAVhJ919v9d&#43;BNEr3mtncwBPBSEVXAL6dVwgjgJTefIAghFgLYSOCHS7pXDOBHABshxCI3zw6EEAvjvpfUxC1CXBSwnY0QUxHvEyIbcQG8jOHqzKUxbYwQwCY38XYTwGZ84re1vstN1tF2o5Kfg8sHLYnUAfJRyI8iwqORr4uQRAA17zXva8NigiJ6nwGJYY3onUXe7OXzE0jQWPsESXQKVPiqgFIBpSQ6KOA8IpmzGaNUQGnG9v4vOh6YAcLU1Xpl8x5JtPcaRnSURMcQgYXWy844RCJCvDKIvIn6QXt7SXRw9qX1svIKI8jalZ7MRmttvj1LooMvnZn&#43;Q7zgEpQaY2Y/WNURkdTemNnvc/&#43;pIbRehdrr9YLYtPdoApiY0p8WY3d8gkhMyNWKyEDYnxGYeb&#43;clm4XkTHgNnG2fQGnIwl8ZeDcgAS&#43;kkxcaDppCEB0mp5yx&#43;4Tw&#43;5DpyOGivPwAMbEKeC30Ul0JK3WkmV3NjWE1kum7au/TiIj6VxmvwLHCxoZjBMAFbDOR7kJZtle/nWQKpVkwuAUznGhfHTtGLSE/0sB6qnwKQDRR3QMmMvlZHE/R4gV4OPeASsIzqASrMBJ42poFmgomBkcD24LsGYIkL0OqMCpBxoboQFH4Ot8tG/gTJ6CZR8TesTc9oKcwVAIseDMviK6djpj1tW/iugzA/eiKIpCEX1ybLbWMYpXD1RtvHv5PvLD7izLToe&#43;OCCJjkLrpSk/O7cyEviZojwWWi&#43;H3lb31jHOW5rWaapZf7bvR3nBleolmiQ69g6iHBFVEn3bjLKJYIzcpXjxaTxzl/Al2tqtsjsbdNa6wxPca84DBZTJn98RXb3e6b3UtFws1O4Abf85c84OhNZLTmr2uP/eP7DHC1w7QBMkV1WLJd2Ga0mOMvv3gf1HTOuh5EKhUr03iH0p4lrXtoA4FpiFTtve/sjfB99R&#43;VTlMPfIPomtrqUwZR0wqeu34coKErhI4C0Rz14McP19EgN8eV4SnUxhsq23JIMXzGs7omPa16L&#43;zU6nJRm8YB14piNfgSNCqrGzk68j5PlbLgFGJ18zKOjsIOF4IeSnPaQ1jyGdSyLVWE7yRNesR/TK8WQ14RjW7bAEvmZxQWMOKxpCpHTJ9pKTRPs5PM7o4C7ECMWSuj3GnifxJ554XPwDjW/NMUHzxh4AAAAASUVORK5CYII=">
+            </a>
+            
+            <a href="https://codepen.io/vickylaiio">
+            <img class="noborder" width="24" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADpklEQVR4nO1a0VXrMAzNCIzACIyQEWR/WfqhG8AGZIOyAWwAG5QNYIOyQdmg74OkL02T6MqxE&#43;DknpMfSBTpWtGV5RbFihUrVqyYH0R05Zm3nnlLRFdL&#43;zMrKITSMe&#43;9yNGLHB3znkIol/YrO&#43;pVf2kCv7iYX/5sNjjmWydyGAy&#43;yQaRg2O&#43;XdrfZKAQrh3zTgv8ggjmHYVwvbT/k&#43;BFHqyBd7PBizwsHYcZFELpRN6nBN8h4v1XFMmTtGlBMX9Bf7u85&#43;dKJjFTW9qGAidm8iJVz/8rYiaNCMe8J2ZaOt4TVGn77/hjs3pDBDT2HPMjkA3LSyaJ3AHS9tn9fscIONkOofQin1qRJJG7OWNunEOlrep7HiFAuXc5yfSAtDnmNxK5GbEBE1AURUEiN475DSA8n2RC0sb85ZnvNVtWAk7PMd&#43;rRTK1ZKLS5kRe0TSMJaAo6s9P5BUoktMl0yJtFrtTCGj7lk0yY6TNghQENH5mkcwYabOgl1zml1h7qGTiDo6v&#43;nO0oyI3Y4XUibyPqYcGx/w85jtsSE2pCLkhkTvA7tGLHGOaGw/Is8WY6iTafOSeB1jsJyWg&#43;a7GVgtslWezn5yA09WpsuCqfFIIJVTAOtmAqlRSArRW1Ikc6q3uRluVrnwiclbb3BAzAfZ7fZ1EAIVQIs2HkimjTVMq&#43;3VWpSfgtFpIK3q5gq9IM5LCflYCWvdswDGWuVUuCkM2fN&#43;zOXt2DgLq3SEy549qbrSmqWX/0Odb1k8AGnx2nzc0N5amqZUJ2&#43;yfQPdMz/ydKs1NbNPUsr9vSWtaAlTH6mGIV0ZYjZz1vFOVTy9SQUORAV8nEaC88OOsUQGam6Z5Apuas91nnSkfVj9zEVD12aibm9HdmRM5WJumjp/qwDQbAY75A6nu0c0NKJ/1wBTKhpQEVLCxwt7coE1Tx2c1G1IR8GRx7MyuVsDAqfKI309pCECGjZEjsaEC1i2kRpu6PDN/4QbRlI0cPQ&#43;ka2W1YxrZx4zI6&#43;2tfj630FgcGt5OPUk2jZ5nOhjJObIfe3GpyQ16WhtLADICq2tJmSJmi/NdJ3YZDkd3ahZG1JEo1JU8&#43;rTWQoBHT6OX&#43;EUZuDG5kEyEAFTapvQNSRAjmWMEZJe2XLBI5hABs0lbLqCS2RckNF5LLW25gEim5coubbkwkOr49V1gq6XjmASDZP4MacsFbzhH8D0zwz8BTTJ/nLTlQs/QdNJPbn4lGsn8NdK2YsWKFX8R/wDe0D7CofVUkgAAAABJRU5ErkJggg==">
+            </a>
+            
+            <a href="https://twitter.com/vickylaiio">
+            <img class="noborder" width="24" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADFUlEQVR4nO1a23XqMBCkBEpICe7g0kF29aWZH&#43;ggdIA7SDqADpIOTAdJB0kH0EHuhwXXFxD4IcmG4zlnvzjH7Ix2pdVqJ5MRI0aMGDFixFAhZCbkiyHXChQHM8CrAnMRmfbtYxQoMFfg25C/Nw14F2tnTb7tFU6sfQrEoRWEzGoTP7e1j5iITIV8UeBbge3lPxeZKvAtZBaTpA&#43;GXCi5a0n&#43;15C/Sn4eFlFEpko&#43;G3Jd/a43WgyZu4/sUotgyEUX4ici7JT8vPgb8OZ1ohp6KUUQMuu68rWEAb78uS8yvaRkChE65Hxr8o7v4p8A1s584SSAxCIfMvSvpMSH2wQzBeYGeD/bC3wCVGwVQ4DYq6/kToHi7Ddg2XglFChCFh5CZrFX38Njc&#43;7M7QioKjoPIYBxp07v5NushgJFk&#43;rrEpT8GAT544oA&#43;xYfXrc9KRTYJhRgUcehTQd1CyWfBypAXsuhuvvAVSHKgmZdR4zBCRDaqcoRtFLgz&#43;kJ0iXiogmQ4mhyN7IiRQXYWIDJZDIxwDKRY6nstgBCZtUQTRie0a1WKW/IvLqBicj0USKhVr3ivQyly9NodpP8IQX6djSKAftaArg0&#43;Ond4cCm5EdtAR5p46tYXlsAsfZpAA4HtcYXNgXe&#43;nY6mDXJ/2MUlK3xr96dD2A3r79eEcis5dV4UNapl/kAIvy0Jn8UoXxZSdq1CWh5ZwGOQlg7S9y96WxBmrenH3Fp8d43uVvWevM7xb0WRsFeuO/0fpAHIX/AXUUBsA8&#43;MeL6AndxHEZ7w7yHmqDRre/hRIgR&#43;j4RhnhPSD7SY8qX5KE0TxZJyVchgCjw5qrE5IIEK3hCQMiXFHM&#43;gyMv1j5dnMB4dPKufbZKueqGPB9tSU68LI/XqfPdAPuYw1pXoeSzAV59w4cJQv4r2givexFa/WflJHaROrc9lkchfirC0AocBTbJB7fNAAocBbZdh686QwBJ2gsE9gps&#43;ppS9&#43;LwRB6lH&#43;hImz5L2aYQa2cGWLroqJ8qJdmtAhsDLAe30l0hZCbWzi5Z376NGDFixDX8BVc7QzrBVv75AAAAAElFTkSuQmCC">
+            </a>
+            
+    </div>
+</div>
+</div>
+</div>
+
+
+<script>
+$('a[href^="\/blog\/free-custom-domain-website-https\/#"]').click(function(e) {
+    e.preventDefault();
+    var target = this.hash;
+    $('html, body').animate({
+    scrollTop: $(target).offset().top
+    }, 500);
+    return false;
+})
+</script>
