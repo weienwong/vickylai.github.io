@@ -1,60 +1,60 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on VickyLai.io</title>
-    <link>https://vickylai.io/blog/</link>
-    <description>Recent content in Blogs on VickyLai.io</description>
+    <title>Verboses on VickyLai.io</title>
+    <link>https://vickylai.io/verbose/</link>
+    <description>Recent content in Verboses on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 06 May 2017 20:04:53 +0800</lastBuildDate>
     
-	<atom:link href="https://vickylai.io/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vickylai.io/verbose/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>When 30 Seconds, StackOverflow, and Sed Saves 30 Minutes</title>
-      <link>https://vickylai.io/blog/when-stackoverflow-sed-saves-30mins/</link>
+      <link>https://vickylai.io/verbose/when-stackoverflow-sed-saves-30mins/</link>
       <pubDate>Sat, 06 May 2017 20:04:53 +0800</pubDate>
       
-      <guid>https://vickylai.io/blog/when-stackoverflow-sed-saves-30mins/</guid>
+      <guid>https://vickylai.io/verbose/when-stackoverflow-sed-saves-30mins/</guid>
       <description>This week, I launched my new website and changed my Twitter username to match. I was about to spend time going through all my old blog posts to find and update the URLs when this very future blog post popped up on my screen like Clippy and shook its pixelated head disapprovingly.
 Here&amp;rsquo;s a worthwhile new habit for you: anytime you find yourself going &amp;ldquo;Ughhh I have to do that?</description>
     </item>
     
     <item>
       <title>Top Free Resources for Developing Coding Superpowers</title>
-      <link>https://vickylai.io/blog/free-resources-for-coding-superpowers/</link>
+      <link>https://vickylai.io/verbose/free-resources-for-coding-superpowers/</link>
       <pubDate>Thu, 27 Apr 2017 08:14:09 +0800</pubDate>
       
-      <guid>https://vickylai.io/blog/free-resources-for-coding-superpowers/</guid>
+      <guid>https://vickylai.io/verbose/free-resources-for-coding-superpowers/</guid>
       <description>I&amp;rsquo;m frequently asked for my opinion on how to get started on being a freelance developer. If you&amp;rsquo;re hoping to live the life of a remote working digital nomad, whichever career you choose, having a little coding expertise in your back pocket will be a big benefit.
 Here&amp;rsquo;s a quick list of resources that you should definitely look at first if you&amp;rsquo;re hoping to gain some coding superpowers for free.</description>
     </item>
     
     <item>
       <title>Things You Need to Know About Becoming a Data Scientist</title>
-      <link>https://vickylai.io/blog/to-be-a-data-scientist/</link>
+      <link>https://vickylai.io/verbose/to-be-a-data-scientist/</link>
       <pubDate>Fri, 31 Mar 2017 13:19:19 +0900</pubDate>
       
-      <guid>https://vickylai.io/blog/to-be-a-data-scientist/</guid>
+      <guid>https://vickylai.io/verbose/to-be-a-data-scientist/</guid>
       <description>&lt;p&gt;I recently attended a panel discussion hosted by General Assembly in Singapore entitled, &amp;ldquo;So you want to be a Data Scientist/Analyst&amp;rdquo;. The panel featured professionals in different stages of their careers and offered a wealth of information to an audience of hopefuls, including tips on how to land a job as a data scientist, and stories debunking myths that color this field. &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>How to Turn Unity into a Tiling Window Manager</title>
-      <link>https://vickylai.io/blog/turn-unity-into-tiling-windows-manager/</link>
+      <link>https://vickylai.io/verbose/turn-unity-into-tiling-windows-manager/</link>
       <pubDate>Wed, 22 Mar 2017 16:10:10 +0800</pubDate>
       
-      <guid>https://vickylai.io/blog/turn-unity-into-tiling-windows-manager/</guid>
+      <guid>https://vickylai.io/verbose/turn-unity-into-tiling-windows-manager/</guid>
       <description>After a long and loving battle experience using i3 as my workhorse window manager on my old laptop, I&amp;rsquo;ve decided to mainly use Unity on my new laptop instead. I&amp;rsquo;m a huge fan of tiling window managers as a result of my i3 experience, however, the time it took to configure everything is longer than I wanted to spend getting set up before getting to work with my new laptop.</description>
     </item>
     
     <item>
       <title>How to Use the Same Dropbox Folder on Dual-boot Windows and Linux</title>
-      <link>https://vickylai.io/blog/same-dropbox-dual-boot/</link>
+      <link>https://vickylai.io/verbose/same-dropbox-dual-boot/</link>
       <pubDate>Fri, 17 Mar 2017 10:58:01 +0800</pubDate>
       
-      <guid>https://vickylai.io/blog/same-dropbox-dual-boot/</guid>
+      <guid>https://vickylai.io/verbose/same-dropbox-dual-boot/</guid>
       <description>I&amp;rsquo;ve now set up two different laptops to dual-boot Windows 10 and different Linux distributions. Here&amp;rsquo;s how to ensure you maintain one Dropbox folder over both operating systems.
 Assuming Windows was there first:
  Mount the Windows drive in Linux Install Dropbox in Linux Sign in to link to Dropbox Immediately change Dropbox folder location to the mounted drive (same Dropbox folder as Windows)  Get it right the first time Dropbox will automatically set up your Dropbox folder when you run it the first time.</description>
@@ -62,19 +62,19 @@ Assuming Windows was there first:
     
     <item>
       <title>Create Desktop Notifications with Terminal and Cron</title>
-      <link>https://vickylai.io/blog/create-desktop-notifications-cron/</link>
+      <link>https://vickylai.io/verbose/create-desktop-notifications-cron/</link>
       <pubDate>Tue, 21 Feb 2017 10:48:38 +0700</pubDate>
       
-      <guid>https://vickylai.io/blog/create-desktop-notifications-cron/</guid>
+      <guid>https://vickylai.io/verbose/create-desktop-notifications-cron/</guid>
       <description>In my last post I talked about moving from Windows 10 to running i3 on Linux, built up from Debian Base System. Among other things, this change has taught me about the benefits of using basic tools and running a minimal, lightweight system. You can achieve a lot of functionality with just command line tools and simple utilities. One example I&amp;rsquo;d like to illustrate in this post is setting up desktop notifications.</description>
     </item>
     
     <item>
       <title>How a Lifelong Windows User Switched to Linux (The Hard Way)</title>
-      <link>https://vickylai.io/blog/how-windows-user-switched-to-linux/</link>
+      <link>https://vickylai.io/verbose/how-windows-user-switched-to-linux/</link>
       <pubDate>Mon, 06 Feb 2017 14:23:59 +0700</pubDate>
       
-      <guid>https://vickylai.io/blog/how-windows-user-switched-to-linux/</guid>
+      <guid>https://vickylai.io/verbose/how-windows-user-switched-to-linux/</guid>
       <description>&lt;p&gt;Let me preface this by saying that I&amp;rsquo;ve always been interested in finding out how things work. If a thing does something, I want to know why, how, and if I can customize it.&lt;/p&gt;
 
 &lt;p&gt;It should come as no surprise that Windows 10 drove me crazy.&lt;/p&gt;</description>
@@ -82,29 +82,29 @@ Assuming Windows was there first:
     
     <item>
       <title>How to Get a Custom Domain Website with HTTPS for (Almost) Free</title>
-      <link>https://vickylai.io/blog/free-custom-domain-website-https/</link>
+      <link>https://vickylai.io/verbose/free-custom-domain-website-https/</link>
       <pubDate>Sat, 28 Jan 2017 13:16:17 +0700</pubDate>
       
-      <guid>https://vickylai.io/blog/free-custom-domain-website-https/</guid>
+      <guid>https://vickylai.io/verbose/free-custom-domain-website-https/</guid>
       <description>&lt;p&gt;I got annoyed with WordPress.com. While using the service has its pros (like https and a mobile responsive website, and being very visual and beginner-friendly) it&amp;rsquo;s limiting. For someone who&amp;rsquo;s comfortable enough to be tweaking CSS but who&amp;rsquo;s not interested in creating their own theme (or paying upwards of $50 for one), I felt I wasn&amp;rsquo;t really the type of consumer WordPress.com was suited to.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Python Programming Fundamentals: Iterations</title>
-      <link>https://vickylai.io/blog/python-programming-fundamentals-iterations/</link>
+      <link>https://vickylai.io/verbose/python-programming-fundamentals-iterations/</link>
       <pubDate>Wed, 18 Jan 2017 21:58:28 +0700</pubDate>
       
-      <guid>https://vickylai.io/blog/python-programming-fundamentals-iterations/</guid>
+      <guid>https://vickylai.io/verbose/python-programming-fundamentals-iterations/</guid>
       <description>I&amp;rsquo;ve been working in Python 3 for about a week, and so far greatly enjoy it. To me, learning code syntax (and programming in general) amounts to an amalgamation of lego blocks: once it&amp;rsquo;s understood what a certain color of block does, it&amp;rsquo;s straightforward to combine them to create the structure you&amp;rsquo;re looking for.
 That said, some blocks can be a little confusing at first. I found documentation relating to iteration in Python to be a little hard to digest, mostly because of subtle differences in terminology: iteration, iterator, iterating, iterable&amp;hellip; it&amp;rsquo;s enough to make your eyes glaze over.</description>
     </item>
     
     <item>
       <title>I&#39;ve Been a Backend Coder for A Week: This is How I Made a Twitter Stream</title>
-      <link>https://vickylai.io/blog/how-i-made-a-twitter-stream/</link>
+      <link>https://vickylai.io/verbose/how-i-made-a-twitter-stream/</link>
       <pubDate>Fri, 06 Jan 2017 16:39:29 +0700</pubDate>
       
-      <guid>https://vickylai.io/blog/how-i-made-a-twitter-stream/</guid>
+      <guid>https://vickylai.io/verbose/how-i-made-a-twitter-stream/</guid>
       <description>This post covers my initial adventures in exploring Twitter&amp;rsquo;s Streaming API. I&amp;rsquo;ll talk about:
  Getting started making a Twitter Streaming program using a template Problems arising from programming in Python with Windows 10 and Unicode Refining the search function  You can follow along with my template on Github.
 1. Getting started If you&amp;rsquo;re new to Twitter&amp;rsquo;s Streaming API like I was this morning, here it is from the top.</description>

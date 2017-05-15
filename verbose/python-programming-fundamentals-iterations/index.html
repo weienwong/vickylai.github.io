@@ -16,7 +16,7 @@
     -verbose
 
 </title>
-<link rel="canonical" href="https://vickylai.io/blog/when-stackoverflow-sed-saves-30mins/">
+<link rel="canonical" href="https://vickylai.io/verbose/python-programming-fundamentals-iterations/">
 
 
 <script type="text/javascript">
@@ -32,13 +32,13 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 
-<script src="/js/tagline.js?t=1494828294"></script>
+<script src="/js/tagline.js?t=1494840377"></script>
 
 <link href="https://fonts.googleapis.com/css?family=Work+Sans|Inconsolata" rel="stylesheet"> 
 
 
     
-    <link rel="stylesheet" href="https://vickylai.io/css/blog.css?t=1494828294">
+    <link rel="stylesheet" href="https://vickylai.io/css/blog.css?t=1494840377">
     
 
 
@@ -83,7 +83,7 @@ ga('send', 'pageview');
         <a href="/">VickyLai.io</a>
       </span>
       <span class="nav-item">
-        <a href="https://vickylai.io/blog">Blog Posts</a>
+        <a href="https://vickylai.io/verbose">Blog Posts</a>
       </span>
       <span class="nav-item">
         <a href="https://tinyletter.com/vickylai" target="_blank">Subscribe</a>
@@ -100,31 +100,31 @@ ga('send', 'pageview');
 </section>
 
     <div class="container">
-        <h1 class="title is-1 top-pad post-title"><a href="/blog/when-stackoverflow-sed-saves-30mins/">When 30 Seconds, StackOverflow, and Sed Saves 30 Minutes</a></h1>
+        <h1 class="title is-1 top-pad post-title"><a href="/verbose/python-programming-fundamentals-iterations/">Python Programming Fundamentals: Iterations</a></h1>
             <div class="post-data">
-                May 6, 2017 |
-                2 minutes read
+                Jan 18, 2017 |
+                5 minutes read
             </div>
             
             
                 <div class="blog-share">
                 Share this:
-                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20When%2030%20Seconds%2c%20StackOverflow%2c%20and%20Sed%20Saves%2030%20Minutes%20https%3a%2f%2fvickylai.io%2fblog%2fwhen-stackoverflow-sed-saves-30mins%2f"
+                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20Python%20Programming%20Fundamentals%3a%20Iterations%20https%3a%2f%2fvickylai.io%2fverbose%2fpython-programming-fundamentals-iterations%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 twitter
                 <span class="hidden">Twitter</span>
                 </a> //
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fvickylai.io%2fblog%2fwhen-stackoverflow-sed-saves-30mins%2f"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fvickylai.io%2fverbose%2fpython-programming-fundamentals-iterations%2f"
                 onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                 facebook
                 <span class="hidden">Facebook</span>
                 </a> //
-                <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://vickylai.io/&title=When%2030%20Seconds%2c%20StackOverflow%2c%20and%20Sed%20Saves%2030%20Minutes&source=Vicky%20Lai"
+                <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://vickylai.io/&title=Python%20Programming%20Fundamentals%3a%20Iterations&source=Vicky%20Lai"
                 onclick="window.open(this.href, 'linkedin-share','width=980,height=980');return false;">
                 linkedin
                 <span class="hidden">LinkedIn</span>
                 </a> //
-                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fvickylai.io%2fblog%2fwhen-stackoverflow-sed-saves-30mins%2f"
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fvickylai.io%2fverbose%2fpython-programming-fundamentals-iterations%2f"
                 onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                 google+
                 <span class="hidden">Google+</span>
@@ -137,43 +137,93 @@ ga('send', 'pageview');
     <div class="container markdown top-pad">
         
 
-<p>This week, I launched my new website and changed my Twitter username to match. I was about to spend time going through all my old blog posts to find and update the URLs when this very future blog post popped up on my screen like <a href="http://knowyourmeme.com/memes/clippy">Clippy</a> and shook its pixelated head disapprovingly.</p>
+<p>I&rsquo;ve been working in Python 3 for about a week, and so far greatly enjoy it. To me, learning code syntax (and programming in general) amounts to an amalgamation of lego blocks: once it&rsquo;s understood what a certain color of block does, it&rsquo;s straightforward to combine them to create the structure you&rsquo;re looking for.</p>
 
-<p>Here&rsquo;s a worthwhile new habit for you: anytime you find yourself going &ldquo;Ughhh I have to do <em>that?</em> It&rsquo;ll take forever!&rdquo; head on over to</p>
+<p>That said, some blocks can be a little confusing at first. I found documentation relating to iteration in Python to be a little hard to digest, mostly because of subtle differences in terminology: iteration, iterator, iterating, iterable&hellip; it&rsquo;s enough to make your eyes glaze over. I found concrete examples to be most useful in learning these concepts; this post aims to summarize what I&rsquo;ve learned.</p>
 
-<p><img src="/blogimg/so.gif" alt="Sparkly StackOverflow, Savior of Devs" /></p>
+<p>There are a few different ways to achieve iterations in Python. I&rsquo;ll present some of these ways in this post and discuss appropriate situations for each.</p>
 
-<p>and search for &ldquo;terminal command [the thing you&rsquo;re trying to do]”.</p>
+<h2 id="for-loop">For loop</h2>
 
-<p>Voila! I&rsquo;ve just saved you x amount of time. (You&rsquo;ll just spend it browsing gifs on Twitter - why do I bother?!)</p>
-
-<h1 id="update-dozens-of-previous-blog-posts-in-milliseconds-with-sed">Update dozens of previous blog posts in milliseconds with sed</h1>
-
-<p>Sed is your friend. This amazingly powerful tool lives in your terminal and is available to be totally underused for things like finding and replacing strings in files. (I seem to have a habit of suggesting ways to totally underuse powerful tools - I previously outlined how to <a href="https://vickylai.io/blog/create-desktop-notifications-cron/">use cron to create desktop notifications</a>, but I digress.)</p>
-
-<p>Run this command to search all the files in your current directory and replace a given string.</p>
-
-<pre><code class="language-sh">// to replace 'foo' with 'bar'
-$ sed -i -- 's/foo/bar/g' *
+<pre><code class="language-python">for iterating_var in iterable:
+    statement/statements
 </code></pre>
 
-<p>The above is <strong>non-recursive</strong>, meaning it won&rsquo;t look in subdirectories. There are ways to do this recursively, as well as limit the search to specific file extensions: <a href="https://unix.stackexchange.com/questions/112023/how-can-i-replace-a-string-in-a-files">see the full answer on StackOverflow</a>.</p>
+<p>For loops are handy things. They&rsquo;re straightforward to understand, which is especially helpful if you&rsquo;re reading someone else&rsquo;s code and trying to follow their thought process. They can acheive as much or as little as you need, and each operation can be clearly written out.</p>
 
-<h2 id="break-it-down">Break it down:</h2>
+<p>An <code>iterating_var</code> can be any of Python&rsquo;s data types: a letter in a string, an item from a list, an index from a list, integers, etc. An <code>iterable</code> can also take different forms: a string of word(s), a range of numbers, a list, and so on. A <code>statement</code> or multiple <code>statements</code> indicates <em>doing something:</em> anything from mathematical expressions to simply printing a result. Check out the following examples, which simply print each <code>iterating_var</code> of an <code>iterable</code> on a new line:</p>
 
-<p><code>-i</code> will change the original, and stands for &ldquo;in-place.&rdquo;<br />
-<code>s</code> is for substitute, so we can find and replace.<br />
-<code>foo</code> is the string we&rsquo;ll be taking away,<br />
-<code>bar</code> is the string we&rsquo;ll use instead today.<br />
-<code>g</code> as in &ldquo;global&rdquo; means &ldquo;all occurrences, please.&rdquo;<br />
-<code>*</code> denotes all file types. (No more rhymes. What a tease.)</p>
+<pre><code class="language-python">for letter in 'Hello world':
+    print(letter)
 
-<p><a href="http://www.folkstalk.com/2012/01/sed-command-in-unix-examples.html">Here are some more examples</a> for using sed that you may find handy.</p>
+for i in range(10):
+    print(i)
+
+breakfastmenu = ['toast','eggs','waffles','coffee']
+for choice in breakfastmenu:
+    print(choice)
+</code></pre>
+
+<p>You can even use a for loop in a more compact situation, such as I did in <a href="https://github.com/vickylaiio/30-days-of-code/blob/master/day7_arrays.py">my solution</a> to HackerRank&rsquo;s <a href="https://www.hackerrank.com/challenges/30-arrays">30 Days of Code - Day 7: Arrays</a> challenge:</p>
+
+<pre><code class="language-python">arrstring = ' '.join(str(e) for e in arr)
+</code></pre>
+
+<p>The downside to for loops is that they can be a bit verbose, depending on how much you&rsquo;re trying to achieve. Still, for anyone learning Python or hoping to make their code as easily understood as possible, for loops are still the most straightforward choice for iterations.</p>
+
+<h2 id="list-comprehensions">List comprehensions</h2>
+
+<pre><code class="language-python">newlist = [statement/statements for iterating_var in iterable]
+</code></pre>
+
+<p>In my opinion, list comprehensions are the most elegant of the solutions discussed in this post. Once you have a grasp of how they work, you can perform concise and effective iterations with very little code.</p>
+
+<p>List comprehensions will always return a list, which may or may not be appropriate for your situation. If appropriate, however, simply defining the variable name of the list can often help you skip some steps.</p>
+
+<p>For example, I can use list comprehension to quickly calculate and print tip percentage on a few bar tabs at once:</p>
+
+<pre><code class="language-python">tabs = [23.60, 42.10, 17.50]
+tabsplustips = [round(tab*1.15, 2) for tab in tabs]
+print(tabsplustips)
+
+&gt;&gt;&gt; [27.14, 48.41, 20.12]
+</code></pre>
+
+<p>In one concise line, we&rsquo;ve taken each tab amount, added 15% tip, rounded it to the nearest cent, and made a new list of the tabs plus the tip values.</p>
+
+<p>List comprehensions can be an elegant tool, depending on the variety of statements you want to iterate through, and whether or not output to a list is useful to you. The more statements you add, the more complicated your list comprehension begins to look, especially once you get into nested list comprehensions. If your code isn&rsquo;t well annotated, it may become difficult for another reader to figure out.</p>
+
+<h2 id="map">Map</h2>
+
+<pre><code class="language-python">map(function, iterable)
+</code></pre>
+
+<p>Map is, in many ways, a non-idiomatic function for iteration in Python. It&rsquo;s pretty compact, which can make it easy to write improperly with a missing comma or parenthesis, and it&rsquo;s more limited than for loops or list comprehensions in its usage. Basically, it applies your <code>statement</code> to every instance of your defined <code>iterable</code>.</p>
+
+<p>I used the map function in <a href="https://github.com/vickylaiio/simple-statistics/blob/master/weighted_mean.py">my solution</a> to HackerRank&rsquo;s <a href="https://www.hackerrank.com/challenges/s10-weighted-mean">10 Days of Statistics - Day 0: Weighted Mean</a> challenge. In this example, it&rsquo;s casting each element of <code>input()</code> (the iterable) from string representation to integer representation.</p>
+
+<pre><code class="language-python">values = list(map(int, input().split()))
+weights = list(map(int, input().split()))
+
+output = sum([x[0] * x[1] for x in zip(values, weights)]) / sum(weights)
+
+print(round(output, 1))
+</code></pre>
+
+<p>It&rsquo;s worthwhile to note that map by itself returns an iterator; if it&rsquo;s a list you want, it&rsquo;s an extra step to get the list representation, as in the example above.</p>
+
+<p>In truth, I&rsquo;ve had a hard time coming up with appropriate situations for the use of map over simply using a list comprehension. Aside from situations similar to the above, it seems to me to be a rather un-Pythonic way to iterate. It can be advantageous as a concise method of doing simple, sort of &lsquo;on-the-spot&rsquo; iterations; otherwise, my preference would be to use a list comprehension instead.</p>
+
+<p>&nbsp;<br />
+&nbsp;<br />
+I hope these examples have been useful to you in your understanding of iterations with Python 3! If you have questions or examples I haven&rsquo;t thought of, feel free to share them here or on Twitter: <a href="https://twitter.com/vickylaiio">@vickylaiio</a>.</p>
+
+<p>Thanks for reading!</p>
 
     </div>
 
     
-    <div class="container top-pad"> Like this post? <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hey%20@vickylaiio:%20I%20just%20read%20https%3a%2f%2fvickylai.io%2fblog%2fwhen-stackoverflow-sed-saves-30mins%2f%20and..."
+    <div class="container top-pad"> Like this post? <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hey%20@vickylaiio:%20I%20just%20read%20https%3a%2f%2fvickylai.io%2fverbose%2fpython-programming-fundamentals-iterations%2f%20and..."
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></div>
             
     <div class="disqus">
@@ -183,15 +233,14 @@ $ sed -i -- 's/foo/bar/g' *
 <div class="container top-pad"><hr>
     <div class="pagination columns is-mobile top-pad">
         <div class="column is-one-third has-text-centered no-padding">
-            
-            <a class="btn inactive">Prev</a>
+            <a class="btn previous" href="/verbose/free-custom-domain-website-https/">Prev</a>
             
         </div>
         <div class="column is-one-third has-text-centered no-padding">
-            <a class="btn up" href="/blog/when-stackoverflow-sed-saves-30mins/#top">UP, JEEVES.</a>
+            <a class="btn up" href="/verbose/python-programming-fundamentals-iterations/#top">UP, JEEVES.</a>
         </div>
         <div class="column is-one-third has-text-centered no-padding">
-            <a class="btn next" href="/blog/free-resources-for-coding-superpowers/">Next</a>
+            <a class="btn next" href="/verbose/how-i-made-a-twitter-stream/">Next</a>
             
         </div>
     </div>
@@ -224,7 +273,7 @@ $ sed -i -- 's/foo/bar/g' *
 
 
 <script>
-$('a[href^="\/blog\/when-stackoverflow-sed-saves-30mins\/#"]').click(function(e) {
+$('a[href^="\/verbose\/python-programming-fundamentals-iterations\/#"]').click(function(e) {
     e.preventDefault();
     var target = this.hash;
     $('html, body').animate({

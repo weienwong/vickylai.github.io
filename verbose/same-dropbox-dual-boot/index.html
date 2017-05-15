@@ -16,7 +16,7 @@
     -verbose
 
 </title>
-<link rel="canonical" href="https://vickylai.io/blog/turn-unity-into-tiling-windows-manager/">
+<link rel="canonical" href="https://vickylai.io/verbose/same-dropbox-dual-boot/">
 
 
 <script type="text/javascript">
@@ -32,13 +32,13 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 
-<script src="/js/tagline.js?t=1494828294"></script>
+<script src="/js/tagline.js?t=1494840377"></script>
 
 <link href="https://fonts.googleapis.com/css?family=Work+Sans|Inconsolata" rel="stylesheet"> 
 
 
     
-    <link rel="stylesheet" href="https://vickylai.io/css/blog.css?t=1494828294">
+    <link rel="stylesheet" href="https://vickylai.io/css/blog.css?t=1494840377">
     
 
 
@@ -83,7 +83,7 @@ ga('send', 'pageview');
         <a href="/">VickyLai.io</a>
       </span>
       <span class="nav-item">
-        <a href="https://vickylai.io/blog">Blog Posts</a>
+        <a href="https://vickylai.io/verbose">Blog Posts</a>
       </span>
       <span class="nav-item">
         <a href="https://tinyletter.com/vickylai" target="_blank">Subscribe</a>
@@ -100,31 +100,31 @@ ga('send', 'pageview');
 </section>
 
     <div class="container">
-        <h1 class="title is-1 top-pad post-title"><a href="/blog/turn-unity-into-tiling-windows-manager/">How to Turn Unity into a Tiling Window Manager</a></h1>
+        <h1 class="title is-1 top-pad post-title"><a href="/verbose/same-dropbox-dual-boot/">How to Use the Same Dropbox Folder on Dual-boot Windows and Linux</a></h1>
             <div class="post-data">
-                Mar 22, 2017 |
-                4 minutes read
+                Mar 17, 2017 |
+                3 minutes read
             </div>
             
             
                 <div class="blog-share">
                 Share this:
-                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20How%20to%20Turn%20Unity%20into%20a%20Tiling%20Window%20Manager%20https%3a%2f%2fvickylai.io%2fblog%2fturn-unity-into-tiling-windows-manager%2f"
+                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20How%20to%20Use%20the%20Same%20Dropbox%20Folder%20on%20Dual-boot%20Windows%20and%20Linux%20https%3a%2f%2fvickylai.io%2fverbose%2fsame-dropbox-dual-boot%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 twitter
                 <span class="hidden">Twitter</span>
                 </a> //
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fvickylai.io%2fblog%2fturn-unity-into-tiling-windows-manager%2f"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fvickylai.io%2fverbose%2fsame-dropbox-dual-boot%2f"
                 onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                 facebook
                 <span class="hidden">Facebook</span>
                 </a> //
-                <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://vickylai.io/&title=How%20to%20Turn%20Unity%20into%20a%20Tiling%20Window%20Manager&source=Vicky%20Lai"
+                <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://vickylai.io/&title=How%20to%20Use%20the%20Same%20Dropbox%20Folder%20on%20Dual-boot%20Windows%20and%20Linux&source=Vicky%20Lai"
                 onclick="window.open(this.href, 'linkedin-share','width=980,height=980');return false;">
                 linkedin
                 <span class="hidden">LinkedIn</span>
                 </a> //
-                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fvickylai.io%2fblog%2fturn-unity-into-tiling-windows-manager%2f"
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fvickylai.io%2fverbose%2fsame-dropbox-dual-boot%2f"
                 onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                 google+
                 <span class="hidden">Google+</span>
@@ -137,161 +137,78 @@ ga('send', 'pageview');
     <div class="container markdown top-pad">
         
 
-<p>After a long and loving <del>battle</del> experience using i3 as my workhorse window manager on my old laptop, I&rsquo;ve decided to mainly use Unity on my new laptop instead. I&rsquo;m a huge fan of tiling window managers as a result of my i3 experience, however, the time it took to configure everything is longer than I wanted to spend getting set up before getting to work with my new laptop. (Read: just can&rsquo;t resist spending hours ricing.)</p>
+<p>I&rsquo;ve now set up two different laptops to dual-boot Windows 10 and different Linux distributions. Here&rsquo;s how to ensure you maintain one Dropbox folder over both operating systems.</p>
 
-<p>I got really hooked on i3&rsquo;s functionality though and needed to find ways to replicate it in Unity. Thankfully it only really took a few small adjustments. For anyone looking to use a full-featured desktop environment that comes pretty close to the functionality of a tiling window manager, I hope these tweaks are useful for you.</p>
+<p>Assuming Windows was there first:</p>
 
-<h1 id="workspaces">Workspaces</h1>
+<ol>
+<li>Mount the Windows drive in Linux</li>
+<li>Install Dropbox in Linux</li>
+<li>Sign in to link to Dropbox</li>
+<li>Immediately change Dropbox folder location to the mounted drive (same Dropbox folder as Windows)</li>
+</ol>
 
-<p>You can create workspaces in Unity that resemble workspaces in i3.</p>
+<h1 id="get-it-right-the-first-time">Get it right the first time</h1>
 
-<h2 id="set-up-workspaces">Set up workspaces</h2>
+<p>Dropbox will automatically set up your Dropbox folder when you run it the first time. On Windows it&rsquo;s typically located in your C:\ or D:\ drive as <code>D:\Dropbox</code> and on Linux, it&rsquo;ll go into <code>home/Dropbox</code> by default. They key to being able to specify the folder location is to do so the <em>very first time</em> you start Dropbox.</p>
 
-<p><strong>Where to find it:</strong><br />
-Unity Tweak Tool &gt; Workspace Settings</p>
+<h1 id="mount-the-windows-drive-in-linux">Mount the Windows Drive in Linux</h1>
 
-<p>Set &ldquo;Horizontal workspaces&rdquo; to as many as you&rsquo;d like, and &ldquo;Vertical workspaces&rdquo; to 1. This will allow you to access spaces by moving right and left.</p>
+<p>If you started with Windows 10, you&rsquo;ll need to make sure the disk that contains your Dropbox folder is mounted in Linux so that you can access it.</p>
 
-<p><img src="/blogimg/workspace-settings.png" alt="Workspace Settings" /></p>
+<p>You can mount the Windows disk in Linux using the terminal with these steps:</p>
 
-<h1 id="keyboard-shortcuts">Keyboard Shortcuts</h1>
+<h2 id="1-find-the-correct-disk-partition-address">1. Find the correct disk partition address</h2>
 
-<h2 id="set-keyboard-shortcuts">Set keyboard shortcuts</h2>
+<p>Type <code>sudo fdisk -l</code>. This will return a list of your partitions and information on them. Look at the &ldquo;Size&rdquo; and &ldquo;Type&rdquo; categories to determine which list item is the Windows disk partition that you wish to mount. Its address will look something like <code>/dev/sda2</code>.</p>
 
-<p><strong>Where to find it:</strong><br />
-System Settings &gt; Keyboard</p>
+<h2 id="2-make-a-directory-to-mount-the-drive-to">2. Make a directory to mount the drive to</h2>
 
-<h2 id="switch-workspaces">Switch workspaces</h2>
+<p>Basically, this is what Linux will use to refer to your Windows drive.<br />
+Type <code>sudo mkdir -p /mnt/winD</code> (where <code>winD</code> is whatever you want to call your Windows disk)</p>
 
-<p><strong>Where to find it:</strong><br />
-System Settings &gt; Keyboard &gt; Navigation</p>
+<h2 id="3-mount-the-disk">3. Mount the disk</h2>
 
-<p>You can set keyboard shortcuts that assign numbers to your workspaces, and that let you move left and right between them.</p>
+<p>The syntax follows the format: [mount command] [file system type] [windows disk address] [target address]<br />
+<code>sudo mount -t ntfs /dev/sda2 /mnt/winD</code></p>
 
-<p><img src="/blogimg/keyboard-shortcut-workspaces.png" alt="Keyboard shortcuts for workspaces" /></p>
+<h2 id="4-mount-disk-automatically-on-boot">4. Mount disk automatically on boot</h2>
 
-<h2 id="move-windows-around-snap">Move windows around (snap)</h2>
+<p>Edit your <code>/etc/fstab</code> file to mount the disk automatically when you boot Linux.<br />
+<code>sudo vi /etc/fstab</code><br />
+Add the mount instruction to the file. The syntax is in the format: [windows disk address] [target address] [file system type] [options] [dump] [pass]<br />
+<code>/dev/sda2 /mnt/winD fat32 defaults 0 2</code></p>
 
-<p><strong>Where to find it:</strong><br />
-System Settings &gt; Keyboard &gt; Windows</p>
+<h1 id="install-dropbox-in-linux">Install Dropbox in Linux</h1>
 
-<p>You can maximize and restore windows using shortcut keys. In my case I have them set to &ldquo;Ctrl+Super+Up&rdquo; and &ldquo;Ctrl+Super+Down&rdquo; respectively.</p>
+<p><a href="https://www.dropbox.com/install-linux">Install Dropbox</a> via package download or using the terminal. The completed installation will produce a GUI sign-in.</p>
 
-<p><img src="/blogimg/move-windows.png" alt="Moving windows with shortcut keys" /></p>
+<p><img src="/pixels/dropbox-1.jpg" alt="Aforementioned GUI" /></p>
 
-<p>I discovered this by accident, and I&rsquo;m not sure if it&rsquo;s listed somewhere I can&rsquo;t find. If I press &ldquo;Ctrl+Super&rdquo; and a left or right arrow key, I can snap a window to the left or right half of the screen.</p>
+<h1 id="sign-in-to-link-to-dropbox">Sign in to link to Dropbox</h1>
 
-<h2 id="custom-shortcuts">Custom shortcuts</h2>
+<p>Input your credentials and wait while Dropbox does its thing. Once you see the &ldquo;Congratulations!&rdquo; message, stop! Don&rsquo;t click the big obvious button, and read on.</p>
 
-<p><strong>Where to find it:</strong><br />
-System Settings &gt; Keyboard &gt; Custom Shortcuts</p>
+<p><img src="/pixels/dropbox-2.jpg" alt="Congratulations screen" /></p>
 
-<p>&ldquo;Custom Shortcuts&rdquo; allows you to set any keybinds you&rsquo;re missing from i3. The most important ones for me were the shortcuts to launch a terminal and to use rofi.</p>
+<h1 id="immediately-change-your-dropbox-folder-location-to-the-mounted-drive">Immediately change your Dropbox folder location to the mounted drive</h1>
 
-<p><img src="/blogimg/custom-shortcuts.png" alt="Custom Keyboard Shortcuts" /></p>
+<p>Click on &ldquo;Advanced Settings&rdquo; and change &ldquo;Dropbox location&rdquo; to the Dropbox folder on your mounted drive. This should be the same folder as in your Windows setup. Ok, now you can click the big obvious &ldquo;Open my Dropbox folder&rdquo; button. You&rsquo;re done!</p>
 
-<h1 id="lose-the-launcher">Lose the Launcher</h1>
+<p><img src="/pixels/dropbox-3.jpg" alt="Advanced settings screen" /></p>
 
-<p><strong>Where to find it:</strong><br />
-Unity Tweak Tool &gt; Launcher</p>
+<h2 id="i-didn-t-read-your-article-before-clicking-the-big-obvious-button-and-now-i-have-two-folders">I didn&rsquo;t read your article before clicking the big obvious button and now I have two folders.</h2>
 
-<p>Turn on &ldquo;Auto-hide&rdquo; and set &ldquo;Reveal sensitivity&rdquo; to zero.</p>
+<p>Uninstall Dropbox on Linux, making sure you get all the bits at <code>/usr/bin/dropbox</code>. Install Dropbox again and this time, read first! :)</p>
 
-<p><img src="/blogimg/off-launcher.png" alt="Turn off launcher" /></p>
+<p>&nbsp;&nbsp;</p>
 
-<h1 id="start-programs-automatically-at-logon">Start programs automatically at logon</h1>
-
-<p><strong>Where to find it:</strong><br />
-Startup Applications</p>
-
-<p>Similar to using <code>@reboot</code> with Cron.</p>
-
-<p><img src="/blogimg/startup-applications.png" alt="Startup Applications" /></p>
-
-<h1 id="ricing">Ricing</h1>
-
-<p>C&rsquo;mon, of course I wasn&rsquo;t just going to leave it stock&hellip;</p>
-
-<p><img src="/blogimg/riced-unity.png" alt="Riced Unity" /></p>
-
-<h2 id="unity-tweak-tool">Unity Tweak Tool</h2>
-
-<p>You can do a fair bit with Unity Tweak Tool. Here&rsquo;s my setup:</p>
-
-<p><strong>Theme</strong>: Numix<br />
-<strong>Icons</strong>: Numix-circle<br />
-<strong>Cursor</strong>: Paper<br />
-<strong>Default font</strong>: Noto Sans CJK JP Light 10<br />
-<strong>Monospace font</strong>: Ubuntu Mono Regular<br />
-<strong>Document font</strong>: Sans Regular 11<br />
-<strong>Window title font</strong>: Noto Sans CJK JP Light 10</p>
-
-<h2 id="remove-panel-top-status-bar-shadow">Remove Panel (top status bar) shadow</h2>
-
-<p><strong>Where to find it:</strong><br />
-Rename or delete this file: <code>/usr/share/unity/icons/panel_shadow.png</code></p>
-
-<p>Log out and in again to restart Unity.</p>
-
-<h2 id="panel-opacity">Panel opacity</h2>
-
-<p><strong>Where to find it:</strong><br />
-Unity Tweak Tool &gt; Panel &gt; Transparency level</p>
-
-<h1 id="misc-other-settings">Misc other settings</h1>
-
-<h2 id="turn-off-web-apps">Turn off web apps</h2>
-
-<p><strong>Where to find it:</strong><br />
-Unity Tweak Tool &gt; Web Apps &gt; Integration prompts OFF, uncheck Preauthorized domains</p>
-
-<h2 id="autostart-open-vpn">Autostart Open VPN</h2>
-
-<p>Not strictly a Unity thing, but useful.</p>
-
-<p>Download required packages:
-<code>openvpn</code><br />
-<code>network-manager-openvpn</code><br />
-<code>network-manager-openvpn-gnome</code></p>
-
-<p>Download your <code>client.ovpn</code> file from your console page and rename it with <code>client.conf</code>.<br />
-Create a <code>keys.txt</code> file with your username on line 1 and your password on line 2. (Yeah, it&rsquo;s plain text. Ubuntu&rsquo;s <code>.Private</code> encrypted folder is a good place to store it.)</p>
-
-<p>In the <code>client.conf</code> file:
-- replace instances of &ldquo;openvpn&rdquo; with your actual IP address
-- add the <code>keys.txt</code> file name directly after <code>auth-user-pass</code>, just like this:</p>
-
-<pre><code>auth-user-pass keys.txt
-</code></pre>
-
-<p>Add both <code>client.conf</code> and <code>keys.txt</code> to <code>/etc/openvpn</code></p>
-
-<p>Finally, in <code>/etc/default/openvpn</code>, uncomment <code>AUTOSTART=&quot;all&quot;</code></p>
-
-<h2 id="display-ip-address-in-the-panel">Display IP address in the Panel</h2>
-
-<p>Uses a light little utility called <code>indicator-ip</code>.</p>
-
-<p>From the terminal, run <code>sudo apt install indicator-ip</code>.</p>
-
-<p>Add it to Startup Applications to run it automatically.</p>
-
-<p><img src="/blogimg/indicator-ip.png" alt="indicator-ip startup" /></p>
-
-<h2 id="if-you-have-a-cat">If you have a cat</h2>
-
-<p>Maybe uncheck this System Settings &gt; Keyboard box:</p>
-
-<p><img src="/blogimg/if-cat.png" alt="Key press repeat" /></p>
-
-<p>Hope that was helpful! Check back for more tips later - I&rsquo;ll continue to update this post as I discover them!</p>
-
-<p>Have one to share? Let me know on Twitter: <a href="https://twitter.com/vickylaiio">@vickylaiio</a></p>
+<p>I hope you found this helpful! If you have questions or want to bug me about using jpgs for screenshots, you can find me on Twitter <a href="https://twitter.com/vickylaiio">@vickylaiio</a>. :)</p>
 
     </div>
 
     
-    <div class="container top-pad"> Like this post? <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hey%20@vickylaiio:%20I%20just%20read%20https%3a%2f%2fvickylai.io%2fblog%2fturn-unity-into-tiling-windows-manager%2f%20and..."
+    <div class="container top-pad"> Like this post? <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hey%20@vickylaiio:%20I%20just%20read%20https%3a%2f%2fvickylai.io%2fverbose%2fsame-dropbox-dual-boot%2f%20and..."
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></div>
             
     <div class="disqus">
@@ -301,14 +218,14 @@ Create a <code>keys.txt</code> file with your username on line 1 and your passwo
 <div class="container top-pad"><hr>
     <div class="pagination columns is-mobile top-pad">
         <div class="column is-one-third has-text-centered no-padding">
-            <a class="btn previous" href="/blog/to-be-a-data-scientist/">Prev</a>
+            <a class="btn previous" href="/verbose/turn-unity-into-tiling-windows-manager/">Prev</a>
             
         </div>
         <div class="column is-one-third has-text-centered no-padding">
-            <a class="btn up" href="/blog/turn-unity-into-tiling-windows-manager/#top">UP, JEEVES.</a>
+            <a class="btn up" href="/verbose/same-dropbox-dual-boot/#top">UP, JEEVES.</a>
         </div>
         <div class="column is-one-third has-text-centered no-padding">
-            <a class="btn next" href="/blog/same-dropbox-dual-boot/">Next</a>
+            <a class="btn next" href="/verbose/create-desktop-notifications-cron/">Next</a>
             
         </div>
     </div>
@@ -341,7 +258,7 @@ Create a <code>keys.txt</code> file with your username on line 1 and your passwo
 
 
 <script>
-$('a[href^="\/blog\/turn-unity-into-tiling-windows-manager\/#"]').click(function(e) {
+$('a[href^="\/verbose\/same-dropbox-dual-boot\/#"]').click(function(e) {
     e.preventDefault();
     var target = this.hash;
     $('html, body').animate({
