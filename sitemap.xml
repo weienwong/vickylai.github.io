@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://vickylai.io/verbose/coding-sucks-frequent-errors/</loc>
+    <lastmod>2017-05-16T10:46:46+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://vickylai.io/verbose/when-stackoverflow-sed-saves-30mins/</loc>
     <lastmod>2017-05-06T20:04:53+08:00</lastmod>
   </url>
@@ -59,7 +64,7 @@
   
   <url>
     <loc>https://vickylai.io/tags/backend/</loc>
-    <lastmod>2017-04-27T08:14:09+08:00</lastmod>
+    <lastmod>2017-05-16T10:46:46+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -70,7 +75,7 @@
   
   <url>
     <loc>https://vickylai.io/tags/coding/</loc>
-    <lastmod>2017-05-06T20:04:53+08:00</lastmod>
+    <lastmod>2017-05-16T10:46:46+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -111,6 +116,12 @@
   </url>
   
   <url>
+    <loc>https://vickylai.io/tags/javascript/</loc>
+    <lastmod>2017-05-16T10:46:46+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://vickylai.io/tags/linux/</loc>
     <lastmod>2017-05-06T20:04:53+08:00</lastmod>
     <priority>0</priority>
@@ -130,13 +141,13 @@
   
   <url>
     <loc>https://vickylai.io/verbose/</loc>
-    <lastmod>2017-05-06T20:04:53+08:00</lastmod>
+    <lastmod>2017-05-16T10:46:46+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://vickylai.io/</loc>
-    <lastmod>2017-05-06T20:04:53+08:00</lastmod>
+    <lastmod>2017-05-16T10:46:46+07:00</lastmod>
     <priority>0</priority>
   </url>
   

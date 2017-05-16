@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on VickyLai.io</title>
+    <link>https://vickylai.io/tags/javascript/</link>
+    <description>Recent content in Javascript on VickyLai.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 May 2017 10:46:46 +0700</lastBuildDate>
+    
+	<atom:link href="https://vickylai.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Coding Sucks: a Cheatsheet for Frequent Errors</title>
+      <link>https://vickylai.io/verbose/coding-sucks-frequent-errors/</link>
+      <pubDate>Tue, 16 May 2017 10:46:46 +0700</pubDate>
+      
+      <guid>https://vickylai.io/verbose/coding-sucks-frequent-errors/</guid>
+      <description>Here&amp;rsquo;s some complaining a quick overview of some code that has confounded me more than once. I&amp;rsquo;m told even very experienced developers encounter these situations regularly, so if you find yourself on your third cup of coffee scratching your head over why your code is doing exactly what you told it to do (and not what you want it to do), maybe this post can help you.
+The example code is JavaScript, since that&amp;rsquo;s what I&amp;rsquo;ve been working in lately, but I believe the concepts to be pretty universal.</description>
+    </item>
+    
+  </channel>
+</rss>
