@@ -6,17 +6,29 @@
     <description>Recent content in Verboses on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 May 2017 10:46:46 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 18 May 2017 11:40:06 +0700</lastBuildDate>
     
 	<atom:link href="https://vickylai.io/verbose/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Coding Sucks: a Cheatsheet for Frequent Errors</title>
-      <link>https://vickylai.io/verbose/coding-sucks-frequent-errors/</link>
+      <title>Understanding Array.prototype.reduce() and Recursion with Apple Pie</title>
+      <link>https://vickylai.io/verbose/reduce-recursion-with-pie/</link>
+      <pubDate>Thu, 18 May 2017 11:40:06 +0700</pubDate>
+      
+      <guid>https://vickylai.io/verbose/reduce-recursion-with-pie/</guid>
+      <description>I was having trouble understanding reduce() and recursion, so I wrote this article to explain it to myself (Hey, look! Recursion!). I hope you find it helpful too!
+Given an array with nested arrays:
+var arr = [1, [2], [3, [[4]]]]  We want to produce this:
+var flat = [1, 2, 3, 4]  Using for loops and if statements Naively, and if we know the maximum number of nested arrays we&amp;rsquo;ll encounter (in this example, 4), we can use for loops to iterate through each array item, and if statements to check if each item is in itself an array, and so on&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Iterating Over Objects and Arrays: Frequent Errors</title>
+      <link>https://vickylai.io/verbose/iterating-objects-arrays/</link>
       <pubDate>Tue, 16 May 2017 10:46:46 +0700</pubDate>
       
-      <guid>https://vickylai.io/verbose/coding-sucks-frequent-errors/</guid>
+      <guid>https://vickylai.io/verbose/iterating-objects-arrays/</guid>
       <description>Here&amp;rsquo;s some complaining a quick overview of some code that has confounded me more than once. I&amp;rsquo;m told even very experienced developers encounter these situations regularly, so if you find yourself on your third cup of coffee scratching your head over why your code is doing exactly what you told it to do (and not what you want it to do), maybe this post can help you.
 The example code is JavaScript, since that&amp;rsquo;s what I&amp;rsquo;ve been working in lately, but I believe the concepts to be pretty universal.</description>
     </item>

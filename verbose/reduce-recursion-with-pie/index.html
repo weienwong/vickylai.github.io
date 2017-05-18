@@ -15,12 +15,12 @@
 
 
 
-    I&#39;ve Been a Backend Coder for A Week: This is How I Made a Twitter Stream
+    Understanding Array.prototype.reduce() and Recursion with Apple Pie
 
 
 
 </title>
-<link rel="canonical" href="https://vickylai.io/verbose/how-i-made-a-twitter-stream/">
+<link rel="canonical" href="https://vickylai.io/verbose/reduce-recursion-with-pie/">
 
 
 <script type="text/javascript">
@@ -105,31 +105,31 @@ ga('send', 'pageview');
 </section>
 
     <div class="container">
-        <h1 class="title is-1 top-pad post-title"><a href="/verbose/how-i-made-a-twitter-stream/">I&#39;ve Been a Backend Coder for A Week: This is How I Made a Twitter Stream</a></h1>
+        <h1 class="title is-1 top-pad post-title"><a href="/verbose/reduce-recursion-with-pie/">Understanding Array.prototype.reduce() and Recursion with Apple Pie</a></h1>
             <div class="post-data">
-                Jan 6, 2017 |
-                5 minutes read
+                May 18, 2017 |
+                6 minutes read
             </div>
             
             
                 <div class="blog-share">
                 Share this:
-                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20I%27ve%20Been%20a%20Backend%20Coder%20for%20A%20Week%3a%20This%20is%20How%20I%20Made%20a%20Twitter%20Stream%20https%3a%2f%2fvickylai.io%2fverbose%2fhow-i-made-a-twitter-stream%2f"
+                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20Understanding%20Array.prototype.reduce%28%29%20and%20Recursion%20with%20Apple%20Pie%20https%3a%2f%2fvickylai.io%2fverbose%2freduce-recursion-with-pie%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 twitter
                 <span class="hidden">Twitter</span>
                 </a> //
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fvickylai.io%2fverbose%2fhow-i-made-a-twitter-stream%2f"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fvickylai.io%2fverbose%2freduce-recursion-with-pie%2f"
                 onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                 facebook
                 <span class="hidden">Facebook</span>
                 </a> //
-                <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://vickylai.io/&title=I%27ve%20Been%20a%20Backend%20Coder%20for%20A%20Week%3a%20This%20is%20How%20I%20Made%20a%20Twitter%20Stream&source=Vicky%20Lai"
+                <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://vickylai.io/&title=Understanding%20Array.prototype.reduce%28%29%20and%20Recursion%20with%20Apple%20Pie&source=Vicky%20Lai"
                 onclick="window.open(this.href, 'linkedin-share','width=980,height=980');return false;">
                 linkedin
                 <span class="hidden">LinkedIn</span>
                 </a> //
-                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fvickylai.io%2fverbose%2fhow-i-made-a-twitter-stream%2f"
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fvickylai.io%2fverbose%2freduce-recursion-with-pie%2f"
                 onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                 google+
                 <span class="hidden">Google+</span>
@@ -142,114 +142,145 @@ ga('send', 'pageview');
     <div class="container markdown top-pad">
         
 
-<p>This post covers my initial adventures in exploring Twitter&rsquo;s Streaming API. I&rsquo;ll talk about:</p>
+<p><em>I was having trouble understanding <code>reduce()</code> and recursion, so I wrote this article to explain it to myself (Hey, look! Recursion!). I hope you find it helpful too!</em></p>
+
+<p>Given an array with nested arrays:</p>
+
+<pre><code class="language-js">var arr = [1, [2], [3, [[4]]]]
+</code></pre>
+
+<p>We want to produce this:</p>
+
+<pre><code class="language-js">var flat = [1, 2, 3, 4]
+</code></pre>
+
+<h1 id="using-for-loops-and-if-statements">Using for loops and if statements</h1>
+
+<p>Naively, and if we know the maximum number of nested arrays we&rsquo;ll encounter (in this example, 4), we can use for loops to iterate through each array item, and if statements to check if each item is in itself an array, and so on&hellip;</p>
+
+<pre><code class="language-js">function flatten() {
+    var flat = [];
+    for (var i=0; i&lt;arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+        for (var ii=0; ii&lt;arr[i].length; ii++) {
+        if (Array.isArray(arr[i][ii])) {
+            for (var iii=0; iii&lt;arr[i][ii].length; iii++) {
+            for (var iiii=0; iiii&lt;arr[i][ii][iii].length; iiii++) {
+                if (Array.isArray(arr[i][ii][iii])) {
+                flat.push(arr[i][ii][iii][iiii]);
+                } else {
+                flat.push(arr[i][ii][iii]);
+                }
+            }
+            }
+        } else {
+            flat.push(arr[i][ii]);
+        }
+        }
+    } else {
+    flat.push(arr[i]);
+    }
+    }
+}
+
+// [1, 2, 3, 4]
+</code></pre>
+
+<p>&hellip;Which works, but of course looks ridiculous. Besides looking ridiculous, a) it only works if we know how many nested arrays we&rsquo;ll process, b) it&rsquo;s hard to read and harder to understand, and c) can you imagine having to debug this mess?! (Gee, I think there&rsquo;s an extra <code>i</code> somewhere.)</p>
+
+<h1 id="using-reduce">Using reduce</h1>
+
+<p>JavaScript has a couple methods we can use to make our code a little less ridiculous. One of these is <code>reduce()</code> and it looks like this:</p>
+
+<pre><code class="language-js">var flat = arr.reduce(function(done,curr){
+    return done.concat(curr);
+}, []);
+
+// [ 1, 2, 3, [ [ 4 ] ] ]
+</code></pre>
+
+<p>It&rsquo;s a lot less code, but we haven&rsquo;t taken care of some of the nested arrays. Let&rsquo;s first walk through <code>reduce()</code> together and examine what it does to see how we&rsquo;ll correct this.</p>
+
+<blockquote>
+<p><strong>Array.prototype.reduce()</strong></p>
+
+<p>The reduce() method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value. <em>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce?v=example">MDN</a></em></p>
+</blockquote>
+
+<p>It&rsquo;s not quite as complicated as it seems. Let&rsquo;s think of <code>reduce()</code> as an out-of-work developer (AI took all the dev jobs) with an empty basket. We&rsquo;ll call him Adam. Adam&rsquo;s main function (ba-dum ching) is now to take apples from a pile, shine them up, and put them one-by-one into the basket. This basket of shiny apples is destined to become delicious apple pies. It&rsquo;s a very important job.</p>
+
+<p><img src="/pixels/recursion-apple-formula.jpg#center" alt="Pile of apples + Adam = apple pie." /></p>
+
+<p>In our above example, the pile of apples is our array, <code>arr</code>. Our basket is <code>done</code>, the accumulator. The initial value of <code>done</code> is an empty array, which we see as <code>[]</code> at the end of our reduce function. The apple that our out-of-work dev is currently shining, you guessed it, is <code>curr</code>. Once Adam processes the current apple, he places it into the basket (<code>.concat()</code>). When there are no more apples in the pile, he returns the basket of polished apples to us, and then probably goes home to his cat, or something.</p>
+
+<h1 id="using-reduce-recursively-to-address-nested-arrays">Using reduce recursively to address nested arrays</h1>
+
+<p>So that&rsquo;s all well and good, and now we have a basket of polished apples. But we still have some nested arrays to deal with. Going back to our analogy, let&rsquo;s say that some of the apples in the pile are in boxes. Within each box there could be more apples, and/or more boxes containing smaller, cuter apples.</p>
+
+<p><img src="/pixels/recursion-nested-apples.jpg#center" alt="Box within a box within a box with apples." /></p>
+
+<p>Here&rsquo;s what we want our apple-processing-function/Adam to do:</p>
 
 <ol>
-<li>Getting started making a Twitter Streaming program using a template</li>
-<li>Problems arising from programming in Python with Windows 10 and Unicode</li>
-<li>Refining the search function</li>
+<li>If the pile of apples is a pile of apples, take an apple from the pile.</li>
+<li>If the apple is an apple, polish it, put it in the basket.</li>
+<li>If the apple is a box, open the box. If the box contains an apple, go to step 2.</li>
+<li>If the box contains another box, open this box, and go to step 3.</li>
+<li>When the pile is no more, give us the basket of shiny apples.</li>
+<li>If the pile of apples is not a pile of apples, give back whatever it is.</li>
 </ol>
 
-<p>You can follow along with <a href="https://github.com/vickylaiio/twitterstreamtemplate">my template on Github</a>.</p>
+<p>A recursive reduce function that accomplishes this is:</p>
 
-<h2 id="1-getting-started">1. Getting started</h2>
+<pre><code class="language-js">function flatten(arr) {
+  if (Array.isArray(arr)) {
+  return arr.reduce(function(done,curr){
+    return done.concat(flatten(curr));
+    }, []);
+  } else {
+    return arr;
+  }
+}
 
-<p>If you&rsquo;re new to Twitter&rsquo;s Streaming API like I was this morning, here it is from the top.</p>
-
-<p>Twitter&rsquo;s <a href="https://dev.twitter.com/streaming/public">Streaming API</a> basically enables you to continually load a stream of tweets based on search parameters of your choosing, as they&rsquo;re created in real time. Using a little Python script run from the Windows 10 command line, you can have these tweets display (print) as they&rsquo;re retrieved, while your script is running. The stream will continually update until you stop the script, which from the terminal is achieved with <code>ctrl+c</code>.</p>
-
-<p>I started with <a href="https://github.com/adamdrake/twitterstreamtemplate">@adamdrake&rsquo;s twitterstreamtemplate on Github</a>, which makes use of queuing in Python (still a concept I&rsquo;m just getting familiar with, but <a href="https://www.troyfawkes.com/learn-python-multithreading-queues-basics/">this article</a> has a nice basic overview of it). <a href="https://twython.readthedocs.io/en/latest/usage/starting_out.html#starting-out">The Twython 3.4.0 documentation</a> was also very helpful.</p>
-
-<p>The Twitter API requires authentication, for which you&rsquo;ll need to register an application with Twitter. You can do this here: <a href="https://dev.twitter.com/apps">https://dev.twitter.com/apps</a>. Don&rsquo;t worry too much about its name or description if you&rsquo;re just tinkering, like I am. Once you&rsquo;ve registered, you can obtain your new credentials (<code>consumer_key</code>, <code>consumer_secret</code>, <code>token</code>, and <code>token_secret</code>) from the Keys and Access Tokens tab.</p>
-
-<p>Input your credentials in the appropriate places:</p>
-
-<pre><code class="language-python"># Input your credentials below  
-consumer_key = 'xxx'  
-consumer_secret = 'xxx'  
-token = 'xxx'  
-token_secret = 'xxx'  
+// [ 1, 2, 3, 4 ]
 </code></pre>
 
-<p>You can set parameters to find specific tweets, or just show a sample stream. The relevant lines are:</p>
+<p>Bear with me and I&rsquo;ll explain.</p>
 
-<pre><code class="language-python"># stream.statuses.filter(track='twitter', language='en')  
-stream.statuses.sample(language='en')  
-</code></pre>
+<blockquote>
+<p><strong>Recursion</strong></p>
 
-<p>As written, it&rsquo;ll show you the sample stream. Switch the commented lines if you want to set your own search parameters. (More on that below.)</p>
+<p>An act of a function calling itself. Recursion is used to solve problems that contain smaller sub-problems. A recursive function can receive two inputs: a base case (ends recursion) or a recursive case (continues recursion). <em>Source: <a href="https://developer.mozilla.org/en-US/docs/Glossary/Recursion">MDN</a></em></p>
+</blockquote>
 
-<h2 id="2-hiccups-windows-10-python-and-unicode">2. Hiccups: Windows 10, Python, and Unicode</h2>
+<p>If you examine our code above, you&rsquo;ll see that <code>flatten()</code> appears twice. The first time it appears, it tells Adam what to do with the pile of apples. The second time, it tells him what to do with the thing he&rsquo;s currently holding, providing instructions in the case it&rsquo;s an apple, and in the case it&rsquo;s not an apple. The thing to note is that these instructions are a <em>repeat of the original instructions we started with</em> - and that&rsquo;s recursion.</p>
 
-<p>My first pass at this program consisted of two goals: 1) successfully pull up a stream of tweets based on my search parameters, and 2) print them. The relevant line for achieving the second goal is:</p>
+<p>We&rsquo;ll break it down line-by-line for clarity:</p>
 
-<pre><code class="language-python">print(tweet)  
-</code></pre>
+<ol>
+<li><code>function flatten(arr) {</code> - we name our overall function and specify that it will take an argument, <code>arr</code>.<br /></li>
+<li><code>if (Array.isArray(arr)) {</code> - we examine the provided &ldquo;arrgument&rdquo; (I know, I&rsquo;m very funny) to determine if it is an array.<br /></li>
+<li><code>return arr.reduce(function(done,curr){</code> - if the previous line is true and the argument is an array, we want to reduce it. This is our recursive case. We&rsquo;ll apply the following function to each array item&hellip;<br /></li>
+<li><code>return done.concat(flatten(curr));</code> - an unexpected plot twist appears! The function we want to apply is the very function we&rsquo;re in. Colloquially: take it from the top.<br /></li>
+<li><code>}, []);</code> - we tell our reduce function to start with an empty accumulator (<code>done</code>), and wrap it up.<br /></li>
+<li><code>} else {</code> - this resolves our if statement at line 2. If the provided argument isn&rsquo;t an array&hellip;<br /></li>
+<li><code>return arr;</code> - return whatever the <code>arr</code> is. (Hopefully a cute apple.) This is our base case that breaks us out of recursion.<br /></li>
+<li><code>}</code> - end the else statement.<br /></li>
+<li><code>}</code> - end the overall function.</li>
+</ol>
 
-<p>I opened up the terminal and typed <code>python tweet_stream.py</code> to run the program. After a brief pause it returned this error:</p>
+<p>And we&rsquo;re done! We&rsquo;ve gone from our 24 line, 4-layers-deep nested for loop solution to a much more concise, 9 line recursive reduce solution. Reduce and recursion can seem a little impenetrable at first, but they&rsquo;re valuable tools that will save you lots of future effort once you grasp them.</p>
 
-<pre><code class="language-system">return codecs.charmap_encode(input,self.errors,encoding_map)[0]  
-UnicodeEncodeError: 'charmap' codec can't encode characters in position 1270-1271: character maps to &lt;undefined&gt;  
-</code></pre>
+<p>And don&rsquo;t worry about Adam, our out-of-work developer. He got so much press after being featured in this article that he opened up his very own AI-managed apple pie factory. He&rsquo;s very happy.</p>
 
-<p>The short explanation is that Windows 10 doesn&rsquo;t play well with Python&rsquo;s default output encoding, UTF-8. (I&rsquo;m making my way through <a href="https://docs.python.org/3.6/howto/unicode.html">Python&rsquo;s documentation on Unicode</a>, which is rather long but truly fascinating to me.)</p>
+<p><img src="/pixels/recursion-adams-apples.jpg#center" alt="Adam's apple pie factory, &quot;Adam's Apples.&quot;" /></p>
 
-<p>I explored installing a Linux shell with updated Python so I could use Bash. While that&rsquo;s a good eventual idea for programming in general, it&rsquo;s definitely a big diversion from the topic at hand. Instead, I implemented a program-specific fix using a much faster and less complicated method: convert the tweets to ASCII before they display in the Windows 10 terminal.</p>
-
-<p>This is achieved by changing the encoding of the tweet text:</p>
-
-<pre><code class="language-python">print(tweet['text'].encode('ascii','ignore'))
-</code></pre>
-
-<p>The above displays the text of the tweets using ASCII encoding, and ignores any characters it can&rsquo;t encode. Instead of <code>ignore</code>, you could also use other handlers to indicate errors. Python documentation gives an example of what these different handlers do <a href="https://docs.python.org/3.6/howto/unicode.html#converting-to-bytes">here</a>.</p>
-
-<pre><code class="language-python">&gt;&gt;&gt; u.encode('ascii', 'ignore')  
-b'abcd'  
-&gt;&gt;&gt; u.encode('ascii', 'replace')  
-b'?abcd?'  
-&gt;&gt;&gt; u.encode('ascii', 'xmlcharrefreplace') # inserts XML character reference  
-b'&amp;#40960;abcd&amp;#1972;'  
-&gt;&gt;&gt; u.encode('ascii', 'backslashreplace') # inserts a \uNNNN escape sequence  
-b'\\ua000abcd\\u07b4'  
-&gt;&gt;&gt; u.encode('ascii', 'namereplace') # inserts a \N{...} escape sequence  
-b'\\N{YI SYLLABLE IT}abcd\\u07b4'  
-</code></pre>
-
-<p>Now running the program with the Windows 10 terminal should give you&hellip; a <em>lot</em> of tweets. (It&rsquo;ll keep going until you stop the program using <code>ctrl+c</code>. On a couple occassions when my program wasn&rsquo;t finding many tweets, <code>ctrl+c</code> didn&rsquo;t seem to work. I hit it a few more times in succession before it seemed to sync up with the program actually doing something, and stopped the operation.)</p>
-
-<h2 id="3-refining-the-search-function">3. Refining the search function</h2>
-
-<p>To retrieve a stream of tweets filtered by your search parameters, you&rsquo;ll want to alter this line of code:</p>
-
-<pre><code class="language-python">stream.statuses.filter(track='twitter', language='en')
-</code></pre>
-
-<p>The <code>track</code> parameter is what lets you filter your tweets by keywords, hashtags, user mentions, and urls. In the above example, it will search for tweets containing the keyword &ldquo;twitter&rdquo;. You can find its accepted phrases <a href="https://dev.twitter.com/streaming/overview/request-parameters#track">here</a>. Note that the phrases don&rsquo;t work like search engine phrases - characters in the tweet must exactly match the search phrase, and punctuation within the quotes will be considered part of the phrase. For example, &ldquo;café&rdquo; will not find &ldquo;cafe&rdquo; or vice versa, and &ldquo;hello,&rdquo; is a different phrase than &ldquo;hello&rdquo;.</p>
-
-<p>The <code>language</code> parameter in the example above limits the search results to tweets written in English. There are further parameters you can use to filter your results, such as follow (which limits your stream to searching the timelines of the users you specify) and location (which can allow you to filter by geolocated tweets). Find the full list of parameters and their values <a href="https://dev.twitter.com/streaming/overview/request-parameters">here</a>.</p>
-
-<p>I intended to use the <code>track</code> parameter to find tweets containing any one of a list of hashtags. I started out with the code below:</p>
-
-<pre><code class="language-python">stream.statuses.filter(track='#coding,#programming,#travel', language='en')  
-</code></pre>
-
-<p>Note that the comma separators will cause the program to find tweets that contain any of those search terms: #coding OR #programming, etc. If you want to have your search find tweets containing all your search terms, use spaces only.</p>
-
-<p>The track function is pretty literal, and thus not very intuitive. For example, my &ldquo;#programming&rdquo; phrase called up tweets that were related to computer programming as well as television programming. While you could set other parameters that omit certain words, it&rsquo;s not long before such an approach turns into a very lengthy guessing game. A cleaner (and faster) approach is to choose more specific search phrases, for example:</p>
-
-<pre><code class="language-python">stream.statuses.filter(track='#coding,#python,#digitalnomad,#laptoplifestyle',  language='en')  
-</code></pre>
-
-<p>Your keywords will vary depending on what you want your stream to display. The <a href="https://twitter.com/search-advanced">Twitter Advanced Search page</a> is a good resource for trying out different combinations before running your script.</p>
-
-<p>I hope you find this overview of my first Twitter streaming script useful! Questions, or something I missed? Hit me up on Twitter <a href="https://twitter.com/vickylaiio">@vickylaiio</a>.</p>
-
-<p>Thanks for reading!</p>
+<p>&nbsp;</p>
 
     </div>
 
     
-    <div class="container top-pad"> Like this post? <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hey%20@vickylaiio:%20I%20just%20read%20https%3a%2f%2fvickylai.io%2fverbose%2fhow-i-made-a-twitter-stream%2f%20and..."
+    <div class="container top-pad"> Like this post? <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hey%20@vickylaiio:%20I%20just%20read%20https%3a%2f%2fvickylai.io%2fverbose%2freduce-recursion-with-pie%2f%20and..."
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></div>
             
     <div class="disqus">
@@ -259,15 +290,15 @@ b'\\N{YI SYLLABLE IT}abcd\\u07b4'
 <div class="container top-pad"><hr>
     <div class="pagination columns is-mobile top-pad">
         <div class="column is-one-third has-text-centered no-padding">
-            <a class="btn previous" href="/verbose/python-programming-fundamentals-iterations/">Prev</a>
+            
+            <a class="btn inactive">Prev</a>
             
         </div>
         <div class="column is-one-third has-text-centered no-padding">
-            <a class="btn up" href="/verbose/how-i-made-a-twitter-stream/#top">UP, JEEVES.</a>
+            <a class="btn up" href="/verbose/reduce-recursion-with-pie/#top">UP, JEEVES.</a>
         </div>
         <div class="column is-one-third has-text-centered no-padding">
-            
-            <a class="btn inactive">Next</a>
+            <a class="btn next" href="/verbose/iterating-objects-arrays/">Next</a>
             
         </div>
     </div>
@@ -304,7 +335,7 @@ b'\\N{YI SYLLABLE IT}abcd\\u07b4'
 
 
 <script>
-$('a[href^="\/verbose\/how-i-made-a-twitter-stream\/#"]').click(function(e) {
+$('a[href^="\/verbose\/reduce-recursion-with-pie\/#"]').click(function(e) {
     e.preventDefault();
     var target = this.hash;
     $('html, body').animate({
