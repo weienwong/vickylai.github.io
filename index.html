@@ -32,9 +32,26 @@
 <link href="https://fonts.googleapis.com/css?family=Work+Sans|Inconsolata" rel="stylesheet"> 
 
 
-    
-    <link rel="stylesheet" href="https://vickylai.io/css/light-style.css?t=11">
-    
+<script>
+    var h = new Date().getHours();
+    if (h > 06 && h < 18) {
+        var head  = document.getElementsByTagName('head')[0];
+        var link  = document.createElement('link');
+        link.rel  = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https:\/\/vickylai.io\/css/light-style.css';
+        link.media = 'all';
+        head.appendChild(link);
+    } else {
+        var head  = document.getElementsByTagName('head')[0];
+        var link  = document.createElement('link');
+        link.rel  = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https:\/\/vickylai.io\/css/dark-style.css';
+        link.media = 'all';
+        head.appendChild(link);
+    }
+</script>
 
 <link id="favicon" rel="shortcut icon" href="/img/code.ico">
 

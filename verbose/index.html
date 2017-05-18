@@ -34,15 +34,31 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 
-<script src="/js/tagline.js?t=1495083557"></script>
+<script src="/js/tagline.js?t=1495109062"></script>
 
 <link href="https://fonts.googleapis.com/css?family=Work+Sans|Inconsolata" rel="stylesheet"> 
 
 
-    
-        
-        <link rel="stylesheet" href="https://vickylai.io/css/light-blog.css">
-        
+<script>
+    var h = new Date().getHours();
+    if (h > 06 && h < 18) {
+        var head  = document.getElementsByTagName('head')[0];
+        var link  = document.createElement('link');
+        link.rel  = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https:\/\/vickylai.io\/css/light-blog.css';
+        link.media = 'all';
+        head.appendChild(link);
+    } else {
+        var head  = document.getElementsByTagName('head')[0];
+        var link  = document.createElement('link');
+        link.rel  = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https:\/\/vickylai.io\/css/dark-blog.css';
+        link.media = 'all';
+        head.appendChild(link);
+    }
+</script>
 
 
 <link rel="shortcut icon"
