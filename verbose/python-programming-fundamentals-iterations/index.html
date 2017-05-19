@@ -15,7 +15,7 @@
 
 
 
-    Python Programming Fundamentals: Iterations
+    Fundamentals of programming: iterations in Python
 
 
 
@@ -31,7 +31,7 @@
 
 
 
-<link rel="stylesheet" href="https://vickylai.io/css/light-blog.css?t=11">
+<link rel="stylesheet" href="https://vickylai.io/css/light-blog.css?t=12">
 
 
 <link href="https://fonts.googleapis.com/css?family=Work+Sans|Inconsolata" rel="stylesheet"> 
@@ -55,7 +55,7 @@ ga('send', 'pageview');
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-<script src="/js/tagline.js?t=11"></script>
+<script src="/js/tagline.js?t=12"></script>
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
@@ -102,7 +102,7 @@ ga('send', 'pageview');
 </section>
 
     <div class="container">
-        <h1 class="title is-1 top-pad post-title"><a href="/verbose/python-programming-fundamentals-iterations/">Python Programming Fundamentals: Iterations</a></h1>
+        <h1 class="title is-1 top-pad post-title"><a href="/verbose/python-programming-fundamentals-iterations/">Fundamentals of programming: iterations in Python</a></h1>
             <div class="post-data">
                 Jan 18, 2017 |
                 5 minutes read
@@ -111,7 +111,7 @@ ga('send', 'pageview');
             
                 <div class="blog-share">
                 Share this:
-                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20Python%20Programming%20Fundamentals%3a%20Iterations%20https%3a%2f%2fvickylai.io%2fverbose%2fpython-programming-fundamentals-iterations%2f"
+                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20Fundamentals%20of%20programming%3a%20iterations%20in%20Python%20https%3a%2f%2fvickylai.io%2fverbose%2fpython-programming-fundamentals-iterations%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 twitter
                 <span class="hidden">Twitter</span>
@@ -121,7 +121,7 @@ ga('send', 'pageview');
                 facebook
                 <span class="hidden">Facebook</span>
                 </a> //
-                <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://vickylai.io/&title=Python%20Programming%20Fundamentals%3a%20Iterations&source=Vicky%20Lai"
+                <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://vickylai.io/&title=Fundamentals%20of%20programming%3a%20iterations%20in%20Python&source=Vicky%20Lai"
                 onclick="window.open(this.href, 'linkedin-share','width=980,height=980');return false;">
                 linkedin
                 <span class="hidden">LinkedIn</span>
@@ -145,7 +145,7 @@ ga('send', 'pageview');
 
 <p>There are a few different ways to achieve iterations in Python. I&rsquo;ll present some of these ways in this post and discuss appropriate situations for each.</p>
 
-<h2 id="for-loop">For loop</h2>
+<h1 id="for-loop">For loop</h1>
 
 <pre><code class="language-python">for iterating_var in iterable:
     statement/statements
@@ -173,7 +173,7 @@ for choice in breakfastmenu:
 
 <p>The downside to for loops is that they can be a bit verbose, depending on how much you&rsquo;re trying to achieve. Still, for anyone learning Python or hoping to make their code as easily understood as possible, for loops are still the most straightforward choice for iterations.</p>
 
-<h2 id="list-comprehensions">List comprehensions</h2>
+<h1 id="list-comprehensions">List comprehensions</h1>
 
 <pre><code class="language-python">newlist = [statement/statements for iterating_var in iterable]
 </code></pre>
@@ -195,7 +195,7 @@ print(tabsplustips)
 
 <p>List comprehensions can be an elegant tool, depending on the variety of statements you want to iterate through, and whether or not output to a list is useful to you. The more statements you add, the more complicated your list comprehension begins to look, especially once you get into nested list comprehensions. If your code isn&rsquo;t well annotated, it may become difficult for another reader to figure out.</p>
 
-<h2 id="map">Map</h2>
+<h1 id="map">Map</h1>
 
 <pre><code class="language-python">map(function, iterable)
 </code></pre>
@@ -216,9 +216,9 @@ print(round(output, 1))
 
 <p>In truth, I&rsquo;ve had a hard time coming up with appropriate situations for the use of map over simply using a list comprehension. Aside from situations similar to the above, it seems to me to be a rather un-Pythonic way to iterate. It can be advantageous as a concise method of doing simple, sort of &lsquo;on-the-spot&rsquo; iterations; otherwise, my preference would be to use a list comprehension instead.</p>
 
-<p>&nbsp;<br />
-&nbsp;<br />
-I hope these examples have been useful to you in your understanding of iterations with Python 3! If you have questions or examples I haven&rsquo;t thought of, feel free to share them here or on Twitter: <a href="https://twitter.com/vickylaiio">@vickylaiio</a>.</p>
+<p>&nbsp;</p>
+
+<p>I hope these examples have been useful to you in your understanding of iterations with Python 3! If you have questions or examples I haven&rsquo;t thought of, feel free to share them with me on Twitter: <a href="https://twitter.com/vickylaiio">@vickylaiio</a>.</p>
 
 <p>Thanks for reading!</p>
 

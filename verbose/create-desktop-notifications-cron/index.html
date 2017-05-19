@@ -15,7 +15,7 @@
 
 
 
-    Create Desktop Notifications with Terminal and Cron
+    How I created custom desktop notifications using terminal and cron
 
 
 
@@ -31,7 +31,7 @@
 
 
 
-<link rel="stylesheet" href="https://vickylai.io/css/light-blog.css?t=11">
+<link rel="stylesheet" href="https://vickylai.io/css/light-blog.css?t=12">
 
 
 <link href="https://fonts.googleapis.com/css?family=Work+Sans|Inconsolata" rel="stylesheet"> 
@@ -55,7 +55,7 @@ ga('send', 'pageview');
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-<script src="/js/tagline.js?t=11"></script>
+<script src="/js/tagline.js?t=12"></script>
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
@@ -102,16 +102,16 @@ ga('send', 'pageview');
 </section>
 
     <div class="container">
-        <h1 class="title is-1 top-pad post-title"><a href="/verbose/create-desktop-notifications-cron/">Create Desktop Notifications with Terminal and Cron</a></h1>
+        <h1 class="title is-1 top-pad post-title"><a href="/verbose/create-desktop-notifications-cron/">How I created custom desktop notifications using terminal and cron</a></h1>
             <div class="post-data">
                 Feb 21, 2017 |
-                5 minutes read
+                6 minutes read
             </div>
             
             
                 <div class="blog-share">
                 Share this:
-                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20Create%20Desktop%20Notifications%20with%20Terminal%20and%20Cron%20https%3a%2f%2fvickylai.io%2fverbose%2fcreate-desktop-notifications-cron%2f"
+                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20How%20I%20created%20custom%20desktop%20notifications%20using%20terminal%20and%20cron%20https%3a%2f%2fvickylai.io%2fverbose%2fcreate-desktop-notifications-cron%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 twitter
                 <span class="hidden">Twitter</span>
@@ -121,7 +121,7 @@ ga('send', 'pageview');
                 facebook
                 <span class="hidden">Facebook</span>
                 </a> //
-                <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://vickylai.io/&title=Create%20Desktop%20Notifications%20with%20Terminal%20and%20Cron&source=Vicky%20Lai"
+                <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://vickylai.io/&title=How%20I%20created%20custom%20desktop%20notifications%20using%20terminal%20and%20cron&source=Vicky%20Lai"
                 onclick="window.open(this.href, 'linkedin-share','width=980,height=980');return false;">
                 linkedin
                 <span class="hidden">LinkedIn</span>
@@ -143,15 +143,19 @@ ga('send', 'pageview');
 
 <p>I use <a href="http://knopwob.org/dunst/">dunst</a> for desktop notifications. It&rsquo;s a simple, lightweight tool that is easy to configure, doesn&rsquo;t have many dependencies, and can be used across various distributions.</p>
 
-<p><img src="/pixels/dunstnotif.png" alt="Screenshot of dunst in action!" /></p>
+<p><img src="/pixels/dunstnotif.png#center" alt="Screenshot of dunst in action!" /></p>
 
-<h2 id="battery-status-low-battery-notification">Battery status/low battery notification</h2>
+<h1 id="battery-status-low-battery-notification">Battery status/low battery notification</h1>
 
 <p>I was looking for a simple, versatile set up to create notifications for my battery status without having to rely on separate, standalone GUI apps or services. In my search I came across a simple one-line cron task that seemed to be the perfect fit. I adapted it to my purpose and it looks like this:</p>
 
 <pre><code class="language-conf"># m h  dom mon dow   command
 */5 * * * * acpi --battery | awk -F, '/Discharging/ { if (int($2) &lt; 20) print }' | xargs -ri env DISPLAY=:0 notify-send -u critical -i &quot;/usr/share/icons/Paper/16x16/status/xfce-battery-critical.png&quot; -t 3000 &quot;{}\nBattery low!&quot;
 </code></pre>
+
+<blockquote>
+<p><em>Psst&hellip; <a href="https://crontab.guru/">here&rsquo;s a great tool</a> for formatting your crontab times.</em></p>
+</blockquote>
 
 <p>There&rsquo;s a lot going on here, so let&rsquo;s break it down:<br />
 <code>*/5 * * * *</code><br />
@@ -192,11 +196,11 @@ Shows a desktop notification with <code>-u critical</code> (critical urgency), <
 
 <p>You can see that each notification makes use of the <code>{}</code> placeholder that tells xargs to put its input there - except for the last one. This is interesting because in this case, we&rsquo;re only using <code>xargs -ri</code> as a kind of switch to present the notification. The actual information that was the input for xargs is not needed in the output in order to create a notification.</p>
 
-<h2 id="additional-notifications-with-command-line-tools">Additional notifications with command line tools</h2>
+<h1 id="additional-notifications-with-command-line-tools">Additional notifications with command line tools</h1>
 
 <p>With cron and just a few combinations of simple command line tools, you can create interesting and useful notifications. Consider the following:</p>
 
-<h3 id="periodically-check-your-dhcp-address">Periodically check your dhcp address</h3>
+<h2 id="periodically-check-your-dhcp-address">Periodically check your dhcp address</h2>
 
 <pre><code>*/60 * * * * journalctl | awk -F: '/dhcp/ &amp;&amp; /address/ { print $5 }' | tail -1 | xargs -ri env DISPLAY=:0 notify-send -a &quot;dhcp address&quot; -u normal &quot;{}&quot;
 </code></pre>
@@ -217,16 +221,16 @@ Take the last line of the output.</p>
 <p><code>| xargs -ri env DISPLAY=:0 notify-send -a &quot;dhcp address&quot; -u normal &quot;{}&quot;</code><br />
 Create the desktop notification including the output.</p>
 
-<h3 id="periodically-display-the-time-and-date">Periodically display the time and date</h3>
+<h2 id="periodically-display-the-time-and-date">Periodically display the time and date</h2>
 
 <pre><code>*/60 * * * * timedatectl status | awk -F\n '/Local time/ { print }' | xargs -ri env DISPLAY=:0 notify-send -a &quot;Current Time&quot; -u normal &quot;{}&quot;
 </code></pre>
 
-<h3 id="system-log-activity">System log activity</h3>
+<h2 id="system-log-activity">System log activity</h2>
 
 <p>You can also search your system logs (try <code>journalctl</code>) for any number of things using awk, enabling you to get periodic notifications of virtually any logged events.</p>
 
-<p>&nbsp;&nbsp;</p>
+<p>&nbsp;</p>
 
 <p>I hope this post has given you some idea about the endless possibilities of these simple utilities. Questions or issues? Let me know on Twitter: <a href="https://twitter.com/vickylaiio">@vickylaiio</a>.</p>
 

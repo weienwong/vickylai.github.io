@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Understanding Array.prototype.reduce() and Recursion with Apple Pie</title>
+      <title>Understanding Array.prototype.reduce() and recursion using apple pie</title>
       <link>https://vickylai.io/verbose/reduce-recursion-with-pie/</link>
       <pubDate>Thu, 18 May 2017 11:40:06 +0700</pubDate>
       
@@ -24,7 +24,7 @@ var flat = [1, 2, 3, 4]  Using for loops and if statements Naively, and if we kn
     </item>
     
     <item>
-      <title>Iterating Over Objects and Arrays: Frequent Errors</title>
+      <title>Iterating over objects and arrays: frequent errors</title>
       <link>https://vickylai.io/verbose/iterating-objects-arrays/</link>
       <pubDate>Tue, 16 May 2017 10:46:46 +0700</pubDate>
       
