@@ -101,7 +101,7 @@ ga('send', 'pageview');
     </div>
 </section>
 
-    <div class="container">
+    <div class="container center-me">
         <h1 class="title is-1 top-pad post-title"><a href="/verbose/reduce-recursion-with-pie/">Understanding Array.prototype.reduce() and recursion using apple pie</a></h1>
             <div class="post-data">
                 May 18, 2017 |
@@ -203,7 +203,7 @@ ga('send', 'pageview');
 <blockquote>
 <p><strong>Array.prototype.reduce()</strong></p>
 
-<p>The reduce() method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value. <em>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce?v=example">MDN</a></em></p>
+<p>The reduce() method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value. (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce?v=example">MDN</a>)</p>
 </blockquote>
 
 <p>It&rsquo;s not quite as complicated as it seems. Let&rsquo;s think of <code>reduce()</code> as an out-of-work developer (AI took all the dev jobs) with an empty basket. We&rsquo;ll call him Adam. Adam&rsquo;s main function (ba-dum ching) is now to take apples from a pile, shine them up, and put them one-by-one into the basket. This basket of shiny apples is destined to become delicious apple pies. It&rsquo;s a very important job.</p>
@@ -249,7 +249,7 @@ ga('send', 'pageview');
 <blockquote>
 <p><strong>Recursion</strong></p>
 
-<p>An act of a function calling itself. Recursion is used to solve problems that contain smaller sub-problems. A recursive function can receive two inputs: a base case (ends recursion) or a recursive case (continues recursion). <em>Source: <a href="https://developer.mozilla.org/en-US/docs/Glossary/Recursion">MDN</a></em></p>
+<p>An act of a function calling itself. Recursion is used to solve problems that contain smaller sub-problems. A recursive function can receive two inputs: a base case (ends recursion) or a recursive case (continues recursion). (<a href="https://developer.mozilla.org/en-US/docs/Glossary/Recursion">MDN</a>)</p>
 </blockquote>
 
 <p>If you examine our code above, you&rsquo;ll see that <code>flatten()</code> appears twice. The first time it appears, it tells Adam what to do with the pile of apples. The second time, it tells him what to do with the thing he&rsquo;s currently holding, providing instructions in the case it&rsquo;s an apple, and in the case it&rsquo;s not an apple. The thing to note is that these instructions are a <em>repeat of the original instructions we started with</em> - and that&rsquo;s recursion.</p>
@@ -277,14 +277,14 @@ ga('send', 'pageview');
     </div>
 
     
-    <div class="container tweet-me"> Like this post? <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hey%20@vickylaiio:%20I%20just%20read%20https%3a%2f%2fvickylai.io%2fverbose%2freduce-recursion-with-pie%2f%20and..."
-                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></div>
+    <div class="container center-me"> <p class="tweet-me">Like this post? <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hey%20@vickylaiio:%20I%20just%20read%20https%3a%2f%2fvickylai.io%2fverbose%2freduce-recursion-with-pie%2f%20and..."
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div>
             
     <div class="disqus">
         
     </div>
 
-<div class="container top-pad"><hr>
+<div class="container center-me top-pad"><hr>
     <div class="pagination columns is-mobile top-pad">
         <div class="column is-one-third has-text-centered no-padding">
             
@@ -301,7 +301,7 @@ ga('send', 'pageview');
     </div>
 <hr></div>
 
-<div class="section" id="footer">
+<div class="section center-me" id="footer">
 <div class="container columns">
     <div class="column is-one-quarter av-box"><img class="avatar" src="https://vickylai.io/img/portrait.jpg"></div>
     <div class="column bio">
