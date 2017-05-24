@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://vickylai.io/about/</loc>
+    <lastmod>2017-05-23T20:54:37+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://vickylai.io/verbose/reduce-recursion-with-pie/</loc>
     <lastmod>2017-05-18T11:40:06+07:00</lastmod>
   </url>
@@ -152,7 +157,7 @@
   
   <url>
     <loc>https://vickylai.io/</loc>
-    <lastmod>2017-05-18T11:40:06+07:00</lastmod>
+    <lastmod>2017-05-23T20:54:37+07:00</lastmod>
     <priority>0</priority>
   </url>
   
