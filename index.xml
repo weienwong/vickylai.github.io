@@ -6,32 +6,10 @@
     <description>Recent content on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 May 2017 20:54:37 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 18 May 2017 11:40:06 +0700</lastBuildDate>
     
 	<atom:link href="https://vickylai.io/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>about</title>
-      <link>https://vickylai.io/about/</link>
-      <pubDate>Tue, 23 May 2017 20:54:37 +0700</pubDate>
-      
-      <guid>https://vickylai.io/about/</guid>
-      <description>I’m a nomadic developer from Canada. I’ve also lived in Singapore, Malaysia, the Philippines, the United States, Japan, and Thailand.
-I like tinkering with code and drinking lots of coffee. The latter seems to produce more of the former.
-My first languages were English, CSS, and LPC. I write JavaScript and Python, and am currently learning Go. I&amp;rsquo;ve loved front end since I was a little girl, and I aim to conquer full stack this year.</description>
-    </item>
-    
-    <item>
-      <title>Now</title>
-      <link>https://vickylai.io/now/</link>
-      <pubDate>Tue, 23 May 2017 20:09:02 +0700</pubDate>
-      
-      <guid>https://vickylai.io/now/</guid>
-      <description>Currently&amp;hellip;  I&amp;rsquo;m bouncing around in GMT+7 / GMT+8 this quarter. It&amp;rsquo;s damn hot out.
- I recently took a stab at my first HackerRank algorithms competition, where I ranked 346/ 1784 participants. Yay.
- Along with client projects, I&amp;rsquo;ve rebuilt my site to have a more flexible, scalable structure that allows me to easily add new projects. (I also put in a bunch of Easter eggs. Have fun.)</description>
-    </item>
     
     <item>
       <title>Understanding Array.prototype.reduce() and recursion using apple pie</title>
@@ -152,6 +130,28 @@ That said, some blocks can be a little confusing at first. I found documentation
       <description>This post covers my initial adventures in exploring Twitter&amp;rsquo;s Streaming API. I&amp;rsquo;ll talk about:
  Getting started making a Twitter Streaming program using a template Problems arising from programming in Python with Windows 10 and Unicode Refining the search function  You can follow along with my template on Github.
 1. Getting started If you&amp;rsquo;re new to Twitter&amp;rsquo;s Streaming API like I was this morning, here it is from the top.</description>
+    </item>
+    
+    <item>
+      <title>Now</title>
+      <link>https://vickylai.io/now/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vickylai.io/now/</guid>
+      <description>Currently&amp;hellip;  I&amp;rsquo;m bouncing around in GMT+7 / GMT+8 this quarter. It&amp;rsquo;s damn hot out.
+ I recently took a stab at my first HackerRank algorithms competition, where I ranked 346/ 1784 participants. Yay.
+ Along with client projects, I&amp;rsquo;ve rebuilt my site to have a more flexible, scalable structure that allows me to easily add new projects. (I also put in a bunch of Easter eggs. Have fun.)</description>
+    </item>
+    
+    <item>
+      <title>about</title>
+      <link>https://vickylai.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vickylai.io/about/</guid>
+      <description>Hi there! I’m a nomadic developer from Canada. I’ve also lived in Singapore, Malaysia, the Philippines, the United States, Japan, and Thailand.
+I like building things with code and drinking lots of coffee. The latter seems to produce more of the former.
+My first languages were English, CSS, and LPC. I write JavaScript and Python, and am currently learning Go. I&amp;rsquo;ve loved front end since I was a little girl, and I aim to conquer full stack this year.</description>
     </item>
     
   </channel>

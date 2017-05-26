@@ -3,16 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://vickylai.io/about/</loc>
-    <lastmod>2017-05-23T20:54:37+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://vickylai.io/now/</loc>
-    <lastmod>2017-05-23T20:09:02+07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://vickylai.io/verbose/reduce-recursion-with-pie/</loc>
     <lastmod>2017-05-18T11:40:06+07:00</lastmod>
   </url>
@@ -144,6 +134,10 @@
   </url>
   
   <url>
+    <loc>https://vickylai.io/now/</loc>
+  </url>
+  
+  <url>
     <loc>https://vickylai.io/tags/python/</loc>
     <lastmod>2017-01-18T21:58:28+07:00</lastmod>
     <priority>0</priority>
@@ -163,7 +157,7 @@
   
   <url>
     <loc>https://vickylai.io/</loc>
-    <lastmod>2017-05-23T20:54:37+07:00</lastmod>
+    <lastmod>2017-05-18T11:40:06+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -171,6 +165,10 @@
     <loc>https://vickylai.io/tags/websites/</loc>
     <lastmod>2017-01-28T13:16:17+07:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vickylai.io/about/</loc>
   </url>
   
 </urlset>

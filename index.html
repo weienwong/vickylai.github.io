@@ -33,7 +33,7 @@
 
 
 
-<link rel="stylesheet" href="https://vickylai.io/css/white.css">
+<link rel="stylesheet" href="https://vickylai.io/css/white.css?t=13">
 
 
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Inconsolata" rel="stylesheet"> 
@@ -79,8 +79,8 @@
             <a class="nav-item is-tab" href="https://vickylai.io/#contact">
             Contact
             </a>
-            <a class="nav-item is-tab" href="https://vickylai.io//verbose">
-            -Verbose
+            <a class="nav-item is-tab" href="https://vickylai.io/verbose">
+            Blog
             </a>
         </div>
         </nav>
@@ -97,8 +97,7 @@
                 </div>
         <div class="column is-half has-text-centered">
       <p class="display is-white">
-          Hi, I'm Vicky.
-      </p>
+          Hi, I'm Vicky.</p>
         <div class="social has-text-centered">
         
         <span class="social-icon">
@@ -125,7 +124,7 @@
             Projects
             </a>
             <a class="nav-item" href="https://vickylai.io/#latest">
-            Latest
+            Blog
             </a>
             <a class="nav-item" href="https://vickylai.io/#about">
             About
@@ -142,8 +141,7 @@
     <div class="container has-text-centered">
         <div class="photo"></div>
         <p class="display less top-pad inset">
-            Hi, I'm Vicky.
-        </p>
+            Hi, I'm Vicky.</p>
         <div class="social has-text-centered top-pad">
         
         <span class="social-icon">
@@ -162,11 +160,11 @@
     </div>
   </section>
 
-  <section class="section projects is-medium" id="projects">
+  <section class="section projects is-medium">
     <div class="container">
-      <h1 class="display less has-text-centered bottom-pad"></h1>
+      <h1 class="display less inset has-text-centered pad-harder">I'm a developer.</h1>
       
-        <div class="tile is-ancestor">
+        <div class="tile is-ancestor" id="projects">
         <div class="tile">
         <div class="tile is-vertical">
             <div class="tile is-parent is-vertical">
@@ -216,7 +214,7 @@ Given an array with nested arrays:
 var arr = [1, [2], [3, [[4]]]]  We want to produce this:
 var flat = [1, 2, 3, 4]  Using for loops and if statements Naively, and if we know the maximum number of nested arrays we&rsquo;ll encounter (in this example, 4), we can use for loops to iterate through each array item, and if statements to check if each item is in itself an array, and so on&hellip;
                         
-                        <a class="markdown-nav" href="/verbose">... Read more at '-verbose'</a>
+                        <a class="markdown-nav" href="/verbose">... See all posts on '-verbose'</a>
                         
                         </div>
                 </div>
@@ -280,44 +278,46 @@ var flat = [1, 2, 3, 4]  Using for loops and if statements Naively, and if we kn
                 </div>
                 <div class="clear">
                 
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
                      
-                            <p>I’m a nomadic developer from Canada. I’ve also lived in Singapore, Malaysia, the Philippines, the United States, Japan, and Thailand.</p>
+                            <p>Hi there! I’m a nomadic developer from Canada. I’ve also lived in Singapore, Malaysia, the Philippines, the United States, Japan, and Thailand.</p>
 
-<p>I like tinkering with code and drinking lots of coffee. The latter seems to produce more of the former.</p>
+<p>I like building things with code and drinking lots of coffee. The latter seems to produce more of the former.</p>
 
 <p>My first languages were English, CSS, and <a href="https://en.wikipedia.org/wiki/LPC_(programming_language)" target="_blank">LPC</a>. I write JavaScript and Python, and am currently learning Go. I&rsquo;ve loved front end since I was a little girl, and I aim to conquer full stack this year.</p>
 
 <p>To see what I&rsquo;m currently up to, you can check out <a href="/now">/now</a>. You can also follow me on Twitter, where I&rsquo;m <a href="https://twitter.com/vickylaiio" target="_blank">@vickylaiio</a>.</p>
 
-<p>Thanks for dropping by!</p>
+<p>Want to hire me? <a href="#contact">Let&rsquo;s make it happen!</a></p>
+
+<p>Have a really great day. :)</p>
 
                         
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
                 
                 </div>
             </div>
@@ -380,7 +380,7 @@ $('a[href^="https:\/\/vickylai.io\/#"]').click(function(e) {
     e.preventDefault();
     var target = this.hash;
     $('html, body').animate({
-    scrollTop: $(target).offset().top
+    scrollTop: $(target).offset().top - 50
     }, 500);
     return false;
 })
