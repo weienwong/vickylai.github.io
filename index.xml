@@ -149,9 +149,9 @@ That said, some blocks can be a little confusing at first. I found documentation
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://vickylai.io/about/</guid>
-      <description>Hi there! I’m a nomadic developer from Canada. I’ve also lived in Singapore, Malaysia, the Philippines, the United States, Japan, and Thailand.
-I like building things with code and drinking lots of coffee. The latter seems to produce more of the former.
-My first languages were English, CSS, and LPC. I write JavaScript and Python, and am currently learning Go. I&amp;rsquo;ve loved front end since I was a little girl, and I aim to conquer full stack this year.</description>
+      <description>Hi there! I&amp;rsquo;m Vicky.
+My first languages were English, CSS, and LPC. I spent whole summers as a little girl programming a text-based MUD over Telnet. I made all kinds of things in that fantasy world, but soon it wasn&amp;rsquo;t enough. So I started making things for the real world.
+I fell hard for front end development, a relationship that&amp;rsquo;s held steady for a couple decades now. I&amp;rsquo;ve also learned to write JavaScript and Python, and I&amp;rsquo;m currently exploring Go.</description>
     </item>
     
   </channel>
