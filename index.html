@@ -33,7 +33,7 @@
 
 
 
-<link rel="stylesheet" href="https://vickylai.io/css/white.css?t=11">
+<link rel="stylesheet" href="https://vickylai.io/css/white.css">
 
 
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Inconsolata" rel="stylesheet"> 
@@ -417,8 +417,8 @@
     </div>
   </section>
 
-  <section class="section paper is-small" id="about">
-    <div class="container">
+  <section class="section paper is-small">
+    <div class="container" id="about">
                 <div class="mobile has-text-centered">
                     <h1 class="display less inset">
                         About Me
@@ -526,7 +526,7 @@ $('a[href^="https:\/\/vickylai.io\/#"]').click(function(e) {
     e.preventDefault();
     var target = this.hash;
     $('html, body').animate({
-    scrollTop: $(target).offset().top - 50
+    scrollTop: $(target).offset().top - 150
     }, 500);
     return false;
 })
