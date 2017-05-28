@@ -15,12 +15,12 @@
 
 
 
-    Fundamentals of programming: iterations in Python
+    Making sandwiches with closures in JavaScript
 
 
 
 </title>
-<link rel="canonical" href="https://vickylai.io/verbose/python-programming-fundamentals-iterations/">
+<link rel="canonical" href="https://vickylai.io/verbose/javascript-closures/">
 
 
 <script type="text/javascript">
@@ -105,31 +105,31 @@ ga('send', 'pageview');
 
 <section>
     <div class="container center-me">
-        <h1 class="title is-1 top-pad post-title"><a href="/verbose/python-programming-fundamentals-iterations/">Fundamentals of programming: iterations in Python</a></h1>
+        <h1 class="title is-1 top-pad post-title"><a href="/verbose/javascript-closures/">Making sandwiches with closures in JavaScript</a></h1>
             <div class="post-data">
-                Jan 18, 2017 |
-                5 minutes read
+                May 28, 2017 |
+                4 minutes read
             </div>
             
             
                 <div class="blog-share">
                 Share this:
-                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20Fundamentals%20of%20programming%3a%20iterations%20in%20Python%20https%3a%2f%2fvickylai.io%2fverbose%2fpython-programming-fundamentals-iterations%2f"
+                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20Making%20sandwiches%20with%20closures%20in%20JavaScript%20https%3a%2f%2fvickylai.io%2fverbose%2fjavascript-closures%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 twitter
                 <span class="hidden">Twitter</span>
                 </a> //
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fvickylai.io%2fverbose%2fpython-programming-fundamentals-iterations%2f"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fvickylai.io%2fverbose%2fjavascript-closures%2f"
                 onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                 facebook
                 <span class="hidden">Facebook</span>
                 </a> //
-                <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://vickylai.io/&title=Fundamentals%20of%20programming%3a%20iterations%20in%20Python&source=Vicky%20Lai"
+                <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://vickylai.io/&title=Making%20sandwiches%20with%20closures%20in%20JavaScript&source=Vicky%20Lai"
                 onclick="window.open(this.href, 'linkedin-share','width=980,height=980');return false;">
                 linkedin
                 <span class="hidden">LinkedIn</span>
                 </a> //
-                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fvickylai.io%2fverbose%2fpython-programming-fundamentals-iterations%2f"
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fvickylai.io%2fverbose%2fjavascript-closures%2f"
                 onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                 google+
                 <span class="hidden">Google+</span>
@@ -140,95 +140,130 @@ ga('send', 'pageview');
     </div>
 
     <div class="container markdown top-pad">
-        
+        <p><img src="/pixels/closures-sandwich.jpg#center" alt="Peanut butter and mayo sandwich." /></p>
 
-<p>I&rsquo;ve been working in Python 3 for about a week, and so far greatly enjoy it. To me, learning code syntax (and programming in general) amounts to an amalgamation of lego blocks: once it&rsquo;s understood what a certain color of block does, it&rsquo;s straightforward to combine them to create the structure you&rsquo;re looking for.</p>
+<p>Say you&rsquo;re having a little coding get-together, and you need some sandwiches. You happen to know that everyone prefers a different type of sandwich, like chicken, ham, or peanut butter and mayo. You could make all these sandwiches yourself, but that would be tedious and boring.</p>
 
-<p>That said, some blocks can be a little confusing at first. I found documentation relating to iteration in Python to be a little hard to digest, mostly because of subtle differences in terminology: iteration, iterator, iterating, iterable&hellip; it&rsquo;s enough to make your eyes glaze over. I found concrete examples to be most useful in learning these concepts; this post aims to summarize what I&rsquo;ve learned.</p>
+<p>Luckily, you know of a nearby sandwich shop that delivers. They have the ability and ingredients to make any kind of sandwich in the world, and all you have to do is order through their app.</p>
 
-<p>There are a few different ways to achieve iterations in Python. I&rsquo;ll present some of these ways in this post and discuss appropriate situations for each.</p>
+<p>The sandwich shop looks like this:</p>
 
-<h1 id="for-loop">For loop</h1>
-
-<pre><code class="language-python">for iterating_var in iterable:
-    statement/statements
+<pre><code class="language-js">function makeMeASandwich(x) {
+    var ingredients = x.join(' ');
+    return function barry() {
+        return ingredients.concat(' sandwich');
+    }
+}
 </code></pre>
 
-<p>For loops are handy things. They&rsquo;re straightforward to understand, which is especially helpful if you&rsquo;re reading someone else&rsquo;s code and trying to follow their thought process. They can acheive as much or as little as you need, and each operation can be clearly written out.</p>
+<p>Notice that we have an outer function, <code>makeMeASandwich()</code> that takes an argument, <code>x</code>. This outer function has the local variable <code>ingredients</code>, which is just <code>x</code> mushed together.</p>
 
-<p>An <code>iterating_var</code> can be any of Python&rsquo;s data types: a letter in a string, an item from a list, an index from a list, integers, etc. An <code>iterable</code> can also take different forms: a string of word(s), a range of numbers, a list, and so on. A <code>statement</code> or multiple <code>statements</code> indicates <em>doing something:</em> anything from mathematical expressions to simply printing a result. Check out the following examples, which simply print each <code>iterating_var</code> of an <code>iterable</code> on a new line:</p>
+<p>Barry? Who&rsquo;s Barry? He&rsquo;s the guy who works at the sandwich shop. You&rsquo;ll never talk with Barry directly, but he&rsquo;s the reason your sandwiches are made, and why they&rsquo;re so delicious. Barry takes <code>ingredients</code> and mushes them together with &ldquo; sandwich&rdquo;.</p>
 
-<pre><code class="language-python">for letter in 'Hello world':
-    print(letter)
+<p>The reason Barry is able to access the <code>ingredients</code> is because they&rsquo;re in his outer scope. If you were to take Barry out of the sandwich shop, he&rsquo;d no longer be able to access them. This is an example of <em>lexical scoping</em>: &ldquo;Nested functions have access to variables declared in their outer scope.&rdquo; (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#Lexical_scoping">MDN</a>)</p>
 
-for i in range(10):
-    print(i)
+<p>Barry, happily at work in the sandwich shop, is an example of a closure.</p>
 
-breakfastmenu = ['toast','eggs','waffles','coffee']
-for choice in breakfastmenu:
-    print(choice)
+<blockquote>
+<p><strong>Closures</strong> are functions that refer to independent (free) variables (variables that are used locally, but defined in an enclosing scope). In other words, these functions &lsquo;remember&rsquo; the environment in which they were created. (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures">MDN</a>)</p>
+</blockquote>
+
+<p>When you order, the app submits your sandwich request like so:</p>
+
+<pre><code class="language-js">var pbm = makeMeASandwich(['peanut butter', 'mayo']);
+
+pbm();
 </code></pre>
 
-<p>You can even use a for loop in a more compact situation, such as I did in <a href="https://github.com/vickylaiio/30-days-of-code/blob/master/day7_arrays.py">my solution</a> to HackerRank&rsquo;s <a href="https://www.hackerrank.com/challenges/30-arrays">30 Days of Code - Day 7: Arrays</a> challenge:</p>
+<p>And in thirty-minutes-or-it&rsquo;s-free, you get: <code>peanut butter mayo sandwich</code>.</p>
 
-<pre><code class="language-python">arrstring = ' '.join(str(e) for e in arr)
+<p>The nice thing about the sandwich shop app is that it remembers the sandwiches you&rsquo;ve ordered before. Your peanut butter and mayo sandwich is now available to you as <code>pbm()</code> for you to order anytime. It&rsquo;s pretty convenient since, each time you order, there&rsquo;s no need to specify that the sandwich you want is the same one you got before with peanut butter and mayo and it&rsquo;s a sandwich. Using <code>pbm()</code> is much more concise.</p>
+
+<p>Let&rsquo;s order the sandwiches you need for the party:</p>
+
+<pre><code class="language-js">var pmrp = makeMeASandwich(['prosciutto', 'mozzarella', 'red pepper']);
+var pbt = makeMeASandwich(['peanut butter', 'tuna']);
+var hm = makeMeASandwich(['ham']);
+var pbm = makeMeASandwich(['peanut butter', 'mayo']);
+
+pmrp();
+pbt();
+hm();
+pbm();
 </code></pre>
 
-<p>The downside to for loops is that they can be a bit verbose, depending on how much you&rsquo;re trying to achieve. Still, for anyone learning Python or hoping to make their code as easily understood as possible, for loops are still the most straightforward choice for iterations.</p>
+<p>Your order confirmation reads:</p>
 
-<h1 id="list-comprehensions">List comprehensions</h1>
-
-<pre><code class="language-python">newlist = [statement/statements for iterating_var in iterable]
+<pre><code class="language-sh">prosciutto mozzarella red pepper sandwich
+peanut butter tuna sandwich
+ham sandwich
+peanut butter mayo sandwich
 </code></pre>
 
-<p>In my opinion, list comprehensions are the most elegant of the solutions discussed in this post. Once you have a grasp of how they work, you can perform concise and effective iterations with very little code.</p>
+<p>Plot twist! The guy who wanted a ham sandwich now wants a ham <em>and cheese</em> sandwich. Luckily, the sandwich shop just released a new version of their app that will let you add cheese to any sandwich.</p>
 
-<p>List comprehensions will always return a list, which may or may not be appropriate for your situation. If appropriate, however, simply defining the variable name of the list can often help you skip some steps.</p>
+<p>With this added feature, the sandwich shop now looks like this:</p>
 
-<p>For example, I can use list comprehension to quickly calculate and print tip percentage on a few bar tabs at once:</p>
+<pre><code class="language-js">function makeMeASandwich(x) {
+    var ingredients = x.join(' ');
+    var slices = 0;
 
-<pre><code class="language-python">tabs = [23.60, 42.10, 17.50]
-tabsplustips = [round(tab*1.15, 2) for tab in tabs]
-print(tabsplustips)
-
-&gt;&gt;&gt; [27.14, 48.41, 20.12]
+    function barry() {
+        return ingredients.concat(' sandwich');
+    }
+    function barryAddCheese() {
+        slices += 2;
+        return ingredients.concat(' sandwich with ', slices, ' slices of cheese');
+    }
+    return {
+        noCheese: function() {
+            return barry();
+        },
+        addCheese: function() {
+            return barryAddCheese();
+        }
+    }
+}
 </code></pre>
 
-<p>In one concise line, we&rsquo;ve taken each tab amount, added 15% tip, rounded it to the nearest cent, and made a new list of the tabs plus the tip values.</p>
+<p>You amend the order to look like this:</p>
 
-<p>List comprehensions can be an elegant tool, depending on the variety of statements you want to iterate through, and whether or not output to a list is useful to you. The more statements you add, the more complicated your list comprehension begins to look, especially once you get into nested list comprehensions. If your code isn&rsquo;t well annotated, it may become difficult for another reader to figure out.</p>
-
-<h1 id="map">Map</h1>
-
-<pre><code class="language-python">map(function, iterable)
+<pre><code class="language-js">pmrp.noCheese();
+pbt.noCheese();
+hm.addCheese();
+pbm.noCheese();
 </code></pre>
 
-<p>Map is, in many ways, a non-idiomatic function for iteration in Python. It&rsquo;s pretty compact, which can make it easy to write improperly with a missing comma or parenthesis, and it&rsquo;s more limited than for loops or list comprehensions in its usage. Basically, it applies your <code>statement</code> to every instance of your defined <code>iterable</code>.</p>
+<p>And your order confirmation reads:</p>
 
-<p>I used the map function in <a href="https://github.com/vickylaiio/simple-statistics/blob/master/weighted_mean.py">my solution</a> to HackerRank&rsquo;s <a href="https://www.hackerrank.com/challenges/s10-weighted-mean">10 Days of Statistics - Day 0: Weighted Mean</a> challenge. In this example, it&rsquo;s casting each element of <code>input()</code> (the iterable) from string representation to integer representation.</p>
-
-<pre><code class="language-python">values = list(map(int, input().split()))
-weights = list(map(int, input().split()))
-
-output = sum([x[0] * x[1] for x in zip(values, weights)]) / sum(weights)
-
-print(round(output, 1))
+<pre><code class="language-sh">prosciutto mozzarella red pepper sandwich
+peanut butter tuna sandwich
+ham sandwich with 2 slices of cheese
+peanut butter mayo sandwich
 </code></pre>
 
-<p>It&rsquo;s worthwhile to note that map by itself returns an iterator; if it&rsquo;s a list you want, it&rsquo;s an extra step to get the list representation, as in the example above.</p>
+<p>You&rsquo;ll notice that when you order a sandwich with cheese, Barry puts 2 slices of cheese on it. In this way, the sandwich shop controls how much cheese you get. You can&rsquo;t get to Barry to tell him you want more than 2 slices at a time. That&rsquo;s because your only access to the sandwich shop is through the public functions <code>noCheese</code> or <code>addCheese</code>.</p>
 
-<p>In truth, I&rsquo;ve had a hard time coming up with appropriate situations for the use of map over simply using a list comprehension. Aside from situations similar to the above, it seems to me to be a rather un-Pythonic way to iterate. It can be advantageous as a concise method of doing simple, sort of &lsquo;on-the-spot&rsquo; iterations; otherwise, my preference would be to use a list comprehension instead.</p>
+<p>Of course, there&rsquo;s a way to cheat the system&hellip;</p>
 
-<p>&nbsp;</p>
+<pre><code class="language-js">hm.addCheese();
+hm.addCheese();
+hm.addCheese();
+</code></pre>
 
-<p>I hope these examples have been useful to you in your understanding of iterations with Python 3! If you have questions or examples I haven&rsquo;t thought of, feel free to share them with me on Twitter: <a href="https://twitter.com/vickylaiio">@vickylaiio</a>.</p>
+<p>By ordering the same ham sandwich with cheese three times, you get: <code>ham sandwich with 6 slices of cheese</code>.</p>
 
-<p>Thanks for reading!</p>
+<p>This happens because the sandwich shop app recognizes the variable <code>hm</code> as the same sandwich each time, and increases the number of cheese slices it tells Barry to add.</p>
 
+<p>The app could prevent you from adding lots of cheese to the same sandwich, either by adding a maximum or by appending unique order numbers to the variable names&hellip; but this is our fantasy sandwich shop, and we get to pile on as much cheese as we want.</p>
+
+<p><img src="/pixels/closures-cheesestack.jpg#center" alt="All the cheese." /></p>
+
+<p>By using closures, we can have JavaScript behave similarly to object-oriented languages. In this case, we&rsquo;re emulating private methods found in languages like Ruby and Java. While it&rsquo;s arguable that object-oriented languages should be used for these kinds of tasks instead, closures remain a useful way to extend the functionality of JavaScript, and also order sandwiches.</p>
     </div>
 
     
-    <div class="container center-me"> <p class="tweet-me">Like this post? <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hey%20@vickylaiio:%20I%20just%20read%20https%3a%2f%2fvickylai.io%2fverbose%2fpython-programming-fundamentals-iterations%2f%20and..."
+    <div class="container center-me"> <p class="tweet-me">Like this post? <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hey%20@vickylaiio:%20I%20just%20read%20https%3a%2f%2fvickylai.io%2fverbose%2fjavascript-closures%2f%20and..."
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div>
             
     <div class="disqus">
@@ -238,14 +273,15 @@ print(round(output, 1))
 <div class="container center-me top-pad"><hr>
     <div class="pagination columns is-mobile top-pad">
         <div class="column is-one-third has-text-centered no-padding btn">
-            <a class="btn previous" href="/verbose/how-i-made-a-twitter-stream/">Prev</a>
+            <a class="btn previous" href="/verbose/reduce-recursion-with-pie/">Prev</a>
             
         </div>
         <div class="column is-one-third has-text-centered no-padding btn">
-            <a class="up" href="/verbose/python-programming-fundamentals-iterations/#top">UP, JEEVES.</a>
+            <a class="up" href="/verbose/javascript-closures/#top">UP, JEEVES.</a>
         </div>
         <div class="column is-one-third has-text-centered no-padding btn">
-            <a class="btn next" href="/verbose/free-custom-domain-website-https/">Next</a>
+            
+            <a class="inactive">Next</a>
             
         </div>
     </div>
@@ -284,7 +320,7 @@ print(round(output, 1))
 
 
 <script>
-$('a[href^="\/verbose\/python-programming-fundamentals-iterations\/#"]').click(function(e) {
+$('a[href^="\/verbose\/javascript-closures\/#"]').click(function(e) {
     e.preventDefault();
     var target = this.hash;
     $('html, body').animate({

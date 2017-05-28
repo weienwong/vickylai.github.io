@@ -6,10 +6,21 @@
     <description>Recent content in Javascript on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 May 2017 11:40:06 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 28 May 2017 09:16:35 +0700</lastBuildDate>
     
 	<atom:link href="https://vickylai.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Making sandwiches with closures in JavaScript</title>
+      <link>https://vickylai.io/verbose/javascript-closures/</link>
+      <pubDate>Sun, 28 May 2017 09:16:35 +0700</pubDate>
+      
+      <guid>https://vickylai.io/verbose/javascript-closures/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://vickylai.io/pixels/closures-sandwich.jpg#center&#34; alt=&#34;Peanut butter and mayo sandwich.&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Say you&amp;rsquo;re having a little coding get-together, and you need some sandwiches. You happen to know that everyone prefers a different type of sandwich, like chicken, ham, or peanut butter and mayo. You could make all these sandwiches yourself, but that would be tedious and boring.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Understanding Array.prototype.reduce() and recursion using apple pie</title>
@@ -17,10 +28,11 @@
       <pubDate>Thu, 18 May 2017 11:40:06 +0700</pubDate>
       
       <guid>https://vickylai.io/verbose/reduce-recursion-with-pie/</guid>
-      <description>I was having trouble understanding reduce() and recursion, so I wrote this article to explain it to myself (Hey, look! Recursion!). I hope you find it helpful too!
-Given an array with nested arrays:
-var arr = [1, [2], [3, [[4]]]]  We want to produce this:
-var flat = [1, 2, 3, 4]  Using for loops and if statements Naively, and if we know the maximum number of nested arrays we&amp;rsquo;ll encounter (in this example, 4), we can use for loops to iterate through each array item, and if statements to check if each item is in itself an array, and so on&amp;hellip;</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://vickylai.io/pixels/recursion-pie.jpg#center&#34; alt=&#34;Delicious attention-retaining recursion pie.&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I was having trouble understanding &lt;code&gt;reduce()&lt;/code&gt; and recursion, so I wrote this article to explain it to myself (Hey, look! Recursion!). I hope you find it helpful too!&lt;/p&gt;
+
+&lt;p&gt;Given an array with nested arrays:&lt;/p&gt;</description>
     </item>
     
     <item>
