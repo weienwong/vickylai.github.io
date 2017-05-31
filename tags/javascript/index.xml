@@ -28,7 +28,8 @@
       <pubDate>Thu, 18 May 2017 11:40:06 +0700</pubDate>
       
       <guid>https://vickylai.io/verbose/reduce-recursion-with-pie/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://vickylai.io/pixels/recursion-pie.jpg#center&#34; alt=&#34;Delicious attention-retaining recursion pie.&#34; /&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&#34;https://vickylai.io/pixels/recursion-pie.jpg#center&#34; alt=&#34;Delicious attention-retaining recursion pie.&#34; /&gt;
+&lt;p class=&#34;has-text-centered caption&#34;&gt;Delicious, attention-retaining recursion pie.&lt;/p&gt;&lt;/p&gt;
 
 &lt;p&gt;I was having trouble understanding &lt;code&gt;reduce()&lt;/code&gt; and recursion in JavaScript, so I wrote this article to explain it to myself (hey, look, recursion!). I hope you find my examples both helpful and delicious.&lt;/p&gt;
 
