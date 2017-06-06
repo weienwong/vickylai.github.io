@@ -21,7 +21,7 @@
     </item>
     
     <item>
-      <title>A straightforward weather web app.</title>
+      <title>A weather app for anyone who likes pretty photos. Who doesn&#39;t?</title>
       <link>https://vickylai.io/project/weather-app/</link>
       <pubDate>Wed, 31 May 2017 14:20:03 +0800</pubDate>
       
@@ -30,7 +30,7 @@
     </item>
     
     <item>
-      <title>A more focused Wikipedia search page.</title>
+      <title>A less distracting Wikipedia search page.</title>
       <link>https://vickylai.io/project/wiki-search/</link>
       <pubDate>Wed, 31 May 2017 14:16:24 +0800</pubDate>
       
@@ -56,7 +56,7 @@
       
       <guid>https://vickylai.io/verbose/reduce-recursion-with-pie/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://vickylai.io/pixels/recursion-pie.jpg#center&#34; alt=&#34;Delicious attention-retaining recursion pie.&#34; /&gt;
-&lt;p class=&#34;has-text-centered caption&#34;&gt;Delicious, attention-retaining recursion pie.&lt;/p&gt;&lt;/p&gt;
+&lt;p class=&#34;has-text-centered img-caption&#34;&gt;Delicious, attention-retaining recursion pie.&lt;/p&gt;&lt;/p&gt;
 
 &lt;p&gt;I was having trouble understanding &lt;code&gt;reduce()&lt;/code&gt; and recursion in JavaScript, so I wrote this article to explain it to myself (hey, look, recursion!). I hope you find my examples both helpful and delicious.&lt;/p&gt;
 

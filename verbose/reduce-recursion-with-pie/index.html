@@ -55,7 +55,7 @@ ga('send', 'pageview');
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-<script src="/js/tagline.js?t=9"></script>
+<script src="/js/tagline.js?t=13"></script>
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
@@ -67,40 +67,35 @@ ga('send', 'pageview');
 <section class="hero">
 
     <div class="container hero-body">
-    <div class="bold-title title inset">-verbose</div>
+    <div class="bold-title title">-verbose</div>
     <div class="subtitle-box">
-        <span class="subtitle inset" id="tagline">Vicky&#39;s Blog</span>
+        <span class="subtitle" id="tagline">Vicky&#39;s Blog</span>
     </div>
     </div>
 
 </section>
 
     <div class="container hero-foot sticky-nav">
-    
-<nav class="container nav nav-center">
-    <span id="nav-toggle" class="nav-toggle"  onclick="document.getElementById('nav-menu').classList.toggle('is-active');">
-      <span></span>
-      <span></span>
-      <span></span>
-    </span>
-    <div id="nav-menu" class="nav-left nav-menu">
-      <span class="nav-item">
-        <a href="/">VickyLai.io</a>
-      </span>
-      <span class="nav-item">
-        <a href="https://vickylai.io/verbose">Blog Posts</a>
-      </span>
-      <span class="nav-item">
-        <a href="https://vickylai.io/#contact">Contact</a>
-      </span>
-    
-      <span class="nav-item">
-        <a href="https://vickylai.io/index.xml" target="_blank">RSS</a>
-      </span>
-    
-    </div>
-</nav>
+    <div class="container hero-foot sticky-nav">
+  <nav class="container nav nav-left">
 
+        <span class="nav-item">
+          <a href="/">VickyLai.io</a>
+        </span>
+        <span class="nav-item">
+          <a href="https://vickylai.io/verbose">All Posts</a>
+        </span>
+        <span class="nav-item">
+          <a href="https://vickylai.io/#contact">Contact</a>
+        </span>
+      
+        <span class="nav-item">
+          <a href="https://vickylai.io/index.xml" target="_blank">RSS</a>
+        </span>
+      
+      
+  </nav>
+</div>
     </div>
 
 <section>
@@ -141,7 +136,7 @@ ga('send', 'pageview');
 
     <div class="container markdown top-pad">
         <p><img src="/pixels/recursion-pie.jpg#center" alt="Delicious attention-retaining recursion pie." />
-<p class="has-text-centered caption">Delicious, attention-retaining recursion pie.</p></p>
+<p class="has-text-centered img-caption">Delicious, attention-retaining recursion pie.</p></p>
 
 <p>I was having trouble understanding <code>reduce()</code> and recursion in JavaScript, so I wrote this article to explain it to myself (hey, look, recursion!). I hope you find my examples both helpful and delicious.</p>
 
@@ -211,7 +206,7 @@ ga('send', 'pageview');
 <p>It&rsquo;s not quite as complicated as it seems. Let&rsquo;s think of <code>reduce()</code> as an out-of-work developer (AI took all the dev jobs) with an empty basket. We&rsquo;ll call him Adam. Adam&rsquo;s main function (ba-dum ching) is now to take apples from a pile, shine them up, and put them one-by-one into the basket. This basket of shiny apples is destined to become delicious apple pies. It&rsquo;s a very important job.</p>
 
 <p><img src="/pixels/recursion-apple-formula.jpg#center" alt="Pile of apples + Adam = apple pie." />
-<p class="has-text-centered caption">Apples plus human effort equals pie. Not to be confused with apple-human-pie, which is less appetizing.</p></p>
+<p class="has-text-centered img-caption">Apples plus human effort equals pie. Not to be confused with apple-human-pie, which is less appetizing.</p></p>
 
 <p>In our above example, the pile of apples is our array, <code>arr</code>. Our basket is <code>done</code>, the accumulator. The initial value of <code>done</code> is an empty array, which we see as <code>[]</code> at the end of our reduce function. The apple that our out-of-work dev is currently shining, you guessed it, is <code>curr</code>. Once Adam processes the current apple, he places it into the basket (<code>.concat()</code>). When there are no more apples in the pile, he returns the basket of polished apples to us, and then probably goes home to his cat, or something.</p>
 
@@ -220,7 +215,7 @@ ga('send', 'pageview');
 <p>So that&rsquo;s all well and good, and now we have a basket of polished apples. But we still have some nested arrays to deal with. Going back to our analogy, let&rsquo;s say that some of the apples in the pile are in boxes. Within each box there could be more apples, and/or more boxes containing smaller, cuter apples.</p>
 
 <p><img src="/pixels/recursion-nested-apples.jpg#center" alt="Box within a box within a box with apples." />
-<p class="has-text-centered caption">Adorable, slightly skewed apples just want to be loved/eaten.</p></p>
+<p class="has-text-centered img-caption">Adorable, slightly skewed apples just want to be loved/eaten.</p></p>
 
 <p>Here&rsquo;s what we want our apple-processing-function/Adam to do:</p>
 
@@ -277,7 +272,7 @@ ga('send', 'pageview');
 <p>And don&rsquo;t worry about Adam, our out-of-work developer. He got so much press after being featured in this article that he opened up his very own AI-managed apple pie factory. He&rsquo;s very happy.</p>
 
 <p><img src="/pixels/recursion-adams-apples.jpg#center" alt="Adam's apple pie factory, &quot;Adam's Apples.&quot;" />
-<p class="has-text-centered caption">+1 for you if you saw that one coming.</p></p>
+<p class="has-text-centered img-caption">+1 for you if you saw that one coming.</p></p>
     </div>
 
     
@@ -288,24 +283,54 @@ ga('send', 'pageview');
         
     </div>
 
-<div class="container center-me top-pad"><hr>
-    <div class="pagination columns is-mobile top-pad">
-        <div class="column is-one-third has-text-centered no-padding btn">
-            <a class="btn previous" href="/verbose/iterating-objects-arrays/">Prev</a>
+<div class="container pagination center-me"><hr>
+    <div class="columns is-mobile">
+
+        <div class="column is-one-third-desktop is-half-mobile no-padding">
+            
+            <div class="card">
+                <div class="card-header bottom-pad">
+                    <a href="/verbose/iterating-objects-arrays/">&lt; Previously on -verbose</a><br />
+                </div>
+                
+                <div class="card-image card-image-left">
+                    <a href="/verbose/iterating-objects-arrays/"><img class="pagination-img" src="/pixels/iteration-breakfast.jpg"></a>
+                </div>
+                
+                <div class="card-content">
+                    A quick reference to why your code isn&#39;t working, or some errors I frequently make with iteration when the coffee wears off.
+                </div>
+            </div>
             
         </div>
-        <div class="column is-one-third has-text-centered no-padding btn">
+
+        <div class="column is-one-third has-text-centered no-padding desktop">
             <a class="up" href="/verbose/reduce-recursion-with-pie/#top">UP, JEEVES.</a>
         </div>
-        <div class="column is-one-third has-text-centered no-padding btn">
-            <a class="btn next" href="/verbose/javascript-closures/">Next</a>
+
+        <div class="column is-one-third-desktop is-half-mobile card-align-right no-padding">
+            
+            <div class="card">
+                <div class="card-header bottom-pad has-text-right">
+                    <a href="/verbose/javascript-closures/">Next time on -verbose ></a><br />
+                </div>
+                
+                <div class="card-image card-image-right">
+                    <a href="/verbose/javascript-closures/"><img class="pagination-img" src="/pixels/closures-sandwich.jpg"></a>
+                </div>
+                
+                <div class="card-content has-text-right">
+                    An explanation of closures and how they can emulate private methods in JavaScript.
+                </div>
+            </div>
             
         </div>
+
     </div>
 <hr></div>
 
 <div class="section center-me" id="footer">
-<div class="container columns">
+<div class="container columns bio-box">
     <div class="column is-one-quarter av-box"><img class="avatar" src="https://vickylai.io/img/portrait.jpg"></div>
     <div class="column bio">
         <p class="strong">About Vicky Lai</p>
