@@ -478,7 +478,7 @@
 
 <p>To see what I&rsquo;m currently up to, you can check out <em><a href="/now">/now</a>.</em> You can also follow me on Twitter, where I&rsquo;m <a href="https://twitter.com/vickylaiio" target="_blank">@vickylaiio</a>.</p>
 
-<p>Want to hire me? <a href="#contact">Let&rsquo;s make it happen!</a></p>
+<p>Want me to build something for you? <a href="#contact">Let&rsquo;s make it happen!</a></p>
 
 <p>Have a really <em>great day.</em> :)</p>
 
@@ -508,8 +508,19 @@
     </div>
   </section>
 
-<footer class="footer phabs-up has-text-centered">
+<footer class="footer no-padding phabs-up has-text-centered" >
+  <div id="footer">
+  <div class="columns">
+    <div class="column is-one-third" id="footer1">
+      <img src="/img/day1.png">
+    </div>
+    <div class="column is-one-third very-center" id="footertext">
   <p>Made with &lt;3 & too much coffee & hosted with GitHub Pages.<br />Vicky Lai 2017</p>
+    </div>
+    <div class="column is-one-third" id="footer2">
+      <img src="/img/day2.png">
+    </div>
+  </div>
 </footer>
 
 <footer class="footer mobile has-text-centered">
@@ -529,7 +540,20 @@ $('a[href^="https:\/\/vickylai.io\/#"]').click(function(e) {
 </script>
 
 <script>
+
+var time = new Date().getHours();
+function footerImg(time) {
+    console.log(time);
+    if (time > 17 || time < 6) {
+        $('#footer1').find('img').attr('src', '/img/night1.png');
+        $('#footer2').find('img').attr('src', '/img/night2.png');
+        $('#footer').css('background', 'rgba(0, 0, 0, 0.4)');
+        $('footer p').css('color', '#fff');
+    }
+}
+
 $(document).ready(function () {
+    
     
     $(".box-link").click(function () {
         window.open($(this).find("a:first").attr("href"));
@@ -541,6 +565,8 @@ $(document).ready(function () {
     }, function () {
         window.status = "";
     });
+    
+    footerImg(time);
 });
 </script>
 
