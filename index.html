@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-	<meta name="generator" content="Hugo 0.21" />
+	<meta name="generator" content="Hugo 0.25.1" />
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
 <meta name="HandheldFriendly" content="True">
@@ -26,7 +26,7 @@
 
 
 
-<link rel="stylesheet" href="https://vickylai.io/css/candid.css">
+<link rel="stylesheet" href="/css/candid.css?t=23">
 
 
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet"> 
@@ -49,38 +49,54 @@
 <body>
 <a name="top" id="top">
 
-    <div class="sticky-nav has-text-centered">
-        <div class="container phabs-up">
+    <div class="sticky-nav has-text-centered phabs-up">
+        <div class="container">
         <nav class="nav">
 
         <nav class="nav-left">
-            <a class="nav-item is-tab" href="https://vickylai.io/#top">
+            <a class="nav-item is-tab" href="/#top">
             <h1 class="home">VickyLai.io</h1>
             </a>
         </nav>
 
         <nav class="nav-right">
-
-        
-        
         <div class="nav-right nav-menu" id="nav-menu">
-            <a class="nav-item is-tab" href="https://vickylai.io/#blog">
+            <a class="nav-item is-tab" href="/#blog">
             Blog
             </a>
-            <a class="nav-item is-tab" href="https://vickylai.io/#projects">
+            <a class="nav-item is-tab" href="/#projects">
             Projects
             </a>
-            <a class="nav-item is-tab" href="https://vickylai.io/#about">
+            <a class="nav-item is-tab" href="/#about">
             About
             </a>
-            <a class="nav-item is-tab" href="https://vickylai.io/#contact">
+            <a class="nav-item is-tab" href="/#contact">
             Contact
             </a>
         </div>
         </nav>
+
         </nav>
-        </div>
     </div>
+    </div>
+
+<div class="container mobile sticky-nav">
+    <nav class="nav nav-center">
+            <a class="nav-item" href="/#blog">
+            Blog
+            </a>
+            <a class="nav-item" href="/#projects">
+            Projects
+            </a>
+            <a class="nav-item" href="/#about">
+            About
+            </a>
+            <a class="nav-item" href="/#contact">
+            Contact
+            </a>
+    </nav>
+</div>
+
 
 
   <section class="section is-large" id="big-intro">
@@ -113,24 +129,6 @@
         </div>
     </div>
   </section>
-
-<div class="container mobile sticky-nav">
-    <nav class="nav nav-center">
-            <a class="nav-item" href="https://vickylai.io/#blog">
-            Blog
-            </a>
-            <a class="nav-item" href="https://vickylai.io/#projects">
-            Projects
-            </a>
-            <a class="nav-item" href="https://vickylai.io/#about">
-            About
-            </a>
-            <a class="nav-item" href="https://vickylai.io/#contact">
-            Contact
-            </a>
-    </nav>
-</div>
-
 
 
   <section class="section tablet is-large" id="small-intro">
@@ -262,7 +260,7 @@
                         <div class="columns is-mobile">
                         <div class="column very-center">
                             <figure class="image is-48x48">
-                            <img src="https://pbs.twimg.com/profile_images/839643754126417920/6trsFcTQ.jpg" alt="Image">
+                            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--DR9yHEyD--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://thepracticaldev.s3.amazonaws.com/uploads/user/profile_image/3/devlogo.png" alt="Image">
                             </figure>
                         </div>
                         <div class="column is-10">
@@ -502,7 +500,7 @@
     </div>
   </section>
 
-<footer class="footer no-padding phabs-up has-text-centered" >
+<footer class="footer no-padding phabs-up has-text-centered">
   <div id="footer">
   <div class="columns">
     <div class="column is-one-third" id="footer1">
@@ -518,12 +516,12 @@
 </footer>
 
 <footer class="footer mobile has-text-centered">
-  <p>Made with &lt;3 & too much coffee <br />& hosted with GitHub Pages.<br />Vicky Lai 2017</p>
+  <p id="mobilefooter">Made with &lt;3 & too much coffee <br />& hosted with GitHub Pages.<br />Vicky Lai 2017</p>
 </footer>
 
 
 <script>
-$('a[href^="https:\/\/vickylai.io\/#"]').click(function(e) {
+$('a[href^="/#"]').click(function(e) {
     e.preventDefault();
     var target = this.hash;
     $('html, body').animate({
@@ -542,7 +540,8 @@ function footerImg(time) {
         $('#footer1').find('img').attr('src', '/img/night1.png');
         $('#footer2').find('img').attr('src', '/img/night2.png');
         $('#footer').css('background', 'rgba(0, 0, 0, 0.4)');
-        $('footer p').css('color', '#fff');
+        $('#mobilefooter').css('color', '#a4a4a4');
+        $('#footertext').css('color', '#fff');
     }
 }
 
