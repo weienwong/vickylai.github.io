@@ -6,7 +6,7 @@
     <description>Recent content in Tags on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Jan 2017 16:39:29 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 31 May 2017 14:20:03 +0800</lastBuildDate>
     
 	<atom:link href="https://vickylai.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Api</title>
       <link>https://vickylai.io/tags/api/</link>
-      <pubDate>Fri, 06 Jan 2017 16:39:29 +0700</pubDate>
+      <pubDate>Wed, 31 May 2017 14:20:03 +0800</pubDate>
       
       <guid>https://vickylai.io/tags/api/</guid>
       <description></description>
@@ -75,6 +75,15 @@
     </item>
     
     <item>
+      <title>Front End</title>
+      <link>https://vickylai.io/tags/front-end/</link>
+      <pubDate>Wed, 31 May 2017 14:21:59 +0800</pubDate>
+      
+      <guid>https://vickylai.io/tags/front-end/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Frontend</title>
       <link>https://vickylai.io/tags/frontend/</link>
       <pubDate>Thu, 27 Apr 2017 08:14:09 +0800</pubDate>
@@ -111,11 +120,38 @@
     </item>
     
     <item>
+      <title>Minimalist</title>
+      <link>https://vickylai.io/tags/minimalist/</link>
+      <pubDate>Wed, 31 May 2017 14:21:59 +0800</pubDate>
+      
+      <guid>https://vickylai.io/tags/minimalist/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Python</title>
       <link>https://vickylai.io/tags/python/</link>
       <pubDate>Wed, 18 Jan 2017 21:58:28 +0700</pubDate>
       
       <guid>https://vickylai.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theme</title>
+      <link>https://vickylai.io/tags/theme/</link>
+      <pubDate>Wed, 31 May 2017 14:21:59 +0800</pubDate>
+      
+      <guid>https://vickylai.io/tags/theme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web App</title>
+      <link>https://vickylai.io/tags/web-app/</link>
+      <pubDate>Wed, 31 May 2017 14:20:03 +0800</pubDate>
+      
+      <guid>https://vickylai.io/tags/web-app/</guid>
       <description></description>
     </item>
     
