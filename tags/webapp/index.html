@@ -47,7 +47,7 @@ And I've decided it doesn't get any better than this.
 <meta name="description" content="Vicky Lai. Nomadic developer of super fast websites and apps you didn't know you needed. Blogger of code explained with doodles of food.">
 <title>
 
-    about
+    Webapp
 
 </title>
 
@@ -83,80 +83,66 @@ And I've decided it doesn't get any better than this.
 
 <body>
 
-    <div class="sticky-nav has-text-centered phabs-up">
-        <div class="container">
-        <nav class="nav">
+<div class="phabs-up sticky-nav has-text-centered">
+  <nav class="container nav">
 
-        <nav class="nav-left">
-            <a class="nav-item is-tab" href="/">
-            <h1 class="home">VickyLai.io</h1>
-            </a>
-        </nav>
-
-        <nav class="nav-right">
-        <div class="nav-right nav-menu" id="nav-menu">
-            <a class="nav-item is-tab" href="/verbose">
-            Verbose
-            </a>
-            <a class="nav-item is-tab" href="/#projects">
-            Projects
-            </a>
-            <a class="nav-item is-tab" href="/#about">
-            About
-            </a>
-            <a class="nav-item is-tab" href="/#contact">
-            Contact
-            </a>
-        </div>
-        </nav>
-
-        </nav>
-    </div>
-    </div>
+    <nav class="nav-left is-mobile">
+        <a class="nav-item is-tab" href="/">VickyLai.io</a>
+    </nav>
+      <nav class="nav-right is-mobile">
+        <a class="nav-item is-tab" href="/tags">All tags</a>
+        <a class="nav-item is-tab" href="/#contact">Contact</a>
+      
+        <a class="nav-item is-tab" href="https://vickylai.io/index.xml" target="_blank">RSS</a>
+      
+  </nav>
+</nav>
+</div>
 
 <div class="container mobile sticky-nav">
     <nav class="nav nav-center">
-            <a class="nav-item" href="/verbose">
-            Verbose
-            </a>
-            <a class="nav-item" href="/#projects">
-            Projects
-            </a>
-            <a class="nav-item" href="/#about">
-            About
-            </a>
-            <a class="nav-item" href="/#contact">
-            Contact
-            </a>
+      <a class="nav-item is-tab" href="/">VickyLai.io</a>
+      <a class="nav-item is-tab" href="/tags">All tags</a>
+      <a class="nav-item is-tab" href="/#contact">Contact</a>
+      
+      <a class="nav-item is-tab" href="https://vickylai.io/index.xml" target="_blank">RSS</a>
+      
     </nav>
 </div>
 
 <section class="hero content-head" id="top">
-<div class="container top-pad has-text-centered"> <h1><span class="text-line">about</span></h1></div>
+<div class="container top-pad has-text-centered"> <h1><span class="text-line">Tagged "webapp"</span></h1></div>
 </section>
 
-<section class="section">
-    <div class="container markdown">
-        <p>Hi there! I&rsquo;m Vicky.</p>
+<div class="section is-medium">
+<div class="posts-list">
+    
+    
+        
 
-<p>My first languages were <em>English, CSS,</em> and <em><a href="https://en.wikipedia.org/wiki/LPC_(programming_language)" target="_blank">LPC</a></em>. I spent whole summers as a little girl programming a text-based MUD over Telnet. I made all kinds of things in that fantasy world, but soon that wasn&rsquo;t enough.</p>
+</div>
 
-<p>I started making things for the real world.</p>
+<div class="posts-list top-pad">
 
-<p>I fell hard for front end development, a relationship that&rsquo;s held steady for a couple decades now. I&rsquo;ve also learned to write <em>JavaScript and Python,</em> and I&rsquo;m currently exploring <em>Go.</em> I aim to conquer <em>full stack</em> this year.</p>
+    
+    
+        
+        <h1 class="top-pad">Projects</h1>
+        
+    <span class="data">Jan 1, 0001</span>
+    <p><a href="https://vickylai.io/project/weather-app/">A weather app for anyone who likes pretty photos. Who doesn&#39;t?</a></p>
+    
+    <span class="data">Jan 1, 0001</span>
+    <p><a href="https://vickylai.io/project/wiki-search/">An uncluttered Wikipedia search page.</a></p>
+    
+    <span class="data">Jan 1, 0001</span>
+    <p><a href="https://vickylai.io/project/calc/">Make math pretty again with this minimalist javascript calculator.</a></p>
+    
+    
 
-<p>I don&rsquo;t seem to have an &ldquo;off&rdquo; button when it comes to <em>building things.</em> I also like drinking lots of coffee. The latter seems to produce even more of the former.</p>
+</div>
 
-<p>To see what I&rsquo;m currently up to, you can check out <em><a href="/now">/now</a>.</em> You can also follow me on Twitter, where I&rsquo;m <a href="https://twitter.com/vickylaiio" target="_blank">@vickylaiio</a>.</p>
-
-<p>Want me to build something for you? <a href="/#contact">Let&rsquo;s make it happen!</a></p>
-
-<p>Have a really <em>great day.</em> :)</p>
-
-    </div>
-<hr>
-
-</section>
+</div>
 
 <div class="footer section center-me" id="footer">
 <div class="container columns bio-box">
@@ -185,3 +171,17 @@ And I've decided it doesn't get any better than this.
     </div>
 </div>
 </div>
+
+
+<script>
+$('a[href^="/#"]').click(function(e) {
+    e.preventDefault();
+    var target = this.hash;
+    $('html, body').animate({
+    scrollTop: $(target).offset().top
+    }, 500);
+    return false;
+});
+</script>
+
+</body>

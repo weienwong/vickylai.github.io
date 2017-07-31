@@ -6,7 +6,7 @@
     <description>Recent content in Tags on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 31 May 2017 14:20:03 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 06 Jan 2017 16:39:29 +0700</lastBuildDate>
     
 	<atom:link href="https://vickylai.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Api</title>
       <link>https://vickylai.io/tags/api/</link>
-      <pubDate>Wed, 31 May 2017 14:20:03 +0800</pubDate>
+      <pubDate>Fri, 06 Jan 2017 16:39:29 +0700</pubDate>
       
       <guid>https://vickylai.io/tags/api/</guid>
       <description></description>
@@ -57,29 +57,20 @@
     </item>
     
     <item>
-      <title>Data Science</title>
-      <link>https://vickylai.io/tags/data-science/</link>
+      <title>Css</title>
+      <link>https://vickylai.io/tags/css/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vickylai.io/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data</title>
+      <link>https://vickylai.io/tags/data/</link>
       <pubDate>Fri, 31 Mar 2017 13:19:19 +0900</pubDate>
       
-      <guid>https://vickylai.io/tags/data-science/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Free</title>
-      <link>https://vickylai.io/tags/free/</link>
-      <pubDate>Thu, 27 Apr 2017 08:14:09 +0800</pubDate>
-      
-      <guid>https://vickylai.io/tags/free/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Front End</title>
-      <link>https://vickylai.io/tags/front-end/</link>
-      <pubDate>Wed, 31 May 2017 14:21:59 +0800</pubDate>
-      
-      <guid>https://vickylai.io/tags/front-end/</guid>
+      <guid>https://vickylai.io/tags/data/</guid>
       <description></description>
     </item>
     
@@ -120,15 +111,6 @@
     </item>
     
     <item>
-      <title>Minimalist</title>
-      <link>https://vickylai.io/tags/minimalist/</link>
-      <pubDate>Wed, 31 May 2017 14:21:59 +0800</pubDate>
-      
-      <guid>https://vickylai.io/tags/minimalist/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Python</title>
       <link>https://vickylai.io/tags/python/</link>
       <pubDate>Wed, 18 Jan 2017 21:58:28 +0700</pubDate>
@@ -138,20 +120,29 @@
     </item>
     
     <item>
+      <title>Responsive</title>
+      <link>https://vickylai.io/tags/responsive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vickylai.io/tags/responsive/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Theme</title>
       <link>https://vickylai.io/tags/theme/</link>
-      <pubDate>Wed, 31 May 2017 14:21:59 +0800</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://vickylai.io/tags/theme/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Web App</title>
-      <link>https://vickylai.io/tags/web-app/</link>
-      <pubDate>Wed, 31 May 2017 14:20:03 +0800</pubDate>
+      <title>Webapp</title>
+      <link>https://vickylai.io/tags/webapp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://vickylai.io/tags/web-app/</guid>
+      <guid>https://vickylai.io/tags/webapp/</guid>
       <description></description>
     </item>
     

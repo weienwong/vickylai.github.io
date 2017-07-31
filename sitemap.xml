@@ -4,17 +4,18 @@
   
   <url>
     <loc>https://vickylai.io/project/introduction/</loc>
-    <lastmod>2017-05-31T14:21:59+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/project/weather-app/</loc>
-    <lastmod>2017-05-31T14:20:03+08:00</lastmod>
+    <loc>https://vickylai.io/project/calc/</loc>
   </url>
   
   <url>
     <loc>https://vickylai.io/project/wiki-search/</loc>
-    <lastmod>2017-05-31T14:16:24+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vickylai.io/project/weather-app/</loc>
   </url>
   
   <url>
@@ -84,7 +85,7 @@
   
   <url>
     <loc>https://vickylai.io/tags/api/</loc>
-    <lastmod>2017-05-31T14:20:03+08:00</lastmod>
+    <lastmod>2017-01-06T16:39:29+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -118,20 +119,13 @@
   </url>
   
   <url>
-    <loc>https://vickylai.io/tags/data-science/</loc>
+    <loc>https://vickylai.io/tags/css/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vickylai.io/tags/data/</loc>
     <lastmod>2017-03-31T13:19:19+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://vickylai.io/tags/free/</loc>
-    <lastmod>2017-04-27T08:14:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://vickylai.io/tags/front-end/</loc>
-    <lastmod>2017-05-31T14:21:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -160,18 +154,11 @@
   </url>
   
   <url>
-    <loc>https://vickylai.io/tags/minimalist/</loc>
-    <lastmod>2017-05-31T14:21:59+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://vickylai.io/now/</loc>
   </url>
   
   <url>
     <loc>https://vickylai.io/project/</loc>
-    <lastmod>2017-05-31T14:21:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -182,14 +169,18 @@
   </url>
   
   <url>
+    <loc>https://vickylai.io/tags/responsive/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://vickylai.io/tags/</loc>
-    <lastmod>2017-05-31T14:20:03+08:00</lastmod>
+    <lastmod>2017-01-06T16:39:29+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://vickylai.io/tags/theme/</loc>
-    <lastmod>2017-05-31T14:21:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -201,13 +192,12 @@
   
   <url>
     <loc>https://vickylai.io/</loc>
-    <lastmod>2017-05-31T14:21:59+08:00</lastmod>
+    <lastmod>2017-05-28T09:16:35+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vickylai.io/tags/web-app/</loc>
-    <lastmod>2017-05-31T14:20:03+08:00</lastmod>
+    <loc>https://vickylai.io/tags/webapp/</loc>
     <priority>0</priority>
   </url>
   

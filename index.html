@@ -1,5 +1,40 @@
 <!DOCTYPE html>
+<!---
+When I was a kid, I thought I knew what I wanted to do with my life.
+I spent entire summers in front of a CRT, developing astigmatism
+and a text-based RPG. I connected via Telnet and wrote in LPC.
+I made tools, monsters, characters, worlds,
+and decided it couldn't get any better than this.
 
+I wanted to make things, so I got a fine arts degree.
+I made props, costumes, sets, and scripts,
+and I made actors happy. I lit stages and arranged amps,
+managed people and shows and theatres and businesses.
+I made minimum wage
+and decided it couldn't get any better than this.
+
+People told me I was good at managing businesses
+and would I please come and work for them? So I traded
+stage shows for startups (they aren't that different)
+and moved halfway around the world
+and I loved Asia and managing projects
+and I really missed making things.
+
+So I :quit
+and recreated myself
+as a character in a new world:
+________________________________________________________________________
+Vicky the Inquisitive Techie
+________________________________________________________________________
+Level: 29                   Gender: Female
+Class: Nomad                Guild: Builders
+
+Skills: Imagine, Code, Debug, Deploy
+________________________________________________________________________
+
+I know what I want to do with my life.
+And I've decided it doesn't get any better than this.
+-->
 <html lang="en">
 
 <head>
@@ -10,7 +45,7 @@
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="noopener">
-<meta name="description" content="I'm a nomadic developer. I blog about coding, geek out over single-page sites and 90s stuff, and drink too much coffee.">
+<meta name="description" content="Vicky Lai. Nomadic developer of super fast websites and apps you didn't know you needed. Blogger of code explained with doodles of food.">
 <title>
 
     VickyLai.io
@@ -26,7 +61,7 @@
 
 
 
-<link rel="stylesheet" href="/css/candid.css?t=13">
+<link rel="stylesheet" href="/css/candid.css?t=12">
 
 
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet"> 
@@ -314,19 +349,25 @@
 
         <h1 class="top-pad"><a href="https://vickylai.io/introduction" target="_blank">Minimal Hugo theme that&#39;s all about you.</a></h1>
 
-         <span class="tags">minimalist</span>  <span class="tags">theme</span>  <span class="tags">front-end</span> 
+         <span class="tags"><a href="/tags/css">css</a></span>  <span class="tags"><a href="/tags/theme">theme</a></span>  <span class="tags"><a href="/tags/responsive">responsive</a></span> 
 
     
 
-        <h1 class="top-pad"><a href="http://vickylai.io/handy-weather-app/" target="_blank">A weather app for anyone who likes pretty photos. Who doesn&#39;t?</a></h1>
+        <h1 class="top-pad"><a href="https://vickylai.io/minimalist-calc/" target="_blank">Make math pretty again with this minimalist javascript calculator.</a></h1>
 
-         <span class="tags">web app</span>  <span class="tags">front-end</span>  <span class="tags">api</span> 
+         <span class="tags"><a href="/tags/css">css</a></span>  <span class="tags"><a href="/tags/javascript">javascript</a></span>  <span class="tags"><a href="/tags/webapp">webapp</a></span>  <span class="tags"><a href="/tags/responsive">responsive</a></span> 
 
     
 
         <h1 class="top-pad"><a href="https://vickylai.io/slick-wiki-search/" target="_blank">An uncluttered Wikipedia search page.</a></h1>
 
-         <span class="tags">web app</span>  <span class="tags">api</span>  <span class="tags">front-end</span> 
+         <span class="tags"><a href="/tags/javascript">javascript</a></span>  <span class="tags"><a href="/tags/webapp">webapp</a></span>  <span class="tags"><a href="/tags/api">api</a></span> 
+
+    
+
+        <h1 class="top-pad"><a href="http://vickylai.io/handy-weather-app/" target="_blank">A weather app for anyone who likes pretty photos. Who doesn&#39;t?</a></h1>
+
+         <span class="tags"><a href="/tags/css">css</a></span>  <span class="tags"><a href="/tags/javascript">javascript</a></span>  <span class="tags"><a href="/tags/webapp">webapp</a></span>  <span class="tags"><a href="/tags/api">api</a></span> 
 
     
 
@@ -347,7 +388,7 @@
 
   </section>
 
-  <section class="section" id="about">
+  <section class="section is-medium" id="about">
     <div class="container about">
                 <div class="mobile has-text-centered">
                     <h1 class="display less">
@@ -402,6 +443,8 @@
                 
                     
                 
+                    
+                
                      
                             <p>Hi there! I&rsquo;m Vicky.</p>
 
@@ -415,7 +458,7 @@
 
 <p>To see what I&rsquo;m currently up to, you can check out <em><a href="/now">/now</a>.</em> You can also follow me on Twitter, where I&rsquo;m <a href="https://twitter.com/vickylaiio" target="_blank">@vickylaiio</a>.</p>
 
-<p>Want me to build something for you? <a href="#contact">Let&rsquo;s make it happen!</a></p>
+<p>Want me to build something for you? <a href="/#contact">Let&rsquo;s make it happen!</a></p>
 
 <p>Have a really <em>great day.</em> :)</p>
 
@@ -470,7 +513,7 @@ $('a[href^="/#"]').click(function(e) {
     e.preventDefault();
     var target = this.hash;
     $('html, body').animate({
-    scrollTop: $(target).offset().top - 48
+    scrollTop: $(target).offset().top
     }, 500);
     return false;
 })
@@ -490,20 +533,7 @@ function footerImg(time) {
     }
 }
 
-$(document).ready(function () {
-    
-    
-    $(".box-link").click(function () {
-        window.open($(this).find("a:first").attr("href"));
-        return false;
-    });
-    
-    $(".box-link").hover(function () {
-        window.status = $(this).find("a:first").attr("href");
-    }, function () {
-        window.status = "";
-    });
-    
+$(document).ready(function () {    
     footerImg(time);
 });
 </script>

@@ -1,40 +1,5 @@
 <!DOCTYPE html>
-<!---
-When I was a kid, I thought I knew what I wanted to do with my life.
-I spent entire summers in front of a CRT, developing astigmatism
-and a text-based RPG. I connected via Telnet and wrote in LPC.
-I made tools, monsters, characters, worlds,
-and decided it couldn't get any better than this.
 
-I wanted to make things, so I got a fine arts degree.
-I made props, costumes, sets, and scripts,
-and I made actors happy. I lit stages and arranged amps,
-managed people and shows and theatres and businesses.
-I made minimum wage
-and decided it couldn't get any better than this.
-
-People told me I was good at managing businesses
-and would I please come and work for them? So I traded
-stage shows for startups (they aren't that different)
-and moved halfway around the world
-and I loved Asia and managing projects
-and I really missed making things.
-
-So I :quit
-and recreated myself
-as a character in a new world:
-________________________________________________________________________
-Vicky the Inquisitive Techie
-________________________________________________________________________
-Level: 29                   Gender: Female
-Class: Nomad                Guild: Builders
-
-Skills: Imagine, Code, Debug, Deploy
-________________________________________________________________________
-
-I know what I want to do with my life.
-And I've decided it doesn't get any better than this.
--->
 <html lang="en">
 
 <head>
@@ -44,10 +9,10 @@ And I've decided it doesn't get any better than this.
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="noopener">
-<meta name="description" content="Vicky Lai. Nomadic developer of super fast websites and apps you didn't know you needed. Blogger of code explained with doodles of food.">
+<meta name="description" content="I'm a nomadic developer. I blog about coding, geek out over single-page sites and 90s stuff, and drink too much coffee.">
 <title>
 
-    about
+    Minimalist
 
 </title>
 
@@ -60,7 +25,7 @@ And I've decided it doesn't get any better than this.
 
 
 
-<link rel="stylesheet" href="/css/candid.css?t=12">
+<link rel="stylesheet" href="/css/candid.css?t=17">
 
 
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet"> 
@@ -88,15 +53,15 @@ And I've decided it doesn't get any better than this.
         <nav class="nav">
 
         <nav class="nav-left">
-            <a class="nav-item is-tab" href="/">
+            <a class="nav-item is-tab" href="/#top">
             <h1 class="home">VickyLai.io</h1>
             </a>
         </nav>
 
         <nav class="nav-right">
         <div class="nav-right nav-menu" id="nav-menu">
-            <a class="nav-item is-tab" href="/verbose">
-            Verbose
+            <a class="nav-item is-tab" href="/#blog">
+            Blog
             </a>
             <a class="nav-item is-tab" href="/#projects">
             Projects
@@ -116,8 +81,8 @@ And I've decided it doesn't get any better than this.
 
 <div class="container mobile sticky-nav">
     <nav class="nav nav-center">
-            <a class="nav-item" href="/verbose">
-            Verbose
+            <a class="nav-item" href="/#blog">
+            Blog
             </a>
             <a class="nav-item" href="/#projects">
             Projects
@@ -131,32 +96,12 @@ And I've decided it doesn't get any better than this.
     </nav>
 </div>
 
+
 <section class="hero content-head" id="top">
-<div class="container top-pad has-text-centered"> <h1><span class="text-line">about</span></h1></div>
+<div class="container top-pad has-text-centered"> <h1><span class="text-line">Minimalist</span></h1></div>
 </section>
 
-<section class="section">
-    <div class="container markdown">
-        <p>Hi there! I&rsquo;m Vicky.</p>
-
-<p>My first languages were <em>English, CSS,</em> and <em><a href="https://en.wikipedia.org/wiki/LPC_(programming_language)" target="_blank">LPC</a></em>. I spent whole summers as a little girl programming a text-based MUD over Telnet. I made all kinds of things in that fantasy world, but soon that wasn&rsquo;t enough.</p>
-
-<p>I started making things for the real world.</p>
-
-<p>I fell hard for front end development, a relationship that&rsquo;s held steady for a couple decades now. I&rsquo;ve also learned to write <em>JavaScript and Python,</em> and I&rsquo;m currently exploring <em>Go.</em> I aim to conquer <em>full stack</em> this year.</p>
-
-<p>I don&rsquo;t seem to have an &ldquo;off&rdquo; button when it comes to <em>building things.</em> I also like drinking lots of coffee. The latter seems to produce even more of the former.</p>
-
-<p>To see what I&rsquo;m currently up to, you can check out <em><a href="/now">/now</a>.</em> You can also follow me on Twitter, where I&rsquo;m <a href="https://twitter.com/vickylaiio" target="_blank">@vickylaiio</a>.</p>
-
-<p>Want me to build something for you? <a href="/#contact">Let&rsquo;s make it happen!</a></p>
-
-<p>Have a really <em>great day.</em> :)</p>
-
-    </div>
-<hr>
-
-</section>
+Page(&#34;Minimalist&#34;)
 
 <div class="footer section center-me" id="footer">
 <div class="container columns bio-box">
@@ -185,3 +130,17 @@ And I've decided it doesn't get any better than this.
     </div>
 </div>
 </div>
+
+
+<script>
+$('a[href^="/#"]').click(function(e) {
+    e.preventDefault();
+    var target = this.hash;
+    $('html, body').animate({
+    scrollTop: $(target).offset().top
+    }, 500);
+    return false;
+});
+</script>
+
+</body>

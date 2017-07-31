@@ -1,5 +1,40 @@
 <!DOCTYPE html>
+<!---
+When I was a kid, I thought I knew what I wanted to do with my life.
+I spent entire summers in front of a CRT, developing astigmatism
+and a text-based RPG. I connected via Telnet and wrote in LPC.
+I made tools, monsters, characters, worlds,
+and decided it couldn't get any better than this.
 
+I wanted to make things, so I got a fine arts degree.
+I made props, costumes, sets, and scripts,
+and I made actors happy. I lit stages and arranged amps,
+managed people and shows and theatres and businesses.
+I made minimum wage
+and decided it couldn't get any better than this.
+
+People told me I was good at managing businesses
+and would I please come and work for them? So I traded
+stage shows for startups (they aren't that different)
+and moved halfway around the world
+and I loved Asia and managing projects
+and I really missed making things.
+
+So I :quit
+and recreated myself
+as a character in a new world:
+________________________________________________________________________
+Vicky the Inquisitive Techie
+________________________________________________________________________
+Level: 29                   Gender: Female
+Class: Nomad                Guild: Builders
+
+Skills: Imagine, Code, Debug, Deploy
+________________________________________________________________________
+
+I know what I want to do with my life.
+And I've decided it doesn't get any better than this.
+-->
 <html lang="en">
 
 <head>
@@ -9,7 +44,7 @@
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="noopener">
-<meta name="description" content="I'm a nomadic developer. I blog about coding, geek out over single-page sites and 90s stuff, and drink too much coffee.">
+<meta name="description" content="Vicky Lai. Nomadic developer of super fast websites and apps you didn't know you needed. Blogger of code explained with doodles of food.">
 <title>
 
     An uncluttered Wikipedia search page.
@@ -25,7 +60,7 @@
 
 
 
-<link rel="stylesheet" href="/css/candid.css?t=13">
+<link rel="stylesheet" href="/css/candid.css?t=12">
 
 
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet"> 
@@ -53,15 +88,15 @@
         <nav class="nav">
 
         <nav class="nav-left">
-            <a class="nav-item is-tab" href="/#top">
+            <a class="nav-item is-tab" href="/">
             <h1 class="home">VickyLai.io</h1>
             </a>
         </nav>
 
         <nav class="nav-right">
         <div class="nav-right nav-menu" id="nav-menu">
-            <a class="nav-item is-tab" href="/#blog">
-            Blog
+            <a class="nav-item is-tab" href="/verbose">
+            Verbose
             </a>
             <a class="nav-item is-tab" href="/#projects">
             Projects
@@ -81,8 +116,8 @@
 
 <div class="container mobile sticky-nav">
     <nav class="nav nav-center">
-            <a class="nav-item" href="/#blog">
-            Blog
+            <a class="nav-item" href="/verbose">
+            Verbose
             </a>
             <a class="nav-item" href="/#projects">
             Projects
@@ -95,7 +130,6 @@
             </a>
     </nav>
 </div>
-
 
 <section class="hero content-head" id="top">
 <div class="container top-pad has-text-centered"> <h1><span class="text-line">An uncluttered Wikipedia search page.</span></h1></div>
@@ -137,17 +171,3 @@
     </div>
 </div>
 </div>
-
-
-<script>
-$('a[href^="#"]').click(function(e) {
-    e.preventDefault();
-    var target = this.hash;
-    $('html, body').animate({
-    scrollTop: $(target).offset().top
-    }, 500);
-    return false;
-});
-</script>
-
-</body>
