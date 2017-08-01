@@ -197,10 +197,10 @@ That said, some blocks can be a little confusing at first. I found documentation
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://vickylai.io/about/</guid>
-      <description>Hi there! I&amp;rsquo;m Vicky.
+      <description>Hi there! I&amp;rsquo;m Vicky. 👋
 My first languages were English, CSS, and LPC. I spent whole summers as a little girl programming a text-based MUD over Telnet. I made all kinds of things in that fantasy world, but soon that wasn&amp;rsquo;t enough.
 I started making things for the real world.
-I fell hard for front end development, a relationship that&amp;rsquo;s held steady for a couple decades now. I&amp;rsquo;ve also learned to write JavaScript and Python, and I&amp;rsquo;m currently exploring Go.</description>
+I fell hard for front end development, a relationship that&amp;rsquo;s held steady for about a couple decades now. I&amp;rsquo;ve also learned to write JavaScript and Python, and I&amp;rsquo;m currently exploring Go.</description>
     </item>
     
   </channel>
