@@ -2,4 +2,4 @@
 
 This website has easter eggs. It's a work in progress. I have grand plans for it.
 
-Hey, I'm on [Twitter](https://twitter.com/vickylaiio) if you want to chat.
+Hey, I'm on [Twitter](https://twitter.com/hivickylai) if you want to chat.

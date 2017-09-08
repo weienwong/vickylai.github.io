@@ -6,10 +6,22 @@
     <description>Recent content in Coding on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 May 2017 09:16:35 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 08 Sep 2017 16:50:24 -0400</lastBuildDate>
     
 	<atom:link href="https://vickylai.io/tags/coding/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to build a program, or make dinner, from scratch</title>
+      <link>https://vickylai.io/verbose/1-things-in-space/</link>
+      <pubDate>Fri, 08 Sep 2017 16:50:24 -0400</pubDate>
+      
+      <guid>https://vickylai.io/verbose/1-things-in-space/</guid>
+      <description>What if I told you that by the end of this article, you&amp;rsquo;ll be able to calculate the orbital period of satellites around Earth using their average altitudes and&amp;hellip; You tuned out already, didn&amp;rsquo;t you?
+Okay, how about this: I&amp;rsquo;m going to teach you how to make paella!
+True fact: people are far more likely to accept complexity if it comes with the promise of food.
+And you&amp;rsquo;ll have written a function that does the stuff I mentioned above, just like I did for this freeCodeCamp challenge.</description>
+    </item>
     
     <item>
       <title>Making sandwiches with closures in JavaScript</title>

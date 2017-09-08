@@ -6,10 +6,19 @@
     <description>Recent content in Tags on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Jan 2017 16:39:29 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 08 Sep 2017 16:50:24 -0400</lastBuildDate>
     
 	<atom:link href="https://vickylai.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Algorithms</title>
+      <link>https://vickylai.io/tags/algorithms/</link>
+      <pubDate>Fri, 08 Sep 2017 16:50:24 -0400</pubDate>
+      
+      <guid>https://vickylai.io/tags/algorithms/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Api</title>
@@ -32,7 +41,7 @@
     <item>
       <title>Coding</title>
       <link>https://vickylai.io/tags/coding/</link>
-      <pubDate>Sun, 28 May 2017 09:16:35 +0700</pubDate>
+      <pubDate>Fri, 08 Sep 2017 16:50:24 -0400</pubDate>
       
       <guid>https://vickylai.io/tags/coding/</guid>
       <description></description>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algorithms on VickyLai.io</title>
+    <link>https://vickylai.io/tags/algorithms/</link>
+    <description>Recent content in Algorithms on VickyLai.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Sep 2017 16:50:24 -0400</lastBuildDate>
+    
+	<atom:link href="https://vickylai.io/tags/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to build a program, or make dinner, from scratch</title>
+      <link>https://vickylai.io/verbose/1-things-in-space/</link>
+      <pubDate>Fri, 08 Sep 2017 16:50:24 -0400</pubDate>
+      
+      <guid>https://vickylai.io/verbose/1-things-in-space/</guid>
+      <description>What if I told you that by the end of this article, you&amp;rsquo;ll be able to calculate the orbital period of satellites around Earth using their average altitudes and&amp;hellip; You tuned out already, didn&amp;rsquo;t you?
+Okay, how about this: I&amp;rsquo;m going to teach you how to make paella!
+True fact: people are far more likely to accept complexity if it comes with the promise of food.
+And you&amp;rsquo;ll have written a function that does the stuff I mentioned above, just like I did for this freeCodeCamp challenge.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -19,6 +19,11 @@
   </url>
   
   <url>
+    <loc>https://vickylai.io/verbose/1-things-in-space/</loc>
+    <lastmod>2017-09-08T16:50:24-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://vickylai.io/verbose/javascript-closures/</loc>
     <lastmod>2017-05-28T09:16:35+07:00</lastmod>
   </url>
@@ -84,6 +89,12 @@
   </url>
   
   <url>
+    <loc>https://vickylai.io/tags/algorithms/</loc>
+    <lastmod>2017-09-08T16:50:24-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://vickylai.io/tags/api/</loc>
     <lastmod>2017-01-06T16:39:29+07:00</lastmod>
     <priority>0</priority>
@@ -102,7 +113,7 @@
   
   <url>
     <loc>https://vickylai.io/tags/coding/</loc>
-    <lastmod>2017-05-28T09:16:35+07:00</lastmod>
+    <lastmod>2017-09-08T16:50:24-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -175,7 +186,7 @@
   
   <url>
     <loc>https://vickylai.io/tags/</loc>
-    <lastmod>2017-01-06T16:39:29+07:00</lastmod>
+    <lastmod>2017-09-08T16:50:24-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -186,13 +197,13 @@
   
   <url>
     <loc>https://vickylai.io/verbose/</loc>
-    <lastmod>2017-05-28T09:16:35+07:00</lastmod>
+    <lastmod>2017-09-08T16:50:24-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://vickylai.io/</loc>
-    <lastmod>2017-05-28T09:16:35+07:00</lastmod>
+    <lastmod>2017-09-08T16:50:24-04:00</lastmod>
     <priority>0</priority>
   </url>
   
