@@ -1,0 +1,59 @@
+html
+    background-color: $white
+
+body
+    font-size: $body-size
+    font-family: $body-font
+    color: $body-color
+
+.title
+    font-family: $title-font
+    color: $title-color
+    padding-top: 0
+    padding-bottom: 0
+
+a
+    color: $links
+    +ease(0.5s)
+    &:hover
+        color: $body-color
+        font-style: none
+        background-color: $links-hover-bg
+    &:active
+        color: $links
+
+hr
+    +skinny-hr
+
+img
+    object-fit: cover
+
+.top-pad
+    padding-top: 1em
+
+.bottom-pad
+    padding-bottom: 1rem
+
+.no-padding
+    padding: 0
+
+.center-me
+    margin: 0 auto
+
+.very-center
+    display: flex
+    justify-content: center
+    align-items: center
+
+.hidden
+    display: none
+
+.mobile
+    display: none
+    @include mobile
+        display: block
+
+.phabs-up
+    display: none
+    @include tablet
+        display: block

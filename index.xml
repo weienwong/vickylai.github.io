@@ -6,45 +6,54 @@
     <description>Recent content on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Sep 2017 16:50:24 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 26 Mar 2017 11:25:00 -0400</lastBuildDate>
     
 	<atom:link href="https://vickylai.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Minimal Hugo theme that&#39;s all about you.</title>
-      <link>https://vickylai.io/project/introduction/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>introduction</title>
+      <link>https://vickylai.io/introduction/</link>
+      <pubDate>Sun, 26 Mar 2017 11:25:00 -0400</pubDate>
       
-      <guid>https://vickylai.io/project/introduction/</guid>
+      <guid>https://vickylai.io/introduction/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Make math pretty again with this minimalist javascript calculator.</title>
-      <link>https://vickylai.io/project/calc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>nice-weather</title>
+      <link>https://vickylai.io/nice-weather/</link>
+      <pubDate>Fri, 14 Apr 2017 11:25:00 -0400</pubDate>
       
-      <guid>https://vickylai.io/project/calc/</guid>
+      <guid>https://vickylai.io/nice-weather/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>An uncluttered Wikipedia search page.</title>
-      <link>https://vickylai.io/project/wiki-search/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>minimalist-calc</title>
+      <link>https://vickylai.io/minimalist-calc/</link>
+      <pubDate>Mon, 19 Jun 2017 11:25:00 -0400</pubDate>
       
-      <guid>https://vickylai.io/project/wiki-search/</guid>
+      <guid>https://vickylai.io/minimalist-calc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>simple-wikipedia</title>
+      <link>https://vickylai.io/simple-wiki/</link>
+      <pubDate>Wed, 19 Apr 2017 11:25:00 -0400</pubDate>
+      
+      <guid>https://vickylai.io/simple-wiki/</guid>
       <description>A fun and simplified Wikipedia search that keeps the focus on your query. Fast and responsive on all screens.</description>
     </item>
     
     <item>
-      <title>A weather app for anyone who likes pretty photos. Who doesn&#39;t?</title>
-      <link>https://vickylai.io/project/weather-app/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Now</title>
+      <link>https://vickylai.io/now/</link>
+      <pubDate>Sun, 29 Oct 2017 16:09:22 -0400</pubDate>
       
-      <guid>https://vickylai.io/project/weather-app/</guid>
-      <description></description>
+      <guid>https://vickylai.io/now/</guid>
+      <description>The coffee conveyor is built using Lego and a Raspberry Pi. It has a sensor that stops the belt before the coffee falls off the end and onto my head. I don&amp;rsquo;t know how the coffee stays hot, or where it comes from.</description>
     </item>
     
     <item>
@@ -196,25 +205,14 @@ That said, some blocks can be a little confusing at first. I found documentation
     </item>
     
     <item>
-      <title>Now</title>
-      <link>https://vickylai.io/now/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>abstract</title>
+      <link>https://vickylai.io/abstract/</link>
+      <pubDate>Sun, 01 Jan 2017 11:25:00 -0400</pubDate>
       
-      <guid>https://vickylai.io/now/</guid>
-      <description>Currently&amp;hellip; The coffee conveyor is built using Lego and a Raspberry Pi. It has a sensor that stops the belt before the coffee falls off the end and onto my head. I don&amp;rsquo;t know how the coffee stays hot, or where it comes from.
- I spent the first half of this summer in North America, reuniting with donut holes and old friends (I&amp;rsquo;ll let you decide if those reference separate things, or not).</description>
-    </item>
-    
-    <item>
-      <title>about</title>
-      <link>https://vickylai.io/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://vickylai.io/about/</guid>
-      <description>Hi there! I&amp;rsquo;m Vicky. 👋
-My first languages were English, CSS, and LPC. I spent whole summers as a little girl programming a text-based MUD over Telnet. I made all kinds of things in that fantasy world, but soon that wasn&amp;rsquo;t enough.
-I started making things for the real world.
-I fell hard for front end development, a relationship that&amp;rsquo;s held steady for about a couple decades now. I&amp;rsquo;ve also learned to write JavaScript and Python, and I&amp;rsquo;m currently exploring Go.</description>
+      <guid>https://vickylai.io/abstract/</guid>
+      <description>Hi! I&amp;rsquo;m Vicky Lai.
+Freelance developer and full-time problem solver.
+I&amp;rsquo;m mostly about black coffee, DRY code, and open source projects sprinkled with easter eggs.</description>
     </item>
     
   </channel>

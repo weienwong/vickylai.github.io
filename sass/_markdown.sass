@@ -1,0 +1,100 @@
+.markdown
+    margin: 0 auto
+    padding: 1rem
+    @include mobile
+        padding: 0
+    p
+        font-family: $body-font
+        margin-top: 1em
+    h1, h2, h3, h4, h5, h6
+        font-family: $title-font
+        margin-top: 1em
+        font-weight: 700
+    h1
+        font-size: $size-3
+    h2
+        font-size: $size-4
+    h3
+        font-size: $size-5
+    hr
+        margin: 2rem 0
+        width: 50%
+    ol 
+        margin-top: 1em
+        li
+            list-style: decimal
+            margin-left: 2rem
+            list-style-position: outside
+            padding-left: 0.5rem
+    ul
+        margin-top: 1em
+        margin-left: 2em
+        list-style: none
+        @include mobile
+            margin-left: 1em
+        li
+            list-style-type: disc 
+            margin-left: 2rem
+            list-style-position: outside
+            padding-left: 0.5rem
+            @include mobile
+                margin-left: 1em
+    em
+        font-style: italic
+    strong
+        font-weight: 700
+    img[src*='#center'] 
+        display: block
+        margin: auto
+        max-width: 600px
+        padding-top: 2em
+        @include mobile
+            max-width: 100%
+    .img-caption
+        font-size: 0.9rem
+        font-family: $body-font
+        font-style: italic
+        color: $silver
+        text-align: center
+        margin: 0 auto
+        margin-bottom: 3em
+        margin-top: 1em
+    abbr
+        font-size: 0.8rem
+        font-weight: bold
+        color: $black
+        text-transform: uppercase
+    abbr[title]
+        cursor: help
+        border-bottom: 1px dotted $blue
+    blockquote
+        padding: .5rem 1rem
+        padding-bottom: 1rem
+        margin: .8rem 0
+        color: $body-color
+        border-left: .25rem solid $primary
+        background-color: $highlight
+        blockquote p:last-child
+        margin-bottom: 0
+    table
+        margin: 2em 0 2em 0
+        width: 100%
+        border: 1px solid $title-color
+        border-collapse: collapse
+    td, th
+        padding: .25rem .5rem
+        border: 1px solid $title-color
+        text-align: center
+        color: $body-color
+    tbody tr:nth-child(odd) td,
+    tbody tr:nth-child(odd) th
+        background-color: $off-white
+    strong
+        font-weight: 700
+    code
+        border-radius: 2px
+        border: 1px solid $silver
+        padding: 0.1rem 0.25rem
+        margin-top: 1em
+    pre
+        border-radius: 0px
