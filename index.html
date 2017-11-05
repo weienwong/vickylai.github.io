@@ -61,7 +61,7 @@ And I've decided it doesn't get any better than this.
 
 
 
-<link rel="stylesheet" href="/css/clearly.css?t=12">
+<link rel="stylesheet" href="/css/clearly.css?t=20">
 
 
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
@@ -139,10 +139,10 @@ And I've decided it doesn't get any better than this.
 
     
 
-    <section class="section is-medium has-text-centered" id="about">
-        <div class="container">
+    <section class="section is-medium" id="about">
+        <div class="container has-text-centered">
             <img class="avatar" src="https://vickylai.io/img/portrait.jpg">
-            <div class="markdown has-text-centered bottom-pad">
+            <div class="page-text abstract bottom-pad">
                                                         <p><strong>Hi! I&rsquo;m Vicky Lai.</strong></p>
 
 <p>Freelance developer and full-time problem solver.</p>
@@ -477,7 +477,7 @@ And I've decided it doesn't get any better than this.
 
     
     <section class="section footer no-padding">
-        <footer class="footer no-padding phabs-up has-text-centered">
+        <footer class="no-padding phabs-up has-text-centered">
   <hr />
   <div id="footer">
     <div class="columns">
@@ -493,7 +493,7 @@ And I've decided it doesn't get any better than this.
     </div>
 </footer>
 
-<footer class="footer mobile has-text-centered">
+<footer class="mobile has-text-centered" id="mobilefooter">
   <hr />
   <p id="footer-text" class="top-pad">Made with &#10084; & too much &#9749; <br />& hosted with GitHub Pages.
     <br />Vicky Lai 2017</p>
@@ -518,7 +518,7 @@ And I've decided it doesn't get any better than this.
             if (time > 17 || time < 6) {
                 $('#footer1').find('img').attr('src', '/img/night1.png');
                 $('#footer2').find('img').attr('src', '/img/night2.png');
-                $('#mobilefooter').css('color', '#a4a4a4');
+                $('.footer').addClass('night');
             }
         }
 
