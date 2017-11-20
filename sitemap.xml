@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>https://vickylai.io/verbose/renaming-images/</loc>
+    <lastmod>2017-11-20T13:59:30-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://vickylai.io/now/</loc>
     <lastmod>2017-10-29T16:09:22-04:00</lastmod>
   </url>
@@ -116,7 +121,7 @@
   
   <url>
     <loc>https://vickylai.io/tags/backend/</loc>
-    <lastmod>2017-05-28T09:16:35+07:00</lastmod>
+    <lastmod>2017-11-20T13:59:30-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -127,7 +132,7 @@
   
   <url>
     <loc>https://vickylai.io/tags/coding/</loc>
-    <lastmod>2017-09-08T16:50:24-04:00</lastmod>
+    <lastmod>2017-11-20T13:59:30-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -146,6 +151,12 @@
   <url>
     <loc>https://vickylai.io/tags/css/</loc>
     <lastmod>2017-03-26T11:25:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vickylai.io/tags/data/</loc>
+    <lastmod>2017-11-20T13:59:30-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -181,13 +192,13 @@
   
   <url>
     <loc>https://vickylai.io/tags/linux/</loc>
-    <lastmod>2017-05-06T20:04:53+08:00</lastmod>
+    <lastmod>2017-11-20T13:59:30-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://vickylai.io/tags/python/</loc>
-    <lastmod>2017-01-18T21:58:28+07:00</lastmod>
+    <lastmod>2017-11-20T13:59:30-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -211,7 +222,7 @@
   
   <url>
     <loc>https://vickylai.io/verbose/</loc>
-    <lastmod>2017-09-08T16:50:24-04:00</lastmod>
+    <lastmod>2017-11-20T13:59:30-05:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -6,10 +6,21 @@
     <description>Recent content in Coding on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Sep 2017 16:50:24 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 20 Nov 2017 13:59:30 -0500</lastBuildDate>
     
 	<atom:link href="https://vickylai.io/tags/coding/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Batch renaming images, including image resolution, with awk</title>
+      <link>https://vickylai.io/verbose/renaming-images/</link>
+      <pubDate>Mon, 20 Nov 2017 13:59:30 -0500</pubDate>
+      
+      <guid>https://vickylai.io/verbose/renaming-images/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://vickylai.io/pixels/renaming-rainbow.png#center&#34; alt=&#34;Renaming rainbow.&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The most recent item on my list of &amp;ldquo;Geeky things I did that made me feel pretty awesome&amp;rdquo; is an hour&amp;rsquo;s adventure that culminated in this code:&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>How to code a satellite algorithm and cook paella from scratch</title>
