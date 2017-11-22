@@ -44,9 +44,7 @@
       <pubDate>Sun, 28 May 2017 09:16:35 +0700</pubDate>
       
       <guid>https://vickylai.io/verbose/javascript-closures/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://vickylai.io/pixels/closures-sandwich.jpg#center&#34; alt=&#34;Peanut butter and mayo sandwich.&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Say you&amp;rsquo;re having a little coding get-together, and you need some sandwiches. You happen to know that everyone prefers a different type of sandwich, like chicken, ham, or peanut butter and mayo. You could make all these sandwiches yourself, but that would be tedious and boring.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Say you&amp;rsquo;re having a little coding get-together, and you need some sandwiches. You happen to know that everyone prefers a different type of sandwich, like chicken, ham, or peanut butter and mayo. You could make all these sandwiches yourself, but that would be tedious and boring.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -55,10 +53,7 @@
       <pubDate>Thu, 18 May 2017 11:40:06 +0700</pubDate>
       
       <guid>https://vickylai.io/verbose/reduce-recursion-with-pie/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://vickylai.io/pixels/recursion-pie.jpg#center&#34; alt=&#34;Delicious attention-retaining recursion pie.&#34; /&gt;
-&lt;p class=&#34;has-text-centered img-caption&#34;&gt;Delicious, attention-retaining recursion pie.&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;I was having trouble understanding &lt;code&gt;reduce()&lt;/code&gt; and recursion in JavaScript, so I wrote this article to explain it to myself (hey, look, recursion!). I hope you find my examples both helpful and delicious.&lt;/p&gt;
+      <description>&lt;p&gt;I was having trouble understanding &lt;code&gt;reduce()&lt;/code&gt; and recursion in JavaScript, so I wrote this article to explain it to myself (hey, look, recursion!). I hope you find my examples both helpful and delicious.&lt;/p&gt;
 
 &lt;p&gt;Given an array with nested arrays:&lt;/p&gt;</description>
     </item>

@@ -21,12 +21,12 @@
 
 
 
-    Understanding Array.prototype.reduce() and recursion using apple pie
+    About Time
 
 
 
 </title>
-<link rel="canonical" href="https://vickylai.io/verbose/reduce-recursion-with-pie/">
+<link rel="canonical" href="https://vickylai.io/verbose/about-time/">
 
 
 <script type="text/javascript">
@@ -115,41 +115,50 @@ crossorigin="anonymous"></script>
         <section>
             <div class="blog-head container center-me">
                 
-                <div class="preview"><img src="/pixels/recursion-pie.jpg#center"></div>
+                <div class="preview"><img src="/pixels/fuji-fog.jpeg#center"></div>
                 <h3 class="top-pad blog-post-title bottom-pad">
-                    <a href="/verbose/reduce-recursion-with-pie/">Understanding Array.prototype.reduce() and recursion using apple pie</a>
+                    <a href="/verbose/about-time/">About Time</a>
                 </h3>
                 
-                <span class="my-tags">
-                        <a href="/tags/javascript">javascript</a>
-                </span> 
                 <span class="my-tags">
                         <a href="/tags/coding">coding</a>
                 </span> 
                 <span class="my-tags">
-                        <a href="/tags/backend">backend</a>
+                        <a href="/tags/ethics">ethics</a>
+                </span> 
+                <span class="my-tags">
+                        <a href="/tags/data">data</a>
+                </span> 
+                <span class="my-tags">
+                        <a href="/tags/frontend">frontend</a>
+                </span> 
+                <span class="my-tags">
+                        <a href="/tags/apps">apps</a>
+                </span> 
+                <span class="my-tags">
+                        <a href="/tags/websites">websites</a>
                 </span> 
                 <div class="post-data top-pad">
-                    May 18, 2017 | 6 minutes read
+                    Nov 22, 2017 | 5 minutes read
                 </div>
 
                 
                 <div class="blog-share">
                     Share this:
-                    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20Understanding%20Array.prototype.reduce%28%29%20and%20recursion%20using%20apple%20pie%20https%3a%2f%2fvickylai.io%2fverbose%2freduce-recursion-with-pie%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20About%20Time%20https%3a%2f%2fvickylai.io%2fverbose%2fabout-time%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                         twitter
                         <span class="hidden">Twitter</span>
                     </a> //
-                    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fvickylai.io%2fverbose%2freduce-recursion-with-pie%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fvickylai.io%2fverbose%2fabout-time%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                         facebook
                         <span class="hidden">Facebook</span>
                     </a> //
-                    <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://vickylai.io/&title=Understanding%20Array.prototype.reduce%28%29%20and%20recursion%20using%20apple%20pie&source=Vicky%20Lai"
+                    <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://vickylai.io/&title=About%20Time&source=Vicky%20Lai"
                         onclick="window.open(this.href, 'linkedin-share','width=980,height=980');return false;">
                         linkedin
                         <span class="hidden">LinkedIn</span>
                     </a> //
-                    <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fvickylai.io%2fverbose%2freduce-recursion-with-pie%2f" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fvickylai.io%2fverbose%2fabout-time%2f" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                         google+
                         <span class="hidden">Google+</span>
                     </a>
@@ -163,148 +172,65 @@ crossorigin="anonymous"></script>
             <section class="section is-small">
                 <div class="container markdown top-pad">
                     
-                    <p>I was having trouble understanding <code>reduce()</code> and recursion in JavaScript, so I wrote this article to explain it to myself (hey, look, recursion!). I hope you find my examples both helpful and delicious.</p>
+                    <p>This morning I read an article that&rsquo;s been making the rounds lately: <a href="http://nautil.us/issue/52/the-hive/modern-media-is-a-dos-attack-on-your-free-will">Modern Media Is a DoS Attack on Your Free Will</a>.</p>
 
-<p>Given an array with nested arrays:</p>
+<p>It&rsquo;s made me think, which I must admit, I at first didn&rsquo;t like. See, when I wake up in the morning (and subsequently wake up my computer) the first thing I do is go on Twitter to catch up on everything I missed while I was asleep. All this before my first coffee, mind you. Links on Twitter usually lead to stories on Medium, newly released apps on ProductHunt, and enticing sales on a new gadget or two on Amazon. Wherever it goes, in those blissfully half-awake mental recesses, the last thing I&rsquo;m trying to do is think.</p>
 
-<pre><code class="language-js">var arr = [1, [2], [3, [[4]]]]
-</code></pre>
+<p>However, yesterday, I also happened to listen to a podcast from freeCodeCamp. It was <a href="https://twitter.com/ossia/status/932698783863001089">#7: The code I&rsquo;m still ashamed of</a>. This lead to thoughts on the responsibilities of programmers - the people tasked with designing and building apps and systems meant to steer the very course of your life.</p>
 
-<p>We want to produce this:</p>
+<p>This morning, the combined swirling mess of notions brought on by these two sources of information had, even before my first coffee, the unfortunate effect of making me think.</p>
 
-<pre><code class="language-js">var flat = [1, 2, 3, 4]
-</code></pre>
+<p>Mostly, I thought about intention, and time.</p>
 
-<h1 id="using-for-loops-and-if-statements">Using for loops and if statements</h1>
+<p>I don&rsquo;t believe it&rsquo;s wildly inaccurate to say that when you go about doing something in your daily life, you have a general awareness of your reason for doing it. If you leave your building and go down the street to Starbucks and buy a coffee, more often than not, it&rsquo;s because you wanted a coffee. If you go to the corner store and buy a litre of milk, you probably intend to drink it. If you find yourself nicely dressed on a Friday night waiting at a well-decorated restaurant to meet another human being with whom you share an apparent mutual attraction, I can risk a guess that you&rsquo;re after some form of pleasant human interaction.</p>
 
-<p>Naively, if we know the maximum number of nested arrays we&rsquo;ll encounter (there are 4 in this example), we can use <code>for</code> loops to iterate through each array item, then <code>if</code> statements to check if each item is in itself an array, and so on&hellip;</p>
+<p>In each of these, and many more examples you can think up, the end goal is clearly defined. There is an expected final step to the process; an expected response; a return value.</p>
 
-<pre><code class="language-js">function flatten() {
-    var flat = [];
-    for (var i=0; i&lt;arr.length; i++) {
-    if (Array.isArray(arr[i])) {
-        for (var ii=0; ii&lt;arr[i].length; ii++) {
-        if (Array.isArray(arr[i][ii])) {
-            for (var iii=0; iii&lt;arr[i][ii].length; iii++) {
-            for (var iiii=0; iiii&lt;arr[i][ii][iii].length; iiii++) {
-                if (Array.isArray(arr[i][ii][iii])) {
-                flat.push(arr[i][ii][iii][iiii]);
-                } else {
-                flat.push(arr[i][ii][iii]);
-                }
-            }
-            }
-        } else {
-            flat.push(arr[i][ii]);
-        }
-        }
-    } else {
-    flat.push(arr[i]);
-    }
-    }
-}
+<p>What is the return value of opening up the Twitter app? Browsing Facebook? Instagram? In fact, any social media?</p>
 
-// [1, 2, 3, 4]
-</code></pre>
-
-<p>&hellip;Which works, but of course looks ridiculous. Besides looking ridiculous, a) it only works if we know how many nested arrays we&rsquo;ll process, b) it&rsquo;s hard to read and harder to understand, and c) can you imagine having to debug this mess?! (Gee, I think there&rsquo;s an extra <code>i</code> somewhere.)</p>
-
-<h1 id="using-reduce">Using reduce</h1>
-
-<p>JavaScript has a couple methods we can use to make our code a little less ridiculous. One of these is <code>reduce()</code> and it looks like this:</p>
-
-<pre><code class="language-js">var flat = arr.reduce(function(done,curr){
-    return done.concat(curr);
-}, []);
-
-// [ 1, 2, 3, [ [ 4 ] ] ]
-</code></pre>
-
-<p>It&rsquo;s a lot less code, but we haven&rsquo;t taken care of some of the nested arrays. Let&rsquo;s first walk through <code>reduce()</code> together and examine what it does to see how we&rsquo;ll correct this.</p>
+<p>The concrete answer is that there isn&rsquo;t one. Perhaps in those of us with resilient self-discipline, there may at least be some sort of time limitation. That&rsquo;s the most we can hope for, however, and no wonder - that&rsquo;s what these and other similar services have been <em>designed</em> for. They&rsquo;re built to be open-ended black-holes for our most precious resource&hellip; time.</p>
 
 <blockquote>
-<p><strong>Array.prototype.reduce()</strong></p>
+<p>In the case of the Analytical Engine we have undoubtedly to lay out a certain capital of analytical labour in one particular line; but this is in order that the engine may bring us in a much larger return in another line.</p>
 
-<p>The reduce() method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value. (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce?v=example">MDN</a>)</p>
+<p><em>Ada Augusta (Ada Lovelace)</em> - <a href="https://www.fourmilab.ch/babbage/sketch.html">Notes on <em>Sketch of The Analytical Engine</em></a></p>
 </blockquote>
 
-<p>It&rsquo;s not quite as complicated as it seems. Let&rsquo;s think of <code>reduce()</code> as an out-of-work developer (AI took all the dev jobs) with an empty basket. We&rsquo;ll call him Adam. Adam&rsquo;s main function (ba-dum ching) is now to take apples from a pile, shine them up, and put them one-by-one into the basket. This basket of shiny apples is destined to become delicious apple pies. It&rsquo;s a very important job.</p>
+<p>Okay, so I did some more reading. Specifically, #ThrowbackThursday to the mid 1800&rsquo;s and something my good friend Ada Lovelace once scribbled in a book. Widely considered one of the first computer programmers, she and Charles Babbage pioneered many concepts that programmers today take for granted. The one I&rsquo;m going to hang my point on is, I think, nicely encapsulated in the above quote: the things programmers make are supposed to save you time.</p>
 
-<p><img src="/pixels/recursion-apple-formula.jpg#center" alt="Pile of apples + Adam: apple pie." />
-<p class="has-text-centered img-caption">Apples plus human effort equals pie. Not to be confused with apple-human-pie, which is less appetizing.</p></p>
+<p>Save it. Not lose it.</p>
 
-<p>In our above example, the pile of apples is our array, <code>arr</code>. Our basket is <code>done</code>, the accumulator. The initial value of <code>done</code> is an empty array, which we see as <code>[]</code> at the end of our reduce function. The apple that our out-of-work dev is currently shining, you guessed it, is <code>curr</code>. Once Adam processes the current apple, he places it into the basket (<code>.concat()</code>). When there are no more apples in the pile, he returns the basket of polished apples to us, and then probably goes home to his cat, or something.</p>
+<p>I think Ada and Charles would agree that, observing the effects of social media apps, clickbait news sites, and many other forms of attention-hogging interactivity that we haven&rsquo;t even classified yet - something&rsquo;s gone horribly wrong.</p>
 
-<h1 id="using-reduce-recursively-to-address-nested-arrays">Using reduce recursively to address nested arrays</h1>
+<p>What if, as programmers, we actually did something about it?</p>
 
-<p>So that&rsquo;s all well and good, and now we have a basket of polished apples. But we still have some nested arrays to deal with. Going back to our analogy, let&rsquo;s say that some of the apples in the pile are in boxes. Within each box there could be more apples, and/or more boxes containing smaller, cuter apples.</p>
+<p>Consider that collectively - no, even individually - we who design and build the workings of modern technology have an <em>incredible</em> amount of power. The next indie app that goes viral on ProductHunt will consume hundreds of hours of time from its users. Where is all that untapped, pure potential going to? Some open-ended, inoffensive amusement? Another advertising platform thinly veiled as a game? Perhaps another drop of oil to smooth the machinery of The Great Engine of Commerce?</p>
 
-<p><img src="/pixels/recursion-nested-apples.jpg#center" alt="Box within a box within a box with apples." />
-<p class="has-text-centered img-caption">Adorable, slightly skewed apples just want to be loved/eaten.</p></p>
+<p>I get it - programmers will build what they&rsquo;re paid to build. That&rsquo;s capitalism, that&rsquo;s feeding your family, survival - life. I&rsquo;m not trying to suggest we all quit our jobs, go live in the woods, and volunteer as humanitarians. That would be nice, but it&rsquo;s impractical.</p>
 
-<p>Here&rsquo;s what we want our apple-processing-function/Adam to do:</p>
+<p>But we all have side projects. Free time. What are you doing with yours?</p>
 
-<ol>
-<li>If the pile of apples is a pile of apples, take an apple from the pile.</li>
-<li>If the apple is an apple, polish it, put it in the basket.</li>
-<li>If the apple is a box, open the box. If the box contains an apple, go to step 2.</li>
-<li>If the box contains another box, open this box, and go to step 3.</li>
-<li>When the pile is no more, give us the basket of shiny apples.</li>
-<li>If the pile of apples is not a pile of apples, give back whatever it is.</li>
-</ol>
+<hr />
 
-<p>A recursive reduce function that accomplishes this is:</p>
+<p>Before I&rsquo;m accused of being too hand-wavy and idealistic, I want to offer a concrete suggestion. Build things that save time. Not in the &ldquo;I&rsquo;ve made yet another to-do list app for you to download,&rdquo; kind of way, but in the &ldquo;Here&rsquo;s a one-liner to automate this mundane thing that would have taken you hours,&rdquo; kind of way. Here, have a <a href="https://dev.to/hivickylai/batch-renaming-images-including-image-resolution-with-awk-2d7">shameless plug</a>.</p>
 
-<pre><code class="language-js">function flatten(arr) {
-  if (Array.isArray(arr)) {
-  return arr.reduce(function(done,curr){
-    return done.concat(flatten(curr));
-    }, []);
-  } else {
-    return arr;
-  }
-}
-
-// [ 1, 2, 3, 4 ]
-</code></pre>
-
-<p>Bear with me and I&rsquo;ll explain.</p>
+<p>I also really like this idea from the first article I mentioned, so hang on tight while I bring this full circle:</p>
 
 <blockquote>
-<p><strong>Recursion</strong></p>
+<p><strong>What’s one concrete thing companies could do now to stop subverting our attention?</strong></p>
 
-<p>An act of a function calling itself. Recursion is used to solve problems that contain smaller sub-problems. A recursive function can receive two inputs: a base case (ends recursion) or a recursive case (continues recursion). (<a href="https://developer.mozilla.org/en-US/docs/Glossary/Recursion">MDN</a>)</p>
+<p>I would just like to know what is the ultimate design goal of that site or that system that’s shaping my behavior or thinking. What are they really designing my experience for? Companies will say that their goal is to make the world open and connected or whatever. These are lofty marketing claims. But if you were to actually look at the dashboards that they’re designing, the high-level metrics they’re designing for, you probably wouldn’t see those things. You’d see other things, like frequency of use, time on site, this type of thing. If there was some way for the app to say, to the user, “Here’s generally what this app wants from you, from an attentional point of view,” that would be huge. It would probably be the primary way I would decide which apps I download and use.</p>
 </blockquote>
 
-<p>If you examine our code above, you&rsquo;ll see that <code>flatten()</code> appears twice. The first time it appears, it tells Adam what to do with the pile of apples. The second time, it tells him what to do with the thing he&rsquo;s currently holding, providing instructions in the case it&rsquo;s an apple, and in the case it&rsquo;s not an apple. The thing to note is that these instructions are a <em>repeat of the original instructions we started with</em> - and that&rsquo;s recursion.</p>
+<p>There are so many ways I&rsquo;d love to see this put into practice, from the obvious to the subversive. A little <code>position: sticky;</code> banner? A custom meta tag in the header? Maybe a call to action like this takes more introspection and honesty than a lot of app makers are ready for&hellip; but maybe it just takes a little of our time.</p>
 
-<p>We&rsquo;ll break it down line-by-line for clarity:</p>
-
-<ol>
-<li><code>function flatten(arr) {</code> - we name our overall function and specify that it will take an argument, <code>arr</code>.<br /></li>
-<li><code>if (Array.isArray(arr)) {</code> - we examine the provided &ldquo;arrgument&rdquo; (I know, I&rsquo;m very funny) to determine if it is an array.<br /></li>
-<li><code>return arr.reduce(function(done,curr){</code> - if the previous line is true and the argument is an array, we want to reduce it. This is our recursive case. We&rsquo;ll apply the following function to each array item&hellip;<br /></li>
-<li><code>return done.concat(flatten(curr));</code> - an unexpected plot twist appears! The function we want to apply is the very function we&rsquo;re in. Colloquially: take it from the top.<br /></li>
-<li><code>}, []);</code> - we tell our reduce function to start with an empty accumulator (<code>done</code>), and wrap it up.<br /></li>
-<li><code>} else {</code> - this resolves our if statement at line 2. If the provided argument isn&rsquo;t an array&hellip;<br /></li>
-<li><code>return arr;</code> - return whatever the <code>arr</code> is. (Hopefully a cute apple.) This is our base case that breaks us out of recursion.<br /></li>
-<li><code>}</code> - end the else statement.<br /></li>
-<li><code>}</code> - end the overall function.</li>
-</ol>
-
-<p>And we&rsquo;re done! We&rsquo;ve gone from our 24 line, 4-layers-deep nested <code>for</code> loop solution to a much more concise, 9 line recursive reduce solution. Reduce and recursion can seem a little impenetrable at first, but they&rsquo;re valuable tools that will save you lots of future effort once you grasp them.</p>
-
-<p>And don&rsquo;t worry about Adam, our out-of-work developer. He got so much press after being featured in this article that he opened up his very own AI-managed apple pie factory. He&rsquo;s very happy.</p>
-
-<p><img src="/pixels/recursion-adams-apples.jpg#center" alt="Adam's apple pie factory, &quot;Adam's Apples.&quot;" />
-<p class="has-text-centered img-caption">+1 for you if you saw that one coming.</p></p>
                 </div>
 
                 
 
                 <div class="container markdown center-me">
                     <p class="tweet-me">Like this post?
-                        <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hey%20@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.io%2fverbose%2freduce-recursion-with-pie%2f%20and..."
+                        <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hey%20@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.io%2fverbose%2fabout-time%2f%20and..."
                             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a>
                     </p>
                 </div>
@@ -319,45 +245,34 @@ crossorigin="anonymous"></script>
                         
                         <div class="card no-border">
                             <div class="card-header bottom-pad no-border">
-                                <a href="/verbose/iterating-objects-arrays/">
+                                <a href="/verbose/renaming-images/">
                                     &lt; Previously...</a>
                                         <br />
                             </div>
                             
                             <div class="card-image card-image-left no-border">
-                                <a href="/verbose/iterating-objects-arrays/">
-                                    <img class="pagination-img" src="/pixels/iteration-breakfast.jpg">
+                                <a href="/verbose/renaming-images/">
+                                    <img class="pagination-img" src="/pixels/renaming-rainbow.png">
                                 </a>
                             </div>
                             
                             <div class="card-content">
-                                A quick reference to why your code isn&#39;t working, or some errors I frequently make with iteration when the coffee wears off.
+                                How to batch rename images with custom values using file, awk, and rename. In rainbow colors.
                             </div>
                         </div>
                         
                     </div>
 
                     <div class="column is-one-third has-text-centered no-padding desktop">
-                        <a class="up" href="/verbose/reduce-recursion-with-pie/#top">UP, JEEVES.</a>
+                        <a class="up" href="/verbose/about-time/#top">UP, JEEVES.</a>
                     </div>
 
                     <div class="column is-one-third-desktop is-half-mobile card-align-right no-padding">
                         
-                        <div class="card no-border">
-                            <div class="card-header bottom-pad has-text-right no-border">
-                                <a href="/verbose/javascript-closures/">Next time... ></a>
-                                <br />
-                            </div>
-                            
-                            <div class="card-image card-image-right no-border">
-                                <a href="/verbose/javascript-closures/">
-                                    <img class="pagination-img" src="/pixels/closures-sandwich.jpg">
-                                </a>
-                            </div>
-                            
-                            <div class="card-content has-text-right">
-                                An explanation of closures and how they can emulate private methods in JavaScript.
-                            </div>
+                        <div class="card inactive no-border">
+                            <div class="card-content">
+                            No more posts (yet!). Check out some cool
+                            <a class="inactive" href="https://vickylai.io/#code">projects</a> instead?</div>
                         </div>
                         
                     </div>
@@ -403,7 +318,7 @@ crossorigin="anonymous"></script>
 
     
     <script>
-        $('a[href^="\/verbose\/reduce-recursion-with-pie\/#"]').click(function (e) {
+        $('a[href^="\/verbose\/about-time\/#"]').click(function (e) {
             e.preventDefault();
             var target = this.hash;
             $('html, body').animate({

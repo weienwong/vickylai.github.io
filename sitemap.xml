@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>https://vickylai.io/verbose/about-time/</loc>
+    <lastmod>2017-11-22T14:05:14-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://vickylai.io/verbose/renaming-images/</loc>
     <lastmod>2017-11-20T13:59:30-05:00</lastmod>
   </url>
@@ -120,6 +125,12 @@
   </url>
   
   <url>
+    <loc>https://vickylai.io/tags/apps/</loc>
+    <lastmod>2017-11-22T14:05:14-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://vickylai.io/tags/backend/</loc>
     <lastmod>2017-11-20T13:59:30-05:00</lastmod>
     <priority>0</priority>
@@ -132,7 +143,7 @@
   
   <url>
     <loc>https://vickylai.io/tags/coding/</loc>
-    <lastmod>2017-11-20T13:59:30-05:00</lastmod>
+    <lastmod>2017-11-22T14:05:14-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -156,13 +167,19 @@
   
   <url>
     <loc>https://vickylai.io/tags/data/</loc>
-    <lastmod>2017-11-20T13:59:30-05:00</lastmod>
+    <lastmod>2017-11-22T14:05:14-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://vickylai.io/tags/data-science/</loc>
     <lastmod>2017-03-31T13:19:19+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vickylai.io/tags/ethics/</loc>
+    <lastmod>2017-11-22T14:05:14-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -174,7 +191,7 @@
   
   <url>
     <loc>https://vickylai.io/tags/frontend/</loc>
-    <lastmod>2017-04-27T08:14:09+08:00</lastmod>
+    <lastmod>2017-11-22T14:05:14-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -222,7 +239,7 @@
   
   <url>
     <loc>https://vickylai.io/verbose/</loc>
-    <lastmod>2017-11-20T13:59:30-05:00</lastmod>
+    <lastmod>2017-11-22T14:05:14-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -240,7 +257,7 @@
   
   <url>
     <loc>https://vickylai.io/tags/websites/</loc>
-    <lastmod>2017-01-28T13:16:17+07:00</lastmod>
+    <lastmod>2017-11-22T14:05:14-05:00</lastmod>
     <priority>0</priority>
   </url>
   

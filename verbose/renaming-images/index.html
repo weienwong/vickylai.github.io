@@ -37,7 +37,7 @@
 
 
 
-<link rel="stylesheet" href="/css/clearly.css?t=22">
+<link rel="stylesheet" href="/css/clearly.css?t=14">
 
 
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
@@ -64,7 +64,7 @@ src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
 
-<script src="/js/tagline.js?t=22"></script>
+<script src="/js/tagline.js?t=14"></script>
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
@@ -115,6 +115,7 @@ crossorigin="anonymous"></script>
         <section>
             <div class="blog-head container center-me">
                 
+                <div class="preview"><img src="/pixels/renaming-rainbow.png#center"></div>
                 <h3 class="top-pad blog-post-title bottom-pad">
                     <a href="/verbose/renaming-images/">Batch renaming images, including image resolution, with awk</a>
                 </h3>
@@ -168,9 +169,7 @@ crossorigin="anonymous"></script>
             <section class="section is-small">
                 <div class="container markdown top-pad">
                     
-                    <p><img src="/pixels/renaming-rainbow.png#center" alt="Renaming rainbow." /></p>
-
-<p>The most recent item on my list of &ldquo;Geeky things I did that made me feel pretty awesome&rdquo; is an hour&rsquo;s adventure that culminated in this code:</p>
+                    <p>The most recent item on my list of &ldquo;Geeky things I did that made me feel pretty awesome&rdquo; is an hour&rsquo;s adventure that culminated in this code:</p>
 
 <pre><code class="language-bash">$ file IMG* | awk 'BEGIN{a=0} {print substr($1, 1, length($1)-5),a++&quot;_&quot;substr($8,1, length($8)-1)}' | while read fn fr; do echo $(rename -v &quot;s/$fn/img_$fr/g&quot; *); done
 IMG_20170808_172653_425.jpg renamed as img_0_4032x3024.jpg
@@ -328,10 +327,21 @@ IMG_20170913_073205_522.jpg renamed as img_12_2738x2738.jpg
 
                     <div class="column is-one-third-desktop is-half-mobile card-align-right no-padding">
                         
-                        <div class="card inactive no-border">
-                            <div class="card-content">
-                            No more posts (yet!). Check out some cool
-                            <a class="inactive" href="https://vickylai.io/#code">projects</a> instead?</div>
+                        <div class="card no-border">
+                            <div class="card-header bottom-pad has-text-right no-border">
+                                <a href="/verbose/about-time/">Next time... ></a>
+                                <br />
+                            </div>
+                            
+                            <div class="card-image card-image-right no-border">
+                                <a href="/verbose/about-time/">
+                                    <img class="pagination-img" src="/pixels/fuji-fog.jpeg">
+                                </a>
+                            </div>
+                            
+                            <div class="card-content has-text-right">
+                                Some thoughts and concrete suggestions on saving society through programming.
+                            </div>
                         </div>
                         
                     </div>

@@ -6,10 +6,20 @@
     <description>Recent content in Coding on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Nov 2017 13:59:30 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 22 Nov 2017 14:05:14 -0500</lastBuildDate>
     
 	<atom:link href="https://vickylai.io/tags/coding/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About Time</title>
+      <link>https://vickylai.io/verbose/about-time/</link>
+      <pubDate>Wed, 22 Nov 2017 14:05:14 -0500</pubDate>
+      
+      <guid>https://vickylai.io/verbose/about-time/</guid>
+      <description>This morning I read an article that&amp;rsquo;s been making the rounds lately: Modern Media Is a DoS Attack on Your Free Will.
+It&amp;rsquo;s made me think, which I must admit, I at first didn&amp;rsquo;t like. See, when I wake up in the morning (and subsequently wake up my computer) the first thing I do is go on Twitter to catch up on everything I missed while I was asleep. All this before my first coffee, mind you.</description>
+    </item>
     
     <item>
       <title>Batch renaming images, including image resolution, with awk</title>
@@ -17,9 +27,7 @@
       <pubDate>Mon, 20 Nov 2017 13:59:30 -0500</pubDate>
       
       <guid>https://vickylai.io/verbose/renaming-images/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://vickylai.io/pixels/renaming-rainbow.png#center&#34; alt=&#34;Renaming rainbow.&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The most recent item on my list of &amp;ldquo;Geeky things I did that made me feel pretty awesome&amp;rdquo; is an hour&amp;rsquo;s adventure that culminated in this code:&lt;/p&gt;</description>
+      <description>&lt;p&gt;The most recent item on my list of &amp;ldquo;Geeky things I did that made me feel pretty awesome&amp;rdquo; is an hour&amp;rsquo;s adventure that culminated in this code:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -28,12 +36,9 @@
       <pubDate>Fri, 08 Sep 2017 16:50:24 -0400</pubDate>
       
       <guid>https://vickylai.io/verbose/build-from-scratch/</guid>
-      <description>&lt;p&gt;What if I told you that by the end of this article, you&amp;rsquo;ll be able to calculate the orbital period of satellites around Earth using their average altitudes and&amp;hellip; You tuned out already, didn&amp;rsquo;t you?&lt;/p&gt;
-
-&lt;p&gt;Okay, how about this: I&amp;rsquo;m going to teach you how to make paella!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://vickylai.io/pixels/solve-paella.jpg#center&#34; alt=&#34;It&#39;s a paella party!&#34; /&gt;
-&lt;p class=&#34;has-text-centered img-caption&#34;&gt;True fact: people are far more likely to accept complexity if it comes with the promise of food.&lt;/p&gt;&lt;/p&gt;</description>
+      <description>What if I told you that by the end of this article, you&amp;rsquo;ll be able to calculate the orbital period of satellites around Earth using their average altitudes and&amp;hellip; You tuned out already, didn&amp;rsquo;t you?
+Okay, how about this: I&amp;rsquo;m going to teach you how to make paella!
+And you&amp;rsquo;ll have written a function that does the stuff I mentioned above, just like I did for this freeCodeCamp challenge.</description>
     </item>
     
     <item>
@@ -42,9 +47,7 @@
       <pubDate>Sun, 28 May 2017 09:16:35 +0700</pubDate>
       
       <guid>https://vickylai.io/verbose/javascript-closures/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://vickylai.io/pixels/closures-sandwich.jpg#center&#34; alt=&#34;Peanut butter and mayo sandwich.&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Say you&amp;rsquo;re having a little coding get-together, and you need some sandwiches. You happen to know that everyone prefers a different type of sandwich, like chicken, ham, or peanut butter and mayo. You could make all these sandwiches yourself, but that would be tedious and boring.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Say you&amp;rsquo;re having a little coding get-together, and you need some sandwiches. You happen to know that everyone prefers a different type of sandwich, like chicken, ham, or peanut butter and mayo. You could make all these sandwiches yourself, but that would be tedious and boring.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -53,10 +56,7 @@
       <pubDate>Thu, 18 May 2017 11:40:06 +0700</pubDate>
       
       <guid>https://vickylai.io/verbose/reduce-recursion-with-pie/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://vickylai.io/pixels/recursion-pie.jpg#center&#34; alt=&#34;Delicious attention-retaining recursion pie.&#34; /&gt;
-&lt;p class=&#34;has-text-centered img-caption&#34;&gt;Delicious, attention-retaining recursion pie.&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;I was having trouble understanding &lt;code&gt;reduce()&lt;/code&gt; and recursion in JavaScript, so I wrote this article to explain it to myself (hey, look, recursion!). I hope you find my examples both helpful and delicious.&lt;/p&gt;
+      <description>&lt;p&gt;I was having trouble understanding &lt;code&gt;reduce()&lt;/code&gt; and recursion in JavaScript, so I wrote this article to explain it to myself (hey, look, recursion!). I hope you find my examples both helpful and delicious.&lt;/p&gt;
 
 &lt;p&gt;Given an array with nested arrays:&lt;/p&gt;</description>
     </item>

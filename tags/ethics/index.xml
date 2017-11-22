@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data on VickyLai.io</title>
-    <link>https://vickylai.io/tags/data/</link>
-    <description>Recent content in Data on VickyLai.io</description>
+    <title>Ethics on VickyLai.io</title>
+    <link>https://vickylai.io/tags/ethics/</link>
+    <description>Recent content in Ethics on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 Nov 2017 14:05:14 -0500</lastBuildDate>
     
-	<atom:link href="https://vickylai.io/tags/data/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vickylai.io/tags/ethics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,15 +19,6 @@
       <guid>https://vickylai.io/verbose/about-time/</guid>
       <description>This morning I read an article that&amp;rsquo;s been making the rounds lately: Modern Media Is a DoS Attack on Your Free Will.
 It&amp;rsquo;s made me think, which I must admit, I at first didn&amp;rsquo;t like. See, when I wake up in the morning (and subsequently wake up my computer) the first thing I do is go on Twitter to catch up on everything I missed while I was asleep. All this before my first coffee, mind you.</description>
-    </item>
-    
-    <item>
-      <title>Batch renaming images, including image resolution, with awk</title>
-      <link>https://vickylai.io/verbose/renaming-images/</link>
-      <pubDate>Mon, 20 Nov 2017 13:59:30 -0500</pubDate>
-      
-      <guid>https://vickylai.io/verbose/renaming-images/</guid>
-      <description>&lt;p&gt;The most recent item on my list of &amp;ldquo;Geeky things I did that made me feel pretty awesome&amp;rdquo; is an hour&amp;rsquo;s adventure that culminated in this code:&lt;/p&gt;</description>
     </item>
     
   </channel>
