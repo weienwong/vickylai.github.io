@@ -21,11 +21,29 @@
     </item>
     
     <item>
-      <title>nice-weather</title>
-      <link>https://vickylai.io/nice-weather/</link>
-      <pubDate>Fri, 14 Apr 2017 11:25:00 -0400</pubDate>
+      <title>acme-gallery</title>
+      <link>https://vickylai.io/acme-gallery/</link>
+      <pubDate>Fri, 24 Nov 2017 22:02:41 -0500</pubDate>
       
-      <guid>https://vickylai.io/nice-weather/</guid>
+      <guid>https://vickylai.io/acme-gallery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>simon</title>
+      <link>https://vickylai.io/simon/</link>
+      <pubDate>Fri, 24 Nov 2017 22:05:50 -0500</pubDate>
+      
+      <guid>https://vickylai.io/simon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cats-vs-unicorns</title>
+      <link>https://vickylai.io/cats-vs-unicorns/</link>
+      <pubDate>Fri, 24 Nov 2017 22:07:45 -0500</pubDate>
+      
+      <guid>https://vickylai.io/cats-vs-unicorns/</guid>
       <description></description>
     </item>
     
@@ -36,15 +54,6 @@
       
       <guid>https://vickylai.io/minimalist-calc/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>simple-wikipedia</title>
-      <link>https://vickylai.io/simple-wiki/</link>
-      <pubDate>Wed, 19 Apr 2017 11:25:00 -0400</pubDate>
-      
-      <guid>https://vickylai.io/simple-wiki/</guid>
-      <description>A fun and simplified Wikipedia search that keeps the focus on your query. Fast and responsive on all screens.</description>
     </item>
     
     <item>

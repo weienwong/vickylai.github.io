@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Game on VickyLai.io</title>
+    <link>https://vickylai.io/tags/game/</link>
+    <description>Recent content in Game on VickyLai.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Nov 2017 22:05:50 -0500</lastBuildDate>
+    
+	<atom:link href="https://vickylai.io/tags/game/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>simon</title>
+      <link>https://vickylai.io/simon/</link>
+      <pubDate>Fri, 24 Nov 2017 22:05:50 -0500</pubDate>
+      
+      <guid>https://vickylai.io/simon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cats-vs-unicorns</title>
+      <link>https://vickylai.io/cats-vs-unicorns/</link>
+      <pubDate>Fri, 24 Nov 2017 22:07:45 -0500</pubDate>
+      
+      <guid>https://vickylai.io/cats-vs-unicorns/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

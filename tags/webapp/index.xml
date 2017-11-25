@@ -6,19 +6,10 @@
     <description>Recent content in Webapp on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Apr 2017 11:25:00 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 19 Jun 2017 11:25:00 -0400</lastBuildDate>
     
 	<atom:link href="https://vickylai.io/tags/webapp/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>nice-weather</title>
-      <link>https://vickylai.io/nice-weather/</link>
-      <pubDate>Fri, 14 Apr 2017 11:25:00 -0400</pubDate>
-      
-      <guid>https://vickylai.io/nice-weather/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>minimalist-calc</title>
@@ -27,15 +18,6 @@
       
       <guid>https://vickylai.io/minimalist-calc/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>simple-wikipedia</title>
-      <link>https://vickylai.io/simple-wiki/</link>
-      <pubDate>Wed, 19 Apr 2017 11:25:00 -0400</pubDate>
-      
-      <guid>https://vickylai.io/simple-wiki/</guid>
-      <description>A fun and simplified Wikipedia search that keeps the focus on your query. Fast and responsive on all screens.</description>
     </item>
     
   </channel>
