@@ -57,6 +57,15 @@
     </item>
     
     <item>
+      <title>Hosting your static site with AWS S3, Route 53, and CloudFront</title>
+      <link>https://vickylai.io/verbose/aws-static-site/</link>
+      <pubDate>Wed, 13 Dec 2017 20:46:12 -0500</pubDate>
+      
+      <guid>https://vickylai.io/verbose/aws-static-site/</guid>
+      <description>&lt;p&gt;Some time ago I decided to stop freeloading on GitHub pages and move my static page for &lt;a href=&#34;https://vickylai.com&#34;&gt;vickylai.com&lt;/a&gt; to Amazon Web Services (AWS). It turns out that I&amp;rsquo;m still mostly freeloading (yay free tier) so it amounted to a learning experience. Here are the components that let me host and serve the site at my custom domain with HTTPS.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>About Time</title>
       <link>https://vickylai.io/verbose/about-time/</link>
       <pubDate>Wed, 22 Nov 2017 14:05:14 -0500</pubDate>
