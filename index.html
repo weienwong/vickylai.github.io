@@ -67,10 +67,10 @@ And I've decided it doesn't get any better than this.
 
 
 
-<link rel="stylesheet" href="/css/clearly.css?t=20">
+<link rel="stylesheet" href="/css/clearly.css?t=13">
 
 
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
 
 <link id="favicon" rel="shortcut icon" href="/img/code.ico">
 
@@ -155,8 +155,6 @@ crossorigin="anonymous"></script>
                                                                 <p><strong>Hi! I&rsquo;m Vicky Lai.</strong></p>
 
 <p>Freelance developer and full-time problem solver.</p>
-
-<p>I&rsquo;m mostly about black coffee, DRY code, and open source projects sprinkled with easter eggs.</p>
   
             </div>
             <div id="social top-pad">
@@ -507,7 +505,10 @@ crossorigin="anonymous"></script>
         <img src="/img/day1.png">
       </div>
       <div class="column is-one-third very-center">
-        <p id="footer-text">Made with &#10084; & too much &#9749; & hosted with GitHub Pages.<br />Vicky Lai 2017</p>
+        <p id="footer-text">Made with &#10084; & too much &#9749; & hosted with GitHub Pages.
+          <br />Vicky Lai
+          <span id="year"></span>
+        </p>
       </div>
       <div class="column is-one-third" id="footer2">
         <img src="/img/day2.png">
@@ -517,9 +518,18 @@ crossorigin="anonymous"></script>
 
 <footer class="mobile has-text-centered" id="mobilefooter">
   <hr />
-  <p id="footer-text" class="top-pad">Made with &#10084; & too much &#9749; <br />& hosted with GitHub Pages.
-    <br />Vicky Lai 2017</p>
+  <p id="footer-text" class="top-pad">Made with &#10084; & too much &#9749;
+    <br />& hosted with GitHub Pages.
+  </p>
 </footer>
+
+<script>
+  $(document).ready(() => {
+    let today = new Date(),
+      year = today.getFullYear();
+    $('#year').html(year);
+  });
+</script>
     </section>
     
     <script>
