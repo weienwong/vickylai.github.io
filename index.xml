@@ -8,56 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Mar 2017 11:25:00 -0400</lastBuildDate>
     
-	<atom:link href="https://vickylai.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://vickylai.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>introduction</title>
-      <link>https://vickylai.io/introduction/</link>
-      <pubDate>Sun, 26 Mar 2017 11:25:00 -0400</pubDate>
-      
-      <guid>https://vickylai.io/introduction/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>acme-gallery</title>
-      <link>https://vickylai.io/acme-gallery/</link>
-      <pubDate>Fri, 24 Nov 2017 22:02:41 -0500</pubDate>
-      
-      <guid>https://vickylai.io/acme-gallery/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>simon</title>
-      <link>https://vickylai.io/simon/</link>
-      <pubDate>Fri, 24 Nov 2017 22:05:50 -0500</pubDate>
-      
-      <guid>https://vickylai.io/simon/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cats-vs-unicorns</title>
-      <link>https://vickylai.io/cats-vs-unicorns/</link>
-      <pubDate>Fri, 24 Nov 2017 22:07:45 -0500</pubDate>
-      
-      <guid>https://vickylai.io/cats-vs-unicorns/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>minimalist-calc</title>
-      <link>https://vickylai.io/minimalist-calc/</link>
-      <pubDate>Mon, 19 Jun 2017 11:25:00 -0400</pubDate>
-      
-      <guid>https://vickylai.io/minimalist-calc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hosting your static site with AWS S3, Route 53, and CloudFront</title>
+      <title>
+        
+            Hosting your static site with AWS S3, Route 53, and CloudFront
+        
+      </title>
       <link>https://vickylai.io/verbose/aws-static-site/</link>
       <pubDate>Wed, 13 Dec 2017 20:46:12 -0500</pubDate>
       
@@ -66,7 +25,11 @@
     </item>
     
     <item>
-      <title>About Time</title>
+      <title>
+        
+            About Time
+        
+      </title>
       <link>https://vickylai.io/verbose/about-time/</link>
       <pubDate>Wed, 22 Nov 2017 14:05:14 -0500</pubDate>
       
@@ -76,7 +39,11 @@ It&amp;rsquo;s made me think, which I must admit, I at first didn&amp;rsquo;t li
     </item>
     
     <item>
-      <title>Batch renaming images, including image resolution, with awk</title>
+      <title>
+        
+            Batch renaming images, including image resolution, with awk
+        
+      </title>
       <link>https://vickylai.io/verbose/renaming-images/</link>
       <pubDate>Mon, 20 Nov 2017 13:59:30 -0500</pubDate>
       
@@ -85,16 +52,11 @@ It&amp;rsquo;s made me think, which I must admit, I at first didn&amp;rsquo;t li
     </item>
     
     <item>
-      <title>Now</title>
-      <link>https://vickylai.io/now/</link>
-      <pubDate>Sun, 29 Oct 2017 16:09:22 -0400</pubDate>
-      
-      <guid>https://vickylai.io/now/</guid>
-      <description>The coffee conveyor is built using Lego and a Raspberry Pi. It has a sensor that stops the belt before the coffee falls off the end and onto my head. I don&amp;rsquo;t know how the coffee stays hot, or where it comes from.</description>
-    </item>
-    
-    <item>
-      <title>How to code a satellite algorithm and cook paella from scratch</title>
+      <title>
+        
+            How to code a satellite algorithm and cook paella from scratch
+        
+      </title>
       <link>https://vickylai.io/verbose/build-from-scratch/</link>
       <pubDate>Fri, 08 Sep 2017 16:50:24 -0400</pubDate>
       
@@ -105,7 +67,11 @@ And you&amp;rsquo;ll have written a function that does the stuff I mentioned abo
     </item>
     
     <item>
-      <title>Making sandwiches with closures in JavaScript</title>
+      <title>
+        
+            Making sandwiches with closures in JavaScript
+        
+      </title>
       <link>https://vickylai.io/verbose/javascript-closures/</link>
       <pubDate>Sun, 28 May 2017 09:16:35 +0700</pubDate>
       
@@ -114,7 +80,11 @@ And you&amp;rsquo;ll have written a function that does the stuff I mentioned abo
     </item>
     
     <item>
-      <title>Understanding Array.prototype.reduce() and recursion using apple pie</title>
+      <title>
+        
+            Understanding Array.prototype.reduce() and recursion using apple pie
+        
+      </title>
       <link>https://vickylai.io/verbose/reduce-recursion-with-pie/</link>
       <pubDate>Thu, 18 May 2017 11:40:06 +0700</pubDate>
       
@@ -125,7 +95,11 @@ And you&amp;rsquo;ll have written a function that does the stuff I mentioned abo
     </item>
     
     <item>
-      <title>Iterating over objects and arrays: frequent errors</title>
+      <title>
+        
+            Iterating over objects and arrays: frequent errors
+        
+      </title>
       <link>https://vickylai.io/verbose/iterating-objects-arrays/</link>
       <pubDate>Tue, 16 May 2017 10:46:46 +0700</pubDate>
       
@@ -135,7 +109,11 @@ The example code is JavaScript, since that&amp;rsquo;s what I&amp;rsquo;ve been 
     </item>
     
     <item>
-      <title>That time 30 seconds, StackOverflow, and sed saved me 30 minutes</title>
+      <title>
+        
+            That time 30 seconds, StackOverflow, and sed saved me 30 minutes
+        
+      </title>
       <link>https://vickylai.io/verbose/when-stackoverflow-sed-saves-30mins/</link>
       <pubDate>Sat, 06 May 2017 20:04:53 +0800</pubDate>
       
@@ -145,7 +123,11 @@ Here&amp;rsquo;s a worthwhile new habit for you: anytime you find yourself going
     </item>
     
     <item>
-      <title>Top free resources for developing coding superpowers</title>
+      <title>
+        
+            Top free resources for developing coding superpowers
+        
+      </title>
       <link>https://vickylai.io/verbose/free-resources-for-coding-superpowers/</link>
       <pubDate>Thu, 27 Apr 2017 08:14:09 +0800</pubDate>
       
@@ -155,7 +137,11 @@ Here&amp;rsquo;s a quick list of resources that you should definitely look at fi
     </item>
     
     <item>
-      <title>Things you need to know about becoming a Data Scientist</title>
+      <title>
+        
+            Things you need to know about becoming a Data Scientist
+        
+      </title>
       <link>https://vickylai.io/verbose/to-be-a-data-scientist/</link>
       <pubDate>Fri, 31 Mar 2017 13:19:19 +0900</pubDate>
       
@@ -164,7 +150,11 @@ Here&amp;rsquo;s a quick list of resources that you should definitely look at fi
     </item>
     
     <item>
-      <title>How I turned Unity into a tiling window manager</title>
+      <title>
+        
+            How I turned Unity into a tiling window manager
+        
+      </title>
       <link>https://vickylai.io/verbose/turn-unity-into-tiling-windows-manager/</link>
       <pubDate>Wed, 22 Mar 2017 16:10:10 +0800</pubDate>
       
@@ -173,7 +163,11 @@ Here&amp;rsquo;s a quick list of resources that you should definitely look at fi
     </item>
     
     <item>
-      <title>How I set up a single Dropbox folder on my dual-boot Windows and Linux system</title>
+      <title>
+        
+            How I set up a single Dropbox folder on my dual-boot Windows and Linux system
+        
+      </title>
       <link>https://vickylai.io/verbose/same-dropbox-dual-boot/</link>
       <pubDate>Fri, 17 Mar 2017 10:58:01 +0800</pubDate>
       
@@ -184,7 +178,11 @@ Assuming Windows was there first:
     </item>
     
     <item>
-      <title>How I created custom desktop notifications using terminal and cron</title>
+      <title>
+        
+            How I created custom desktop notifications using terminal and cron
+        
+      </title>
       <link>https://vickylai.io/verbose/create-desktop-notifications-cron/</link>
       <pubDate>Tue, 21 Feb 2017 10:48:38 +0700</pubDate>
       
@@ -193,7 +191,11 @@ Assuming Windows was there first:
     </item>
     
     <item>
-      <title>How a lifelong Windows user switched to Linux... the hard way</title>
+      <title>
+        
+            How a lifelong Windows user switched to Linux... the hard way
+        
+      </title>
       <link>https://vickylai.io/verbose/how-windows-user-switched-to-linux/</link>
       <pubDate>Mon, 06 Feb 2017 14:23:59 +0700</pubDate>
       
@@ -204,7 +206,11 @@ Assuming Windows was there first:
     </item>
     
     <item>
-      <title>How I ditched WordPress and set up my custom domain HTTPS site for (almost) free</title>
+      <title>
+        
+            How I ditched WordPress and set up my custom domain HTTPS site for (almost) free
+        
+      </title>
       <link>https://vickylai.io/verbose/free-custom-domain-website-https/</link>
       <pubDate>Sat, 28 Jan 2017 13:16:17 +0700</pubDate>
       
@@ -213,7 +219,11 @@ Assuming Windows was there first:
     </item>
     
     <item>
-      <title>Fundamentals of programming: iterations in Python</title>
+      <title>
+        
+            Fundamentals of programming: iterations in Python
+        
+      </title>
       <link>https://vickylai.io/verbose/python-programming-fundamentals-iterations/</link>
       <pubDate>Wed, 18 Jan 2017 21:58:28 +0700</pubDate>
       
@@ -223,7 +233,11 @@ That said, some blocks can be a little confusing at first. I found documentation
     </item>
     
     <item>
-      <title>I&#39;ve been a back-end coder for a week: here&#39;s how I made a Twitter stream</title>
+      <title>
+        
+            I&#39;ve been a back-end coder for a week: here&#39;s how I made a Twitter stream
+        
+      </title>
       <link>https://vickylai.io/verbose/how-i-made-a-twitter-stream/</link>
       <pubDate>Fri, 06 Jan 2017 16:39:29 +0700</pubDate>
       
@@ -234,13 +248,16 @@ That said, some blocks can be a little confusing at first. I found documentation
     </item>
     
     <item>
-      <title>abstract</title>
-      <link>https://vickylai.io/abstract/</link>
-      <pubDate>Sun, 01 Jan 2017 11:25:00 -0400</pubDate>
+      <title>
+        
+            -verbose
+        
+      </title>
+      <link>https://vickylai.io/verbose/</link>
+      <pubDate>Wed, 13 Dec 2017 20:46:12 -0500</pubDate>
       
-      <guid>https://vickylai.io/abstract/</guid>
-      <description>Hi! I&amp;rsquo;m Vicky Lai.
-Freelance developer and full-time problem solver.</description>
+      <guid>https://vickylai.io/verbose/</guid>
+      <description></description>
     </item>
     
   </channel>
