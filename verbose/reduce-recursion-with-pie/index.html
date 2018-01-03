@@ -42,6 +42,7 @@ https://vickylai.io/pixels/recursion-pie.jpg
 
 ">
 <meta property="og:url" content="https://vickylai.io/verbose/reduce-recursion-with-pie/">
+
 <meta name="twitter:image" content="
 
 
@@ -63,15 +64,8 @@ https://vickylai.io/pixels/recursion-pie.jpg
 <link rel="canonical" href="https://vickylai.io/verbose/reduce-recursion-with-pie/">
 
 
-<script type="text/javascript">
-    var host = 'vickylai.io';
-    if ((host == window.location.host) && (window.location.protocol != "https:"))
-        window.location.protocol = "https";
-</script>
 
-
-
-<link rel="stylesheet" href="/css/clearly.css?t=22">
+<link rel="stylesheet" href="/css/clearly.css?t=12">
 
 
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
@@ -98,11 +92,8 @@ src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
 
-<script src="/js/tagline.js?t=22"></script>
+<script src="/js/tagline.js?t=12"></script>
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
@@ -200,60 +191,48 @@ crossorigin="anonymous"></script>
                     <p>I was having trouble understanding <code>reduce()</code> and recursion in JavaScript, so I wrote this article to explain it to myself (hey, look, recursion!). I hope you find my examples both helpful and delicious.</p>
 
 <p>Given an array with nested arrays:</p>
-
-<pre><code class="language-js">var arr = [1, [2], [3, [[4]]]]
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">arr</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">],</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">[[</span><span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">]]]]</span></code></pre></div>
 <p>We want to produce this:</p>
-
-<pre><code class="language-js">var flat = [1, 2, 3, 4]
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">flat</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">]</span></code></pre></div>
 <h1 id="using-for-loops-and-if-statements">Using for loops and if statements</h1>
 
 <p>Naively, if we know the maximum number of nested arrays we&rsquo;ll encounter (there are 4 in this example), we can use <code>for</code> loops to iterate through each array item, then <code>if</code> statements to check if each item is in itself an array, and so on&hellip;</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">flatten</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">flat</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[];</span>
+    <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">i</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">i</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">arr</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">length</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">i</span><span style="color:#ce5c00;font-weight:bold">++</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">Array</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">isArray</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">arr</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">]))</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">ii</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">ii</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">arr</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">].</span><span style="color:#000">length</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">ii</span><span style="color:#ce5c00;font-weight:bold">++</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">Array</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">isArray</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">arr</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">][</span><span style="color:#000">ii</span><span style="color:#000;font-weight:bold">]))</span> <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">iii</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">iii</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">arr</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">][</span><span style="color:#000">ii</span><span style="color:#000;font-weight:bold">].</span><span style="color:#000">length</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">iii</span><span style="color:#ce5c00;font-weight:bold">++</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">iiii</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">iiii</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">arr</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">][</span><span style="color:#000">ii</span><span style="color:#000;font-weight:bold">][</span><span style="color:#000">iii</span><span style="color:#000;font-weight:bold">].</span><span style="color:#000">length</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">iiii</span><span style="color:#ce5c00;font-weight:bold">++</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+                <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">Array</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">isArray</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">arr</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">][</span><span style="color:#000">ii</span><span style="color:#000;font-weight:bold">][</span><span style="color:#000">iii</span><span style="color:#000;font-weight:bold">]))</span> <span style="color:#000;font-weight:bold">{</span>
+                <span style="color:#000">flat</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">push</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">arr</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">][</span><span style="color:#000">ii</span><span style="color:#000;font-weight:bold">][</span><span style="color:#000">iii</span><span style="color:#000;font-weight:bold">][</span><span style="color:#000">iiii</span><span style="color:#000;font-weight:bold">]);</span>
+                <span style="color:#000;font-weight:bold">}</span> <span style="color:#204a87;font-weight:bold">else</span> <span style="color:#000;font-weight:bold">{</span>
+                <span style="color:#000">flat</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">push</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">arr</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">][</span><span style="color:#000">ii</span><span style="color:#000;font-weight:bold">][</span><span style="color:#000">iii</span><span style="color:#000;font-weight:bold">]);</span>
+                <span style="color:#000;font-weight:bold">}</span>
+            <span style="color:#000;font-weight:bold">}</span>
+            <span style="color:#000;font-weight:bold">}</span>
+        <span style="color:#000;font-weight:bold">}</span> <span style="color:#204a87;font-weight:bold">else</span> <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#000">flat</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">push</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">arr</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">][</span><span style="color:#000">ii</span><span style="color:#000;font-weight:bold">]);</span>
+        <span style="color:#000;font-weight:bold">}</span>
+        <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">}</span> <span style="color:#204a87;font-weight:bold">else</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">flat</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">push</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">arr</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">]);</span>
+    <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">}</span>
 
-<pre><code class="language-js">function flatten() {
-    var flat = [];
-    for (var i=0; i&lt;arr.length; i++) {
-    if (Array.isArray(arr[i])) {
-        for (var ii=0; ii&lt;arr[i].length; ii++) {
-        if (Array.isArray(arr[i][ii])) {
-            for (var iii=0; iii&lt;arr[i][ii].length; iii++) {
-            for (var iiii=0; iiii&lt;arr[i][ii][iii].length; iiii++) {
-                if (Array.isArray(arr[i][ii][iii])) {
-                flat.push(arr[i][ii][iii][iiii]);
-                } else {
-                flat.push(arr[i][ii][iii]);
-                }
-            }
-            }
-        } else {
-            flat.push(arr[i][ii]);
-        }
-        }
-    } else {
-    flat.push(arr[i]);
-    }
-    }
-}
-
-// [1, 2, 3, 4]
-</code></pre>
-
+<span style="color:#a40000">// [1, 2, 3, 4]</span></code></pre></div>
 <p>&hellip;Which works, but of course looks ridiculous. Besides looking ridiculous, a) it only works if we know how many nested arrays we&rsquo;ll process, b) it&rsquo;s hard to read and harder to understand, and c) can you imagine having to debug this mess?! (Gee, I think there&rsquo;s an extra <code>i</code> somewhere.)</p>
 
 <h1 id="using-reduce">Using reduce</h1>
 
 <p>JavaScript has a couple methods we can use to make our code a little less ridiculous. One of these is <code>reduce()</code> and it looks like this:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">flat</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">arr</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">reduce</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">done</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">curr</span><span style="color:#000;font-weight:bold">){</span>
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">done</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">concat</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">curr</span><span style="color:#000;font-weight:bold">);</span>
+<span style="color:#000;font-weight:bold">},</span> <span style="color:#000;font-weight:bold">[]);</span>
 
-<pre><code class="language-js">var flat = arr.reduce(function(done,curr){
-    return done.concat(curr);
-}, []);
-
-// [ 1, 2, 3, [ [ 4 ] ] ]
-</code></pre>
-
+<span style="color:#a40000">// [ 1, 2, 3, [ [ 4 ] ] ]</span></code></pre></div>
 <p>It&rsquo;s a lot less code, but we haven&rsquo;t taken care of some of the nested arrays. Let&rsquo;s first walk through <code>reduce()</code> together and examine what it does to see how we&rsquo;ll correct this.</p>
 
 <blockquote>
@@ -288,20 +267,17 @@ crossorigin="anonymous"></script>
 </ol>
 
 <p>A recursive reduce function that accomplishes this is:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">flatten</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">arr</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">Array</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">isArray</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">arr</span><span style="color:#000;font-weight:bold">))</span> <span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">arr</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">reduce</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">done</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">curr</span><span style="color:#000;font-weight:bold">){</span>
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">done</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">concat</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">flatten</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">curr</span><span style="color:#000;font-weight:bold">));</span>
+    <span style="color:#000;font-weight:bold">},</span> <span style="color:#000;font-weight:bold">[]);</span>
+  <span style="color:#000;font-weight:bold">}</span> <span style="color:#204a87;font-weight:bold">else</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">arr</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">}</span>
 
-<pre><code class="language-js">function flatten(arr) {
-  if (Array.isArray(arr)) {
-  return arr.reduce(function(done,curr){
-    return done.concat(flatten(curr));
-    }, []);
-  } else {
-    return arr;
-  }
-}
-
-// [ 1, 2, 3, 4 ]
-</code></pre>
-
+<span style="color:#a40000">// [ 1, 2, 3, 4 ]</span></code></pre></div>
 <p>Bear with me and I&rsquo;ll explain.</p>
 
 <blockquote>

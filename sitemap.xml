@@ -3,27 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://vickylai.io/introduction/</loc>
+    <loc>https://vickylai.io/project/introduction/</loc>
     <lastmod>2017-03-26T11:25:00-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/acme-gallery/</loc>
+    <loc>https://vickylai.io/project/acme-gallery/</loc>
     <lastmod>2017-11-24T22:02:41-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/simon/</loc>
+    <loc>https://vickylai.io/project/uni-pretty/</loc>
+    <lastmod>2018-01-03T11:47:34-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vickylai.io/project/simon/</loc>
     <lastmod>2017-11-24T22:05:50-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/cats-vs-unicorns/</loc>
+    <loc>https://vickylai.io/project/cats-vs-unicorns/</loc>
     <lastmod>2017-11-24T22:07:45-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/minimalist-calc/</loc>
+    <loc>https://vickylai.io/project/minimalist-calc/</loc>
     <lastmod>2017-06-19T11:25:00-04:00</lastmod>
   </url>
   
@@ -188,6 +193,12 @@
   </url>
   
   <url>
+    <loc>https://vickylai.io/tags/encoding/</loc>
+    <lastmod>2018-01-03T11:47:34-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://vickylai.io/tags/ethics/</loc>
     <lastmod>2017-11-22T14:05:14-05:00</lastmod>
     <priority>0</priority>
@@ -226,6 +237,12 @@
   <url>
     <loc>https://vickylai.io/tags/linux/</loc>
     <lastmod>2017-11-20T13:59:30-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vickylai.io/project/</loc>
+    <lastmod>2017-03-26T11:25:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   

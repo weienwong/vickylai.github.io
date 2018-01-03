@@ -43,32 +43,33 @@ And I've decided it doesn't get any better than this.
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="referrer" content="noopener">
-<meta name="description" content="Vicky Lai. Developer of super fast websites and apps. Blogger of code explained with doodles of food.">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Vicky Lai designs and develops experiences that get to the point. She blogs about code, liberally applies emoji unicorns, and apparently talks in third person.">
+<meta property="og:title" content="VickyLai.io">
+<meta property="og:description" content="Vicky Lai designs and develops experiences that get to the point. She blogs about code, liberally applies emoji unicorns, and apparently talks in third person.">
+<meta property="og:image" content="https://vickylai.io/img/portrait.jpg">
+<meta property="og:url" content="https://vickylai.io/">
+<meta name="twitter:image" content="https://vickylai.io/img/portrait.jpg">
+<meta name="twitter:card" content="summary">
 <title>
 
-    Make math pretty again with this minimalist javascript calculator.
+    cats-vs-unicorns
 
 </title>
 
 
-<script type="text/javascript">
-    var host = "vickylai.io";
-    if ((host == window.location.host) && (window.location.protocol != "https:"))
-        window.location.protocol = "https";
-</script>
+
+<link rel="stylesheet" href="/css/clearly.css?t=12">
 
 
-
-<link rel="stylesheet" href="/css/clearly.css?t=15">
-
-
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
 
 <link id="favicon" rel="shortcut icon" href="/img/code.ico">
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
+<script
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -82,74 +83,55 @@ And I've decided it doesn't get any better than this.
 
 
 <body>
+    <div id="top">
+        <div class="sticky-nav">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/"> 
+                Vicky Lai
+            </a>
 
-    
-    <div class="sticky-nav has-text-centered phabs-up">
-        <div class="container">
-        <nav class="nav">
-
-        <nav class="nav-left">
-            <a class="nav-item is-tab" href="/">
-            <h1 class="home">VickyLai.io</h1>
+            <a class="navbar-item" href="/verbose">
+                Blog
             </a>
-        </nav>
-
-        <nav class="nav-right">
-        <div class="nav-right nav-menu" id="nav-menu">
-            <a class="nav-item is-tab" href="/verbose">
-            Verbose
+            <a class="navbar-item" href="/#code">
+                Code
             </a>
-            <a class="nav-item is-tab" href="/#projects">
-            Projects
+            <a class="navbar-item" href="/#contact">
+                Contact
             </a>
-            <a class="nav-item is-tab" href="/#about">
-            About
+            
+            <a class="navbar-item" href="https://vickylai.io/index.xml" target="_blank">
+                RSS
             </a>
-            <a class="nav-item is-tab" href="/#contact">
-            Contact
-            </a>
+            
         </div>
-        </nav>
-
-        </nav>
-    </div>
-    </div>
-
-<div class="container mobile sticky-nav">
-    <nav class="nav nav-center">
-            <a class="nav-item" href="/verbose">
-            Verbose
-            </a>
-            <a class="nav-item" href="/#projects">
-            Projects
-            </a>
-            <a class="nav-item" href="/#about">
-            About
-            </a>
-            <a class="nav-item" href="/#contact">
-            Contact
-            </a>
     </nav>
 </div>
+        <section class="hero content-head">
+            
 
-<section class="hero content-head" id="top">
-<div class="container top-pad has-text-centered"> <h1><span class="text-line">Make math pretty again with this minimalist javascript calculator.</span></h1></div>
-</section>
+            <div class="container hero-body has-text-centered">
+                <h2>cats-vs-unicorns</h2>
+            </div>
 
-<section class="section">
-    <div class="container markdown">
+        </section>
         
-    </div>
-<hr>
 
-</section>
+        <hr />
 
-<div class="footer section center-me" id="footer">
+        <section class="section">
+            <div class="container markdown">
+                
+            </div>
+            <hr> <div class="footer section center-me" id="footer">
     <div class="container columns bio-box">
-        <div class="column is-one-quarter av-box"><img class="avatar" src="https://vickylai.io/img/portrait.jpg"></div>
+        <div class="column is-one-quarter av-box">
+            <img class="avatar small" src="https://vickylai.io/img/portrait.jpg">
+        </div>
         <div class="column bio">
-            <p class="strong">About Vicky Lai</p>
-            <p class="footer-text">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.</p>
+            <p class="bio-title">About Vicky Lai</p>
+            <p id="footer-text">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.</p>
             <p class="top-pad">
                 
                 <a href="https://github.com/hivickylai" target="_blank">
@@ -171,3 +153,6 @@ And I've decided it doesn't get any better than this.
         </div>
     </div>
     </div>
+        </section>
+    </div>
+</body>

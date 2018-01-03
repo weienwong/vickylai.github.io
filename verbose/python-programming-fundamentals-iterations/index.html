@@ -40,6 +40,7 @@ https://vickylai.io/
 
 ">
 <meta property="og:url" content="https://vickylai.io/verbose/python-programming-fundamentals-iterations/">
+
 <meta name="twitter:image" content="
 
 
@@ -61,15 +62,8 @@ https://vickylai.io/
 <link rel="canonical" href="https://vickylai.io/verbose/python-programming-fundamentals-iterations/">
 
 
-<script type="text/javascript">
-    var host = 'vickylai.io';
-    if ((host == window.location.host) && (window.location.protocol != "https:"))
-        window.location.protocol = "https";
-</script>
 
-
-
-<link rel="stylesheet" href="/css/clearly.css?t=22">
+<link rel="stylesheet" href="/css/clearly.css?t=12">
 
 
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
@@ -96,11 +90,8 @@ src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
 
-<script src="/js/tagline.js?t=22"></script>
+<script src="/js/tagline.js?t=12"></script>
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
@@ -201,79 +192,58 @@ crossorigin="anonymous"></script>
 <p>There are a few different ways to achieve iterations in Python. I&rsquo;ll present some of these ways in this post and discuss appropriate situations for each.</p>
 
 <h1 id="for-loop">For loop</h1>
-
-<pre><code class="language-python">for iterating_var in iterable:
-    statement/statements
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">iterating_var</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">iterable</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#000">statement</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#000">statements</span></code></pre></div>
 <p>For loops are handy things. They&rsquo;re straightforward to understand, which is especially helpful if you&rsquo;re reading someone else&rsquo;s code and trying to follow their thought process. They can acheive as much or as little as you need, and each operation can be clearly written out.</p>
 
 <p>An <code>iterating_var</code> can be any of Python&rsquo;s data types: a letter in a string, an item from a list, an index from a list, integers, etc. An <code>iterable</code> can also take different forms: a string of word(s), a range of numbers, a list, and so on. A <code>statement</code> or multiple <code>statements</code> indicates <em>doing something:</em> anything from mathematical expressions to simply printing a result. Check out the following examples, which simply print each <code>iterating_var</code> of an <code>iterable</code> on a new line:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">letter</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;Hello world&#39;</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#204a87;font-weight:bold">print</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">letter</span><span style="color:#000;font-weight:bold">)</span>
 
-<pre><code class="language-python">for letter in 'Hello world':
-    print(letter)
+<span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">i</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#204a87">range</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#204a87;font-weight:bold">print</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">)</span>
 
-for i in range(10):
-    print(i)
-
-breakfastmenu = ['toast','eggs','waffles','coffee']
-for choice in breakfastmenu:
-    print(choice)
-</code></pre>
-
-<p>You can even use a for loop in a more compact situation, such as I did in <a href="https://github.com/vickylaiio/30-days-of-code/blob/master/day7_arrays.py">my solution</a> to HackerRank&rsquo;s <a href="https://www.hackerrank.com/challenges/30-arrays">30 Days of Code - Day 7: Arrays</a> challenge:</p>
-
-<pre><code class="language-python">arrstring = ' '.join(str(e) for e in arr)
-</code></pre>
-
+<span style="color:#000">breakfastmenu</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;toast&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;eggs&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;waffles&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;coffee&#39;</span><span style="color:#000;font-weight:bold">]</span>
+<span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">choice</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">breakfastmenu</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#204a87;font-weight:bold">print</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">choice</span><span style="color:#000;font-weight:bold">)</span></code></pre></div>
+<p>You can even use a for loop in a more compact situation, such as I did in <a href="https://github.com/hivickylai/30-days-of-code/blob/master/day7_arrays.py">my solution</a> to HackerRank&rsquo;s <a href="https://www.hackerrank.com/challenges/30-arrays">30 Days of Code - Day 7: Arrays</a> challenge:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">arrstring</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39; &#39;</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">join</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">str</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">e</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">e</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">arr</span><span style="color:#000;font-weight:bold">)</span></code></pre></div>
 <p>The downside to for loops is that they can be a bit verbose, depending on how much you&rsquo;re trying to achieve. Still, for anyone learning Python or hoping to make their code as easily understood as possible, for loops are still the most straightforward choice for iterations.</p>
 
 <h1 id="list-comprehensions">List comprehensions</h1>
-
-<pre><code class="language-python">newlist = [statement/statements for iterating_var in iterable]
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">newlist</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">statement</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#000">statements</span> <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">iterating_var</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">iterable</span><span style="color:#000;font-weight:bold">]</span></code></pre></div>
 <p>In my opinion, list comprehensions are the most elegant of the solutions discussed in this post. Once you have a grasp of how they work, you can perform concise and effective iterations with very little code.</p>
 
 <p>List comprehensions will always return a list, which may or may not be appropriate for your situation. If appropriate, however, simply defining the variable name of the list can often help you skip some steps.</p>
 
 <p>For example, I can use list comprehension to quickly calculate and print tip percentage on a few bar tabs at once:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">tabs</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">23.60</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">42.10</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">17.50</span><span style="color:#000;font-weight:bold">]</span>
+<span style="color:#000">tabsplustips</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#204a87">round</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">tab</span><span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#0000cf;font-weight:bold">1.15</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">tab</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">tabs</span><span style="color:#000;font-weight:bold">]</span>
+<span style="color:#204a87;font-weight:bold">print</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">tabsplustips</span><span style="color:#000;font-weight:bold">)</span>
 
-<pre><code class="language-python">tabs = [23.60, 42.10, 17.50]
-tabsplustips = [round(tab*1.15, 2) for tab in tabs]
-print(tabsplustips)
-
-&gt;&gt;&gt; [27.14, 48.41, 20.12]
-</code></pre>
-
+<span style="color:#ce5c00;font-weight:bold">&gt;&gt;&gt;</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">27.14</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">48.41</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">20.12</span><span style="color:#000;font-weight:bold">]</span></code></pre></div>
 <p>In one concise line, we&rsquo;ve taken each tab amount, added 15% tip, rounded it to the nearest cent, and made a new list of the tabs plus the tip values.</p>
 
 <p>List comprehensions can be an elegant tool, depending on the variety of statements you want to iterate through, and whether or not output to a list is useful to you. The more statements you add, the more complicated your list comprehension begins to look, especially once you get into nested list comprehensions. If your code isn&rsquo;t well annotated, it may become difficult for another reader to figure out.</p>
 
 <h1 id="map">Map</h1>
-
-<pre><code class="language-python">map(function, iterable)
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87">map</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">function</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">iterable</span><span style="color:#000;font-weight:bold">)</span></code></pre></div>
 <p>Map is, in many ways, a non-idiomatic function for iteration in Python. It&rsquo;s pretty compact, which can make it easy to write improperly with a missing comma or parenthesis, and it&rsquo;s more limited than for loops or list comprehensions in its usage. Basically, it applies your <code>statement</code> to every instance of your defined <code>iterable</code>.</p>
 
-<p>I used the map function in <a href="https://github.com/vickylaiio/simple-statistics/blob/master/weighted_mean.py">my solution</a> to HackerRank&rsquo;s <a href="https://www.hackerrank.com/challenges/s10-weighted-mean">10 Days of Statistics - Day 0: Weighted Mean</a> challenge. In this example, it&rsquo;s casting each element of <code>input()</code> (the iterable) from string representation to integer representation.</p>
+<p>I used the map function in <a href="https://github.com/hivickylai/simple-statistics/blob/master/weighted_mean.py">my solution</a> to HackerRank&rsquo;s <a href="https://www.hackerrank.com/challenges/s10-weighted-mean">10 Days of Statistics - Day 0: Weighted Mean</a> challenge. In this example, it&rsquo;s casting each element of <code>input()</code> (the iterable) from string representation to integer representation.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">values</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87">list</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">map</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">int</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87">input</span><span style="color:#000;font-weight:bold">()</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">split</span><span style="color:#000;font-weight:bold">()))</span>
+<span style="color:#000">weights</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87">list</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">map</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">int</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87">input</span><span style="color:#000;font-weight:bold">()</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">split</span><span style="color:#000;font-weight:bold">()))</span>
 
-<pre><code class="language-python">values = list(map(int, input().split()))
-weights = list(map(int, input().split()))
+<span style="color:#000">output</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87">sum</span><span style="color:#000;font-weight:bold">([</span><span style="color:#000">x</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">x</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">x</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#204a87">zip</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">values</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">weights</span><span style="color:#000;font-weight:bold">)])</span> <span style="color:#ce5c00;font-weight:bold">/</span> <span style="color:#204a87">sum</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">weights</span><span style="color:#000;font-weight:bold">)</span>
 
-output = sum([x[0] * x[1] for x in zip(values, weights)]) / sum(weights)
-
-print(round(output, 1))
-</code></pre>
-
+<span style="color:#204a87;font-weight:bold">print</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">round</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">output</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">))</span></code></pre></div>
 <p>It&rsquo;s worthwhile to note that map by itself returns an iterator; if it&rsquo;s a list you want, it&rsquo;s an extra step to get the list representation, as in the example above.</p>
 
 <p>In truth, I&rsquo;ve had a hard time coming up with appropriate situations for the use of map over simply using a list comprehension. Aside from situations similar to the above, it seems to me to be a rather un-Pythonic way to iterate. It can be advantageous as a concise method of doing simple, sort of &lsquo;on-the-spot&rsquo; iterations; otherwise, my preference would be to use a list comprehension instead.</p>
 
 <p>&nbsp;</p>
 
-<p>I hope these examples have been useful to you in your understanding of iterations with Python 3! If you have questions or examples I haven&rsquo;t thought of, feel free to share them with me on Twitter: <a href="https://twitter.com/vickylaiio">@vickylaiio</a>.</p>
+<p>I hope these examples have been useful to you in your understanding of iterations with Python 3! If you have questions or examples I haven&rsquo;t thought of, feel free to share them with me on Twitter: <a href="https://twitter.com/hivickylai">@hivickylai</a>.</p>
 
 <p>Thanks for reading!</p>
 

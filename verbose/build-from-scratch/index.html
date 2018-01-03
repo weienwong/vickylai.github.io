@@ -42,6 +42,7 @@ https://vickylai.io/pixels/solve-paella.jpg
 
 ">
 <meta property="og:url" content="https://vickylai.io/verbose/build-from-scratch/">
+
 <meta name="twitter:image" content="
 
 
@@ -63,15 +64,8 @@ https://vickylai.io/pixels/solve-paella.jpg
 <link rel="canonical" href="https://vickylai.io/verbose/build-from-scratch/">
 
 
-<script type="text/javascript">
-    var host = 'vickylai.io';
-    if ((host == window.location.host) && (window.location.protocol != "https:"))
-        window.location.protocol = "https";
-</script>
 
-
-
-<link rel="stylesheet" href="/css/clearly.css?t=22">
+<link rel="stylesheet" href="/css/clearly.css?t=12">
 
 
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
@@ -98,11 +92,8 @@ src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
 
-<script src="/js/tagline.js?t=22"></script>
+<script src="/js/tagline.js?t=12"></script>
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
@@ -296,10 +287,7 @@ crossorigin="anonymous"></script>
 <p>*<strong>T*, the orbital period, equals 2 multiplied by Pi, in turn multiplied by the square root of the radius, <em>r</em> cubed, divided by the gravitational mass, <em>GM</em>.</strong></p>
 
 <p>JavaScript has a <code>Math.PI</code> property, as well as <code>Math.sqrt()</code> function and <code>Math.pow()</code> function. Using those combined with simple calculation, we can represent this equation in a single line assigned to a variable:</p>
-
-<pre><code class="language-js">var orbitalPeriod = 2 * Math.PI * (Math.sqrt(Math.pow((earthRadius + avgAlt), 3) / GM));
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">orbitalPeriod</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">2</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#204a87">Math</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">PI</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">Math</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">sqrt</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">Math</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pow</span><span style="color:#000;font-weight:bold">((</span><span style="color:#000">earthRadius</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">avgAlt</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#a40000">/ GM));</span></code></pre></div>
 <p>From the inside out:</p>
 
 <ol>
@@ -314,27 +302,24 @@ crossorigin="anonymous"></script>
 <p>Believe it or not, we&rsquo;re already most of the way there.</p>
 
 <p>The next MIQ for this challenge is to take the arguments object, extract the information we need, and return the result of our equation in the required format. There are a multitude of ways to do this, but I&rsquo;m happy with a straightforward <code>for</code> loop:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">orbitalPeriod</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">arr</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">resultArr</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[];</span>
 
-<pre><code class="language-js">function orbitalPeriod(arr) {
-  var resultArr = [];
+  <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">teapot</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">teapot</span> <span style="color:#ce5c00;font-weight:bold">&lt;</span> <span style="color:#000">arguments</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">].</span><span style="color:#000">length</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">teapot</span><span style="color:#ce5c00;font-weight:bold">++</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">GM</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">398600.4418</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">earthRadius</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">6367.4447</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">avgAlt</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">arguments</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">][</span><span style="color:#000">teapot</span><span style="color:#000;font-weight:bold">][</span><span style="color:#4e9a06">&#39;avgAlt&#39;</span><span style="color:#000;font-weight:bold">];</span>
+    <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">name</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">arguments</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">][</span><span style="color:#000">teapot</span><span style="color:#000;font-weight:bold">][</span><span style="color:#4e9a06">&#39;name&#39;</span><span style="color:#000;font-weight:bold">];</span>
+    <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">orbitalPeriod</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">2</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#204a87">Math</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">PI</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">Math</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">sqrt</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">Math</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pow</span><span style="color:#000;font-weight:bold">((</span><span style="color:#000">earthRadius</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">avgAlt</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#a40000">/ GM));</span>
+    <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">result</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">name</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#000">orbitalPeriod</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#204a87">Math</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">round</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">orbitalPeriod</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000">resultArr</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">push</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">result</span><span style="color:#000;font-weight:bold">);</span>
+  <span style="color:#000;font-weight:bold">}</span>
 
-  for (var teapot = 0; teapot &lt; arguments[0].length; teapot++) {
-    var GM = 398600.4418;
-    var earthRadius = 6367.4447;
-    var avgAlt = arguments[0][teapot]['avgAlt'];
-    var name = arguments[0][teapot]['name'];
-    var orbitalPeriod = 2 * Math.PI * (Math.sqrt(Math.pow((earthRadius + avgAlt), 3) / GM));
-    var result = {
-      name: name,
-      orbitalPeriod: Math.round(orbitalPeriod)
-    }
-    resultArr.push(result);
-  }
-
-  return resultArr;
-}
-</code></pre>
-
+  <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">resultArr</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">}</span></code></pre></div>
 <p>If you need a refresher on iterating through arrays, have a look at my <a href="https://vickylai.io/verbose/iterating-objects-arrays/">article on iterating, featuring breakfast arrays</a>! (5 minutes read)</p>
 
 <p>Don&rsquo;t look now, but you just gained the ability to calculate the orbital period of satellites. You could even do it <em>while</em> making paella, if you wanted to. Seriously. Put it on your resume.</p>

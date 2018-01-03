@@ -38,6 +38,7 @@ https://vickylai.io/pixels/dunstnotif.png
 
 ">
 <meta property="og:url" content="https://vickylai.io/verbose/create-desktop-notifications-cron/">
+
 <meta name="twitter:image" content="
 
 
@@ -59,15 +60,8 @@ https://vickylai.io/pixels/dunstnotif.png
 <link rel="canonical" href="https://vickylai.io/verbose/create-desktop-notifications-cron/">
 
 
-<script type="text/javascript">
-    var host = 'vickylai.io';
-    if ((host == window.location.host) && (window.location.protocol != "https:"))
-        window.location.protocol = "https";
-</script>
 
-
-
-<link rel="stylesheet" href="/css/clearly.css?t=22">
+<link rel="stylesheet" href="/css/clearly.css?t=12">
 
 
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
@@ -94,11 +88,8 @@ src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
 
-<script src="/js/tagline.js?t=22"></script>
+<script src="/js/tagline.js?t=12"></script>
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
@@ -204,11 +195,8 @@ crossorigin="anonymous"></script>
 <h1 id="battery-status-low-battery-notification">Battery status/low battery notification</h1>
 
 <p>I was looking for a simple, versatile set up to create notifications for my battery status without having to rely on separate, standalone GUI apps or services. In my search I came across a simple one-line cron task that seemed to be the perfect fit. I adapted it to my purpose and it looks like this:</p>
-
-<pre><code class="language-conf"># m h  dom mon dow   command
-*/5 * * * * acpi --battery | awk -F, '/Discharging/ { if (int($2) &lt; 20) print }' | xargs -ri env DISPLAY=:0 notify-send -u critical -i &quot;/usr/share/icons/Paper/16x16/status/xfce-battery-critical.png&quot; -t 3000 &quot;{}\nBattery low!&quot;
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-conf" data-lang="conf"># m h  dom mon dow   command
+*/5 * * * * acpi --battery | awk -F, &#39;/Discharging/ { if (int($2) &lt; 20) print }&#39; | xargs -ri env DISPLAY=:0 notify-send -u critical -i &#34;/usr/share/icons/Paper/16x16/status/xfce-battery-critical.png&#34; -t 3000 &#34;{}\nBattery low!&#34;</code></pre></div>
 <blockquote>
 <p><em>Psst&hellip; <a href="https://crontab.guru/">here&rsquo;s a great tool</a> for formatting your crontab times.</em></p>
 </blockquote>
@@ -239,15 +227,12 @@ Run the following utility in the specified display, in this case, the first disp
 Shows a desktop notification with <code>-u critical</code> (critical urgency), <code>-i</code> (the specified icon), <code>-t 3000</code> (display time/expires after 3000 milliseconds), and finally <code>{}</code> (the output of awk, replaced by xargs).</p>
 
 <p>Not bad for a one-liner! I made a few modifications for different states of my battery. Here they all are in my crontab:</p>
-
-<pre><code class="language-conf"># m h  dom mon dow   command
-*/5 * * * * acpi --battery | awk -F, '/Discharging/ { if ( (int($2) &lt; 30) &amp;&amp; (int($2) &gt; 15) ) print }' | xargs -ri env DISPLAY=:0 notify-send -a &quot;Battery status&quot; -u normal -i &quot;/usr/share/icons/Paper/16x16/status/xfce-battery-low.png&quot; -t 3000 &quot;{}\nBattery low!&quot;
-*/5 * * * * acpi --battery | awk -F, '/Discharging/ { if (int($2) &lt; 15) print }' | xargs -ri env DISPLAY=:0 notify-send -a &quot;Battery status&quot; -u critical -i &quot;/usr/share/icons/Paper/16x16/status/xfce-battery-critical.png&quot; -t 3000 &quot;{}\nSeriously, plug me in.&quot;
-*/60 * * * * acpi --battery | awk -F, '/Discharging/ { if (int($2) &gt; 30) print }' | xargs -ri env DISPLAY=:0 notify-send -a &quot;Battery status&quot; -u normal -i &quot;/usr/share/icons/Paper/16x16/status/xfce-battery-ok.png&quot; &quot;{}&quot;
-*/60 * * * * acpi --battery | awk -F, '/Charging/ { print }' | xargs -ri env DISPLAY=:0 notify-send -a &quot;Battery status&quot; -u normal -i &quot;/usr/share/icons/Paper/16x16/status/xfce-battery-ok-charging.png&quot; &quot;{}&quot;
-*/60 * * * * acpi --battery | awk -F, '/Charging/ { if (int($2) == 100) print }' | xargs -ri env DISPLAY=:0 notify-send -a &quot;Battery status&quot; -u normal -i &quot;/usr/share/icons/Paper/16x16/status/xfce-battery-full-charging.png&quot; &quot;Fully charged.&quot;
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-conf" data-lang="conf"># m h  dom mon dow   command
+*/5 * * * * acpi --battery | awk -F, &#39;/Discharging/ { if ( (int($2) &lt; 30) &amp;&amp; (int($2) &gt; 15) ) print }&#39; | xargs -ri env DISPLAY=:0 notify-send -a &#34;Battery status&#34; -u normal -i &#34;/usr/share/icons/Paper/16x16/status/xfce-battery-low.png&#34; -t 3000 &#34;{}\nBattery low!&#34;
+*/5 * * * * acpi --battery | awk -F, &#39;/Discharging/ { if (int($2) &lt; 15) print }&#39; | xargs -ri env DISPLAY=:0 notify-send -a &#34;Battery status&#34; -u critical -i &#34;/usr/share/icons/Paper/16x16/status/xfce-battery-critical.png&#34; -t 3000 &#34;{}\nSeriously, plug me in.&#34;
+*/60 * * * * acpi --battery | awk -F, &#39;/Discharging/ { if (int($2) &gt; 30) print }&#39; | xargs -ri env DISPLAY=:0 notify-send -a &#34;Battery status&#34; -u normal -i &#34;/usr/share/icons/Paper/16x16/status/xfce-battery-ok.png&#34; &#34;{}&#34;
+*/60 * * * * acpi --battery | awk -F, &#39;/Charging/ { print }&#39; | xargs -ri env DISPLAY=:0 notify-send -a &#34;Battery status&#34; -u normal -i &#34;/usr/share/icons/Paper/16x16/status/xfce-battery-ok-charging.png&#34; &#34;{}&#34;
+*/60 * * * * acpi --battery | awk -F, &#39;/Charging/ { if (int($2) == 100) print }&#39; | xargs -ri env DISPLAY=:0 notify-send -a &#34;Battery status&#34; -u normal -i &#34;/usr/share/icons/Paper/16x16/status/xfce-battery-full-charging.png&#34; &#34;Fully charged.&#34;</code></pre></div>
 <p>By the way, you can open your crontab in the editor of your choice by accessing it as root from the <code>/var/spool/cron/crontabs/</code> directory. It&rsquo;s generally best practice however to make changes to your crontab with the command <code>crontab -e</code>.</p>
 
 <p>You can see that each notification makes use of the <code>{}</code> placeholder that tells xargs to put its input there - except for the last one. This is interesting because in this case, we&rsquo;re only using <code>xargs -ri</code> as a kind of switch to present the notification. The actual information that was the input for xargs is not needed in the output in order to create a notification.</p>
@@ -288,7 +273,7 @@ Create the desktop notification including the output.</p>
 
 <p>&nbsp;</p>
 
-<p>I hope this post has given you some idea about the endless possibilities of these simple utilities. Questions or issues? Let me know on Twitter: <a href="https://twitter.com/vickylaiio">@vickylaiio</a>.</p>
+<p>I hope this post has given you some idea about the endless possibilities of these simple utilities. Questions or issues? Let me know on Twitter: <a href="https://twitter.com/hivickylai">@hivickylai</a>.</p>
 
 <p>Thanks for reading!</p>
 

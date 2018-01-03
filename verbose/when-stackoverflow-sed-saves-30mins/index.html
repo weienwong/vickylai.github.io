@@ -40,6 +40,7 @@ https://vickylai.io/pixels/so.gif
 
 ">
 <meta property="og:url" content="https://vickylai.io/verbose/when-stackoverflow-sed-saves-30mins/">
+
 <meta name="twitter:image" content="
 
 
@@ -61,15 +62,8 @@ https://vickylai.io/pixels/so.gif
 <link rel="canonical" href="https://vickylai.io/verbose/when-stackoverflow-sed-saves-30mins/">
 
 
-<script type="text/javascript">
-    var host = 'vickylai.io';
-    if ((host == window.location.host) && (window.location.protocol != "https:"))
-        window.location.protocol = "https";
-</script>
 
-
-
-<link rel="stylesheet" href="/css/clearly.css?t=22">
+<link rel="stylesheet" href="/css/clearly.css?t=12">
 
 
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
@@ -96,11 +90,8 @@ src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
 
-<script src="/js/tagline.js?t=22"></script>
+<script src="/js/tagline.js?t=12"></script>
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
@@ -209,11 +200,8 @@ crossorigin="anonymous"></script>
 <p>Sed is your friend. This amazingly powerful tool lives in your terminal and is available to be totally underused for things like finding and replacing strings in files. (I seem to have a habit of suggesting ways to totally underuse powerful tools - I previously outlined how to <a href="https://vickylai.io/verbose/create-desktop-notifications-cron/">use cron to create desktop notifications</a>, but I digress.)</p>
 
 <p>Run this command to search all the files in your current directory and replace a given string.</p>
-
-<pre><code class="language-sh">// to replace 'foo' with 'bar'
-$ sed -i -- 's/foo/bar/g' *
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">// to replace <span style="color:#4e9a06">&#39;foo&#39;</span> with <span style="color:#4e9a06">&#39;bar&#39;</span>
+$ sed -i -- <span style="color:#4e9a06">&#39;s/foo/bar/g&#39;</span> *</code></pre></div>
 <p>The above is <strong>non-recursive</strong>, meaning it won&rsquo;t look in subdirectories. There are ways to do this recursively, as well as limit the search to specific file extensions: <a href="https://unix.stackexchange.com/questions/112023/how-can-i-replace-a-string-in-a-files">see the full answer on StackOverflow</a>.</p>
 
 <h2 id="break-it-down">Break it down:</h2>
