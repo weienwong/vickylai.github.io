@@ -14,6 +14,19 @@
     <item>
       <title>
         
+            A unicode substitution cipher algorithm
+        
+      </title>
+      <link>https://vickylai.io/verbose/unicode-cipher/</link>
+      <pubDate>Sat, 06 Jan 2018 20:00:28 -0500</pubDate>
+      
+      <guid>https://vickylai.io/verbose/unicode-cipher/</guid>
+      <description>Full transparency: I occasionally waste time messing around on Twitter. (Gasp! Shock!) One of the ways I waste time messing around on Twitter is by writing my name in my profile with different unicode character &amp;ldquo;fonts,&amp;rdquo; 𝖑𝖎𝖐𝖊 𝖙𝖍𝖎𝖘 𝖔𝖓𝖊. I previously did this by searching for different unicode characters on Google, then one-by-one copying and pasting them into the &amp;ldquo;Name&amp;rdquo; field on my Twitter profile. Since this method of wasting time was a bit of a time waster, I decided (in true programmer fashion) to write a tool that would help me save some time while wasting it.</description>
+    </item>
+    
+    <item>
+      <title>
+        
             Hosting your static site with AWS S3, Route 53, and CloudFront
         
       </title>
@@ -27,7 +40,7 @@
     <item>
       <title>
         
-            About Time
+            About time
         
       </title>
       <link>https://vickylai.io/verbose/about-time/</link>
@@ -203,19 +216,6 @@ Assuming Windows was there first:
       <description>&lt;p&gt;Let me preface this by saying that I&amp;rsquo;ve always been interested in finding out how things work. If a thing does something, I want to know why, how, and if I can customize it.&lt;/p&gt;
 
 &lt;p&gt;It should come as no surprise that Windows 10 drove me crazy.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>
-        
-            How I ditched WordPress and set up my custom domain HTTPS site for (almost) free
-        
-      </title>
-      <link>https://vickylai.io/verbose/free-custom-domain-website-https/</link>
-      <pubDate>Sat, 28 Jan 2017 13:16:17 +0700</pubDate>
-      
-      <guid>https://vickylai.io/verbose/free-custom-domain-website-https/</guid>
-      <description>&lt;p&gt;I got annoyed with WordPress.com. While using the service has its pros (like https and a mobile responsive website, and being very visual and beginner-friendly) it&amp;rsquo;s limiting. For someone who&amp;rsquo;s comfortable enough to be tweaking CSS but who&amp;rsquo;s not interested in creating their own theme (or paying upwards of $50 for one), I felt I wasn&amp;rsquo;t really the type of consumer WordPress.com was suited to.&lt;/p&gt;</description>
     </item>
     
   </channel>
