@@ -6,10 +6,23 @@
     <description>Recent content in Config on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Mar 2017 16:10:10 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jan 2018 08:56:20 -0500</lastBuildDate>
     
         <atom:link href="https://vickylai.io/tags/config/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>
+        
+            Moving to a new domain without breaking old links: AWS &amp; Disqus
+        
+      </title>
+      <link>https://vickylai.io/verbose/aws-new-domain/</link>
+      <pubDate>Wed, 10 Jan 2018 08:56:20 -0500</pubDate>
+      
+      <guid>https://vickylai.io/verbose/aws-new-domain/</guid>
+      <description>&lt;p&gt;I started blogging about my nomadic travels last year, and so far the habit has stuck. Like all side projects, I won&amp;rsquo;t typically invest heavily in setting up web properties before I can be reasonably certain that such an investment is worth my time or enjoyment. In other words: don&amp;rsquo;t buy the domain until you&amp;rsquo;ve proven to yourself that you&amp;rsquo;ll stick with it!&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>
@@ -201,21 +214,6 @@ Assuming Windows was there first:
       
       <guid>https://vickylai.io/verbose/create-desktop-notifications-cron/</guid>
       <description>In my last post I talked about moving from Windows 10 to running i3 on Linux, built up from Debian Base System. Among other things, this change has taught me about the benefits of using basic tools and running a minimal, lightweight system. You can achieve a lot of functionality with just command line tools and simple utilities. One example I&amp;rsquo;d like to illustrate in this post is setting up desktop notifications.</description>
-    </item>
-    
-    <item>
-      <title>
-        
-            How a lifelong Windows user switched to Linux... the hard way
-        
-      </title>
-      <link>https://vickylai.io/verbose/how-windows-user-switched-to-linux/</link>
-      <pubDate>Mon, 06 Feb 2017 14:23:59 +0700</pubDate>
-      
-      <guid>https://vickylai.io/verbose/how-windows-user-switched-to-linux/</guid>
-      <description>&lt;p&gt;Let me preface this by saying that I&amp;rsquo;ve always been interested in finding out how things work. If a thing does something, I want to know why, how, and if I can customize it.&lt;/p&gt;
-
-&lt;p&gt;It should come as no surprise that Windows 10 drove me crazy.&lt;/p&gt;</description>
     </item>
     
   </channel>
