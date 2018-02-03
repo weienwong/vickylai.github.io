@@ -65,7 +65,7 @@ https://vickylai.io/
 
 
 
-<link rel="stylesheet" href="/css/clearly.css?t=10">
+<link rel="stylesheet" href="/css/clearly.css?t=13">
 
 
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
@@ -92,7 +92,7 @@ src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
 
-<script src="/js/tagline.js?t=10"></script>
+<script src="/js/tagline.js?t=13"></script>
 
 </head>
 
@@ -240,7 +240,7 @@ UnicodeEncodeError: &#39;charmap&#39; codec can&#39;t encode characters in posit
 <span style="color:#ce5c00;font-weight:bold">&gt;&gt;&gt;</span> <span style="color:#000">u</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">encode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;ascii&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;replace&#39;</span><span style="color:#000;font-weight:bold">)</span>  
 <span style="color:#4e9a06">b</span><span style="color:#4e9a06">&#39;?abcd?&#39;</span>  
 <span style="color:#ce5c00;font-weight:bold">&gt;&gt;&gt;</span> <span style="color:#000">u</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">encode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;ascii&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;xmlcharrefreplace&#39;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic"># inserts XML character reference  </span>
-<span style="color:#4e9a06">b</span><span style="color:#4e9a06">&#39;ꀀabcd޴&#39;</span>  
+<span style="color:#4e9a06">b</span><span style="color:#4e9a06">&#39;&amp;#40960;abcd&amp;#1972;&#39;</span>  
 <span style="color:#ce5c00;font-weight:bold">&gt;&gt;&gt;</span> <span style="color:#000">u</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">encode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;ascii&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;backslashreplace&#39;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic"># inserts a \uNNNN escape sequence  </span>
 <span style="color:#4e9a06">b</span><span style="color:#4e9a06">&#39;</span><span style="color:#4e9a06">\\</span><span style="color:#4e9a06">ua000abcd</span><span style="color:#4e9a06">\\</span><span style="color:#4e9a06">u07b4&#39;</span>  
 <span style="color:#ce5c00;font-weight:bold">&gt;&gt;&gt;</span> <span style="color:#000">u</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">encode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;ascii&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;namereplace&#39;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic"># inserts a \N{...} escape sequence  </span>
