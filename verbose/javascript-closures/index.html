@@ -1,201 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="referrer" content="no-referrer">
-<meta name="description" content="
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    
+    <meta name="description" content="I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="https://vickylai.io/">
+    
+    <meta name="twitter:image" content="https://vickylai.io/img/card.png">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.">
+    <meta name="og:type" content="website">
+    <meta name="og:url" content="https://vickylai.io/">
+    <meta name="og:image" itemprop="image primaryImageOfPage" content="https://vickylai.io/img/card.png">
+    
+    <title>VickyLai.io</title>
+    <link rel="shortcut icon" href="/img/logo.ico" id="favicon">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-
-Say you&rsquo;re having a little coding get-together, and you need some sandwiches. You happen to know that everyone prefers a different type of sandwich, like chicken, ham, or peanut butter and mayo. You could make all these sandwiches yourself, but that would be tedious and boring.
-
-
-">
-
-<meta property="og:title" content="
-
-
-Making sandwiches with closures in JavaScript
-
-
-">
-<meta property="og:description" content="
-
-
-Say you&rsquo;re having a little coding get-together, and you need some sandwiches. You happen to know that everyone prefers a different type of sandwich, like chicken, ham, or peanut butter and mayo. You could make all these sandwiches yourself, but that would be tedious and boring.
-
-
-">
-<meta property="og:image" content="
-
-
-https://vickylai.io/pixels/closures-sandwich.jpg
-
-
-">
-<meta property="og:url" content="https://vickylai.io/verbose/javascript-closures/">
-
-<meta name="twitter:image" content="
-
-
-https://vickylai.io/pixels/closures-sandwich.jpg
-
-
-">
-<meta name="twitter:card" content="summary_large_image">
-
-<title>
-
-
-
-    Making sandwiches with closures in JavaScript
-
-
-
-</title>
-<link rel="canonical" href="https://vickylai.io/verbose/javascript-closures/">
-
-
-
-<link rel="stylesheet" href="/css/clearly.css?t=13">
-
-
-<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
-
-<link rel="shortcut icon"
-
-    href="/img/code.ico"
-
->
-
-
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-98623582-1', 'auto');
-ga('send', 'pageview');
-</script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
-
-
-
-
-<script
-src="https://code.jquery.com/jquery-3.2.1.min.js"
-integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-crossorigin="anonymous"></script>
-
-<script src="/js/tagline.js?t=13"></script>
+        gtag('config', '');
+    </script>
 
 </head>
 
-<body>
-    <div id="top">
-        <div class="sticky-nav">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="/"> 
-                Vicky Lai
-            </a>
+</html><body><div id="top"></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.io/">vickylai.io</a></div><div class="blog-menu no-mobile"><p><a href="/verbose">verbose</a> &#183;
+<a href="/#work">work</a>
 
-            <a class="navbar-item" href="/verbose">
-                Blog
-            </a>
-            <a class="navbar-item" href="/#code">
-                Code
-            </a>
-            <a class="navbar-item" href="/#contact">
-                Contact
-            </a>
-            
-            <a class="navbar-item" href="https://vickylai.io/index.xml" target="_blank">
-                RSS
-            </a>
-            
-        </div>
-    </nav>
-</div>
-        <section class="hero content-head">
-            
+&#183; <a href="/#contact-box">contact</a>
+&#183; <a href="https://vickylai.io/">vickylai.io</a></p><hr/></div><div class="wrap contain"><div id="featuredimg"><img src="https://vickylai.io/pixels/closures-sandwich.jpg"/></div><div id="content"><h1>Making sandwiches with closures in JavaScript</h1>Sun May 28, 2017 &#183; 773 words
 
-            <div class="container hero-body">
-                <div class="bold-title">-verbose</div>
-                <div class="subtitle-box">
-                    <span class="subtitle" id="tagline">Vicky&#39;s Blog</span>
-                </div>
-            </div>
-
-        </section>
-        
-
-        <hr />
-
-        <section>
-            <div class="blog-head container center-me">
-                
-                <div class="preview">
-                    <img src="/pixels/closures-sandwich.jpg"></div>
-                <h3 class="top-pad blog-post-title bottom-pad">
-                    <a href="/verbose/javascript-closures/">Making sandwiches with closures in JavaScript</a>
-                </h3>
-                
-                <span class="my-tags">
-                        <a href="/tags/backend">backend</a>
-                </span> 
-                <span class="my-tags">
-                        <a href="/tags/coding">coding</a>
-                </span> 
-                <span class="my-tags">
-                        <a href="/tags/javascript">javascript</a>
-                </span> 
-                <div class="post-data top-pad">
-                    May 28, 2017 | 4 minutes read
-                </div>
-
-                
-                <div class="blog-share">
-                    Share this:
-                    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20Making%20sandwiches%20with%20closures%20in%20JavaScript%20https%3a%2f%2fvickylai.io%2fverbose%2fjavascript-closures%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                        twitter
-                        <span class="hidden">Twitter</span>
-                    </a> //
-                    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fvickylai.io%2fverbose%2fjavascript-closures%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                        facebook
-                        <span class="hidden">Facebook</span>
-                    </a> //
-                    <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://vickylai.io/&title=Making%20sandwiches%20with%20closures%20in%20JavaScript&source=Vicky%20Lai"
-                        onclick="window.open(this.href, 'linkedin-share','width=980,height=980');return false;">
-                        linkedin
-                        <span class="hidden">LinkedIn</span>
-                    </a> //
-                    <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fvickylai.io%2fverbose%2fjavascript-closures%2f" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                        google+
-                        <span class="hidden">Google+</span>
-                    </a>
-                </div>
-                
-
-            </div>
-            
-
-
-            <section class="section is-small">
-                <div class="container markdown top-pad">
-                    
-                    <p>Say you&rsquo;re having a little coding get-together, and you need some sandwiches. You happen to know that everyone prefers a different type of sandwich, like chicken, ham, or peanut butter and mayo. You could make all these sandwiches yourself, but that would be tedious and boring.</p>
+<div><span id="tag"><a href="https://vickylai.io/tags/coding">coding</a></span><span id="tag"><a href="https://vickylai.io/tags/javascript">javascript</a></span><span id="tag"><a href="https://vickylai.io/tags/food">food</a></span></div><hr/><p>Say you&rsquo;re having a little coding get-together, and you need some sandwiches. You happen to know that everyone prefers a different type of sandwich, like chicken, ham, or peanut butter and mayo. You could make all these sandwiches yourself, but that would be tedious and boring.</p>
 
 <p>Luckily, you know of a nearby sandwich shop that delivers. They have the ability and ingredients to make any kind of sandwich in the world, and all you have to do is order through their app.</p>
 
 <p>The sandwich shop looks like this:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">makeMeASandwich</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">x</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">ingredients</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">x</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">join</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39; &#39;</span><span style="color:#000;font-weight:bold">);</span>
-    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">barry</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">ingredients</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">concat</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39; sandwich&#39;</span><span style="color:#000;font-weight:bold">);</span>
-    <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span></code></pre></div>
+
+<pre><code class="language-js">function makeMeASandwich(x) {
+    var ingredients = x.join(' ');
+    return function barry() {
+        return ingredients.concat(' sandwich');
+    }
+}
+</code></pre>
+
 <p>Notice that we have an outer function, <code>makeMeASandwich()</code> that takes an argument, <code>x</code>. This outer function has the local variable <code>ingredients</code>, which is just <code>x</code> mushed together.</p>
 
 <p>Barry? Who&rsquo;s Barry? He&rsquo;s the guy who works at the sandwich shop. You&rsquo;ll never talk with Barry directly, but he&rsquo;s the reason your sandwiches are made, and why they&rsquo;re so delicious. Barry takes <code>ingredients</code> and mushes them together with &ldquo; sandwich&rdquo;.</p>
@@ -209,67 +74,88 @@ crossorigin="anonymous"></script>
 </blockquote>
 
 <p>When you order, the app submits your sandwich request like so:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">pbm</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">makeMeASandwich</span><span style="color:#000;font-weight:bold">([</span><span style="color:#4e9a06">&#39;peanut butter&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;mayo&#39;</span><span style="color:#000;font-weight:bold">]);</span>
 
-<span style="color:#000">pbm</span><span style="color:#000;font-weight:bold">();</span></code></pre></div>
+<pre><code class="language-js">var pbm = makeMeASandwich(['peanut butter', 'mayo']);
+
+pbm();
+</code></pre>
+
 <p>And in thirty-minutes-or-it&rsquo;s-free, you get: <code>peanut butter mayo sandwich</code>.</p>
 
 <p>The nice thing about the sandwich shop app is that it remembers the sandwiches you&rsquo;ve ordered before. Your peanut butter and mayo sandwich is now available to you as <code>pbm()</code> for you to order anytime. It&rsquo;s pretty convenient since, each time you order, there&rsquo;s no need to specify that the sandwich you want is the same one you got before with peanut butter and mayo and it&rsquo;s a sandwich. Using <code>pbm()</code> is much more concise.</p>
 
 <p>Let&rsquo;s order the sandwiches you need for the party:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">pmrp</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">makeMeASandwich</span><span style="color:#000;font-weight:bold">([</span><span style="color:#4e9a06">&#39;prosciutto&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;mozzarella&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;red pepper&#39;</span><span style="color:#000;font-weight:bold">]);</span>
-<span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">pbt</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">makeMeASandwich</span><span style="color:#000;font-weight:bold">([</span><span style="color:#4e9a06">&#39;peanut butter&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;tuna&#39;</span><span style="color:#000;font-weight:bold">]);</span>
-<span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">hm</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">makeMeASandwich</span><span style="color:#000;font-weight:bold">([</span><span style="color:#4e9a06">&#39;ham&#39;</span><span style="color:#000;font-weight:bold">]);</span>
-<span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">pbm</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">makeMeASandwich</span><span style="color:#000;font-weight:bold">([</span><span style="color:#4e9a06">&#39;peanut butter&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;mayo&#39;</span><span style="color:#000;font-weight:bold">]);</span>
 
-<span style="color:#000">pmrp</span><span style="color:#000;font-weight:bold">();</span>
-<span style="color:#000">pbt</span><span style="color:#000;font-weight:bold">();</span>
-<span style="color:#000">hm</span><span style="color:#000;font-weight:bold">();</span>
-<span style="color:#000">pbm</span><span style="color:#000;font-weight:bold">();</span></code></pre></div>
+<pre><code class="language-js">var pmrp = makeMeASandwich(['prosciutto', 'mozzarella', 'red pepper']);
+var pbt = makeMeASandwich(['peanut butter', 'tuna']);
+var hm = makeMeASandwich(['ham']);
+var pbm = makeMeASandwich(['peanut butter', 'mayo']);
+
+pmrp();
+pbt();
+hm();
+pbm();
+</code></pre>
+
 <p>Your order confirmation reads:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">prosciutto mozzarella red pepper sandwich
+
+<pre><code class="language-sh">prosciutto mozzarella red pepper sandwich
 peanut butter tuna sandwich
 ham sandwich
-peanut butter mayo sandwich</code></pre></div>
+peanut butter mayo sandwich
+</code></pre>
+
 <p>Plot twist! The guy who wanted a ham sandwich now wants a ham <em>and cheese</em> sandwich. Luckily, the sandwich shop just released a new version of their app that will let you add cheese to any sandwich.</p>
 
 <p>With this added feature, the sandwich shop now looks like this:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">makeMeASandwich</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">x</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">ingredients</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">x</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">join</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39; &#39;</span><span style="color:#000;font-weight:bold">);</span>
-    <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">slices</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">;</span>
 
-    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">barry</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">ingredients</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">concat</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39; sandwich&#39;</span><span style="color:#000;font-weight:bold">);</span>
-    <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">barryAddCheese</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#000">slices</span> <span style="color:#ce5c00;font-weight:bold">+=</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">;</span>
-        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">ingredients</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">concat</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39; sandwich with &#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">slices</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39; slices of cheese&#39;</span><span style="color:#000;font-weight:bold">);</span>
-    <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#000">noCheese</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">barry</span><span style="color:#000;font-weight:bold">();</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#000">addCheese</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">barryAddCheese</span><span style="color:#000;font-weight:bold">();</span>
-        <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span></code></pre></div>
+<pre><code class="language-js">function makeMeASandwich(x) {
+    var ingredients = x.join(' ');
+    var slices = 0;
+
+    function barry() {
+        return ingredients.concat(' sandwich');
+    }
+    function barryAddCheese() {
+        slices += 2;
+        return ingredients.concat(' sandwich with ', slices, ' slices of cheese');
+    }
+    return {
+        noCheese: function() {
+            return barry();
+        },
+        addCheese: function() {
+            return barryAddCheese();
+        }
+    }
+}
+</code></pre>
+
 <p>You amend the order to look like this:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#000">pmrp</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">noCheese</span><span style="color:#000;font-weight:bold">();</span>
-<span style="color:#000">pbt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">noCheese</span><span style="color:#000;font-weight:bold">();</span>
-<span style="color:#000">hm</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">addCheese</span><span style="color:#000;font-weight:bold">();</span>
-<span style="color:#000">pbm</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">noCheese</span><span style="color:#000;font-weight:bold">();</span></code></pre></div>
+
+<pre><code class="language-js">pmrp.noCheese();
+pbt.noCheese();
+hm.addCheese();
+pbm.noCheese();
+</code></pre>
+
 <p>And your order confirmation reads:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">prosciutto mozzarella red pepper sandwich
+
+<pre><code class="language-sh">prosciutto mozzarella red pepper sandwich
 peanut butter tuna sandwich
-ham sandwich with <span style="color:#0000cf;font-weight:bold">2</span> slices of cheese
-peanut butter mayo sandwich</code></pre></div>
+ham sandwich with 2 slices of cheese
+peanut butter mayo sandwich
+</code></pre>
+
 <p>You&rsquo;ll notice that when you order a sandwich with cheese, Barry puts 2 slices of cheese on it. In this way, the sandwich shop controls how much cheese you get. You can&rsquo;t get to Barry to tell him you want more than 2 slices at a time. That&rsquo;s because your only access to the sandwich shop is through the public functions <code>noCheese</code> or <code>addCheese</code>.</p>
 
 <p>Of course, there&rsquo;s a way to cheat the system&hellip;</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#000">hm</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">addCheese</span><span style="color:#000;font-weight:bold">();</span>
-<span style="color:#000">hm</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">addCheese</span><span style="color:#000;font-weight:bold">();</span>
-<span style="color:#000">hm</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">addCheese</span><span style="color:#000;font-weight:bold">();</span></code></pre></div>
+
+<pre><code class="language-js">hm.addCheese();
+hm.addCheese();
+hm.addCheese();
+</code></pre>
+
 <p>By ordering the same ham sandwich with cheese three times, you get: <code>ham sandwich with 6 slices of cheese</code>.</p>
 
 <p>This happens because the sandwich shop app recognizes the variable <code>hm</code> as the same sandwich each time, and increases the number of cheese slices it tells Barry to add.</p>
@@ -278,119 +164,20 @@ peanut butter mayo sandwich</code></pre></div>
 
 <p><img src="/pixels/closures-cheesestack.jpg#center" alt="All the cheese." /></p>
 
-<p>By using closures, we can have JavaScript emulate private methods found in languages like Ruby and Java. Closures are a useful way to extend the functionality of JavaScript, and also order sandwiches.</p>
-                </div>
+<p>By using closures, we can have JavaScript emulate private methods found in languages like Ruby and Java. Closures are a useful way to extend the functionality of JavaScript, and also order sandwiches.</p><p>Like this post? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.io%2fverbose%2fjavascript-closures%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/reduce-recursion-with-pie/">Understanding Array.prototype.reduce() and recursion using apple pie</a></li><li><a href="/verbose/iterating-objects-arrays/">Iterating over objects and arrays: frequent errors</a></li><li><a href="/verbose/build-from-scratch/">How to code a satellite algorithm and cook paella from scratch</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><ul><li><a href="https://github.com/hivickylai">github</a></li>
 
-                
+&#183; <li><a href="https://twitter.com/hivickylai">twitter</a></li>
+&#183; <li><a href="mailto:hello@vickylai.io" rel="noopener">email</a></li></ul></div></div></div>
+<script>
+    scrollTo = (element) => {
+        window.scroll({
+            behavior: 'smooth',
+            left: 0,
+            top: element.offsetTop
+        });
+    }
 
-                <div class="container markdown center-me">
-                    <p class="tweet-me">Like this post?
-                        <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hey%20@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.io%2fverbose%2fjavascript-closures%2f%20and..."
-                            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a>
-                    </p>
-                </div>
-            </section>
-
-            <hr />
-
-            <div class="container my-pagination center-me">
-                <div class="columns is-mobile">
-
-                    <div class="column is-one-third-desktop is-half-mobile no-padding">
-                        
-                        <div class="card no-border">
-                            <div class="card-header bottom-pad no-border">
-                                <a href="/verbose/reduce-recursion-with-pie/">
-                                    &lt; Previously...</a>
-                                        <br />
-                            </div>
-                            
-                            <div class="card-image card-image-left no-border">
-                                <a href="/verbose/reduce-recursion-with-pie/">
-                                    <img class="pagination-img" src="/pixels/recursion-pie.jpg">
-                                </a>
-                            </div>
-                            
-                            <div class="card-content">
-                                An explanation of JavaScript reduce() method and recursive functions using delicious, attention-retaining apples.
-                            </div>
-                        </div>
-                        
-                    </div>
-
-                    <div class="column is-one-third has-text-centered no-padding desktop">
-                        <a class="up" href="/verbose/javascript-closures/#top">UP, JEEVES.</a>
-                    </div>
-
-                    <div class="column is-one-third-desktop is-half-mobile card-align-right no-padding">
-                        
-                        <div class="card no-border">
-                            <div class="card-header bottom-pad has-text-right no-border">
-                                <a href="/verbose/build-from-scratch/">Next time... ></a>
-                                <br />
-                            </div>
-                            
-                            <div class="card-image card-image-right no-border">
-                                <a href="/verbose/build-from-scratch/">
-                                    <img class="pagination-img" src="/pixels/solve-paella.jpg">
-                                </a>
-                            </div>
-                            
-                            <div class="card-content has-text-right">
-                                A guide to expertly tackling seemingly complicated problems that you&#39;d rather never tackle in the first place.
-                            </div>
-                        </div>
-                        
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="footer section center-me" id="footer">
-    <div class="container columns bio-box">
-        <div class="column is-one-quarter av-box">
-            <img class="avatar small" width="100px" height="100px" src="https://vickylai.io/img/portrait-360.jpg">
-        </div>
-        <div class="column bio">
-            <p class="bio-title">About Vicky Lai</p>
-            <p id="footer-text">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.</p>
-            <p class="top-pad">
-                
-                <a href="https://github.com/hivickylai" target="_blank">
-                <img class="noborder" width="24" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAD2ElEQVR4nO1ay3HCMBClBEqgBDpIOkhK8AW0OcGB1XBD0Q73dAAdJB0kHYQOSAfQATlgMxhbv7VsmUnezF48HmnfarUfSYPBP7rBC&#43;oHsXh9AkkrkLQCpM&#43;S5N/F4vXpBfVDan0bY4Lr8YWopBNLcsNMcD1OzccL2VwNBdJMIH2zSRtEIH0LpFk2V8PUPCvI5moIklYC9SE28aoh9AEkrXpjiK6ImwyRjPgE1&#43;M2XJ2zNTqPEQJplpp4jSFmrRPP5moIqDepyRoF9aZV8n1weZ8tET1A3gv5Voxwb&#43;SvjRDFAL3e8y5pGhOmUs&#43;Tk2goU6nnLPJ5LZ&#43;cQAxh1Qkg9d5ncCHpCJIUSFKA&#43;guQflojg/QDqL&#43;K&#43;fK53TqGxoN8Aj&#43;lFvRo8J6t23h6J6TeeRl4qUa380wlPQcYUHmRP0d9z9oe9ZfVkEs1uvKKLaDObOkpL7Sy87/n1Xals9wjPLxAH7xSY9Dq&#43;1q1RUTVN2j1De7fNWBBj776Or0gOO3dmQFAOtJiaMU3lfTcIddaBAZCc0Zg5n3VLd0qAmPACaShLuAMJFB/JOBcgkD9EWXhfNNJWfS&#43;e8o3eku9D9a7Ln0zrNgLD&#43;AtHJ3KgwRG0ovUVGddA5ZqxNL9OoOFRtK&#43;rH4BjheUMhgnAALqLB3lMphtu7oMwDFAn66rGqdwjgulo1uPRlv4LxqglAr/vAEE0lvoAL25nBxcLmcDtwC9XQbgBME&#43;dIIFOGkcmmaBkgUTg&#43;PBcJMFsvAB0vcBBTj9QKkQYh&#43;B96AY4i1eTR3je8R86wUpg&#43;E5&#43;IWvvpB0rAzG7KtPQtJ7Au5nnSW9s3Su62M4gfBqK7R3L29AwztLVRnQFQeE1DtYqlHeflZuZQTSdxftMSzVqOlttbGPsd3S3J6mZnM1NPzfyguuWC/RhNQ74yTWiIr0WadUnREE6gOg3sR48TnB9RhQb6K9RLNlrjMhSzao2esWT7DvOQdAkor9/E5IOjq9ExyXmnUXC5c7wHrP&#43;eGcHcBSjXip2Spb58ROL5DmChCWagQLeiwklHRlPGaRw179As4jpg4rwFjvDYJfilj3dU1AbAvMRudm9S2R3wTnUXlH7TD7yD6Grvat0F0f0Knr10xuzAoC9UEsXp8i8bTp0F7U94E7z&#43;t93pisriXK5APmtZ3Uu7ivRd3FTkWiTD5gHHnHJF&#43;AY4RYcycnf6OM8/lbKgO0Tv5KIa&#43;zg4jzucl3fUg7wfXYtSVizWVfdTomPaIHy5PVaHMYymGB&#43;qMXFzT5YUXJEDFdsmbLbfvwOKOCwhBtNEu5EfpJ/B//uF/8AhiGWISX3cHqAAAAAElFTkSuQmCC">
-                </a>
-                
-                <a href="https://codepen.io/hivickylai" target="_blank">
-                <img class="noborder" width="24" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADwElEQVR4nO1awVXzMAzOCIzACB0hI3QDcmltTvQQ&#43;XHDz6Jn2AA2gA1gA7pB2aDd4P8PIWmbJpHk2Anl5XvPFxpU6bOqT5aTJBMmTJgwYXhkK3uljHtSxj1lK3s1tj&#43;DQueYauO22uC/YrmtzjEd26/oKHYd3w6Bny5l8O3PZsOtebxR4HZtwVckgNvdmsebsf0NBn1vrzXgBxX42QL80Pf2emz/e0EbfBAHXssGbfBh7DjE0DmmCvCrT/CnRODXRRTJUtrIgAzuOX87f&#43;YXS&#43;bS4PxU2poDL55D2/C5XRqc00S47dLgfOx4K1DSdpTGz&#43;XutRFQ2QN8ZmTR&#43;JKpAO9IaQP8rv9&#43;uwionskx1YDfVJFUgHdDxlw4x5c22/j/DAKIZ8eTTM2RNnCfC1jPOmywCUiSJFnAeqbBfTIIjyeZHGkripxbkbaEBJRYGreiimRwyWRLG7h3bhr6EpAkxc9PgXuni2QAyZRIm8RuHwKOfYsmmT7SJkEIAio/Y0imj7RJ0ESuMvjma48rmXyD3Yy&#43;&#43;jq6gPWsq5AqwK8u9WD4/drlu8RQcLlRgHcMuyUR4uZGM&#43;RZYox2lNl8xJ4HSOyHJcDQrSirVR7QfnACKkdrVZa1Kz&#43;FlFPA6tnAVamwBBCtqAK3Wxqca3AZtSt1&#43;eTImQK30&#43;CypcE5rVLNvvYjIMeU13x0Zkpn0xTKfjF2j0DAYbfoVrRhB985zUgI&#43;1EJqJ4Bl/HGWPJWOUn42aAM7jW47MS3QQjIMeXN&#43;f2aG6ppOtr5XZNvcX8CjNNhAxHs5kbSNB0y4XD6i0bA&#43;Z2ecBHNjXfTVC23PfgZmgDCsXIYookRVilnZ9/JkE9t0HKGIm2&#43;9iOgO/02xzvLOp39NE&#43;spqZ2&#43;tT39loZt5H6GYsA22QjW9krTZzOilZX1jTV/KQHprEIUMZtONXdt7nhyucC1jNuNoQkwLKNJfLmhts01XwmsyEMAeBeJI4dgypg3Klyq9/gXoIQwBk2&#43;o7E2gpYvZCKbDLkWRncsw1yU9Z39NySrlZqRzKy9xqRF8dbetg42licMbztfZMsGT0PdjEScWTf/sU5ppTccG9rfQngjMCUcZuob5O0OF9PvY/wl6P&#43;t9HBURxa/G9rJQRo5m30KG&#43;UsQ4m5lwyOQRwpa1P3xAEPpLZRUB0aYsFiWS2ETCYtMUCWzIbgmSO18JKWyxwJFOyoktbLLSkuiBw3Lepw8VAIJm/Q9piQXKP0DQz/BOgJPPXSVssnA1Ne75yc5EoJfNipG3ChAkT/iL&#43;A3gnYQcATkHJAAAAAElFTkSuQmCC">
-                </a>
-                
-                <a href="https://twitter.com/hivickylai" target="_blank">
-                <img class="noborder" width="24" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADRElEQVR4nO1ay3XqMBBVCS4hJbiDRwdJB3hjJFbxwqOTHcoMrJMOcAfQAXSQdEA6gA7eW9jmOYDAH30Mx/ecu2Fh5l6NpJE0jA0YMGDAgAED&#43;ooYFiEHehWASwG0KcklfkzlfBwlKvAdoxVM5XwsJO6EpL&#43;3yCWtREqjJt/WGife1JMhDa0QwyKsK/yMgEudsChRAQd6FRJ3AnB78c&#43;jRAVC4i6GRWhTpA4CMOKA&#43;1biy2wA&#43;ioHMUpUwNP3ZwG4/PVdXbYISSr/CO5dmyAAoy7Cf5uAew70pTHoUx9EJfVcmpAvdN1Gvt5agd/auZ&#43;n/7mTLkxoPec7iI8SFQjA6H8QKY106TSR9GJNvMHUvzIl1lGighgW4VTOx1zS6mwt0BlQ4cyKAZZHnwPuBdDm9PeJxKT5SABtTBYe&#43;ZZnd/Q1zM5H4nYGHB2dyvnYhAGi2HW8i281GkCbJtXXJXDAdS/EHwOSdGj8UcBl251CAG6dia&#43;u&#43;NqAJGXt/4A2PH1/7qkBql5ANdeBa8xXXVzWMaN3BpgOqrIFzaaAf053kE4ZZ8sAN1sT7nJjcNc7AxhjbCIxcRSYK942IIZFWE1R4S49rbNWKS8kqeoCFiUqeJhMqFOv6HcA3HkX0JE3xZdTwHegNsglHWoZwBhjAujHd8DGDQBc1zfggRa&#43;ClV9A97UUw8CNsumBzYO9Ok9aENsNP9LRIkKuMRv38EbYtbYAMaKW9o2R&#43;OesdNd5t2bAPTTWnyJ/DnJ&#43;a2NKarOBpQQKY2c3t4YoJHL29OPFNNi5VtcDWadxTN2x4WRqRfuOz0fKCPiS9xTFnBJB&#43;MdI3lhdB/bobU3zHuoCRqd&#43;h7NBCuprzehf&#43;cE5y09AjDqzeVJnScvW5hIeuFAnwJw68mQzJv4U3CgVxd9Pr0TL97U06UOjIcXX1yfzRyP&#43;nlri2vEsAgF4NL1fOeSDjabta6Cp&#43;/PXOKHrvnQvnj8ttbCW7wIzarkEj&#43;OndkeBJ9QWRF&#43;akIPC5zMeeN2LwocwG3X5qvOyAscd3eBxRkj89WlrsXxidzCfWAp2msp2xQipdFEYsIB102mCpd0KEzMJhKT3o10V8SwCEVKo0v0HduAAQMGXMM/rs839uro0rcAAAAASUVORK5CYII=">
-                </a>
-                
-                <a href="mailto:hello@vickylai.io" target="_blank">
-                <img class="noborder" width="24" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADOklEQVR4nO1azXHyMBBVCZSQEuggKYESfMFSTnDI7nDDszucv3QQOkg6SDoIHSQdmA6Sg2NirfwZ&#43;QcLgt7MHmCMZvdJu2&#43;1RqmIiIiIiIiIiGuFQf66ZosEhHYgtCkD/BnaiWAG/KmSZTbRSLvgzoxsGmmXLLOJUkqpZJlNDPI2tFMj2vYQvFCEayBhawcN9CQ&#43;J2fg5GkMKHFiN8hfGvi9eiQMUKKR98EdHsg08r4afLLMJhr43WBFBjXwu1llN&#43;VDc9hM/wIJGnk/h830sLmr7KYM3iKgIIHy6sMFCZerEBpp58QDlFefcRohDZSnyDPruFwgCZbMlWktgq8l4GAiZ8xlKYRV6ZsKe3MrLBRCAz&#43;eQXDNOw/8KCt90/PH7wJAT/IohQ6ywVf71B4J3o8AdGUyRZ6dk0Jo5L1TtyqVvjcBJQmuQoQnQcpcUen9gm9FQEGCLZNmld2EVAiNtHN6l5pKPxgBB5NdVQAS6mSuyzqdByIaeGFV23Fl0pI5Dbzoula/iZC8SCFnIwSftZG50xKA/KWRn0eTSSf1&#43;LnvmoPMBJ3b5APfDakQGnlvHviui8yNQkBBAuWnuE3W3&#43;baVfpRCEiRlkqgr0LISl8iRVqeDQF1x9P5DPTWem2gN5lWp0izXgTIHRJd2FooRBuZ3Irfrg263egQPUgfAiwnU&#43;SZk5vdZDKzfiNkTs4rOpA7AAFyuPizQ/XP8qt7dN1d00g7N3X4tcEP&#43;4R1nGO2IwD40z2Cx7VYzhvLdEmRZynyrLqmUu7czpfcOWymbd90&#43;RMgitIcNlOD9OH7ew2Uy/a5Dhp40U7m6ENuSpui6zsPkFOW2vmar8MaeHEPdFuudw90W/Tz/oRKcmvS0qstbyRAztOVUkoj/esW&#43;Agmiq7P4Oa/BMiR8pDt5ylNtuXHRvu1BGigF1ffh2s/T08C5e7dgV58CchkvocOqMdpsIpuXQv9&#43;2qsZrDY9659Fian2qKFLl6Oitmatw5fiMkWujrLVEb8WcA88N0l5bs/CfUttBJfrEM7OoJZLfRvlRxgvHQxVm2h275I&#43;Dv200L/xXz3NQ2Uxz9KhnYgtEUCIiIiIiIiIiKuFd&#43;oxN7Z3PBXwQAAAABJRU5ErkJggg==">
-                </a>
-                
-        </div>
-    </div>
-    </div>
-    </div>
-    
-
-    </section>
-
-    
-    <script>
-        $('a[href^="\/verbose\/javascript-closures\/#"]').click(function (e) {
-            e.preventDefault();
-            var target = this.hash;
-            $('html, body').animate({
-                scrollTop: $(target).offset().top
-            }, 500);
-            return false;
-        })
-    </script>
-</body>
+    document.getElementById("up").addEventListener('click', () => {
+        scrollTo(document.getElementById("top"));
+    });
+</script></div></body>

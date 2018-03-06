@@ -1,194 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="referrer" content="no-referrer">
-<meta name="description" content="
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    
+    <meta name="description" content="I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="https://vickylai.io/">
+    
+    <meta name="twitter:image" content="https://vickylai.io/img/card.png">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.">
+    <meta name="og:type" content="website">
+    <meta name="og:url" content="https://vickylai.io/">
+    <meta name="og:image" itemprop="image primaryImageOfPage" content="https://vickylai.io/img/card.png">
+    
+    <title>VickyLai.io</title>
+    <link rel="shortcut icon" href="/img/logo.ico" id="favicon">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-
-This post covers my initial adventures in exploring Twitter&rsquo;s Streaming API. I&rsquo;ll talk about:
- Getting started making a Twitter Streaming program using a template Problems arising from programming in Python with Windows 10 and Unicode Refining the search function  You can follow along with my template on Github.
-1. Getting started If you&rsquo;re new to Twitter&rsquo;s Streaming API like I was this morning, here it is from the top.
-
-
-">
-
-<meta property="og:title" content="
-
-
-I&#39;ve been a back-end coder for a week: here&#39;s how I made a Twitter stream
-
-
-">
-<meta property="og:description" content="
-
-
-This post covers my initial adventures in exploring Twitter&rsquo;s Streaming API. I&rsquo;ll talk about:
- Getting started making a Twitter Streaming program using a template Problems arising from programming in Python with Windows 10 and Unicode Refining the search function  You can follow along with my template on Github.
-1. Getting started If you&rsquo;re new to Twitter&rsquo;s Streaming API like I was this morning, here it is from the top.
-
-
-">
-<meta property="og:image" content="
-
-
-https://vickylai.io/
-
-
-">
-<meta property="og:url" content="https://vickylai.io/verbose/how-i-made-a-twitter-stream/">
-
-<meta name="twitter:image" content="
-
-
-https://vickylai.io/
-
-
-">
-<meta name="twitter:card" content="summary_large_image">
-
-<title>
-
-
-
-    I&#39;ve been a back-end coder for a week: here&#39;s how I made a Twitter stream
-
-
-
-</title>
-<link rel="canonical" href="https://vickylai.io/verbose/how-i-made-a-twitter-stream/">
-
-
-
-<link rel="stylesheet" href="/css/clearly.css?t=13">
-
-
-<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
-
-<link rel="shortcut icon"
-
-    href="/img/code.ico"
-
->
-
-
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-98623582-1', 'auto');
-ga('send', 'pageview');
-</script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
-
-
-
-
-<script
-src="https://code.jquery.com/jquery-3.2.1.min.js"
-integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-crossorigin="anonymous"></script>
-
-<script src="/js/tagline.js?t=13"></script>
+        gtag('config', '');
+    </script>
 
 </head>
 
-<body>
-    <div id="top">
-        <div class="sticky-nav">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="/"> 
-                Vicky Lai
-            </a>
+</html><body><div id="top"></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.io/">vickylai.io</a></div><div class="blog-menu no-mobile"><p><a href="/verbose">verbose</a> &#183;
+<a href="/#work">work</a>
 
-            <a class="navbar-item" href="/verbose">
-                Blog
-            </a>
-            <a class="navbar-item" href="/#code">
-                Code
-            </a>
-            <a class="navbar-item" href="/#contact">
-                Contact
-            </a>
-            
-            <a class="navbar-item" href="https://vickylai.io/index.xml" target="_blank">
-                RSS
-            </a>
-            
-        </div>
-    </nav>
-</div>
-        <section class="hero content-head">
-            
+&#183; <a href="/#contact-box">contact</a>
+&#183; <a href="https://vickylai.io/">vickylai.io</a></p><hr/></div><div class="wrap contain"><div id="content"><h1>I&#39;ve been a back-end coder for a week: here&#39;s how I made a Twitter stream</h1>Fri Jan 06, 2017 &#183; 1017 words
 
-            <div class="container hero-body">
-                <div class="bold-title">-verbose</div>
-                <div class="subtitle-box">
-                    <span class="subtitle" id="tagline">Vicky&#39;s Blog</span>
-                </div>
-            </div>
-
-        </section>
-        
-
-        <hr />
-
-        <section>
-            <div class="blog-head container center-me">
-                
-                
-                <h3 class="top-pad blog-post-title bottom-pad">
-                    <a href="/verbose/how-i-made-a-twitter-stream/">I&#39;ve been a back-end coder for a week: here&#39;s how I made a Twitter stream</a>
-                </h3>
-                
-                <span class="my-tags">
-                        <a href="/tags/backend">backend</a>
-                </span> 
-                <span class="my-tags">
-                        <a href="/tags/api">API</a>
-                </span> 
-                <span class="my-tags">
-                        <a href="/tags/python">python</a>
-                </span> 
-                <div class="post-data top-pad">
-                    Jan 6, 2017 | 5 minutes read
-                </div>
-
-                
-                <div class="blog-share">
-                    Share this:
-                    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20I%27ve%20been%20a%20back-end%20coder%20for%20a%20week%3a%20here%27s%20how%20I%20made%20a%20Twitter%20stream%20https%3a%2f%2fvickylai.io%2fverbose%2fhow-i-made-a-twitter-stream%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                        twitter
-                        <span class="hidden">Twitter</span>
-                    </a> //
-                    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fvickylai.io%2fverbose%2fhow-i-made-a-twitter-stream%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                        facebook
-                        <span class="hidden">Facebook</span>
-                    </a> //
-                    <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://vickylai.io/&title=I%27ve%20been%20a%20back-end%20coder%20for%20a%20week%3a%20here%27s%20how%20I%20made%20a%20Twitter%20stream&source=Vicky%20Lai"
-                        onclick="window.open(this.href, 'linkedin-share','width=980,height=980');return false;">
-                        linkedin
-                        <span class="hidden">LinkedIn</span>
-                    </a> //
-                    <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fvickylai.io%2fverbose%2fhow-i-made-a-twitter-stream%2f" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                        google+
-                        <span class="hidden">Google+</span>
-                    </a>
-                </div>
-                
-
-            </div>
-            
-
-
-            <section class="section is-small">
-                <div class="container markdown top-pad">
-                    
-                    
+<div><span id="tag"><a href="https://vickylai.io/tags/api">api</a></span><span id="tag"><a href="https://vickylai.io/tags/python">python</a></span><span id="tag"><a href="https://vickylai.io/tags/twitter">twitter</a></span></div><hr/>
 
 <p>This post covers my initial adventures in exploring Twitter&rsquo;s Streaming API. I&rsquo;ll talk about:</p>
 
@@ -211,156 +70,102 @@ crossorigin="anonymous"></script>
 <p>The Twitter API requires authentication, for which you&rsquo;ll need to register an application with Twitter. You can do this here: <a href="https://dev.twitter.com/apps">https://dev.twitter.com/apps</a>. Don&rsquo;t worry too much about its name or description if you&rsquo;re just tinkering, like I am. Once you&rsquo;ve registered, you can obtain your new credentials (<code>consumer_key</code>, <code>consumer_secret</code>, <code>token</code>, and <code>token_secret</code>) from the Keys and Access Tokens tab.</p>
 
 <p>Input your credentials in the appropriate places:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#8f5902;font-style:italic"># Input your credentials below  </span>
-<span style="color:#000">consumer_key</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;xxx&#39;</span>  
-<span style="color:#000">consumer_secret</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;xxx&#39;</span>  
-<span style="color:#000">token</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;xxx&#39;</span>  
-<span style="color:#000">token_secret</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;xxx&#39;</span>  </code></pre></div>
+
+<pre><code class="language-python"># Input your credentials below  
+consumer_key = 'xxx'  
+consumer_secret = 'xxx'  
+token = 'xxx'  
+token_secret = 'xxx'  
+</code></pre>
+
 <p>You can set parameters to find specific tweets, or just show a sample stream. The relevant lines are:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#8f5902;font-style:italic"># stream.statuses.filter(track=&#39;twitter&#39;, language=&#39;en&#39;)  </span>
-<span style="color:#000">stream</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">statuses</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">sample</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">language</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;en&#39;</span><span style="color:#000;font-weight:bold">)</span>  </code></pre></div>
+
+<pre><code class="language-python"># stream.statuses.filter(track='twitter', language='en')  
+stream.statuses.sample(language='en')  
+</code></pre>
+
 <p>As written, it&rsquo;ll show you the sample stream. Switch the commented lines if you want to set your own search parameters. (More on that below.)</p>
 
 <h1 id="2-hiccups-windows-10-python-and-unicode">2. Hiccups: Windows 10, Python, and Unicode</h1>
 
 <p>My first pass at this program consisted of two goals: 1) successfully pull up a stream of tweets based on my search parameters, and 2) print them. The relevant line for achieving the second goal is:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">print</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">tweet</span><span style="color:#000;font-weight:bold">)</span>  </code></pre></div>
+
+<pre><code class="language-python">print(tweet)  
+</code></pre>
+
 <p>I opened up the terminal and typed <code>python tweet_stream.py</code> to run the program. After a brief pause it returned this error:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-system" data-lang="system">return codecs.charmap_encode(input,self.errors,encoding_map)[0]  
-UnicodeEncodeError: &#39;charmap&#39; codec can&#39;t encode characters in position 1270-1271: character maps to &lt;undefined&gt;  </code></pre></div>
+
+<pre><code class="language-system">return codecs.charmap_encode(input,self.errors,encoding_map)[0]  
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 1270-1271: character maps to &lt;undefined&gt;  
+</code></pre>
+
 <p>The short explanation is that Windows 10 doesn&rsquo;t play well with Python&rsquo;s default output encoding, UTF-8. (I&rsquo;m making my way through <a href="https://docs.python.org/3.6/howto/unicode.html">Python&rsquo;s documentation on Unicode</a>, which is rather long but truly fascinating to me.)</p>
 
 <p>I explored installing a Linux shell with updated Python so I could use Bash. While that&rsquo;s a good eventual idea for programming in general, it&rsquo;s definitely a big diversion from the topic at hand. Instead, I implemented a program-specific fix using a much faster and less complicated method: convert the tweets to ASCII before they display in the Windows 10 terminal.</p>
 
 <p>This is achieved by changing the encoding of the tweet text:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">print</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">tweet</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;text&#39;</span><span style="color:#000;font-weight:bold">]</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">encode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;ascii&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;ignore&#39;</span><span style="color:#000;font-weight:bold">))</span></code></pre></div>
+
+<pre><code class="language-python">print(tweet['text'].encode('ascii','ignore'))
+</code></pre>
+
 <p>The above displays the text of the tweets using ASCII encoding, and ignores any characters it can&rsquo;t encode. Instead of <code>ignore</code>, you could also use other handlers to indicate errors. Python documentation gives an example of what these different handlers do <a href="https://docs.python.org/3.6/howto/unicode.html#converting-to-bytes">here</a>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ce5c00;font-weight:bold">&gt;&gt;&gt;</span> <span style="color:#000">u</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">encode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;ascii&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;ignore&#39;</span><span style="color:#000;font-weight:bold">)</span>  
-<span style="color:#4e9a06">b</span><span style="color:#4e9a06">&#39;abcd&#39;</span>  
-<span style="color:#ce5c00;font-weight:bold">&gt;&gt;&gt;</span> <span style="color:#000">u</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">encode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;ascii&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;replace&#39;</span><span style="color:#000;font-weight:bold">)</span>  
-<span style="color:#4e9a06">b</span><span style="color:#4e9a06">&#39;?abcd?&#39;</span>  
-<span style="color:#ce5c00;font-weight:bold">&gt;&gt;&gt;</span> <span style="color:#000">u</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">encode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;ascii&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;xmlcharrefreplace&#39;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic"># inserts XML character reference  </span>
-<span style="color:#4e9a06">b</span><span style="color:#4e9a06">&#39;&amp;#40960;abcd&amp;#1972;&#39;</span>  
-<span style="color:#ce5c00;font-weight:bold">&gt;&gt;&gt;</span> <span style="color:#000">u</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">encode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;ascii&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;backslashreplace&#39;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic"># inserts a \uNNNN escape sequence  </span>
-<span style="color:#4e9a06">b</span><span style="color:#4e9a06">&#39;</span><span style="color:#4e9a06">\\</span><span style="color:#4e9a06">ua000abcd</span><span style="color:#4e9a06">\\</span><span style="color:#4e9a06">u07b4&#39;</span>  
-<span style="color:#ce5c00;font-weight:bold">&gt;&gt;&gt;</span> <span style="color:#000">u</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">encode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;ascii&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;namereplace&#39;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic"># inserts a \N{...} escape sequence  </span>
-<span style="color:#4e9a06">b</span><span style="color:#4e9a06">&#39;</span><span style="color:#4e9a06">\\</span><span style="color:#4e9a06">N{YI SYLLABLE IT}abcd</span><span style="color:#4e9a06">\\</span><span style="color:#4e9a06">u07b4&#39;</span>  </code></pre></div>
+
+<pre><code class="language-python">&gt;&gt;&gt; u.encode('ascii', 'ignore')  
+b'abcd'  
+&gt;&gt;&gt; u.encode('ascii', 'replace')  
+b'?abcd?'  
+&gt;&gt;&gt; u.encode('ascii', 'xmlcharrefreplace') # inserts XML character reference  
+b'&amp;#40960;abcd&amp;#1972;'  
+&gt;&gt;&gt; u.encode('ascii', 'backslashreplace') # inserts a \uNNNN escape sequence  
+b'\\ua000abcd\\u07b4'  
+&gt;&gt;&gt; u.encode('ascii', 'namereplace') # inserts a \N{...} escape sequence  
+b'\\N{YI SYLLABLE IT}abcd\\u07b4'  
+</code></pre>
+
 <p>Now running the program with the Windows 10 terminal should give you&hellip; a <em>lot</em> of tweets. (It&rsquo;ll keep going until you stop the program using <code>ctrl+c</code>. On a couple occassions when my program wasn&rsquo;t finding many tweets, <code>ctrl+c</code> didn&rsquo;t seem to work. I hit it a few more times in succession before it seemed to sync up with the program actually doing something, and stopped the operation.)</p>
 
 <h1 id="3-refining-the-search-function">3. Refining the search function</h1>
 
 <p>To retrieve a stream of tweets filtered by your search parameters, you&rsquo;ll want to alter this line of code:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">stream</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">statuses</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#204a87">filter</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">track</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;twitter&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">language</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;en&#39;</span><span style="color:#000;font-weight:bold">)</span></code></pre></div>
+
+<pre><code class="language-python">stream.statuses.filter(track='twitter', language='en')
+</code></pre>
+
 <p>The <code>track</code> parameter is what lets you filter your tweets by keywords, hashtags, user mentions, and urls. In the above example, it will search for tweets containing the keyword &ldquo;twitter&rdquo;. You can find its accepted phrases <a href="https://dev.twitter.com/streaming/overview/request-parameters#track">here</a>. Note that the phrases don&rsquo;t work like search engine phrases - characters in the tweet must exactly match the search phrase, and punctuation within the quotes will be considered part of the phrase. For example, &ldquo;café&rdquo; will not find &ldquo;cafe&rdquo; or vice versa, and &ldquo;hello,&rdquo; is a different phrase than &ldquo;hello&rdquo;.</p>
 
 <p>The <code>language</code> parameter in the example above limits the search results to tweets written in English. There are further parameters you can use to filter your results, such as follow (which limits your stream to searching the timelines of the users you specify) and location (which can allow you to filter by geolocated tweets). Find the full list of parameters and their values <a href="https://dev.twitter.com/streaming/overview/request-parameters">here</a>.</p>
 
 <p>I intended to use the <code>track</code> parameter to find tweets containing any one of a list of hashtags. I started out with the code below:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">stream</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">statuses</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#204a87">filter</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">track</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;#coding,#programming,#travel&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">language</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;en&#39;</span><span style="color:#000;font-weight:bold">)</span>  </code></pre></div>
+
+<pre><code class="language-python">stream.statuses.filter(track='#coding,#programming,#travel', language='en')  
+</code></pre>
+
 <p>Note that the comma separators will cause the program to find tweets that contain any of those search terms: #coding OR #programming, etc. If you want to have your search find tweets containing all your search terms, use spaces only.</p>
 
 <p>The track function is pretty literal, and thus not very intuitive. For example, my &ldquo;#programming&rdquo; phrase called up tweets that were related to computer programming as well as television programming. While you could set other parameters that omit certain words, it&rsquo;s not long before such an approach turns into a very lengthy guessing game. A cleaner (and faster) approach is to choose more specific search phrases, for example:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">stream</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">statuses</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#204a87">filter</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">track</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;#coding,#python,#digitalnomad,#laptoplifestyle&#39;</span><span style="color:#000;font-weight:bold">,</span>  <span style="color:#000">language</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;en&#39;</span><span style="color:#000;font-weight:bold">)</span>  </code></pre></div>
+
+<pre><code class="language-python">stream.statuses.filter(track='#coding,#python,#digitalnomad,#laptoplifestyle',  language='en')  
+</code></pre>
+
 <p>Your keywords will vary depending on what you want your stream to display. The <a href="https://twitter.com/search-advanced">Twitter Advanced Search page</a> is a good resource for trying out different combinations before running your script.</p>
 
 <p>I hope you find this overview of my first Twitter streaming script useful! Questions, or something I missed? Hit me up on Twitter <a href="https://twitter.com/hivickylai">@hivickylai</a>.</p>
 
 <p>Thanks for reading!</p>
+<p>Like this post? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.io%2fverbose%2fhow-i-made-a-twitter-stream%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/python-programming-fundamentals-iterations/">Fundamentals of programming: iterations in Python</a></li><li><a href="/verbose/aws-lambda/">Running a free Twitter bot on AWS Lambda</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><ul><li><a href="https://github.com/hivickylai">github</a></li>
 
-                </div>
+&#183; <li><a href="https://twitter.com/hivickylai">twitter</a></li>
+&#183; <li><a href="mailto:hello@vickylai.io" rel="noopener">email</a></li></ul></div></div></div>
+<script>
+    scrollTo = (element) => {
+        window.scroll({
+            behavior: 'smooth',
+            left: 0,
+            top: element.offsetTop
+        });
+    }
 
-                
-
-                <div class="container markdown center-me">
-                    <p class="tweet-me">Like this post?
-                        <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hey%20@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.io%2fverbose%2fhow-i-made-a-twitter-stream%2f%20and..."
-                            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a>
-                    </p>
-                </div>
-            </section>
-
-            <hr />
-
-            <div class="container my-pagination center-me">
-                <div class="columns is-mobile">
-
-                    <div class="column is-one-third-desktop is-half-mobile no-padding">
-                        
-                        <div class="card inactive no-border">
-                            <div class="card-content">
-                            You're where it all began! Aww. #nostalgia
-                            </div>
-                        </div>
-                        
-                    </div>
-
-                    <div class="column is-one-third has-text-centered no-padding desktop">
-                        <a class="up" href="/verbose/how-i-made-a-twitter-stream/#top">UP, JEEVES.</a>
-                    </div>
-
-                    <div class="column is-one-third-desktop is-half-mobile card-align-right no-padding">
-                        
-                        <div class="card no-border">
-                            <div class="card-header bottom-pad has-text-right no-border">
-                                <a href="/verbose/python-programming-fundamentals-iterations/">Next time... ></a>
-                                <br />
-                            </div>
-                            
-                            <div class="card-content has-text-right">
-                                An overview of writing effective iterations in Python using for loops, list comprehensions, and map.
-                            </div>
-                        </div>
-                        
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="footer section center-me" id="footer">
-    <div class="container columns bio-box">
-        <div class="column is-one-quarter av-box">
-            <img class="avatar small" width="100px" height="100px" src="https://vickylai.io/img/portrait-360.jpg">
-        </div>
-        <div class="column bio">
-            <p class="bio-title">About Vicky Lai</p>
-            <p id="footer-text">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.</p>
-            <p class="top-pad">
-                
-                <a href="https://github.com/hivickylai" target="_blank">
-                <img class="noborder" width="24" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAD2ElEQVR4nO1ay3HCMBClBEqgBDpIOkhK8AW0OcGB1XBD0Q73dAAdJB0kHYQOSAfQATlgMxhbv7VsmUnezF48HmnfarUfSYPBP7rBC&#43;oHsXh9AkkrkLQCpM&#43;S5N/F4vXpBfVDan0bY4Lr8YWopBNLcsNMcD1OzccL2VwNBdJMIH2zSRtEIH0LpFk2V8PUPCvI5moIklYC9SE28aoh9AEkrXpjiK6ImwyRjPgE1&#43;M2XJ2zNTqPEQJplpp4jSFmrRPP5moIqDepyRoF9aZV8n1weZ8tET1A3gv5Voxwb&#43;SvjRDFAL3e8y5pGhOmUs&#43;Tk2goU6nnLPJ5LZ&#43;cQAxh1Qkg9d5ncCHpCJIUSFKA&#43;guQflojg/QDqL&#43;K&#43;fK53TqGxoN8Aj&#43;lFvRo8J6t23h6J6TeeRl4qUa380wlPQcYUHmRP0d9z9oe9ZfVkEs1uvKKLaDObOkpL7Sy87/n1Xals9wjPLxAH7xSY9Dq&#43;1q1RUTVN2j1De7fNWBBj776Or0gOO3dmQFAOtJiaMU3lfTcIddaBAZCc0Zg5n3VLd0qAmPACaShLuAMJFB/JOBcgkD9EWXhfNNJWfS&#43;e8o3eku9D9a7Ln0zrNgLD&#43;AtHJ3KgwRG0ovUVGddA5ZqxNL9OoOFRtK&#43;rH4BjheUMhgnAALqLB3lMphtu7oMwDFAn66rGqdwjgulo1uPRlv4LxqglAr/vAEE0lvoAL25nBxcLmcDtwC9XQbgBME&#43;dIIFOGkcmmaBkgUTg&#43;PBcJMFsvAB0vcBBTj9QKkQYh&#43;B96AY4i1eTR3je8R86wUpg&#43;E5&#43;IWvvpB0rAzG7KtPQtJ7Au5nnSW9s3Su62M4gfBqK7R3L29AwztLVRnQFQeE1DtYqlHeflZuZQTSdxftMSzVqOlttbGPsd3S3J6mZnM1NPzfyguuWC/RhNQ74yTWiIr0WadUnREE6gOg3sR48TnB9RhQb6K9RLNlrjMhSzao2esWT7DvOQdAkor9/E5IOjq9ExyXmnUXC5c7wHrP&#43;eGcHcBSjXip2Spb58ROL5DmChCWagQLeiwklHRlPGaRw179As4jpg4rwFjvDYJfilj3dU1AbAvMRudm9S2R3wTnUXlH7TD7yD6Grvat0F0f0Knr10xuzAoC9UEsXp8i8bTp0F7U94E7z&#43;t93pisriXK5APmtZ3Uu7ivRd3FTkWiTD5gHHnHJF&#43;AY4RYcycnf6OM8/lbKgO0Tv5KIa&#43;zg4jzucl3fUg7wfXYtSVizWVfdTomPaIHy5PVaHMYymGB&#43;qMXFzT5YUXJEDFdsmbLbfvwOKOCwhBtNEu5EfpJ/B//uF/8AhiGWISX3cHqAAAAAElFTkSuQmCC">
-                </a>
-                
-                <a href="https://codepen.io/hivickylai" target="_blank">
-                <img class="noborder" width="24" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADwElEQVR4nO1awVXzMAzOCIzACB0hI3QDcmltTvQQ&#43;XHDz6Jn2AA2gA1gA7pB2aDd4P8PIWmbJpHk2Anl5XvPFxpU6bOqT5aTJBMmTJgwYXhkK3uljHtSxj1lK3s1tj&#43;DQueYauO22uC/YrmtzjEd26/oKHYd3w6Bny5l8O3PZsOtebxR4HZtwVckgNvdmsebsf0NBn1vrzXgBxX42QL80Pf2emz/e0EbfBAHXssGbfBh7DjE0DmmCvCrT/CnRODXRRTJUtrIgAzuOX87f&#43;YXS&#43;bS4PxU2poDL55D2/C5XRqc00S47dLgfOx4K1DSdpTGz&#43;XutRFQ2QN8ZmTR&#43;JKpAO9IaQP8rv9&#43;uwionskx1YDfVJFUgHdDxlw4x5c22/j/DAKIZ8eTTM2RNnCfC1jPOmywCUiSJFnAeqbBfTIIjyeZHGkripxbkbaEBJRYGreiimRwyWRLG7h3bhr6EpAkxc9PgXuni2QAyZRIm8RuHwKOfYsmmT7SJkEIAio/Y0imj7RJ0ESuMvjma48rmXyD3Yy&#43;&#43;jq6gPWsq5AqwK8u9WD4/drlu8RQcLlRgHcMuyUR4uZGM&#43;RZYox2lNl8xJ4HSOyHJcDQrSirVR7QfnACKkdrVZa1Kz&#43;FlFPA6tnAVamwBBCtqAK3Wxqca3AZtSt1&#43;eTImQK30&#43;CypcE5rVLNvvYjIMeU13x0Zkpn0xTKfjF2j0DAYbfoVrRhB985zUgI&#43;1EJqJ4Bl/HGWPJWOUn42aAM7jW47MS3QQjIMeXN&#43;f2aG6ppOtr5XZNvcX8CjNNhAxHs5kbSNB0y4XD6i0bA&#43;Z2ecBHNjXfTVC23PfgZmgDCsXIYookRVilnZ9/JkE9t0HKGIm2&#43;9iOgO/02xzvLOp39NE&#43;spqZ2&#43;tT39loZt5H6GYsA22QjW9krTZzOilZX1jTV/KQHprEIUMZtONXdt7nhyucC1jNuNoQkwLKNJfLmhts01XwmsyEMAeBeJI4dgypg3Klyq9/gXoIQwBk2&#43;o7E2gpYvZCKbDLkWRncsw1yU9Z39NySrlZqRzKy9xqRF8dbetg42licMbztfZMsGT0PdjEScWTf/sU5ppTccG9rfQngjMCUcZuob5O0OF9PvY/wl6P&#43;t9HBURxa/G9rJQRo5m30KG&#43;UsQ4m5lwyOQRwpa1P3xAEPpLZRUB0aYsFiWS2ETCYtMUCWzIbgmSO18JKWyxwJFOyoktbLLSkuiBw3Lepw8VAIJm/Q9piQXKP0DQz/BOgJPPXSVssnA1Ne75yc5EoJfNipG3ChAkT/iL&#43;A3gnYQcATkHJAAAAAElFTkSuQmCC">
-                </a>
-                
-                <a href="https://twitter.com/hivickylai" target="_blank">
-                <img class="noborder" width="24" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADRElEQVR4nO1ay3XqMBBVCS4hJbiDRwdJB3hjJFbxwqOTHcoMrJMOcAfQAXSQdEA6gA7eW9jmOYDAH30Mx/ecu2Fh5l6NpJE0jA0YMGDAgAED&#43;ooYFiEHehWASwG0KcklfkzlfBwlKvAdoxVM5XwsJO6EpL&#43;3yCWtREqjJt/WGife1JMhDa0QwyKsK/yMgEudsChRAQd6FRJ3AnB78c&#43;jRAVC4i6GRWhTpA4CMOKA&#43;1biy2wA&#43;ioHMUpUwNP3ZwG4/PVdXbYISSr/CO5dmyAAoy7Cf5uAew70pTHoUx9EJfVcmpAvdN1Gvt5agd/auZ&#43;n/7mTLkxoPec7iI8SFQjA6H8QKY106TSR9GJNvMHUvzIl1lGighgW4VTOx1zS6mwt0BlQ4cyKAZZHnwPuBdDm9PeJxKT5SABtTBYe&#43;ZZnd/Q1zM5H4nYGHB2dyvnYhAGi2HW8i281GkCbJtXXJXDAdS/EHwOSdGj8UcBl251CAG6dia&#43;u&#43;NqAJGXt/4A2PH1/7qkBql5ANdeBa8xXXVzWMaN3BpgOqrIFzaaAf053kE4ZZ8sAN1sT7nJjcNc7AxhjbCIxcRSYK942IIZFWE1R4S49rbNWKS8kqeoCFiUqeJhMqFOv6HcA3HkX0JE3xZdTwHegNsglHWoZwBhjAujHd8DGDQBc1zfggRa&#43;ClV9A97UUw8CNsumBzYO9Ok9aENsNP9LRIkKuMRv38EbYtbYAMaKW9o2R&#43;OesdNd5t2bAPTTWnyJ/DnJ&#43;a2NKarOBpQQKY2c3t4YoJHL29OPFNNi5VtcDWadxTN2x4WRqRfuOz0fKCPiS9xTFnBJB&#43;MdI3lhdB/bobU3zHuoCRqd&#43;h7NBCuprzehf&#43;cE5y09AjDqzeVJnScvW5hIeuFAnwJw68mQzJv4U3CgVxd9Pr0TL97U06UOjIcXX1yfzRyP&#43;nlri2vEsAgF4NL1fOeSDjabta6Cp&#43;/PXOKHrvnQvnj8ttbCW7wIzarkEj&#43;OndkeBJ9QWRF&#43;akIPC5zMeeN2LwocwG3X5qvOyAscd3eBxRkj89WlrsXxidzCfWAp2msp2xQipdFEYsIB102mCpd0KEzMJhKT3o10V8SwCEVKo0v0HduAAQMGXMM/rs839uro0rcAAAAASUVORK5CYII=">
-                </a>
-                
-                <a href="mailto:hello@vickylai.io" target="_blank">
-                <img class="noborder" width="24" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADOklEQVR4nO1azXHyMBBVCZSQEuggKYESfMFSTnDI7nDDszucv3QQOkg6SDoIHSQdmA6Sg2NirfwZ&#43;QcLgt7MHmCMZvdJu2&#43;1RqmIiIiIiIiIiGuFQf66ZosEhHYgtCkD/BnaiWAG/KmSZTbRSLvgzoxsGmmXLLOJUkqpZJlNDPI2tFMj2vYQvFCEayBhawcN9CQ&#43;J2fg5GkMKHFiN8hfGvi9eiQMUKKR98EdHsg08r4afLLMJhr43WBFBjXwu1llN&#43;VDc9hM/wIJGnk/h830sLmr7KYM3iKgIIHy6sMFCZerEBpp58QDlFefcRohDZSnyDPruFwgCZbMlWktgq8l4GAiZ8xlKYRV6ZsKe3MrLBRCAz&#43;eQXDNOw/8KCt90/PH7wJAT/IohQ6ywVf71B4J3o8AdGUyRZ6dk0Jo5L1TtyqVvjcBJQmuQoQnQcpcUen9gm9FQEGCLZNmld2EVAiNtHN6l5pKPxgBB5NdVQAS6mSuyzqdByIaeGFV23Fl0pI5Dbzoula/iZC8SCFnIwSftZG50xKA/KWRn0eTSSf1&#43;LnvmoPMBJ3b5APfDakQGnlvHviui8yNQkBBAuWnuE3W3&#43;baVfpRCEiRlkqgr0LISl8iRVqeDQF1x9P5DPTWem2gN5lWp0izXgTIHRJd2FooRBuZ3Irfrg263egQPUgfAiwnU&#43;SZk5vdZDKzfiNkTs4rOpA7AAFyuPizQ/XP8qt7dN1d00g7N3X4tcEP&#43;4R1nGO2IwD40z2Cx7VYzhvLdEmRZynyrLqmUu7czpfcOWymbd90&#43;RMgitIcNlOD9OH7ew2Uy/a5Dhp40U7m6ENuSpui6zsPkFOW2vmar8MaeHEPdFuudw90W/Tz/oRKcmvS0qstbyRAztOVUkoj/esW&#43;Agmiq7P4Oa/BMiR8pDt5ylNtuXHRvu1BGigF1ffh2s/T08C5e7dgV58CchkvocOqMdpsIpuXQv9&#43;2qsZrDY9659Fian2qKFLl6Oitmatw5fiMkWujrLVEb8WcA88N0l5bs/CfUttBJfrEM7OoJZLfRvlRxgvHQxVm2h275I&#43;Dv200L/xXz3NQ2Uxz9KhnYgtEUCIiIiIiIiIiKuFd&#43;oxN7Z3PBXwQAAAABJRU5ErkJggg==">
-                </a>
-                
-        </div>
-    </div>
-    </div>
-    </div>
-    
-
-    </section>
-
-    
-    <script>
-        $('a[href^="\/verbose\/how-i-made-a-twitter-stream\/#"]').click(function (e) {
-            e.preventDefault();
-            var target = this.hash;
-            $('html, body').animate({
-                scrollTop: $(target).offset().top
-            }, 500);
-            return false;
-        })
-    </script>
-</body>
+    document.getElementById("up").addEventListener('click', () => {
+        scrollTo(document.getElementById("top"));
+    });
+</script></div></body>

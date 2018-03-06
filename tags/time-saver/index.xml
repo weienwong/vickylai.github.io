@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Time Saver on VickyLai.io</title>
+    <link>https://vickylai.io/tags/time-saver/</link>
+    <description>Recent content in Time Saver on VickyLai.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Nov 2017 14:05:14 -0500</lastBuildDate>
+    
+	<atom:link href="https://vickylai.io/tags/time-saver/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About time</title>
+      <link>https://vickylai.io/verbose/about-time/</link>
+      <pubDate>Wed, 22 Nov 2017 14:05:14 -0500</pubDate>
+      
+      <guid>https://vickylai.io/verbose/about-time/</guid>
+      <description>This morning I read an article that&amp;rsquo;s been making the rounds lately: Modern Media Is a DoS Attack on Your Free Will.
+It&amp;rsquo;s made me think, which I must admit, I at first didn&amp;rsquo;t like. See, when I wake up in the morning (and subsequently wake up my computer) the first thing I do is go on Twitter to catch up on everything I missed while I was asleep. All this before my first coffee, mind you.</description>
+    </item>
+    
+    <item>
+      <title>Batch renaming images, including image resolution, with awk</title>
+      <link>https://vickylai.io/verbose/renaming-images/</link>
+      <pubDate>Mon, 20 Nov 2017 13:59:30 -0500</pubDate>
+      
+      <guid>https://vickylai.io/verbose/renaming-images/</guid>
+      <description>&lt;p&gt;The most recent item on my list of &amp;ldquo;Geeky things I did that made me feel pretty awesome&amp;rdquo; is an hour&amp;rsquo;s adventure that culminated in this code:&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>That time 30 seconds, StackOverflow, and sed saved me 30 minutes</title>
+      <link>https://vickylai.io/verbose/when-stackoverflow-sed-saves-30mins/</link>
+      <pubDate>Sat, 06 May 2017 20:04:53 +0800</pubDate>
+      
+      <guid>https://vickylai.io/verbose/when-stackoverflow-sed-saves-30mins/</guid>
+      <description>This week, I launched my new website and changed my Twitter username to match. I was about to spend time going through all my old blog posts to find and update the URLs when this very future blog post popped up on my screen like Clippy and shook its pixelated head disapprovingly.
+Here&amp;rsquo;s a worthwhile new habit for you: anytime you find yourself going &amp;ldquo;Ughhh I have to do that?</description>
+    </item>
+    
+    <item>
+      <title>How I created custom desktop notifications using terminal and cron</title>
+      <link>https://vickylai.io/verbose/create-desktop-notifications-cron/</link>
+      <pubDate>Tue, 21 Feb 2017 10:48:38 +0700</pubDate>
+      
+      <guid>https://vickylai.io/verbose/create-desktop-notifications-cron/</guid>
+      <description>In my last post I talked about moving from Windows 10 to running i3 on Linux, built up from Debian Base System. Among other things, this change has taught me about the benefits of using basic tools and running a minimal, lightweight system. You can achieve a lot of functionality with just command line tools and simple utilities. One example I&amp;rsquo;d like to illustrate in this post is setting up desktop notifications.</description>
+    </item>
+    
+  </channel>
+</rss>

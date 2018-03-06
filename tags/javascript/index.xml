@@ -6,55 +6,10 @@
     <description>Recent content in Javascript on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Nov 2017 22:02:41 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jan 2018 20:00:28 -0500</lastBuildDate>
     
 	<atom:link href="https://vickylai.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>acme-gallery</title>
-      <link>https://vickylai.io/project/acme-gallery/</link>
-      <pubDate>Fri, 24 Nov 2017 22:02:41 -0500</pubDate>
-      
-      <guid>https://vickylai.io/project/acme-gallery/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>uni-pretty</title>
-      <link>https://vickylai.io/project/uni-pretty/</link>
-      <pubDate>Wed, 03 Jan 2018 11:47:34 -0500</pubDate>
-      
-      <guid>https://vickylai.io/project/uni-pretty/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>simon</title>
-      <link>https://vickylai.io/project/simon/</link>
-      <pubDate>Fri, 24 Nov 2017 22:05:50 -0500</pubDate>
-      
-      <guid>https://vickylai.io/project/simon/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cats-vs-unicorns</title>
-      <link>https://vickylai.io/project/cats-vs-unicorns/</link>
-      <pubDate>Fri, 24 Nov 2017 22:07:45 -0500</pubDate>
-      
-      <guid>https://vickylai.io/project/cats-vs-unicorns/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>minimalist-calc</title>
-      <link>https://vickylai.io/project/minimalist-calc/</link>
-      <pubDate>Mon, 19 Jun 2017 11:25:00 -0400</pubDate>
-      
-      <guid>https://vickylai.io/project/minimalist-calc/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>A unicode substitution cipher algorithm</title>

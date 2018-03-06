@@ -6,19 +6,10 @@
     <description>Recent content in Websites on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Nov 2017 22:02:41 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jan 2018 08:56:20 -0500</lastBuildDate>
     
 	<atom:link href="https://vickylai.io/tags/websites/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>acme-gallery</title>
-      <link>https://vickylai.io/project/acme-gallery/</link>
-      <pubDate>Fri, 24 Nov 2017 22:02:41 -0500</pubDate>
-      
-      <guid>https://vickylai.io/project/acme-gallery/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Moving to a new domain without breaking old links: AWS &amp; Disqus</title>
@@ -36,16 +27,6 @@
       
       <guid>https://vickylai.io/verbose/aws-static-site/</guid>
       <description>&lt;p&gt;Some time ago I decided to stop freeloading on GitHub pages and move my static page for &lt;a href=&#34;https://vickylai.com&#34;&gt;vickylai.com&lt;/a&gt; to Amazon Web Services (AWS). It turns out that I&amp;rsquo;m still mostly freeloading (yay free tier) so it amounted to a learning experience. Here are the components that let me host and serve the site at my custom domain with HTTPS.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>About time</title>
-      <link>https://vickylai.io/verbose/about-time/</link>
-      <pubDate>Wed, 22 Nov 2017 14:05:14 -0500</pubDate>
-      
-      <guid>https://vickylai.io/verbose/about-time/</guid>
-      <description>This morning I read an article that&amp;rsquo;s been making the rounds lately: Modern Media Is a DoS Attack on Your Free Will.
-It&amp;rsquo;s made me think, which I must admit, I at first didn&amp;rsquo;t like. See, when I wake up in the morning (and subsequently wake up my computer) the first thing I do is go on Twitter to catch up on everything I missed while I was asleep. All this before my first coffee, mind you.</description>
     </item>
     
     <item>
