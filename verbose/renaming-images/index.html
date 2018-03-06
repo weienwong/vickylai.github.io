@@ -30,13 +30,13 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
     
-    <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98623582-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
-        gtag('config', '');
+        gtag('config', 'UA-98623582-1');
     </script>
 
 </head>
@@ -45,9 +45,9 @@
 <a href="/#work">work</a>
 
 &#183; <a href="/#contact-box">contact</a>
-&#183; <a href="https://vickylai.io/">vickylai.io</a></p><hr/></div><div class="wrap contain"><div id="featuredimg"><img src="https://vickylai.io/pixels/renaming-rainbow.png"/></div><div id="content"><h1>Batch renaming images, including image resolution, with awk</h1>Mon Nov 20, 2017 &#183; 851 words
+&#183; <a href="https://vickylai.io/">vickylai.io</a></p><hr/></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/renaming-rainbow.png"/></div><div id="content"><h1>Batch renaming images, including image resolution, with awk</h1>Mon Nov 20, 2017 &#183; 851 words
 
-<div><span id="tag"><a href="https://vickylai.io/tags/coding">coding</a></span><span id="tag"><a href="https://vickylai.io/tags/data">data</a></span><span id="tag"><a href="https://vickylai.io/tags/linux">linux</a></span><span id="tag"><a href="https://vickylai.io/tags/time-saver">time-saver</a></span></div><hr/><p>The most recent item on my list of &ldquo;Geeky things I did that made me feel pretty awesome&rdquo; is an hour&rsquo;s adventure that culminated in this code:</p>
+<div><span id="tag"><a href="/tags/coding">coding</a></span><span id="tag"><a href="/tags/data">data</a></span><span id="tag"><a href="/tags/linux">linux</a></span><span id="tag"><a href="/tags/time-saver">time-saver</a></span></div><hr/><p>The most recent item on my list of &ldquo;Geeky things I did that made me feel pretty awesome&rdquo; is an hour&rsquo;s adventure that culminated in this code:</p>
 
 <pre><code class="language-bash">$ file IMG* | awk 'BEGIN{a=0} {print substr($1, 1, length($1)-5),a++&quot;_&quot;substr($8,1, length($8)-1)}' | while read fn fr; do echo $(rename -v &quot;s/$fn/img_$fr/g&quot; *); done
 IMG_20170808_172653_425.jpg renamed as img_0_4032x3024.jpg
