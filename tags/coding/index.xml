@@ -6,6 +6,8 @@
     <description>Recent content in Coding on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <managingEditor>hello@vickylai.io (Vicky Lai)</managingEditor>
+    <webMaster>hello@vickylai.io (Vicky Lai)</webMaster>
     <lastBuildDate>Wed, 22 Nov 2017 14:05:14 -0500</lastBuildDate>
     
 	<atom:link href="https://vickylai.io/tags/coding/index.xml" rel="self" type="application/rss+xml" />
@@ -15,7 +17,7 @@
       <title>About time</title>
       <link>https://vickylai.io/verbose/about-time/</link>
       <pubDate>Wed, 22 Nov 2017 14:05:14 -0500</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/about-time/</guid>
       <description>This morning I read an article that&amp;rsquo;s been making the rounds lately: Modern Media Is a DoS Attack on Your Free Will.
 It&amp;rsquo;s made me think, which I must admit, I at first didn&amp;rsquo;t like. See, when I wake up in the morning (and subsequently wake up my computer) the first thing I do is go on Twitter to catch up on everything I missed while I was asleep. All this before my first coffee, mind you.</description>
@@ -25,7 +27,7 @@ It&amp;rsquo;s made me think, which I must admit, I at first didn&amp;rsquo;t li
       <title>Batch renaming images, including image resolution, with awk</title>
       <link>https://vickylai.io/verbose/renaming-images/</link>
       <pubDate>Mon, 20 Nov 2017 13:59:30 -0500</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/renaming-images/</guid>
       <description>&lt;p&gt;The most recent item on my list of &amp;ldquo;Geeky things I did that made me feel pretty awesome&amp;rdquo; is an hour&amp;rsquo;s adventure that culminated in this code:&lt;/p&gt;</description>
     </item>
@@ -34,7 +36,7 @@ It&amp;rsquo;s made me think, which I must admit, I at first didn&amp;rsquo;t li
       <title>How to code a satellite algorithm and cook paella from scratch</title>
       <link>https://vickylai.io/verbose/build-from-scratch/</link>
       <pubDate>Fri, 08 Sep 2017 16:50:24 -0400</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/build-from-scratch/</guid>
       <description>What if I told you that by the end of this article, you&amp;rsquo;ll be able to calculate the orbital period of satellites around Earth using their average altitudes and&amp;hellip; You tuned out already, didn&amp;rsquo;t you?
 Okay, how about this: I&amp;rsquo;m going to teach you how to make paella!
@@ -45,7 +47,7 @@ And you&amp;rsquo;ll have written a function that does the stuff I mentioned abo
       <title>Making sandwiches with closures in JavaScript</title>
       <link>https://vickylai.io/verbose/javascript-closures/</link>
       <pubDate>Sun, 28 May 2017 09:16:35 +0700</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/javascript-closures/</guid>
       <description>&lt;p&gt;Say you&amp;rsquo;re having a little coding get-together, and you need some sandwiches. You happen to know that everyone prefers a different type of sandwich, like chicken, ham, or peanut butter and mayo. You could make all these sandwiches yourself, but that would be tedious and boring.&lt;/p&gt;</description>
     </item>
@@ -54,7 +56,7 @@ And you&amp;rsquo;ll have written a function that does the stuff I mentioned abo
       <title>Understanding Array.prototype.reduce() and recursion using apple pie</title>
       <link>https://vickylai.io/verbose/reduce-recursion-with-pie/</link>
       <pubDate>Thu, 18 May 2017 11:40:06 +0700</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/reduce-recursion-with-pie/</guid>
       <description>&lt;p&gt;I was having trouble understanding &lt;code&gt;reduce()&lt;/code&gt; and recursion in JavaScript, so I wrote this article to explain it to myself (hey, look, recursion!). I hope you find my examples both helpful and delicious.&lt;/p&gt;
 
@@ -65,7 +67,7 @@ And you&amp;rsquo;ll have written a function that does the stuff I mentioned abo
       <title>Iterating over objects and arrays: frequent errors</title>
       <link>https://vickylai.io/verbose/iterating-objects-arrays/</link>
       <pubDate>Tue, 16 May 2017 10:46:46 +0700</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/iterating-objects-arrays/</guid>
       <description>Here&amp;rsquo;s some complaining a quick overview of some code that has confounded me more than once. I&amp;rsquo;m told even very experienced developers encounter these situations regularly, so if you find yourself on your third cup of coffee scratching your head over why your code is doing exactly what you told it to do (and not what you want it to do), maybe this post can help you.
 The example code is JavaScript, since that&amp;rsquo;s what I&amp;rsquo;ve been working in lately, but I believe the concepts to be pretty universal.</description>
@@ -75,7 +77,7 @@ The example code is JavaScript, since that&amp;rsquo;s what I&amp;rsquo;ve been 
       <title>That time 30 seconds, StackOverflow, and sed saved me 30 minutes</title>
       <link>https://vickylai.io/verbose/when-stackoverflow-sed-saves-30mins/</link>
       <pubDate>Sat, 06 May 2017 20:04:53 +0800</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/when-stackoverflow-sed-saves-30mins/</guid>
       <description>This week, I launched my new website and changed my Twitter username to match. I was about to spend time going through all my old blog posts to find and update the URLs when this very future blog post popped up on my screen like Clippy and shook its pixelated head disapprovingly.
 Here&amp;rsquo;s a worthwhile new habit for you: anytime you find yourself going &amp;ldquo;Ughhh I have to do that?</description>
@@ -85,7 +87,7 @@ Here&amp;rsquo;s a worthwhile new habit for you: anytime you find yourself going
       <title>Top free resources for developing coding superpowers</title>
       <link>https://vickylai.io/verbose/free-resources-for-coding-superpowers/</link>
       <pubDate>Thu, 27 Apr 2017 08:14:09 +0800</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/free-resources-for-coding-superpowers/</guid>
       <description>I&amp;rsquo;m frequently asked for my opinion on how to get started on being a freelance developer. If you&amp;rsquo;re hoping to live the life of a remote working digital nomad, whichever career you choose, having a little coding expertise in your back pocket will be a big benefit.
 Here&amp;rsquo;s a quick list of resources that you should definitely look at first if you&amp;rsquo;re hoping to gain some coding superpowers for free.</description>
@@ -95,7 +97,7 @@ Here&amp;rsquo;s a quick list of resources that you should definitely look at fi
       <title>Fundamentals of programming: iterations in Python</title>
       <link>https://vickylai.io/verbose/python-programming-fundamentals-iterations/</link>
       <pubDate>Wed, 18 Jan 2017 21:58:28 +0700</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/python-programming-fundamentals-iterations/</guid>
       <description>I&amp;rsquo;ve been working in Python 3 for about a week, and so far greatly enjoy it. To me, learning code syntax (and programming in general) amounts to an amalgamation of lego blocks: once it&amp;rsquo;s understood what a certain color of block does, it&amp;rsquo;s straightforward to combine them to create the structure you&amp;rsquo;re looking for.
 That said, some blocks can be a little confusing at first. I found documentation relating to iteration in Python to be a little hard to digest, mostly because of subtle differences in terminology: iteration, iterator, iterating, iterable&amp;hellip; it&amp;rsquo;s enough to make your eyes glaze over.</description>

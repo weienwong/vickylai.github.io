@@ -6,6 +6,8 @@
     <description>Recent content in Data on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <managingEditor>hello@vickylai.io (Vicky Lai)</managingEditor>
+    <webMaster>hello@vickylai.io (Vicky Lai)</webMaster>
     <lastBuildDate>Mon, 20 Nov 2017 13:59:30 -0500</lastBuildDate>
     
 	<atom:link href="https://vickylai.io/tags/data/index.xml" rel="self" type="application/rss+xml" />
@@ -15,7 +17,7 @@
       <title>Batch renaming images, including image resolution, with awk</title>
       <link>https://vickylai.io/verbose/renaming-images/</link>
       <pubDate>Mon, 20 Nov 2017 13:59:30 -0500</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/renaming-images/</guid>
       <description>&lt;p&gt;The most recent item on my list of &amp;ldquo;Geeky things I did that made me feel pretty awesome&amp;rdquo; is an hour&amp;rsquo;s adventure that culminated in this code:&lt;/p&gt;</description>
     </item>

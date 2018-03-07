@@ -6,6 +6,8 @@
     <description>Recent content in Websites on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <managingEditor>hello@vickylai.io (Vicky Lai)</managingEditor>
+    <webMaster>hello@vickylai.io (Vicky Lai)</webMaster>
     <lastBuildDate>Wed, 10 Jan 2018 08:56:20 -0500</lastBuildDate>
     
 	<atom:link href="https://vickylai.io/tags/websites/index.xml" rel="self" type="application/rss+xml" />
@@ -15,7 +17,7 @@
       <title>Moving to a new domain without breaking old links: AWS &amp; Disqus</title>
       <link>https://vickylai.io/verbose/aws-new-domain/</link>
       <pubDate>Wed, 10 Jan 2018 08:56:20 -0500</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/aws-new-domain/</guid>
       <description>&lt;p&gt;I started blogging about my nomadic travels last year, and so far the habit has stuck. Like all side projects, I won&amp;rsquo;t typically invest heavily in setting up web properties before I can be reasonably certain that such an investment is worth my time or enjoyment. In other words: don&amp;rsquo;t buy the domain until you&amp;rsquo;ve proven to yourself that you&amp;rsquo;ll stick with it!&lt;/p&gt;</description>
     </item>
@@ -24,7 +26,7 @@
       <title>Hosting your static site with AWS S3, Route 53, and CloudFront</title>
       <link>https://vickylai.io/verbose/aws-static-site/</link>
       <pubDate>Wed, 13 Dec 2017 20:46:12 -0500</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/aws-static-site/</guid>
       <description>&lt;p&gt;Some time ago I decided to stop freeloading on GitHub pages and move my static page for &lt;a href=&#34;https://vickylai.com&#34;&gt;vickylai.com&lt;/a&gt; to Amazon Web Services (AWS). It turns out that I&amp;rsquo;m still mostly freeloading (yay free tier) so it amounted to a learning experience. Here are the components that let me host and serve the site at my custom domain with HTTPS.&lt;/p&gt;</description>
     </item>
@@ -33,7 +35,7 @@
       <title>How I ditched WordPress and set up my custom domain HTTPS site for (almost) free</title>
       <link>https://vickylai.io/verbose/free-custom-domain-website-https/</link>
       <pubDate>Sat, 28 Jan 2017 13:16:17 +0700</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/free-custom-domain-website-https/</guid>
       <description>&lt;p&gt;I got annoyed with WordPress.com. While using the service has its pros (like https and a mobile responsive website, and being very visual and beginner-friendly) it&amp;rsquo;s limiting. For someone who&amp;rsquo;s comfortable enough to be tweaking CSS but who&amp;rsquo;s not interested in creating their own theme (or paying upwards of $50 for one), I felt I wasn&amp;rsquo;t really the type of consumer WordPress.com was suited to.&lt;/p&gt;</description>
     </item>

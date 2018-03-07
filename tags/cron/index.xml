@@ -6,6 +6,8 @@
     <description>Recent content in Cron on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <managingEditor>hello@vickylai.io (Vicky Lai)</managingEditor>
+    <webMaster>hello@vickylai.io (Vicky Lai)</webMaster>
     <lastBuildDate>Mon, 05 Mar 2018 10:29:15 -0500</lastBuildDate>
     
 	<atom:link href="https://vickylai.io/tags/cron/index.xml" rel="self" type="application/rss+xml" />
@@ -15,7 +17,7 @@
       <title>Running a free Twitter bot on AWS Lambda</title>
       <link>https://vickylai.io/verbose/aws-lambda/</link>
       <pubDate>Mon, 05 Mar 2018 10:29:15 -0500</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/aws-lambda/</guid>
       <description>If you read About time, you&amp;rsquo;ll know that I&amp;rsquo;m a big believer in spending time now on building things that save time in the future. To this end I built a simple Twitter bot in Go that would occasionally post links to my articles and keep my account interesting even when I&amp;rsquo;m too busy to use it. The tweets help drive traffic to my sites, and I don&amp;rsquo;t have to lift a finger.</description>
     </item>
@@ -24,7 +26,7 @@
       <title>How I created custom desktop notifications using terminal and cron</title>
       <link>https://vickylai.io/verbose/create-desktop-notifications-cron/</link>
       <pubDate>Tue, 21 Feb 2017 10:48:38 +0700</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/create-desktop-notifications-cron/</guid>
       <description>In my last post I talked about moving from Windows 10 to running i3 on Linux, built up from Debian Base System. Among other things, this change has taught me about the benefits of using basic tools and running a minimal, lightweight system. You can achieve a lot of functionality with just command line tools and simple utilities. One example I&amp;rsquo;d like to illustrate in this post is setting up desktop notifications.</description>
     </item>

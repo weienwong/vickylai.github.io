@@ -6,6 +6,8 @@
     <description>Recent content in Api on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <managingEditor>hello@vickylai.io (Vicky Lai)</managingEditor>
+    <webMaster>hello@vickylai.io (Vicky Lai)</webMaster>
     <lastBuildDate>Fri, 06 Jan 2017 16:39:29 +0700</lastBuildDate>
     
 	<atom:link href="https://vickylai.io/tags/api/index.xml" rel="self" type="application/rss+xml" />
@@ -15,7 +17,7 @@
       <title>I&#39;ve been a back-end coder for a week: here&#39;s how I made a Twitter stream</title>
       <link>https://vickylai.io/verbose/how-i-made-a-twitter-stream/</link>
       <pubDate>Fri, 06 Jan 2017 16:39:29 +0700</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/how-i-made-a-twitter-stream/</guid>
       <description>This post covers my initial adventures in exploring Twitter&amp;rsquo;s Streaming API. I&amp;rsquo;ll talk about:
  Getting started making a Twitter Streaming program using a template Problems arising from programming in Python with Windows 10 and Unicode Refining the search function  You can follow along with my template on Github.

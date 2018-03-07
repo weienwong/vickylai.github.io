@@ -6,6 +6,8 @@
     <description>Recent content in Github on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <managingEditor>hello@vickylai.io (Vicky Lai)</managingEditor>
+    <webMaster>hello@vickylai.io (Vicky Lai)</webMaster>
     <lastBuildDate>Sat, 28 Jan 2017 13:16:17 +0700</lastBuildDate>
     
 	<atom:link href="https://vickylai.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
@@ -15,7 +17,7 @@
       <title>How I ditched WordPress and set up my custom domain HTTPS site for (almost) free</title>
       <link>https://vickylai.io/verbose/free-custom-domain-website-https/</link>
       <pubDate>Sat, 28 Jan 2017 13:16:17 +0700</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/free-custom-domain-website-https/</guid>
       <description>&lt;p&gt;I got annoyed with WordPress.com. While using the service has its pros (like https and a mobile responsive website, and being very visual and beginner-friendly) it&amp;rsquo;s limiting. For someone who&amp;rsquo;s comfortable enough to be tweaking CSS but who&amp;rsquo;s not interested in creating their own theme (or paying upwards of $50 for one), I felt I wasn&amp;rsquo;t really the type of consumer WordPress.com was suited to.&lt;/p&gt;</description>
     </item>

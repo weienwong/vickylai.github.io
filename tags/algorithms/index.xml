@@ -6,6 +6,8 @@
     <description>Recent content in Algorithms on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <managingEditor>hello@vickylai.io (Vicky Lai)</managingEditor>
+    <webMaster>hello@vickylai.io (Vicky Lai)</webMaster>
     <lastBuildDate>Sat, 06 Jan 2018 20:00:28 -0500</lastBuildDate>
     
 	<atom:link href="https://vickylai.io/tags/algorithms/index.xml" rel="self" type="application/rss+xml" />
@@ -15,7 +17,7 @@
       <title>A unicode substitution cipher algorithm</title>
       <link>https://vickylai.io/verbose/unicode-cipher/</link>
       <pubDate>Sat, 06 Jan 2018 20:00:28 -0500</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/unicode-cipher/</guid>
       <description>Full transparency: I occasionally waste time messing around on Twitter. (Gasp! Shock!) One of the ways I waste time messing around on Twitter is by writing my name in my profile with different unicode character &amp;ldquo;fonts,&amp;rdquo; 𝖑𝖎𝖐𝖊 𝖙𝖍𝖎𝖘 𝖔𝖓𝖊. I previously did this by searching for different unicode characters on Google, then one-by-one copying and pasting them into the &amp;ldquo;Name&amp;rdquo; field on my Twitter profile. Since this method of wasting time was a bit of a time waster, I decided (in true programmer fashion) to write a tool that would help me save some time while wasting it.</description>
     </item>
@@ -24,7 +26,7 @@
       <title>How to code a satellite algorithm and cook paella from scratch</title>
       <link>https://vickylai.io/verbose/build-from-scratch/</link>
       <pubDate>Fri, 08 Sep 2017 16:50:24 -0400</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/build-from-scratch/</guid>
       <description>What if I told you that by the end of this article, you&amp;rsquo;ll be able to calculate the orbital period of satellites around Earth using their average altitudes and&amp;hellip; You tuned out already, didn&amp;rsquo;t you?
 Okay, how about this: I&amp;rsquo;m going to teach you how to make paella!

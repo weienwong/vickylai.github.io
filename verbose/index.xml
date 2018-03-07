@@ -6,6 +6,8 @@
     <description>Recent content in --verbose on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <managingEditor>hello@vickylai.io (Vicky Lai)</managingEditor>
+    <webMaster>hello@vickylai.io (Vicky Lai)</webMaster>
     <lastBuildDate>Mon, 05 Mar 2018 10:29:15 -0500</lastBuildDate>
     
 	<atom:link href="https://vickylai.io/verbose/index.xml" rel="self" type="application/rss+xml" />
@@ -15,7 +17,7 @@
       <title>Running a free Twitter bot on AWS Lambda</title>
       <link>https://vickylai.io/verbose/aws-lambda/</link>
       <pubDate>Mon, 05 Mar 2018 10:29:15 -0500</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/aws-lambda/</guid>
       <description>If you read About time, you&amp;rsquo;ll know that I&amp;rsquo;m a big believer in spending time now on building things that save time in the future. To this end I built a simple Twitter bot in Go that would occasionally post links to my articles and keep my account interesting even when I&amp;rsquo;m too busy to use it. The tweets help drive traffic to my sites, and I don&amp;rsquo;t have to lift a finger.</description>
     </item>
@@ -24,7 +26,7 @@
       <title>Moving to a new domain without breaking old links: AWS &amp; Disqus</title>
       <link>https://vickylai.io/verbose/aws-new-domain/</link>
       <pubDate>Wed, 10 Jan 2018 08:56:20 -0500</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/aws-new-domain/</guid>
       <description>&lt;p&gt;I started blogging about my nomadic travels last year, and so far the habit has stuck. Like all side projects, I won&amp;rsquo;t typically invest heavily in setting up web properties before I can be reasonably certain that such an investment is worth my time or enjoyment. In other words: don&amp;rsquo;t buy the domain until you&amp;rsquo;ve proven to yourself that you&amp;rsquo;ll stick with it!&lt;/p&gt;</description>
     </item>
@@ -33,7 +35,7 @@
       <title>A unicode substitution cipher algorithm</title>
       <link>https://vickylai.io/verbose/unicode-cipher/</link>
       <pubDate>Sat, 06 Jan 2018 20:00:28 -0500</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/unicode-cipher/</guid>
       <description>Full transparency: I occasionally waste time messing around on Twitter. (Gasp! Shock!) One of the ways I waste time messing around on Twitter is by writing my name in my profile with different unicode character &amp;ldquo;fonts,&amp;rdquo; 𝖑𝖎𝖐𝖊 𝖙𝖍𝖎𝖘 𝖔𝖓𝖊. I previously did this by searching for different unicode characters on Google, then one-by-one copying and pasting them into the &amp;ldquo;Name&amp;rdquo; field on my Twitter profile. Since this method of wasting time was a bit of a time waster, I decided (in true programmer fashion) to write a tool that would help me save some time while wasting it.</description>
     </item>
@@ -42,7 +44,7 @@
       <title>Hosting your static site with AWS S3, Route 53, and CloudFront</title>
       <link>https://vickylai.io/verbose/aws-static-site/</link>
       <pubDate>Wed, 13 Dec 2017 20:46:12 -0500</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/aws-static-site/</guid>
       <description>&lt;p&gt;Some time ago I decided to stop freeloading on GitHub pages and move my static page for &lt;a href=&#34;https://vickylai.com&#34;&gt;vickylai.com&lt;/a&gt; to Amazon Web Services (AWS). It turns out that I&amp;rsquo;m still mostly freeloading (yay free tier) so it amounted to a learning experience. Here are the components that let me host and serve the site at my custom domain with HTTPS.&lt;/p&gt;</description>
     </item>
@@ -51,7 +53,7 @@
       <title>About time</title>
       <link>https://vickylai.io/verbose/about-time/</link>
       <pubDate>Wed, 22 Nov 2017 14:05:14 -0500</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/about-time/</guid>
       <description>This morning I read an article that&amp;rsquo;s been making the rounds lately: Modern Media Is a DoS Attack on Your Free Will.
 It&amp;rsquo;s made me think, which I must admit, I at first didn&amp;rsquo;t like. See, when I wake up in the morning (and subsequently wake up my computer) the first thing I do is go on Twitter to catch up on everything I missed while I was asleep. All this before my first coffee, mind you.</description>
@@ -61,7 +63,7 @@ It&amp;rsquo;s made me think, which I must admit, I at first didn&amp;rsquo;t li
       <title>Batch renaming images, including image resolution, with awk</title>
       <link>https://vickylai.io/verbose/renaming-images/</link>
       <pubDate>Mon, 20 Nov 2017 13:59:30 -0500</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/renaming-images/</guid>
       <description>&lt;p&gt;The most recent item on my list of &amp;ldquo;Geeky things I did that made me feel pretty awesome&amp;rdquo; is an hour&amp;rsquo;s adventure that culminated in this code:&lt;/p&gt;</description>
     </item>
@@ -70,7 +72,7 @@ It&amp;rsquo;s made me think, which I must admit, I at first didn&amp;rsquo;t li
       <title>How to code a satellite algorithm and cook paella from scratch</title>
       <link>https://vickylai.io/verbose/build-from-scratch/</link>
       <pubDate>Fri, 08 Sep 2017 16:50:24 -0400</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/build-from-scratch/</guid>
       <description>What if I told you that by the end of this article, you&amp;rsquo;ll be able to calculate the orbital period of satellites around Earth using their average altitudes and&amp;hellip; You tuned out already, didn&amp;rsquo;t you?
 Okay, how about this: I&amp;rsquo;m going to teach you how to make paella!
@@ -81,7 +83,7 @@ And you&amp;rsquo;ll have written a function that does the stuff I mentioned abo
       <title>Making sandwiches with closures in JavaScript</title>
       <link>https://vickylai.io/verbose/javascript-closures/</link>
       <pubDate>Sun, 28 May 2017 09:16:35 +0700</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/javascript-closures/</guid>
       <description>&lt;p&gt;Say you&amp;rsquo;re having a little coding get-together, and you need some sandwiches. You happen to know that everyone prefers a different type of sandwich, like chicken, ham, or peanut butter and mayo. You could make all these sandwiches yourself, but that would be tedious and boring.&lt;/p&gt;</description>
     </item>
@@ -90,7 +92,7 @@ And you&amp;rsquo;ll have written a function that does the stuff I mentioned abo
       <title>Understanding Array.prototype.reduce() and recursion using apple pie</title>
       <link>https://vickylai.io/verbose/reduce-recursion-with-pie/</link>
       <pubDate>Thu, 18 May 2017 11:40:06 +0700</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/reduce-recursion-with-pie/</guid>
       <description>&lt;p&gt;I was having trouble understanding &lt;code&gt;reduce()&lt;/code&gt; and recursion in JavaScript, so I wrote this article to explain it to myself (hey, look, recursion!). I hope you find my examples both helpful and delicious.&lt;/p&gt;
 
@@ -101,7 +103,7 @@ And you&amp;rsquo;ll have written a function that does the stuff I mentioned abo
       <title>Iterating over objects and arrays: frequent errors</title>
       <link>https://vickylai.io/verbose/iterating-objects-arrays/</link>
       <pubDate>Tue, 16 May 2017 10:46:46 +0700</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/iterating-objects-arrays/</guid>
       <description>Here&amp;rsquo;s some complaining a quick overview of some code that has confounded me more than once. I&amp;rsquo;m told even very experienced developers encounter these situations regularly, so if you find yourself on your third cup of coffee scratching your head over why your code is doing exactly what you told it to do (and not what you want it to do), maybe this post can help you.
 The example code is JavaScript, since that&amp;rsquo;s what I&amp;rsquo;ve been working in lately, but I believe the concepts to be pretty universal.</description>
@@ -111,7 +113,7 @@ The example code is JavaScript, since that&amp;rsquo;s what I&amp;rsquo;ve been 
       <title>That time 30 seconds, StackOverflow, and sed saved me 30 minutes</title>
       <link>https://vickylai.io/verbose/when-stackoverflow-sed-saves-30mins/</link>
       <pubDate>Sat, 06 May 2017 20:04:53 +0800</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/when-stackoverflow-sed-saves-30mins/</guid>
       <description>This week, I launched my new website and changed my Twitter username to match. I was about to spend time going through all my old blog posts to find and update the URLs when this very future blog post popped up on my screen like Clippy and shook its pixelated head disapprovingly.
 Here&amp;rsquo;s a worthwhile new habit for you: anytime you find yourself going &amp;ldquo;Ughhh I have to do that?</description>
@@ -121,7 +123,7 @@ Here&amp;rsquo;s a worthwhile new habit for you: anytime you find yourself going
       <title>Top free resources for developing coding superpowers</title>
       <link>https://vickylai.io/verbose/free-resources-for-coding-superpowers/</link>
       <pubDate>Thu, 27 Apr 2017 08:14:09 +0800</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/free-resources-for-coding-superpowers/</guid>
       <description>I&amp;rsquo;m frequently asked for my opinion on how to get started on being a freelance developer. If you&amp;rsquo;re hoping to live the life of a remote working digital nomad, whichever career you choose, having a little coding expertise in your back pocket will be a big benefit.
 Here&amp;rsquo;s a quick list of resources that you should definitely look at first if you&amp;rsquo;re hoping to gain some coding superpowers for free.</description>
@@ -131,7 +133,7 @@ Here&amp;rsquo;s a quick list of resources that you should definitely look at fi
       <title>Things you need to know about becoming a Data Scientist</title>
       <link>https://vickylai.io/verbose/to-be-a-data-scientist/</link>
       <pubDate>Fri, 31 Mar 2017 13:19:19 +0900</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/to-be-a-data-scientist/</guid>
       <description>&lt;p&gt;I recently attended a panel discussion hosted by General Assembly in Singapore entitled, &amp;ldquo;So you want to be a Data Scientist/Analyst&amp;rdquo;. The panel featured professionals in different stages of their careers and offered a wealth of information to an audience of hopefuls, including tips on how to land a job as a data scientist, and stories debunking myths that color this field. &lt;/p&gt;</description>
     </item>
@@ -140,7 +142,7 @@ Here&amp;rsquo;s a quick list of resources that you should definitely look at fi
       <title>How I turned Unity into a tiling window manager</title>
       <link>https://vickylai.io/verbose/turn-unity-into-tiling-windows-manager/</link>
       <pubDate>Wed, 22 Mar 2017 16:10:10 +0800</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/turn-unity-into-tiling-windows-manager/</guid>
       <description>After a long and loving battle experience using i3 as my workhorse window manager on my old laptop, I&amp;rsquo;ve decided to mainly use Unity on my new laptop instead. I&amp;rsquo;m a huge fan of tiling window managers as a result of my i3 experience, however, the time it took to configure everything is longer than I wanted to spend getting set up before getting to work with my new laptop.</description>
     </item>
@@ -149,7 +151,7 @@ Here&amp;rsquo;s a quick list of resources that you should definitely look at fi
       <title>How I set up a single Dropbox folder on my dual-boot Windows and Linux system</title>
       <link>https://vickylai.io/verbose/same-dropbox-dual-boot/</link>
       <pubDate>Fri, 17 Mar 2017 10:58:01 +0800</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/same-dropbox-dual-boot/</guid>
       <description>I&amp;rsquo;ve now set up two different laptops to dual-boot Windows 10 and different Linux distributions. Here&amp;rsquo;s how to ensure you maintain one Dropbox folder over both operating systems.
 Assuming Windows was there first:
@@ -160,7 +162,7 @@ Assuming Windows was there first:
       <title>How I created custom desktop notifications using terminal and cron</title>
       <link>https://vickylai.io/verbose/create-desktop-notifications-cron/</link>
       <pubDate>Tue, 21 Feb 2017 10:48:38 +0700</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/create-desktop-notifications-cron/</guid>
       <description>In my last post I talked about moving from Windows 10 to running i3 on Linux, built up from Debian Base System. Among other things, this change has taught me about the benefits of using basic tools and running a minimal, lightweight system. You can achieve a lot of functionality with just command line tools and simple utilities. One example I&amp;rsquo;d like to illustrate in this post is setting up desktop notifications.</description>
     </item>
@@ -169,7 +171,7 @@ Assuming Windows was there first:
       <title>How a lifelong Windows user switched to Linux... the hard way</title>
       <link>https://vickylai.io/verbose/how-windows-user-switched-to-linux/</link>
       <pubDate>Mon, 06 Feb 2017 14:23:59 +0700</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/how-windows-user-switched-to-linux/</guid>
       <description>&lt;p&gt;Let me preface this by saying that I&amp;rsquo;ve always been interested in finding out how things work. If a thing does something, I want to know why, how, and if I can customize it.&lt;/p&gt;
 
@@ -180,7 +182,7 @@ Assuming Windows was there first:
       <title>How I ditched WordPress and set up my custom domain HTTPS site for (almost) free</title>
       <link>https://vickylai.io/verbose/free-custom-domain-website-https/</link>
       <pubDate>Sat, 28 Jan 2017 13:16:17 +0700</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/free-custom-domain-website-https/</guid>
       <description>&lt;p&gt;I got annoyed with WordPress.com. While using the service has its pros (like https and a mobile responsive website, and being very visual and beginner-friendly) it&amp;rsquo;s limiting. For someone who&amp;rsquo;s comfortable enough to be tweaking CSS but who&amp;rsquo;s not interested in creating their own theme (or paying upwards of $50 for one), I felt I wasn&amp;rsquo;t really the type of consumer WordPress.com was suited to.&lt;/p&gt;</description>
     </item>
@@ -189,7 +191,7 @@ Assuming Windows was there first:
       <title>Fundamentals of programming: iterations in Python</title>
       <link>https://vickylai.io/verbose/python-programming-fundamentals-iterations/</link>
       <pubDate>Wed, 18 Jan 2017 21:58:28 +0700</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/python-programming-fundamentals-iterations/</guid>
       <description>I&amp;rsquo;ve been working in Python 3 for about a week, and so far greatly enjoy it. To me, learning code syntax (and programming in general) amounts to an amalgamation of lego blocks: once it&amp;rsquo;s understood what a certain color of block does, it&amp;rsquo;s straightforward to combine them to create the structure you&amp;rsquo;re looking for.
 That said, some blocks can be a little confusing at first. I found documentation relating to iteration in Python to be a little hard to digest, mostly because of subtle differences in terminology: iteration, iterator, iterating, iterable&amp;hellip; it&amp;rsquo;s enough to make your eyes glaze over.</description>
@@ -199,7 +201,7 @@ That said, some blocks can be a little confusing at first. I found documentation
       <title>I&#39;ve been a back-end coder for a week: here&#39;s how I made a Twitter stream</title>
       <link>https://vickylai.io/verbose/how-i-made-a-twitter-stream/</link>
       <pubDate>Fri, 06 Jan 2017 16:39:29 +0700</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/how-i-made-a-twitter-stream/</guid>
       <description>This post covers my initial adventures in exploring Twitter&amp;rsquo;s Streaming API. I&amp;rsquo;ll talk about:
  Getting started making a Twitter Streaming program using a template Problems arising from programming in Python with Windows 10 and Unicode Refining the search function  You can follow along with my template on Github.

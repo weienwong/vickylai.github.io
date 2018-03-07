@@ -6,6 +6,8 @@
     <description>Recent content in Life on VickyLai.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <managingEditor>hello@vickylai.io (Vicky Lai)</managingEditor>
+    <webMaster>hello@vickylai.io (Vicky Lai)</webMaster>
     <lastBuildDate>Wed, 22 Nov 2017 14:05:14 -0500</lastBuildDate>
     
 	<atom:link href="https://vickylai.io/tags/life/index.xml" rel="self" type="application/rss+xml" />
@@ -15,7 +17,7 @@
       <title>About time</title>
       <link>https://vickylai.io/verbose/about-time/</link>
       <pubDate>Wed, 22 Nov 2017 14:05:14 -0500</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/about-time/</guid>
       <description>This morning I read an article that&amp;rsquo;s been making the rounds lately: Modern Media Is a DoS Attack on Your Free Will.
 It&amp;rsquo;s made me think, which I must admit, I at first didn&amp;rsquo;t like. See, when I wake up in the morning (and subsequently wake up my computer) the first thing I do is go on Twitter to catch up on everything I missed while I was asleep. All this before my first coffee, mind you.</description>
@@ -25,7 +27,7 @@ It&amp;rsquo;s made me think, which I must admit, I at first didn&amp;rsquo;t li
       <title>Things you need to know about becoming a Data Scientist</title>
       <link>https://vickylai.io/verbose/to-be-a-data-scientist/</link>
       <pubDate>Fri, 31 Mar 2017 13:19:19 +0900</pubDate>
-      
+      <author>hello@vickylai.io (Vicky Lai)</author>
       <guid>https://vickylai.io/verbose/to-be-a-data-scientist/</guid>
       <description>&lt;p&gt;I recently attended a panel discussion hosted by General Assembly in Singapore entitled, &amp;ldquo;So you want to be a Data Scientist/Analyst&amp;rdquo;. The panel featured professionals in different stages of their careers and offered a wealth of information to an audience of hopefuls, including tips on how to land a job as a data scientist, and stories debunking myths that color this field. &lt;/p&gt;</description>
     </item>
