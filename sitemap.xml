@@ -3,6 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://vickylai.io/work/aba/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vickylai.io/work/hugo-iintroduction/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vickylai.io/work/simon/</loc>
+  </url>
+  
+  <url>
     <loc>https://vickylai.io/verbose/aws-lambda/</loc>
     <lastmod>2018-03-05T10:29:15-05:00</lastmod>
   </url>
@@ -133,10 +145,6 @@
   </url>
   
   <url>
-    <loc>https://vickylai.io/work/aba/</loc>
-  </url>
-  
-  <url>
     <loc>https://vickylai.io/work/atazzo/</loc>
   </url>
   
@@ -218,10 +226,6 @@
   </url>
   
   <url>
-    <loc>https://vickylai.io/work/hugo-iintroduction/</loc>
-  </url>
-  
-  <url>
     <loc>https://vickylai.io/tags/javascript/</loc>
     <lastmod>2018-01-06T20:00:28-05:00</lastmod>
     <priority>0</priority>
@@ -255,10 +259,6 @@
   
   <url>
     <loc>https://vickylai.io/work/hugo-sam/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vickylai.io/work/simon/</loc>
   </url>
   
   <url>
