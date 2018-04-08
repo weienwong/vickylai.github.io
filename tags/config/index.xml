@@ -1,51 +1,52 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Config on VickyLai.io</title>
-    <link>https://vickylai.io/tags/config/</link>
-    <description>Recent content in Config on VickyLai.io</description>
+    <title>Config on VickyLai.com</title>
+    <link>https://vickylai.com/tags/config/</link>
+    <description>Recent content in Config on VickyLai.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>hello@vickylai.io (Vicky Lai)</managingEditor>
-    <webMaster>hello@vickylai.io (Vicky Lai)</webMaster>
+    <managingEditor>hello@vickylai.com (Vicky Lai)</managingEditor>
+    <webMaster>hello@vickylai.com (Vicky Lai)</webMaster>
     <lastBuildDate>Mon, 05 Mar 2018 10:29:15 -0500</lastBuildDate>
     
-	<atom:link href="https://vickylai.io/tags/config/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vickylai.com/tags/config/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Running a free Twitter bot on AWS Lambda</title>
-      <link>https://vickylai.io/verbose/aws-lambda/</link>
+      <link>https://vickylai.com/verbose/aws-lambda/</link>
       <pubDate>Mon, 05 Mar 2018 10:29:15 -0500</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/verbose/aws-lambda/</guid>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/aws-lambda/</guid>
       <description>If you read About time, you&amp;rsquo;ll know that I&amp;rsquo;m a big believer in spending time now on building things that save time in the future. To this end I built a simple Twitter bot in Go that would occasionally post links to my articles and keep my account interesting even when I&amp;rsquo;m too busy to use it. The tweets help drive traffic to my sites, and I don&amp;rsquo;t have to lift a finger.</description>
     </item>
     
     <item>
       <title>Moving to a new domain without breaking old links: AWS &amp; Disqus</title>
-      <link>https://vickylai.io/verbose/aws-new-domain/</link>
+      <link>https://vickylai.com/verbose/aws-new-domain/</link>
       <pubDate>Wed, 10 Jan 2018 08:56:20 -0500</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/verbose/aws-new-domain/</guid>
-      <description>&lt;p&gt;I started blogging about my nomadic travels last year, and so far the habit has stuck. Like all side projects, I won&amp;rsquo;t typically invest heavily in setting up web properties before I can be reasonably certain that such an investment is worth my time or enjoyment. In other words: don&amp;rsquo;t buy the domain until you&amp;rsquo;ve proven to yourself that you&amp;rsquo;ll stick with it!&lt;/p&gt;</description>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/aws-new-domain/</guid>
+      <description>I started blogging about my nomadic travels last year, and so far the habit has stuck. Like all side projects, I won&amp;rsquo;t typically invest heavily in setting up web properties before I can be reasonably certain that such an investment is worth my time or enjoyment. In other words: don&amp;rsquo;t buy the domain until you&amp;rsquo;ve proven to yourself that you&amp;rsquo;ll stick with it!
+After some months of regular posting I felt I was ready to commit (short courtship, I know, but we&amp;rsquo;re all adults here) and I bought a dedicated domain, herOneBag.</description>
     </item>
     
     <item>
       <title>How I turned Unity into a tiling window manager</title>
-      <link>https://vickylai.io/verbose/turn-unity-into-tiling-windows-manager/</link>
+      <link>https://vickylai.com/verbose/turn-unity-into-tiling-windows-manager/</link>
       <pubDate>Wed, 22 Mar 2017 16:10:10 +0800</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/verbose/turn-unity-into-tiling-windows-manager/</guid>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/turn-unity-into-tiling-windows-manager/</guid>
       <description>After a long and loving battle experience using i3 as my workhorse window manager on my old laptop, I&amp;rsquo;ve decided to mainly use Unity on my new laptop instead. I&amp;rsquo;m a huge fan of tiling window managers as a result of my i3 experience, however, the time it took to configure everything is longer than I wanted to spend getting set up before getting to work with my new laptop.</description>
     </item>
     
     <item>
       <title>How I set up a single Dropbox folder on my dual-boot Windows and Linux system</title>
-      <link>https://vickylai.io/verbose/same-dropbox-dual-boot/</link>
+      <link>https://vickylai.com/verbose/same-dropbox-dual-boot/</link>
       <pubDate>Fri, 17 Mar 2017 10:58:01 +0800</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/verbose/same-dropbox-dual-boot/</guid>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/same-dropbox-dual-boot/</guid>
       <description>I&amp;rsquo;ve now set up two different laptops to dual-boot Windows 10 and different Linux distributions. Here&amp;rsquo;s how to ensure you maintain one Dropbox folder over both operating systems.
 Assuming Windows was there first:
  Mount the Windows drive in Linux Install Dropbox in Linux Sign in to link to Dropbox Immediately change Dropbox folder location to the mounted drive (same Dropbox folder as Windows)  Get it right the first time Dropbox will automatically set up your Dropbox folder when you run it the first time.</description>
@@ -53,19 +54,19 @@ Assuming Windows was there first:
     
     <item>
       <title>How I created custom desktop notifications using terminal and cron</title>
-      <link>https://vickylai.io/verbose/create-desktop-notifications-cron/</link>
+      <link>https://vickylai.com/verbose/create-desktop-notifications-cron/</link>
       <pubDate>Tue, 21 Feb 2017 10:48:38 +0700</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/verbose/create-desktop-notifications-cron/</guid>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/create-desktop-notifications-cron/</guid>
       <description>In my last post I talked about moving from Windows 10 to running i3 on Linux, built up from Debian Base System. Among other things, this change has taught me about the benefits of using basic tools and running a minimal, lightweight system. You can achieve a lot of functionality with just command line tools and simple utilities. One example I&amp;rsquo;d like to illustrate in this post is setting up desktop notifications.</description>
     </item>
     
     <item>
       <title>How a lifelong Windows user switched to Linux... the hard way</title>
-      <link>https://vickylai.io/verbose/how-windows-user-switched-to-linux/</link>
+      <link>https://vickylai.com/verbose/how-windows-user-switched-to-linux/</link>
       <pubDate>Mon, 06 Feb 2017 14:23:59 +0700</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/verbose/how-windows-user-switched-to-linux/</guid>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/how-windows-user-switched-to-linux/</guid>
       <description>&lt;p&gt;Let me preface this by saying that I&amp;rsquo;ve always been interested in finding out how things work. If a thing does something, I want to know why, how, and if I can customize it.&lt;/p&gt;
 
 &lt;p&gt;It should come as no surprise that Windows 10 drove me crazy.&lt;/p&gt;</description>

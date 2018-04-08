@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data Science on VickyLai.io</title>
-    <link>https://vickylai.io/tags/data-science/</link>
-    <description>Recent content in Data Science on VickyLai.io</description>
+    <title>Data Science on VickyLai.com</title>
+    <link>https://vickylai.com/tags/data-science/</link>
+    <description>Recent content in Data Science on VickyLai.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>hello@vickylai.io (Vicky Lai)</managingEditor>
-    <webMaster>hello@vickylai.io (Vicky Lai)</webMaster>
+    <managingEditor>hello@vickylai.com (Vicky Lai)</managingEditor>
+    <webMaster>hello@vickylai.com (Vicky Lai)</webMaster>
     <lastBuildDate>Fri, 31 Mar 2017 13:19:19 +0900</lastBuildDate>
     
-	<atom:link href="https://vickylai.io/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vickylai.com/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Things you need to know about becoming a Data Scientist</title>
-      <link>https://vickylai.io/verbose/to-be-a-data-scientist/</link>
+      <link>https://vickylai.com/verbose/to-be-a-data-scientist/</link>
       <pubDate>Fri, 31 Mar 2017 13:19:19 +0900</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/verbose/to-be-a-data-scientist/</guid>
-      <description>&lt;p&gt;I recently attended a panel discussion hosted by General Assembly in Singapore entitled, &amp;ldquo;So you want to be a Data Scientist/Analyst&amp;rdquo;. The panel featured professionals in different stages of their careers and offered a wealth of information to an audience of hopefuls, including tips on how to land a job as a data scientist, and stories debunking myths that color this field. &lt;/p&gt;</description>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/to-be-a-data-scientist/</guid>
+      <description>I recently attended a panel discussion hosted by General Assembly in Singapore entitled, &amp;ldquo;So you want to be a Data Scientist/Analyst&amp;rdquo;. The panel featured professionals in different stages of their careers and offered a wealth of information to an audience of hopefuls, including tips on how to land a job as a data scientist, and stories debunking myths that color this field.
+The panelists Misrab Faizullah-Khan - VP of Data Science, GO_JEK</description>
     </item>
     
   </channel>

@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data on VickyLai.io</title>
-    <link>https://vickylai.io/tags/data/</link>
-    <description>Recent content in Data on VickyLai.io</description>
+    <title>Data on VickyLai.com</title>
+    <link>https://vickylai.com/tags/data/</link>
+    <description>Recent content in Data on VickyLai.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>hello@vickylai.io (Vicky Lai)</managingEditor>
-    <webMaster>hello@vickylai.io (Vicky Lai)</webMaster>
+    <managingEditor>hello@vickylai.com (Vicky Lai)</managingEditor>
+    <webMaster>hello@vickylai.com (Vicky Lai)</webMaster>
     <lastBuildDate>Mon, 20 Nov 2017 13:59:30 -0500</lastBuildDate>
     
-	<atom:link href="https://vickylai.io/tags/data/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vickylai.com/tags/data/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Batch renaming images, including image resolution, with awk</title>
-      <link>https://vickylai.io/verbose/renaming-images/</link>
+      <link>https://vickylai.com/verbose/renaming-images/</link>
       <pubDate>Mon, 20 Nov 2017 13:59:30 -0500</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/verbose/renaming-images/</guid>
-      <description>&lt;p&gt;The most recent item on my list of &amp;ldquo;Geeky things I did that made me feel pretty awesome&amp;rdquo; is an hour&amp;rsquo;s adventure that culminated in this code:&lt;/p&gt;</description>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/renaming-images/</guid>
+      <description>The most recent item on my list of &amp;ldquo;Geeky things I did that made me feel pretty awesome&amp;rdquo; is an hour&amp;rsquo;s adventure that culminated in this code:
+$ file IMG* | awk &#39;BEGIN{a=0} {print substr($1, 1, length($1)-5),a++&amp;quot;_&amp;quot;substr($8,1, length($8)-1)}&#39; | while read fn fr; do echo $(rename -v &amp;quot;s/$fn/img_$fr/g&amp;quot; *); done IMG_20170808_172653_425.jpg renamed as img_0_4032x3024.jpg IMG_20170808_173020_267.jpg renamed as img_1_3024x3506.jpg IMG_20170808_173130_616.jpg renamed as img_2_3024x3779.jpg IMG_20170808_173221_425.jpg renamed as img_3_3024x3780.jpg IMG_20170808_173417_059.jpg renamed as img_4_2956x2980.</description>
     </item>
     
   </channel>

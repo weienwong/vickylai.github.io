@@ -12,8 +12,9 @@
 
 
 I was having trouble understanding reduce() and recursion in JavaScript, so I wrote this article to explain it to myself (hey, look, recursion!). I hope you find my examples both helpful and delicious.
-
 Given an array with nested arrays:
+var arr = [1, [2], [3, [[4]]]]  We want to produce this:
+var flat = [1, 2, 3, 4]  Using for loops and if statements Naively, if we know the maximum number of nested arrays we&rsquo;ll encounter (there are 4 in this example), we can use for loops to iterate through each array item, then if statements to check if each item is in itself an array, and so on&hellip;
 
 
 ">
@@ -29,24 +30,25 @@ Understanding Array.prototype.reduce() and recursion using apple pie
 
 
 I was having trouble understanding reduce() and recursion in JavaScript, so I wrote this article to explain it to myself (hey, look, recursion!). I hope you find my examples both helpful and delicious.
-
 Given an array with nested arrays:
+var arr = [1, [2], [3, [[4]]]]  We want to produce this:
+var flat = [1, 2, 3, 4]  Using for loops and if statements Naively, if we know the maximum number of nested arrays we&rsquo;ll encounter (there are 4 in this example), we can use for loops to iterate through each array item, then if statements to check if each item is in itself an array, and so on&hellip;
 
 
 ">
 <meta property="og:image" content="
 
 
-https://vickylai.io/pixels/recursion-pie.jpg
+https://vickylai.com/pixels/recursion-pie.jpg
 
 
 ">
-<meta property="og:url" content="https://vickylai.io/verbose/reduce-recursion-with-pie/">
+<meta property="og:url" content="https://vickylai.com/verbose/reduce-recursion-with-pie/">
 
 <meta name="twitter:image" content="
 
 
-https://vickylai.io/pixels/recursion-pie.jpg
+https://vickylai.com/pixels/recursion-pie.jpg
 
 
 ">
@@ -61,7 +63,7 @@ https://vickylai.io/pixels/recursion-pie.jpg
 
 
 </title>
-<link rel="canonical" href="https://vickylai.io/verbose/reduce-recursion-with-pie/">
+<link rel="canonical" href="https://vickylai.com/verbose/reduce-recursion-with-pie/">
 
 <link rel="stylesheet" href="/css/style.css">
 
@@ -85,13 +87,15 @@ src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
 
-</head><body><div id="top"></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.io/">vickylai.io</a></div><div class="blog-menu no-mobile"><p><a href="/verbose">verbose</a> &#183;
+</head><body><div id="top"></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu no-mobile"><p><a href="/verbose">verbose</a> &#183;
 <a href="/#work">work</a>
 
-&#183; <a href="/#contact-box">contact</a>
-&#183; <a href="https://vickylai.io/">vickylai.io</a></p><hr/></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/recursion-pie.jpg"/></div><div id="content"><h1>Understanding Array.prototype.reduce() and recursion using apple pie</h1>Thu May 18, 2017 &#183; 1115 words
+&#183; <a href="mailto:hello@vickylai.com">email</a>
+&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/recursion-pie.jpg"/></div><div id="content"><h1>Understanding Array.prototype.reduce() and recursion using apple pie</h1>Thu May 18, 2017 &#183; 1115 words
 
-<div><span id="tag"><a href="/tags/javascript">javascript</a></span><span id="tag"><a href="/tags/coding">coding</a></span><span id="tag"><a href="/tags/food">food</a></span></div><hr/><p>I was having trouble understanding <code>reduce()</code> and recursion in JavaScript, so I wrote this article to explain it to myself (hey, look, recursion!). I hope you find my examples both helpful and delicious.</p>
+<div><span id="tag"><a href="/tags/javascript">javascript</a></span><span id="tag"><a href="/tags/coding">coding</a></span><span id="tag"><a href="/tags/food">food</a></span></div><hr/>
+
+<p>I was having trouble understanding <code>reduce()</code> and recursion in JavaScript, so I wrote this article to explain it to myself (hey, look, recursion!). I hope you find my examples both helpful and delicious.</p>
 
 <p>Given an array with nested arrays:</p>
 
@@ -225,10 +229,11 @@ crossorigin="anonymous"></script>
 <p>And don&rsquo;t worry about Adam, our out-of-work developer. He got so much press after being featured in this article that he opened up his very own AI-managed apple pie factory. He&rsquo;s very happy.</p>
 
 <p><img src="/pixels/recursion-adams-apples.jpg#center" alt="Adam's apple pie factory, &quot;Adam's Apples.&quot;" />
-<p class="has-text-centered img-caption">+1 for you if you saw that one coming.</p></p><p>Like this post? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.io%2fverbose%2freduce-recursion-with-pie%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/javascript-closures/">Making sandwiches with closures in JavaScript</a></li><li><a href="/verbose/iterating-objects-arrays/">Iterating over objects and arrays: frequent errors</a></li><li><a href="/verbose/build-from-scratch/">How to code a satellite algorithm and cook paella from scratch</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><ul><li><a href="https://github.com/hivickylai">github</a></li>
+<p class="has-text-centered img-caption">+1 for you if you saw that one coming.</p></p>
+<p>Like this post? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2freduce-recursion-with-pie%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/javascript-closures/">Making sandwiches with closures in JavaScript</a></li><li><a href="/verbose/iterating-objects-arrays/">Iterating over objects and arrays: frequent errors</a></li><li><a href="/verbose/build-from-scratch/">How to code a satellite algorithm and cook paella from scratch</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
 
-&#183; <li><a href="https://twitter.com/hivickylai">twitter</a></li>
-&#183; <li><a href="mailto:hello@vickylai.io" rel="noopener">email</a></li></ul></div></div></div>
+&#183; <a href="https://twitter.com/hivickylai">twitter</a>
+&#183; <a href="mailto:hello@vickylai.com" rel="noopener">email</a></p></div></div></div>
 <script>
     scrollTo = (element) => {
         window.scroll({

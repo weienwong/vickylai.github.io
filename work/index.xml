@@ -1,123 +1,63 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Works on VickyLai.io</title>
-    <link>https://vickylai.io/work/</link>
-    <description>Recent content in Works on VickyLai.io</description>
+    <title>Works on VickyLai.com</title>
+    <link>https://vickylai.com/work/</link>
+    <description>Recent content in Works on VickyLai.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>hello@vickylai.io (Vicky Lai)</managingEditor>
-    <webMaster>hello@vickylai.io (Vicky Lai)</webMaster>
+    <managingEditor>hello@vickylai.com (Vicky Lai)</managingEditor>
+    <webMaster>hello@vickylai.com (Vicky Lai)</webMaster>
     
-	<atom:link href="https://vickylai.io/work/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vickylai.com/work/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Apply by API</title>
-      <link>https://vickylai.io/work/aba/</link>
+      <link>https://vickylai.com/work/aba/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/work/aba/</guid>
-      <description></description>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/work/aba/</guid>
+      <description>ApplyByAPI.com An effective, automated pre-screening solution for technical hiring. ApplyByAPI addresses the need for organizations to pre-screen candidates effectively in a scalable manner, without consuming additional human time and effort.
+Python, Django, Stripe API, jQuery, AWS Elastic Beanstalk, RDS</description>
     </item>
     
     <item>
       <title>Introduction</title>
-      <link>https://vickylai.io/work/hugo-iintroduction/</link>
+      <link>https://vickylai.com/work/hugo-iintroduction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/work/hugo-iintroduction/</guid>
-      <description></description>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/work/hugo-iintroduction/</guid>
+      <description>Themes for Hugo Responsive, full-featured, and customizable themes for the popular static site generator Hugo. Focused on minimalism and adaptability. Open source on GitHub.
+Pug, Sass, gulp/Node.js, jQuery</description>
     </item>
     
     <item>
       <title>Simon</title>
-      <link>https://vickylai.io/work/simon/</link>
+      <link>https://vickylai.com/work/simon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/work/simon/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Adam Drake</title>
-      <link>https://vickylai.io/work/adam-drake/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/work/adam-drake/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Atazzo</title>
-      <link>https://vickylai.io/work/atazzo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/work/atazzo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cats vs Unicorns</title>
-      <link>https://vickylai.io/work/cats-vs-unicorns/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/work/cats-vs-unicorns/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Compress Test</title>
-      <link>https://vickylai.io/work/compress-test/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/work/compress-test/</guid>
-      <description></description>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/work/simon/</guid>
+      <description>A post-apocalyptic Simon game A reinvention of the classic Simon game with an RPG theme, implemented in JavaScript as a finite-state machine. Offers a choice of play modes with custom CSS effects.</description>
     </item>
     
     <item>
       <title>Fancy Unicode</title>
-      <link>https://vickylai.io/work/fancy-unicode/</link>
+      <link>https://vickylai.com/work/fancy-unicode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/work/fancy-unicode/</guid>
-      <description></description>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/work/fancy-unicode/</guid>
+      <description>A substitution cipher unicode converter A single-page app that instantly converts plain-looking letters into their fancier extended unicode character representations. It uses an algorithm based on the Caesar cipher from classical cryptography. Further details in this article.</description>
     </item>
     
     <item>
       <title>Moji Munchi</title>
-      <link>https://vickylai.io/work/moji-munchi/</link>
+      <link>https://vickylai.com/work/moji-munchi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/work/moji-munchi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Oliver Rothland</title>
-      <link>https://vickylai.io/work/oliver-rothland/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/work/oliver-rothland/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sam</title>
-      <link>https://vickylai.io/work/hugo-sam/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/work/hugo-sam/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sunflower Studio</title>
-      <link>https://vickylai.io/work/sunflower-studio/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/work/sunflower-studio/</guid>
-      <description></description>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/work/moji-munchi/</guid>
+      <description>Automated meal decisions with emojis and Google Maps Randomly generated food emojis suggest what to eat and where to get it near your.
+jQuery, W3C geolocation API, Google Maps API</description>
     </item>
     
   </channel>

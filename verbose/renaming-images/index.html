@@ -12,6 +12,7 @@
 
 
 The most recent item on my list of &ldquo;Geeky things I did that made me feel pretty awesome&rdquo; is an hour&rsquo;s adventure that culminated in this code:
+$ file IMG* | awk &#39;BEGIN{a=0} {print substr($1, 1, length($1)-5),a&#43;&#43;&quot;_&quot;substr($8,1, length($8)-1)}&#39; | while read fn fr; do echo $(rename -v &quot;s/$fn/img_$fr/g&quot; *); done IMG_20170808_172653_425.jpg renamed as img_0_4032x3024.jpg IMG_20170808_173020_267.jpg renamed as img_1_3024x3506.jpg IMG_20170808_173130_616.jpg renamed as img_2_3024x3779.jpg IMG_20170808_173221_425.jpg renamed as img_3_3024x3780.jpg IMG_20170808_173417_059.jpg renamed as img_4_2956x2980.
 
 
 ">
@@ -27,22 +28,23 @@ Batch renaming images, including image resolution, with awk
 
 
 The most recent item on my list of &ldquo;Geeky things I did that made me feel pretty awesome&rdquo; is an hour&rsquo;s adventure that culminated in this code:
+$ file IMG* | awk &#39;BEGIN{a=0} {print substr($1, 1, length($1)-5),a&#43;&#43;&quot;_&quot;substr($8,1, length($8)-1)}&#39; | while read fn fr; do echo $(rename -v &quot;s/$fn/img_$fr/g&quot; *); done IMG_20170808_172653_425.jpg renamed as img_0_4032x3024.jpg IMG_20170808_173020_267.jpg renamed as img_1_3024x3506.jpg IMG_20170808_173130_616.jpg renamed as img_2_3024x3779.jpg IMG_20170808_173221_425.jpg renamed as img_3_3024x3780.jpg IMG_20170808_173417_059.jpg renamed as img_4_2956x2980.
 
 
 ">
 <meta property="og:image" content="
 
 
-https://vickylai.io/pixels/renaming-rainbow.png
+https://vickylai.com/pixels/renaming-rainbow.png
 
 
 ">
-<meta property="og:url" content="https://vickylai.io/verbose/renaming-images/">
+<meta property="og:url" content="https://vickylai.com/verbose/renaming-images/">
 
 <meta name="twitter:image" content="
 
 
-https://vickylai.io/pixels/renaming-rainbow.png
+https://vickylai.com/pixels/renaming-rainbow.png
 
 
 ">
@@ -57,7 +59,7 @@ https://vickylai.io/pixels/renaming-rainbow.png
 
 
 </title>
-<link rel="canonical" href="https://vickylai.io/verbose/renaming-images/">
+<link rel="canonical" href="https://vickylai.com/verbose/renaming-images/">
 
 <link rel="stylesheet" href="/css/style.css">
 
@@ -81,13 +83,15 @@ src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
 
-</head><body><div id="top"></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.io/">vickylai.io</a></div><div class="blog-menu no-mobile"><p><a href="/verbose">verbose</a> &#183;
+</head><body><div id="top"></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu no-mobile"><p><a href="/verbose">verbose</a> &#183;
 <a href="/#work">work</a>
 
-&#183; <a href="/#contact-box">contact</a>
-&#183; <a href="https://vickylai.io/">vickylai.io</a></p><hr/></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/renaming-rainbow.png"/></div><div id="content"><h1>Batch renaming images, including image resolution, with awk</h1>Mon Nov 20, 2017 &#183; 851 words
+&#183; <a href="mailto:hello@vickylai.com">email</a>
+&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/renaming-rainbow.png"/></div><div id="content"><h1>Batch renaming images, including image resolution, with awk</h1>Mon Nov 20, 2017 &#183; 851 words
 
-<div><span id="tag"><a href="/tags/coding">coding</a></span><span id="tag"><a href="/tags/data">data</a></span><span id="tag"><a href="/tags/nerdy">nerdy</a></span><span id="tag"><a href="/tags/linux">linux</a></span><span id="tag"><a href="/tags/time-saver">time-saver</a></span></div><hr/><p>The most recent item on my list of &ldquo;Geeky things I did that made me feel pretty awesome&rdquo; is an hour&rsquo;s adventure that culminated in this code:</p>
+<div><span id="tag"><a href="/tags/coding">coding</a></span><span id="tag"><a href="/tags/data">data</a></span><span id="tag"><a href="/tags/linux">linux</a></span><span id="tag"><a href="/tags/time-saver">time-saver</a></span></div><hr/>
+
+<p>The most recent item on my list of &ldquo;Geeky things I did that made me feel pretty awesome&rdquo; is an hour&rsquo;s adventure that culminated in this code:</p>
 
 <pre><code class="language-bash">$ file IMG* | awk 'BEGIN{a=0} {print substr($1, 1, length($1)-5),a++&quot;_&quot;substr($8,1, length($8)-1)}' | while read fn fr; do echo $(rename -v &quot;s/$fn/img_$fr/g&quot; *); done
 IMG_20170808_172653_425.jpg renamed as img_0_4032x3024.jpg
@@ -172,10 +176,11 @@ IMG_20170913_073205_522.jpg renamed as img_12_2738x2738.jpg
 <pre><code class="language-bash">$ file IMG* | awk 'BEGIN{a=0} {print substr($1, 1, length($1)-5),a++&quot;_&quot;substr($8,1, length($8)-1)}' | while read fn fs; do echo $(rename -v &quot;s/$fn/img_$fs/g&quot; *); done | lolcat
 </code></pre>
 
-<p>Enjoy!</p><p>Like this post? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.io%2fverbose%2frenaming-images%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/create-desktop-notifications-cron/">How I created custom desktop notifications using terminal and cron</a></li><li><a href="/verbose/about-time/">About time</a></li><li><a href="/verbose/when-stackoverflow-sed-saves-30mins/">That time 30 seconds, StackOverflow, and sed saved me 30 minutes</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><ul><li><a href="https://github.com/hivickylai">github</a></li>
+<p>Enjoy!</p>
+<p>Like this post? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2frenaming-images%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/about-time/">About time</a></li><li><a href="/verbose/when-stackoverflow-sed-saves-30mins/">That time 30 seconds, StackOverflow, and sed saved me 30 minutes</a></li><li><a href="/verbose/create-desktop-notifications-cron/">How I created custom desktop notifications using terminal and cron</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
 
-&#183; <li><a href="https://twitter.com/hivickylai">twitter</a></li>
-&#183; <li><a href="mailto:hello@vickylai.io" rel="noopener">email</a></li></ul></div></div></div>
+&#183; <a href="https://twitter.com/hivickylai">twitter</a>
+&#183; <a href="mailto:hello@vickylai.com" rel="noopener">email</a></p></div></div></div>
 <script>
     scrollTo = (element) => {
         window.scroll({

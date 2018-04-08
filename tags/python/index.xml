@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on VickyLai.io</title>
-    <link>https://vickylai.io/tags/python/</link>
-    <description>Recent content in Python on VickyLai.io</description>
+    <title>Python on VickyLai.com</title>
+    <link>https://vickylai.com/tags/python/</link>
+    <description>Recent content in Python on VickyLai.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>hello@vickylai.io (Vicky Lai)</managingEditor>
-    <webMaster>hello@vickylai.io (Vicky Lai)</webMaster>
+    <managingEditor>hello@vickylai.com (Vicky Lai)</managingEditor>
+    <webMaster>hello@vickylai.com (Vicky Lai)</webMaster>
     <lastBuildDate>Wed, 18 Jan 2017 21:58:28 +0700</lastBuildDate>
     
-	<atom:link href="https://vickylai.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vickylai.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Fundamentals of programming: iterations in Python</title>
-      <link>https://vickylai.io/verbose/python-programming-fundamentals-iterations/</link>
+      <link>https://vickylai.com/verbose/python-programming-fundamentals-iterations/</link>
       <pubDate>Wed, 18 Jan 2017 21:58:28 +0700</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/verbose/python-programming-fundamentals-iterations/</guid>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/python-programming-fundamentals-iterations/</guid>
       <description>I&amp;rsquo;ve been working in Python 3 for about a week, and so far greatly enjoy it. To me, learning code syntax (and programming in general) amounts to an amalgamation of lego blocks: once it&amp;rsquo;s understood what a certain color of block does, it&amp;rsquo;s straightforward to combine them to create the structure you&amp;rsquo;re looking for.
 That said, some blocks can be a little confusing at first. I found documentation relating to iteration in Python to be a little hard to digest, mostly because of subtle differences in terminology: iteration, iterator, iterating, iterable&amp;hellip; it&amp;rsquo;s enough to make your eyes glaze over.</description>
     </item>
     
     <item>
       <title>I&#39;ve been a back-end coder for a week: here&#39;s how I made a Twitter stream</title>
-      <link>https://vickylai.io/verbose/how-i-made-a-twitter-stream/</link>
+      <link>https://vickylai.com/verbose/how-i-made-a-twitter-stream/</link>
       <pubDate>Fri, 06 Jan 2017 16:39:29 +0700</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/verbose/how-i-made-a-twitter-stream/</guid>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/how-i-made-a-twitter-stream/</guid>
       <description>This post covers my initial adventures in exploring Twitter&amp;rsquo;s Streaming API. I&amp;rsquo;ll talk about:
  Getting started making a Twitter Streaming program using a template Problems arising from programming in Python with Windows 10 and Unicode Refining the search function  You can follow along with my template on Github.
 1. Getting started If you&amp;rsquo;re new to Twitter&amp;rsquo;s Streaming API like I was this morning, here it is from the top.</description>

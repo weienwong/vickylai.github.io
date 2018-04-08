@@ -12,6 +12,7 @@
 
 
 Some time ago I decided to stop freeloading on GitHub pages and move my static page for vickylai.com to Amazon Web Services (AWS). It turns out that I&rsquo;m still mostly freeloading (yay free tier) so it amounted to a learning experience. Here are the components that let me host and serve the site at my custom domain with HTTPS.
+ Static site in Amazon Web Services S3 bucket Route 53 handling the DNS CloudFront for distribution and a custom SSL certificate  I set all that up most of a year ago.
 
 
 ">
@@ -27,22 +28,23 @@ Hosting your static site with AWS S3, Route 53, and CloudFront
 
 
 Some time ago I decided to stop freeloading on GitHub pages and move my static page for vickylai.com to Amazon Web Services (AWS). It turns out that I&rsquo;m still mostly freeloading (yay free tier) so it amounted to a learning experience. Here are the components that let me host and serve the site at my custom domain with HTTPS.
+ Static site in Amazon Web Services S3 bucket Route 53 handling the DNS CloudFront for distribution and a custom SSL certificate  I set all that up most of a year ago.
 
 
 ">
 <meta property="og:image" content="
 
 
-https://vickylai.io/pixels/aws-questions.png
+https://vickylai.com/pixels/aws-questions.png
 
 
 ">
-<meta property="og:url" content="https://vickylai.io/verbose/aws-static-site/">
+<meta property="og:url" content="https://vickylai.com/verbose/aws-static-site/">
 
 <meta name="twitter:image" content="
 
 
-https://vickylai.io/pixels/aws-questions.png
+https://vickylai.com/pixels/aws-questions.png
 
 
 ">
@@ -57,7 +59,7 @@ https://vickylai.io/pixels/aws-questions.png
 
 
 </title>
-<link rel="canonical" href="https://vickylai.io/verbose/aws-static-site/">
+<link rel="canonical" href="https://vickylai.com/verbose/aws-static-site/">
 
 <link rel="stylesheet" href="/css/style.css">
 
@@ -81,13 +83,15 @@ src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
 
-</head><body><div id="top"></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.io/">vickylai.io</a></div><div class="blog-menu no-mobile"><p><a href="/verbose">verbose</a> &#183;
+</head><body><div id="top"></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu no-mobile"><p><a href="/verbose">verbose</a> &#183;
 <a href="/#work">work</a>
 
-&#183; <a href="/#contact-box">contact</a>
-&#183; <a href="https://vickylai.io/">vickylai.io</a></p><hr/></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/aws-questions.png"/></div><div id="content"><h1>Hosting your static site with AWS S3, Route 53, and CloudFront</h1>Wed Dec 13, 2017 &#183; 1288 words
+&#183; <a href="mailto:hello@vickylai.com">email</a>
+&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/aws-questions.png"/></div><div id="content"><h1>Hosting your static site with AWS S3, Route 53, and CloudFront</h1>Wed Dec 13, 2017 &#183; 1288 words
 
-<div><span id="tag"><a href="/tags/aws">aws</a></span><span id="tag"><a href="/tags/websites">websites</a></span><span id="tag"><a href="/tags/free">free</a></span></div><hr/><p>Some time ago I decided to stop freeloading on GitHub pages and move my static page for <a href="https://vickylai.com">vickylai.com</a> to Amazon Web Services (AWS). It turns out that I&rsquo;m still mostly freeloading (yay free tier) so it amounted to a learning experience. Here are the components that let me host and serve the site at my custom domain with HTTPS.</p>
+<div><span id="tag"><a href="/tags/aws">aws</a></span><span id="tag"><a href="/tags/websites">websites</a></span><span id="tag"><a href="/tags/free">free</a></span></div><hr/>
+
+<p>Some time ago I decided to stop freeloading on GitHub pages and move my static page for <a href="https://vickylai.com">vickylai.com</a> to Amazon Web Services (AWS). It turns out that I&rsquo;m still mostly freeloading (yay free tier) so it amounted to a learning experience. Here are the components that let me host and serve the site at my custom domain with HTTPS.</p>
 
 <ul>
 <li>Static site in Amazon Web Services S3 bucket</li>
@@ -185,10 +189,11 @@ crossorigin="anonymous"></script>
 <li>Wait. Sometimes changes take up to 48hrs to propogate. ¯\_(ツ)_/¯</li>
 </ol>
 
-<p>Failing all that, if you&rsquo;re still having trouble, you can always <a href="https://twitter.com/hivickylai">ask me!</a> Just don&rsquo;t call me at 4am. I&rsquo;m sleeping.</p><p>Like this post? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.io%2fverbose%2faws-static-site%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/free-custom-domain-website-https/">How I ditched WordPress and set up my custom domain HTTPS site for (almost) free</a></li><li><a href="/verbose/aws-lambda/">Running a free Twitter bot on AWS Lambda</a></li><li><a href="/verbose/aws-new-domain/">Moving to a new domain without breaking old links: AWS &amp; Disqus</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><ul><li><a href="https://github.com/hivickylai">github</a></li>
+<p>Failing all that, if you&rsquo;re still having trouble, you can always <a href="https://twitter.com/hivickylai">ask me!</a> Just don&rsquo;t call me at 4am. I&rsquo;m sleeping.</p>
+<p>Like this post? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2faws-static-site%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/free-custom-domain-website-https/">How I ditched WordPress and set up my custom domain HTTPS site for (almost) free</a></li><li><a href="/verbose/aws-lambda/">Running a free Twitter bot on AWS Lambda</a></li><li><a href="/verbose/aws-new-domain/">Moving to a new domain without breaking old links: AWS &amp; Disqus</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
 
-&#183; <li><a href="https://twitter.com/hivickylai">twitter</a></li>
-&#183; <li><a href="mailto:hello@vickylai.io" rel="noopener">email</a></li></ul></div></div></div>
+&#183; <a href="https://twitter.com/hivickylai">twitter</a>
+&#183; <a href="mailto:hello@vickylai.com" rel="noopener">email</a></p></div></div></div>
 <script>
     scrollTo = (element) => {
         window.scroll({

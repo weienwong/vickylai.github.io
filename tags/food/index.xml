@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Food on VickyLai.io</title>
-    <link>https://vickylai.io/tags/food/</link>
-    <description>Recent content in Food on VickyLai.io</description>
+    <title>Food on VickyLai.com</title>
+    <link>https://vickylai.com/tags/food/</link>
+    <description>Recent content in Food on VickyLai.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>hello@vickylai.io (Vicky Lai)</managingEditor>
-    <webMaster>hello@vickylai.io (Vicky Lai)</webMaster>
+    <managingEditor>hello@vickylai.com (Vicky Lai)</managingEditor>
+    <webMaster>hello@vickylai.com (Vicky Lai)</webMaster>
     <lastBuildDate>Fri, 08 Sep 2017 16:50:24 -0400</lastBuildDate>
     
-	<atom:link href="https://vickylai.io/tags/food/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vickylai.com/tags/food/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How to code a satellite algorithm and cook paella from scratch</title>
-      <link>https://vickylai.io/verbose/build-from-scratch/</link>
+      <link>https://vickylai.com/verbose/build-from-scratch/</link>
       <pubDate>Fri, 08 Sep 2017 16:50:24 -0400</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/verbose/build-from-scratch/</guid>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/build-from-scratch/</guid>
       <description>What if I told you that by the end of this article, you&amp;rsquo;ll be able to calculate the orbital period of satellites around Earth using their average altitudes and&amp;hellip; You tuned out already, didn&amp;rsquo;t you?
 Okay, how about this: I&amp;rsquo;m going to teach you how to make paella!
 And you&amp;rsquo;ll have written a function that does the stuff I mentioned above, just like I did for this freeCodeCamp challenge.</description>
@@ -26,30 +26,32 @@ And you&amp;rsquo;ll have written a function that does the stuff I mentioned abo
     
     <item>
       <title>Making sandwiches with closures in JavaScript</title>
-      <link>https://vickylai.io/verbose/javascript-closures/</link>
+      <link>https://vickylai.com/verbose/javascript-closures/</link>
       <pubDate>Sun, 28 May 2017 09:16:35 +0700</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/verbose/javascript-closures/</guid>
-      <description>&lt;p&gt;Say you&amp;rsquo;re having a little coding get-together, and you need some sandwiches. You happen to know that everyone prefers a different type of sandwich, like chicken, ham, or peanut butter and mayo. You could make all these sandwiches yourself, but that would be tedious and boring.&lt;/p&gt;</description>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/javascript-closures/</guid>
+      <description>Say you&amp;rsquo;re having a little coding get-together, and you need some sandwiches. You happen to know that everyone prefers a different type of sandwich, like chicken, ham, or peanut butter and mayo. You could make all these sandwiches yourself, but that would be tedious and boring.
+Luckily, you know of a nearby sandwich shop that delivers. They have the ability and ingredients to make any kind of sandwich in the world, and all you have to do is order through their app.</description>
     </item>
     
     <item>
       <title>Understanding Array.prototype.reduce() and recursion using apple pie</title>
-      <link>https://vickylai.io/verbose/reduce-recursion-with-pie/</link>
+      <link>https://vickylai.com/verbose/reduce-recursion-with-pie/</link>
       <pubDate>Thu, 18 May 2017 11:40:06 +0700</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/verbose/reduce-recursion-with-pie/</guid>
-      <description>&lt;p&gt;I was having trouble understanding &lt;code&gt;reduce()&lt;/code&gt; and recursion in JavaScript, so I wrote this article to explain it to myself (hey, look, recursion!). I hope you find my examples both helpful and delicious.&lt;/p&gt;
-
-&lt;p&gt;Given an array with nested arrays:&lt;/p&gt;</description>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/reduce-recursion-with-pie/</guid>
+      <description>I was having trouble understanding reduce() and recursion in JavaScript, so I wrote this article to explain it to myself (hey, look, recursion!). I hope you find my examples both helpful and delicious.
+Given an array with nested arrays:
+var arr = [1, [2], [3, [[4]]]]  We want to produce this:
+var flat = [1, 2, 3, 4]  Using for loops and if statements Naively, if we know the maximum number of nested arrays we&amp;rsquo;ll encounter (there are 4 in this example), we can use for loops to iterate through each array item, then if statements to check if each item is in itself an array, and so on&amp;hellip;</description>
     </item>
     
     <item>
       <title>Iterating over objects and arrays: frequent errors</title>
-      <link>https://vickylai.io/verbose/iterating-objects-arrays/</link>
+      <link>https://vickylai.com/verbose/iterating-objects-arrays/</link>
       <pubDate>Tue, 16 May 2017 10:46:46 +0700</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/verbose/iterating-objects-arrays/</guid>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/iterating-objects-arrays/</guid>
       <description>Here&amp;rsquo;s some complaining a quick overview of some code that has confounded me more than once. I&amp;rsquo;m told even very experienced developers encounter these situations regularly, so if you find yourself on your third cup of coffee scratching your head over why your code is doing exactly what you told it to do (and not what you want it to do), maybe this post can help you.
 The example code is JavaScript, since that&amp;rsquo;s what I&amp;rsquo;ve been working in lately, but I believe the concepts to be pretty universal.</description>
     </item>

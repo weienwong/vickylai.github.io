@@ -1,42 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on VickyLai.io</title>
-    <link>https://vickylai.io/tags/linux/</link>
-    <description>Recent content in Linux on VickyLai.io</description>
+    <title>Linux on VickyLai.com</title>
+    <link>https://vickylai.com/tags/linux/</link>
+    <description>Recent content in Linux on VickyLai.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>hello@vickylai.io (Vicky Lai)</managingEditor>
-    <webMaster>hello@vickylai.io (Vicky Lai)</webMaster>
+    <managingEditor>hello@vickylai.com (Vicky Lai)</managingEditor>
+    <webMaster>hello@vickylai.com (Vicky Lai)</webMaster>
     <lastBuildDate>Mon, 20 Nov 2017 13:59:30 -0500</lastBuildDate>
     
-	<atom:link href="https://vickylai.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vickylai.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Batch renaming images, including image resolution, with awk</title>
-      <link>https://vickylai.io/verbose/renaming-images/</link>
+      <link>https://vickylai.com/verbose/renaming-images/</link>
       <pubDate>Mon, 20 Nov 2017 13:59:30 -0500</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/verbose/renaming-images/</guid>
-      <description>&lt;p&gt;The most recent item on my list of &amp;ldquo;Geeky things I did that made me feel pretty awesome&amp;rdquo; is an hour&amp;rsquo;s adventure that culminated in this code:&lt;/p&gt;</description>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/renaming-images/</guid>
+      <description>The most recent item on my list of &amp;ldquo;Geeky things I did that made me feel pretty awesome&amp;rdquo; is an hour&amp;rsquo;s adventure that culminated in this code:
+$ file IMG* | awk &#39;BEGIN{a=0} {print substr($1, 1, length($1)-5),a++&amp;quot;_&amp;quot;substr($8,1, length($8)-1)}&#39; | while read fn fr; do echo $(rename -v &amp;quot;s/$fn/img_$fr/g&amp;quot; *); done IMG_20170808_172653_425.jpg renamed as img_0_4032x3024.jpg IMG_20170808_173020_267.jpg renamed as img_1_3024x3506.jpg IMG_20170808_173130_616.jpg renamed as img_2_3024x3779.jpg IMG_20170808_173221_425.jpg renamed as img_3_3024x3780.jpg IMG_20170808_173417_059.jpg renamed as img_4_2956x2980.</description>
     </item>
     
     <item>
       <title>How I turned Unity into a tiling window manager</title>
-      <link>https://vickylai.io/verbose/turn-unity-into-tiling-windows-manager/</link>
+      <link>https://vickylai.com/verbose/turn-unity-into-tiling-windows-manager/</link>
       <pubDate>Wed, 22 Mar 2017 16:10:10 +0800</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/verbose/turn-unity-into-tiling-windows-manager/</guid>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/turn-unity-into-tiling-windows-manager/</guid>
       <description>After a long and loving battle experience using i3 as my workhorse window manager on my old laptop, I&amp;rsquo;ve decided to mainly use Unity on my new laptop instead. I&amp;rsquo;m a huge fan of tiling window managers as a result of my i3 experience, however, the time it took to configure everything is longer than I wanted to spend getting set up before getting to work with my new laptop.</description>
     </item>
     
     <item>
       <title>How I set up a single Dropbox folder on my dual-boot Windows and Linux system</title>
-      <link>https://vickylai.io/verbose/same-dropbox-dual-boot/</link>
+      <link>https://vickylai.com/verbose/same-dropbox-dual-boot/</link>
       <pubDate>Fri, 17 Mar 2017 10:58:01 +0800</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/verbose/same-dropbox-dual-boot/</guid>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/same-dropbox-dual-boot/</guid>
       <description>I&amp;rsquo;ve now set up two different laptops to dual-boot Windows 10 and different Linux distributions. Here&amp;rsquo;s how to ensure you maintain one Dropbox folder over both operating systems.
 Assuming Windows was there first:
  Mount the Windows drive in Linux Install Dropbox in Linux Sign in to link to Dropbox Immediately change Dropbox folder location to the mounted drive (same Dropbox folder as Windows)  Get it right the first time Dropbox will automatically set up your Dropbox folder when you run it the first time.</description>
@@ -44,19 +45,19 @@ Assuming Windows was there first:
     
     <item>
       <title>How I created custom desktop notifications using terminal and cron</title>
-      <link>https://vickylai.io/verbose/create-desktop-notifications-cron/</link>
+      <link>https://vickylai.com/verbose/create-desktop-notifications-cron/</link>
       <pubDate>Tue, 21 Feb 2017 10:48:38 +0700</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/verbose/create-desktop-notifications-cron/</guid>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/create-desktop-notifications-cron/</guid>
       <description>In my last post I talked about moving from Windows 10 to running i3 on Linux, built up from Debian Base System. Among other things, this change has taught me about the benefits of using basic tools and running a minimal, lightweight system. You can achieve a lot of functionality with just command line tools and simple utilities. One example I&amp;rsquo;d like to illustrate in this post is setting up desktop notifications.</description>
     </item>
     
     <item>
       <title>How a lifelong Windows user switched to Linux... the hard way</title>
-      <link>https://vickylai.io/verbose/how-windows-user-switched-to-linux/</link>
+      <link>https://vickylai.com/verbose/how-windows-user-switched-to-linux/</link>
       <pubDate>Mon, 06 Feb 2017 14:23:59 +0700</pubDate>
-      <author>hello@vickylai.io (Vicky Lai)</author>
-      <guid>https://vickylai.io/verbose/how-windows-user-switched-to-linux/</guid>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/how-windows-user-switched-to-linux/</guid>
       <description>&lt;p&gt;Let me preface this by saying that I&amp;rsquo;ve always been interested in finding out how things work. If a thing does something, I want to know why, how, and if I can customize it.&lt;/p&gt;
 
 &lt;p&gt;It should come as no surprise that Windows 10 drove me crazy.&lt;/p&gt;</description>

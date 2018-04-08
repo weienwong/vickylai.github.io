@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on VickyLai.io</title>
-    <link>https://vickylai.io/categories/</link>
-    <description>Recent content in Categories on VickyLai.io</description>
+    <title>Categories on VickyLai.com</title>
+    <link>https://vickylai.com/categories/</link>
+    <description>Recent content in Categories on VickyLai.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>hello@vickylai.io (Vicky Lai)</managingEditor>
-    <webMaster>hello@vickylai.io (Vicky Lai)</webMaster>
+    <managingEditor>hello@vickylai.com (Vicky Lai)</managingEditor>
+    <webMaster>hello@vickylai.com (Vicky Lai)</webMaster>
     
-	<atom:link href="https://vickylai.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vickylai.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

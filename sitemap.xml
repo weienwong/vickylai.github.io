@@ -3,300 +3,276 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://vickylai.io/work/aba/</loc>
+    <loc>https://vickylai.com/work/aba/</loc>
   </url>
   
   <url>
-    <loc>https://vickylai.io/work/hugo-iintroduction/</loc>
+    <loc>https://vickylai.com/work/hugo-iintroduction/</loc>
   </url>
   
   <url>
-    <loc>https://vickylai.io/work/simon/</loc>
+    <loc>https://vickylai.com/work/simon/</loc>
   </url>
   
   <url>
-    <loc>https://vickylai.io/verbose/aws-lambda/</loc>
+    <loc>https://vickylai.com/hugo-themes/</loc>
+    <lastmod>2018-03-07T11:39:55-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vickylai.com/verbose/aws-lambda/</loc>
     <lastmod>2018-03-05T10:29:15-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/</loc>
+    <loc>https://vickylai.com/</loc>
     <lastmod>2018-02-12T19:27:28-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/verbose/aws-new-domain/</loc>
+    <loc>https://vickylai.com/verbose/aws-new-domain/</loc>
     <lastmod>2018-01-10T08:56:20-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/verbose/unicode-cipher/</loc>
+    <loc>https://vickylai.com/verbose/unicode-cipher/</loc>
     <lastmod>2018-01-06T20:00:28-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/verbose/aws-static-site/</loc>
+    <loc>https://vickylai.com/verbose/aws-static-site/</loc>
     <lastmod>2017-12-13T20:46:12-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/verbose/about-time/</loc>
+    <loc>https://vickylai.com/verbose/about-time/</loc>
     <lastmod>2017-11-22T14:05:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/verbose/renaming-images/</loc>
+    <loc>https://vickylai.com/verbose/renaming-images/</loc>
     <lastmod>2017-11-20T13:59:30-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/verbose/build-from-scratch/</loc>
+    <loc>https://vickylai.com/press/</loc>
+    <lastmod>2017-09-18T18:48:44+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vickylai.com/verbose/build-from-scratch/</loc>
     <lastmod>2017-09-08T16:50:24-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/verbose/javascript-closures/</loc>
+    <loc>https://vickylai.com/verbose/javascript-closures/</loc>
     <lastmod>2017-05-28T09:16:35+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/verbose/reduce-recursion-with-pie/</loc>
+    <loc>https://vickylai.com/verbose/reduce-recursion-with-pie/</loc>
     <lastmod>2017-05-18T11:40:06+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/verbose/iterating-objects-arrays/</loc>
+    <loc>https://vickylai.com/verbose/iterating-objects-arrays/</loc>
     <lastmod>2017-05-16T10:46:46+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/verbose/when-stackoverflow-sed-saves-30mins/</loc>
+    <loc>https://vickylai.com/verbose/when-stackoverflow-sed-saves-30mins/</loc>
     <lastmod>2017-05-06T20:04:53+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/verbose/free-resources-for-coding-superpowers/</loc>
+    <loc>https://vickylai.com/verbose/free-resources-for-coding-superpowers/</loc>
     <lastmod>2017-04-27T08:14:09+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/verbose/to-be-a-data-scientist/</loc>
+    <loc>https://vickylai.com/verbose/to-be-a-data-scientist/</loc>
     <lastmod>2017-03-31T13:19:19+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/verbose/turn-unity-into-tiling-windows-manager/</loc>
+    <loc>https://vickylai.com/verbose/turn-unity-into-tiling-windows-manager/</loc>
     <lastmod>2017-03-22T16:10:10+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/verbose/same-dropbox-dual-boot/</loc>
+    <loc>https://vickylai.com/verbose/same-dropbox-dual-boot/</loc>
     <lastmod>2017-03-17T10:58:01+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/verbose/create-desktop-notifications-cron/</loc>
+    <loc>https://vickylai.com/verbose/create-desktop-notifications-cron/</loc>
     <lastmod>2017-02-21T10:48:38+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/verbose/how-windows-user-switched-to-linux/</loc>
+    <loc>https://vickylai.com/verbose/how-windows-user-switched-to-linux/</loc>
     <lastmod>2017-02-06T14:23:59+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/verbose/free-custom-domain-website-https/</loc>
+    <loc>https://vickylai.com/verbose/free-custom-domain-website-https/</loc>
     <lastmod>2017-01-28T13:16:17+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/verbose/python-programming-fundamentals-iterations/</loc>
+    <loc>https://vickylai.com/verbose/python-programming-fundamentals-iterations/</loc>
     <lastmod>2017-01-18T21:58:28+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/verbose/how-i-made-a-twitter-stream/</loc>
+    <loc>https://vickylai.com/verbose/how-i-made-a-twitter-stream/</loc>
     <lastmod>2017-01-06T16:39:29+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/verbose/</loc>
+    <loc>https://vickylai.com/verbose/</loc>
     <lastmod>2018-03-05T10:29:15-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vickylai.io/about/</loc>
+    <loc>https://vickylai.com/about/</loc>
   </url>
   
   <url>
-    <loc>https://vickylai.io/work/adam-drake/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vickylai.io/tags/algorithms/</loc>
+    <loc>https://vickylai.com/tags/algorithms/</loc>
     <lastmod>2018-01-06T20:00:28-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vickylai.io/tags/api/</loc>
+    <loc>https://vickylai.com/tags/api/</loc>
     <lastmod>2017-01-06T16:39:29+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vickylai.io/work/atazzo/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vickylai.io/tags/aws/</loc>
+    <loc>https://vickylai.com/tags/aws/</loc>
     <lastmod>2018-03-05T10:29:15-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vickylai.io/categories/</loc>
+    <loc>https://vickylai.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vickylai.io/work/cats-vs-unicorns/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vickylai.io/tags/coding/</loc>
+    <loc>https://vickylai.com/tags/coding/</loc>
     <lastmod>2017-11-22T14:05:14-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vickylai.io/work/compress-test/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vickylai.io/tags/config/</loc>
+    <loc>https://vickylai.com/tags/config/</loc>
     <lastmod>2018-03-05T10:29:15-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vickylai.io/tags/cron/</loc>
+    <loc>https://vickylai.com/tags/cron/</loc>
     <lastmod>2018-03-05T10:29:15-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vickylai.io/tags/data/</loc>
+    <loc>https://vickylai.com/tags/data/</loc>
     <lastmod>2017-11-20T13:59:30-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vickylai.io/tags/data-science/</loc>
+    <loc>https://vickylai.com/tags/data-science/</loc>
     <lastmod>2017-03-31T13:19:19+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vickylai.io/work/fancy-unicode/</loc>
+    <loc>https://vickylai.com/work/fancy-unicode/</loc>
   </url>
   
   <url>
-    <loc>https://vickylai.io/tags/food/</loc>
+    <loc>https://vickylai.com/tags/food/</loc>
     <lastmod>2017-09-08T16:50:24-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vickylai.io/tags/free/</loc>
+    <loc>https://vickylai.com/tags/free/</loc>
     <lastmod>2018-03-05T10:29:15-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vickylai.io/tags/github/</loc>
+    <loc>https://vickylai.com/tags/github/</loc>
     <lastmod>2017-01-28T13:16:17+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vickylai.io/tags/go/</loc>
+    <loc>https://vickylai.com/tags/go/</loc>
     <lastmod>2018-03-05T10:29:15-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vickylai.io/tags/javascript/</loc>
+    <loc>https://vickylai.com/tags/javascript/</loc>
     <lastmod>2018-01-06T20:00:28-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vickylai.io/tags/life/</loc>
+    <loc>https://vickylai.com/tags/life/</loc>
     <lastmod>2017-11-22T14:05:14-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vickylai.io/tags/linux/</loc>
+    <loc>https://vickylai.com/tags/linux/</loc>
     <lastmod>2017-11-20T13:59:30-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vickylai.io/work/moji-munchi/</loc>
+    <loc>https://vickylai.com/work/moji-munchi/</loc>
   </url>
   
   <url>
-    <loc>https://vickylai.io/tags/nerdy/</loc>
-    <lastmod>2018-01-06T20:00:28-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://vickylai.io/work/oliver-rothland/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vickylai.io/tags/python/</loc>
+    <loc>https://vickylai.com/tags/python/</loc>
     <lastmod>2017-01-18T21:58:28+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vickylai.io/work/hugo-sam/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vickylai.io/work/sunflower-studio/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vickylai.io/tags/</loc>
+    <loc>https://vickylai.com/tags/</loc>
     <lastmod>2018-01-06T20:00:28-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vickylai.io/tags/time-saver/</loc>
+    <loc>https://vickylai.com/tags/time-saver/</loc>
     <lastmod>2017-11-22T14:05:14-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vickylai.io/tags/twitter/</loc>
+    <loc>https://vickylai.com/tags/twitter/</loc>
     <lastmod>2018-03-05T10:29:15-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vickylai.io/tags/websites/</loc>
+    <loc>https://vickylai.com/tags/websites/</loc>
     <lastmod>2018-01-10T08:56:20-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vickylai.io/work/</loc>
+    <loc>https://vickylai.com/work/</loc>
     <priority>0</priority>
   </url>
   
