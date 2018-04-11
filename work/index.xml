@@ -56,7 +56,7 @@ Pug, Sass, gulp/Node.js, jQuery</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
       <guid>https://vickylai.com/work/moji-munchi/</guid>
-      <description>Automated meal decisions with emojis and Google Maps Randomly generated food emojis suggest what to eat and where to get it near your.
+      <description>Automated meal decisions with emojis and Google Maps Randomly generated food emojis suggest what to eat and where to get it near your current location.
 jQuery, W3C geolocation API, Google Maps API</description>
     </item>
     
