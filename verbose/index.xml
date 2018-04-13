@@ -8,10 +8,21 @@
     <language>en-us</language>
     <managingEditor>hello@vickylai.com (Vicky Lai)</managingEditor>
     <webMaster>hello@vickylai.com (Vicky Lai)</webMaster>
-    <lastBuildDate>Mon, 05 Mar 2018 10:29:15 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 12 Apr 2018 10:51:15 -0500</lastBuildDate>
     
 	<atom:link href="https://vickylai.com/verbose/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Why I&#39;m automatically deleting my old tweets using AWS Lambda</title>
+      <link>https://vickylai.com/verbose/delete-old-tweets-ephemeral/</link>
+      <pubDate>Thu, 12 Apr 2018 10:51:15 -0500</pubDate>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/delete-old-tweets-ephemeral/</guid>
+      <description>From now on, my tweets are ephemeral. Here&amp;rsquo;s why I&amp;rsquo;m deleting all my old tweets and the AWS Lambda function that does it for free.
+Click here to skip to the code part.
+Stuff and opinions I&amp;rsquo;ve only been a one-bag nomad for a little over a year and a half. Before that, I lived as most people do in an apartment or a house. I owned furniture, more clothing than I strictly needed, and enough &amp;ldquo;stuff&amp;rdquo; to fill at least a few moving boxes.</description>
+    </item>
     
     <item>
       <title>Running a free Twitter bot on AWS Lambda</title>

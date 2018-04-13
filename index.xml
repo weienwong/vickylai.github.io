@@ -16,6 +16,21 @@
     <item>
       <title>
         
+            Why I&#39;m automatically deleting my old tweets using AWS Lambda
+        
+      </title>
+      <link>https://vickylai.com/verbose/delete-old-tweets-ephemeral/</link>
+      <pubDate>Thu, 12 Apr 2018 10:51:15 -0500</pubDate>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/delete-old-tweets-ephemeral/</guid>
+      <description>From now on, my tweets are ephemeral. Here’s why I’m deleting all my old tweets and the AWS Lambda function that does it for free.
+Click here to skip to the code part.
+Stuff and opinions I’ve only been a one-bag nomad for a little over a year and a half. Before that, I lived as most people do in an apartment or a house. I owned furniture, more clothing than I strictly needed, and enough “stuff” to fill at least a few moving boxes.</description>
+    </item>
+    
+    <item>
+      <title>
+        
             Running a free Twitter bot on AWS Lambda
         
       </title>
@@ -207,21 +222,6 @@ The panelists Misrab Faizullah-Khan - VP of Data Science, GO_JEK</description>
       <author>hello@vickylai.com (Vicky Lai)</author>
       <guid>https://vickylai.com/verbose/turn-unity-into-tiling-windows-manager/</guid>
       <description>After a long and loving battle experience using i3 as my workhorse window manager on my old laptop, I’ve decided to mainly use Unity on my new laptop instead. I’m a huge fan of tiling window managers as a result of my i3 experience, however, the time it took to configure everything is longer than I wanted to spend getting set up before getting to work with my new laptop.</description>
-    </item>
-    
-    <item>
-      <title>
-        
-            How I set up a single Dropbox folder on my dual-boot Windows and Linux system
-        
-      </title>
-      <link>https://vickylai.com/verbose/same-dropbox-dual-boot/</link>
-      <pubDate>Fri, 17 Mar 2017 10:58:01 +0800</pubDate>
-      <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/same-dropbox-dual-boot/</guid>
-      <description>I’ve now set up two different laptops to dual-boot Windows 10 and different Linux distributions. Here’s how to ensure you maintain one Dropbox folder over both operating systems.
-Assuming Windows was there first:
- Mount the Windows drive in Linux Install Dropbox in Linux Sign in to link to Dropbox Immediately change Dropbox folder location to the mounted drive (same Dropbox folder as Windows)  Get it right the first time Dropbox will automatically set up your Dropbox folder when you run it the first time.</description>
     </item>
     
   </channel>
