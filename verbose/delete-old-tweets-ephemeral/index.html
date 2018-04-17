@@ -125,7 +125,7 @@ crossorigin="anonymous"></script>
 
 <p>The code that makes up ephemeral is written in Go. AWS Lambda creates an environment for each Lambda function, so ephemeral utilizes environment variables for your private Twitter API keys and the maximum age of the tweets you want to keep, represented in hours, like <code>72h</code>.</p>
 
-<pre><code>var (
+<pre><code class="language-go">var (
 	consumerKey       = getenv(&quot;TWITTER_CONSUMER_KEY&quot;)
 	consumerSecret    = getenv(&quot;TWITTER_CONSUMER_SECRET&quot;)
 	accessToken       = getenv(&quot;TWITTER_ACCESS_TOKEN&quot;)
@@ -145,7 +145,7 @@ func getenv(name string) string {
 
 <p>The program uses the <a href="https://github.com/ChimeraCoder/anaconda">anaconda</a> library. It fetches your timeline up to the Twitter API&rsquo;s limit of 200 tweets per request, then compares each tweet&rsquo;s date of creation to your <code>MAX_TWEET_AGE</code> variable to decide whether it&rsquo;s old enough to be deleted. After deleting all the expired tweets, the Lambda function terminates.</p>
 
-<pre><code>func deleteFromTimeline(api *anaconda.TwitterApi, ageLimit time.Duration) {
+<pre><code class="language-go">func deleteFromTimeline(api *anaconda.TwitterApi, ageLimit time.Duration) {
 	timeline, err := getTimeline(api)
 
 	if err != nil {
