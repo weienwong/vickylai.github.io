@@ -91,6 +91,7 @@ crossorigin="anonymous"></script>
 
 <div><span id="tag"><a href="/tags/coding">coding</a></span><span id="tag"><a href="/tags/data">data</a></span><span id="tag"><a href="/tags/linux">linux</a></span><span id="tag"><a href="/tags/time-saver">time-saver</a></span></div><hr/>
 
+
 <p>The most recent item on my list of &ldquo;Geeky things I did that made me feel pretty awesome&rdquo; is an hour&rsquo;s adventure that culminated in this code:</p>
 
 <pre><code class="language-bash">$ file IMG* | awk 'BEGIN{a=0} {print substr($1, 1, length($1)-5),a++&quot;_&quot;substr($8,1, length($8)-1)}' | while read fn fr; do echo $(rename -v &quot;s/$fn/img_$fr/g&quot; *); done

@@ -31,6 +31,20 @@ Stuff and opinions I’ve only been a one-bag nomad for a little over a year and
     <item>
       <title>
         
+            Solving the Knapsack Problem in Go for my real-life carry-on bag
+        
+      </title>
+      <link>https://vickylai.com/verbose/packing-problem/packing-carry-on/</link>
+      <pubDate>Sun, 08 Apr 2018 17:15:40 -0400</pubDate>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/packing-problem/packing-carry-on/</guid>
+      <description>I’m a nomad and live out of one carry-on bag. This means that the total weight of all my worldly possessions must fall under airline cabin baggage weight limits - usually 10kg. On some smaller airlines, however, this weight limit drops to 7kg. Occasionally, I have to decide not to bring something with me to adjust to the smaller weight limit.
+As a practical exercise, deciding what to leave behind (or get rid of altogether) entails laying out all my things and choosing which ones to keep.</description>
+    </item>
+    
+    <item>
+      <title>
+        
             Running a free Twitter bot on AWS Lambda
         
       </title>
@@ -209,19 +223,6 @@ Here’s a quick list of resources that you should definitely look at first if y
       <guid>https://vickylai.com/verbose/to-be-a-data-scientist/</guid>
       <description>I recently attended a panel discussion hosted by General Assembly in Singapore entitled, “So you want to be a Data Scientist/Analyst”. The panel featured professionals in different stages of their careers and offered a wealth of information to an audience of hopefuls, including tips on how to land a job as a data scientist, and stories debunking myths that color this field.
 The panelists Misrab Faizullah-Khan - VP of Data Science, GO_JEK</description>
-    </item>
-    
-    <item>
-      <title>
-        
-            How I turned Unity into a tiling window manager
-        
-      </title>
-      <link>https://vickylai.com/verbose/turn-unity-into-tiling-windows-manager/</link>
-      <pubDate>Wed, 22 Mar 2017 16:10:10 +0800</pubDate>
-      <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/turn-unity-into-tiling-windows-manager/</guid>
-      <description>After a long and loving battle experience using i3 as my workhorse window manager on my old laptop, I’ve decided to mainly use Unity on my new laptop instead. I’m a huge fan of tiling window managers as a result of my i3 experience, however, the time it took to configure everything is longer than I wanted to spend getting set up before getting to work with my new laptop.</description>
     </item>
     
   </channel>

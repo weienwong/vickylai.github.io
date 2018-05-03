@@ -25,6 +25,16 @@ Stuff and opinions I&amp;rsquo;ve only been a one-bag nomad for a little over a 
     </item>
     
     <item>
+      <title>Solving the Knapsack Problem in Go for my real-life carry-on bag</title>
+      <link>https://vickylai.com/verbose/packing-problem/packing-carry-on/</link>
+      <pubDate>Sun, 08 Apr 2018 17:15:40 -0400</pubDate>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/packing-problem/packing-carry-on/</guid>
+      <description>I&amp;rsquo;m a nomad and live out of one carry-on bag. This means that the total weight of all my worldly possessions must fall under airline cabin baggage weight limits - usually 10kg. On some smaller airlines, however, this weight limit drops to 7kg. Occasionally, I have to decide not to bring something with me to adjust to the smaller weight limit.
+As a practical exercise, deciding what to leave behind (or get rid of altogether) entails laying out all my things and choosing which ones to keep.</description>
+    </item>
+    
+    <item>
       <title>Running a free Twitter bot on AWS Lambda</title>
       <link>https://vickylai.com/verbose/aws-lambda/</link>
       <pubDate>Mon, 05 Mar 2018 10:29:15 -0500</pubDate>
