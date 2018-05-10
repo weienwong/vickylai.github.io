@@ -11,8 +11,7 @@
 <meta name="description" content="
 
 
-I started blogging about my nomadic travels last year, and so far the habit has stuck. Like all side projects, I won&rsquo;t typically invest heavily in setting up web properties before I can be reasonably certain that such an investment is worth my time or enjoyment. In other words: don&rsquo;t buy the domain until you&rsquo;ve proven to yourself that you&rsquo;ll stick with it!
-After some months of regular posting I felt I was ready to commit (short courtship, I know, but we&rsquo;re all adults here) and I bought a dedicated domain, herOneBag.
+I moved my site&#39;s blog to its own domain without breaking old links or losing comments. Here&#39;s how.
 
 
 ">
@@ -27,8 +26,7 @@ Moving to a new domain without breaking old links: AWS &amp; Disqus
 <meta property="og:description" content="
 
 
-I started blogging about my nomadic travels last year, and so far the habit has stuck. Like all side projects, I won&rsquo;t typically invest heavily in setting up web properties before I can be reasonably certain that such an investment is worth my time or enjoyment. In other words: don&rsquo;t buy the domain until you&rsquo;ve proven to yourself that you&rsquo;ll stick with it!
-After some months of regular posting I felt I was ready to commit (short courtship, I know, but we&rsquo;re all adults here) and I bought a dedicated domain, herOneBag.
+I moved my site&#39;s blog to its own domain without breaking old links or losing comments. Here&#39;s how.
 
 
 ">
@@ -83,11 +81,11 @@ src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
 
-</head><body><div id="top"></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu no-mobile"><p><a href="/verbose">verbose</a> &#183;
+</head><body><div id="top"></div><div id="logo"><img id="up" src="/img/vx50.png" width="25px"/></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu"><p><a href="/verbose">verbose</a> &#183;
 <a href="/#work">work</a>
 
 &#183; <a href="mailto:hello@vickylai.com">email</a>
-&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/aws-moving.png"/></div><div id="content"><h1>Moving to a new domain without breaking old links: AWS &amp; Disqus</h1>Wed Jan 10, 2018 &#183; 602 words
+&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/aws-moving.png"/></div><div id="content"><h1>Moving to a new domain without breaking old links: AWS &amp; Disqus</h1>Wed Jan 10, 2018 &#183; 3 min read
 
 <div><span id="tag"><a href="/tags/aws">aws</a></span><span id="tag"><a href="/tags/config">config</a></span><span id="tag"><a href="/tags/websites">websites</a></span></div><hr/>
 
@@ -123,20 +121,17 @@ New URL: <code>https://heronebag.com/blog/5-bag-lessons/</code></p>
 <p>There are a few examples given, but none that represent the redirect I want. In addition to changing the prefix of the object key, we&rsquo;re also changing the domain. The latter is achieved with the <code>&lt;HostName&gt;</code> tag.</p>
 
 <p>To redirect requests for the old blog URL to the new top level domain, we&rsquo;ll use the code below.</p>
-
-<pre><code class="language-xml">&lt;RoutingRules&gt;
-  &lt;RoutingRule&gt;
-    &lt;Condition&gt;
-      &lt;KeyPrefixEquals&gt;oldblog/&lt;/KeyPrefixEquals&gt;
-    &lt;/Condition&gt;
-    &lt;Redirect&gt;
-      &lt;HostName&gt;newdomain.com&lt;/HostName&gt;
-      &lt;ReplaceKeyPrefixWith&gt;newblog/&lt;/ReplaceKeyPrefixWith&gt;
-    &lt;/Redirect&gt;
-  &lt;/RoutingRule&gt;
-&lt;/RoutingRules&gt;
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#1e90ff;font-weight:bold">&lt;RoutingRules&gt;</span>
+  <span style="color:#1e90ff;font-weight:bold">&lt;RoutingRule&gt;</span>
+    <span style="color:#1e90ff;font-weight:bold">&lt;Condition&gt;</span>
+      <span style="color:#1e90ff;font-weight:bold">&lt;KeyPrefixEquals&gt;</span>oldblog/<span style="color:#1e90ff;font-weight:bold">&lt;/KeyPrefixEquals&gt;</span>
+    <span style="color:#1e90ff;font-weight:bold">&lt;/Condition&gt;</span>
+    <span style="color:#1e90ff;font-weight:bold">&lt;Redirect&gt;</span>
+      <span style="color:#1e90ff;font-weight:bold">&lt;HostName&gt;</span>newdomain.com<span style="color:#1e90ff;font-weight:bold">&lt;/HostName&gt;</span>
+      <span style="color:#1e90ff;font-weight:bold">&lt;ReplaceKeyPrefixWith&gt;</span>newblog/<span style="color:#1e90ff;font-weight:bold">&lt;/ReplaceKeyPrefixWith&gt;</span>
+    <span style="color:#1e90ff;font-weight:bold">&lt;/Redirect&gt;</span>
+  <span style="color:#1e90ff;font-weight:bold">&lt;/RoutingRule&gt;</span>
+<span style="color:#1e90ff;font-weight:bold">&lt;/RoutingRules&gt;</span></code></pre></div>
 <p>This rule ensures that requests for <code>olddomain.com/oldblog/specific-blog-post</code> will redirect to <code>newdomain.com/newblog/specific-blog-post</code>.</p>
 
 <h1 id="migrate-disqus-comments">Migrate Disqus comments</h1>
@@ -154,7 +149,7 @@ New URL: <code>https://heronebag.com/blog/5-bag-lessons/</code></p>
 <h1 id="transfer-other-settings">Transfer other settings</h1>
 
 <p>Update links in your social profiles and any other sites you may have around the web. If you&rsquo;re using other services attached to your website like Google Analytics or IFTTT, don&rsquo;t forget to update those details too!</p>
-<p>Like this post? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2faws-new-domain%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/aws-lambda/">Running a free Twitter bot on AWS Lambda</a></li><li><a href="/verbose/aws-static-site/">Hosting your static site with AWS S3, Route 53, and CloudFront</a></li><li><a href="/verbose/delete-old-tweets-ephemeral/">Why I&#39;m automatically deleting my old tweets using AWS Lambda</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
+<p>Like this post? Questions? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2faws-new-domain%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/aws-lambda/">Running a free Twitter bot on AWS Lambda</a></li><li><a href="/verbose/aws-static-site/">Hosting your static site with AWS S3, Route 53, and CloudFront</a></li><li><a href="/verbose/delete-old-tweets-ephemeral/">Why I&#39;m automatically deleting my old tweets using AWS Lambda</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
 
 &#183; <a href="https://twitter.com/hivickylai">twitter</a>
 &#183; <a href="mailto:hello@vickylai.com" rel="noopener">email</a></p></div></div></div>

@@ -11,7 +11,7 @@
 <meta name="description" content="
 
 
-I got annoyed with WordPress.com. While using the service has its pros (like https and a mobile responsive website, and being very visual and beginner-friendly) it&rsquo;s limiting. For someone who&rsquo;s comfortable enough to be tweaking CSS but who&rsquo;s not interested in creating their own theme (or paying upwards of $50 for one), I felt I wasn&rsquo;t really the type of consumer WordPress.com was suited to.
+A guide (for the minimally tech-savvy) to setting up a website with HTTPS using Hugo, Cloudflare and GitHub Pages.
 
 
 ">
@@ -26,7 +26,7 @@ How I ditched WordPress and set up my custom domain HTTPS site for (almost) free
 <meta property="og:description" content="
 
 
-I got annoyed with WordPress.com. While using the service has its pros (like https and a mobile responsive website, and being very visual and beginner-friendly) it&rsquo;s limiting. For someone who&rsquo;s comfortable enough to be tweaking CSS but who&rsquo;s not interested in creating their own theme (or paying upwards of $50 for one), I felt I wasn&rsquo;t really the type of consumer WordPress.com was suited to.
+A guide (for the minimally tech-savvy) to setting up a website with HTTPS using Hugo, Cloudflare and GitHub Pages.
 
 
 ">
@@ -81,11 +81,11 @@ src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
 
-</head><body><div id="top"></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu no-mobile"><p><a href="/verbose">verbose</a> &#183;
+</head><body><div id="top"></div><div id="logo"><img id="up" src="/img/vx50.png" width="25px"/></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu"><p><a href="/verbose">verbose</a> &#183;
 <a href="/#work">work</a>
 
 &#183; <a href="mailto:hello@vickylai.com">email</a>
-&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="content"><h1>How I ditched WordPress and set up my custom domain HTTPS site for (almost) free</h1>Sat Jan 28, 2017 &#183; 1038 words
+&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="content"><h1>How I ditched WordPress and set up my custom domain HTTPS site for (almost) free</h1>Sat Jan 28, 2017 &#183; 5 min read
 
 <div><span id="tag"><a href="/tags/websites">websites</a></span><span id="tag"><a href="/tags/github">github</a></span><span id="tag"><a href="/tags/free">free</a></span></div><hr/>
 <p>I got annoyed with WordPress.com. While using the service has its pros (like https and a mobile responsive website, and being very visual and beginner-friendly) it&rsquo;s limiting. For someone who&rsquo;s comfortable enough to be tweaking CSS but who&rsquo;s not interested in creating their own theme (or paying upwards of $50 for one), I felt I wasn&rsquo;t really the type of consumer WordPress.com was suited to.</p>
@@ -133,15 +133,12 @@ crossorigin="anonymous"></script>
 <p>Once you&rsquo;re comfortable with the way GitHub works generally, setting up a site by following <a href="https://pages.github.com/">the guide on GitHub Pages</a> is no big deal. If you followed the Hugo Quickstart Guide up to Step 11, you&rsquo;ll want to jump to Step 12 after creating the repository on GitHub.</p>
 
 <p>In case it&rsquo;s not clear, once you set up your new repository on GitHub called <em>yourusername</em>.github.io, grab the HTTPS link at the top. From there it&rsquo;s just a few simple commands to create the git repository for your site and push it to your new web address:</p>
-
-<pre><code class="language-sh"># from yoursite/public folder:
-$ git init
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#aaa;font-style:italic"># from yoursite/public folder:
+</span><span style="color:#aaa;font-style:italic"></span>$ git init
 $ git remote add origin &lt;paste that https url here!&gt;
 $ git add --all
-$ git commit -m &quot;Initial commit.&quot;
-$ git push origin master
-</code></pre>
-
+$ git commit -m <span style="color:#a50">&#34;Initial commit.&#34;</span>
+$ git push origin master</code></pre></div>
 <p>Have a little celebration - your site is already up at <code>https://yourusername.github.io</code>! Now for the pizza-de-resiliance: the custom domain.</p>
 
 <h2 id="4-point-your-custom-domain-to-github-pages">4. Point your custom domain to GitHub Pages</h2>
@@ -162,26 +159,20 @@ $ git push origin master
 <p><a href="https://www.cloudflare.com/">Sign up with Cloudflare</a> and follow their set up guide. The site will collect your custom domain&rsquo;s DNS settings and set everything up automagically. Once the set up is complete, Cloudflare provides you with two new nameserver addresses. Go to your domain registrar&rsquo;s DNS settings and change the Domain Name Servers to the ones Cloudflare gives you.</p>
 
 <p>In your <code>config.toml</code>, <code>config.yaml</code>, or <code>config.json</code> file, ensure these lines are present:</p>
-
-<pre><code class="language-toml">baseURL = &quot;https://yourname.com/&quot;
-canonifyURLs = true
-enforce_ssl = www.yoursite.com
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">baseURL = <span style="color:#a50">&#34;https://yourname.com/&#34;</span>
+canonifyURLs = <span style="color:#00a">true</span>
+enforce_ssl = www.yoursite.com</code></pre></div>
 <p>To redirect users to HTTPS, add this script to the top of your <code>&lt;head&gt;</code> file:</p>
-
-<pre><code class="language-html">&lt;script type=&quot;text/javascript&quot;&gt;
-    var host = &quot;yourname.com&quot;;
-    if ((host == window.location.host) &amp;&amp; (window.location.protocol != &quot;https:&quot;))
-        window.location.protocol = &quot;https&quot;;
-&lt;/script&gt;
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#1e90ff;font-weight:bold">script</span> <span style="color:#1e90ff">type</span>=<span style="color:#a50">&#34;text/javascript&#34;</span>&gt;
+    <span style="color:#00a">var</span> host = <span style="color:#a50">&#34;yourname.com&#34;</span>;
+    <span style="color:#00a">if</span> ((host == <span style="color:#0aa">window</span>.location.host) &amp;&amp; (<span style="color:#0aa">window</span>.location.protocol != <span style="color:#a50">&#34;https:&#34;</span>))
+        <span style="color:#0aa">window</span>.location.protocol = <span style="color:#a50">&#34;https&#34;</span>;
+&lt;/<span style="color:#1e90ff;font-weight:bold">script</span>&gt;</code></pre></div>
 <p>&nbsp;</p>
 
 <p>That&rsquo;s pretty much it! In a couple hours or so, your site will be up and running at <code>https://yourname.com</code>.</p>
 
-<p>Thanks for reading!</p><p>Like this post? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2ffree-custom-domain-website-https%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/aws-static-site/">Hosting your static site with AWS S3, Route 53, and CloudFront</a></li><li><a href="/verbose/free-resources-for-coding-superpowers/">Top free resources for developing coding superpowers</a></li><li><a href="/verbose/delete-old-tweets-ephemeral/">Why I&#39;m automatically deleting my old tweets using AWS Lambda</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
+<p>Thanks for reading!</p><p>Like this post? Questions? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2ffree-custom-domain-website-https%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/aws-static-site/">Hosting your static site with AWS S3, Route 53, and CloudFront</a></li><li><a href="/verbose/free-resources-for-coding-superpowers/">Top free resources for developing coding superpowers</a></li><li><a href="/verbose/delete-old-tweets-ephemeral/">Why I&#39;m automatically deleting my old tweets using AWS Lambda</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
 
 &#183; <a href="https://twitter.com/hivickylai">twitter</a>
 &#183; <a href="mailto:hello@vickylai.com" rel="noopener">email</a></p></div></div></div>

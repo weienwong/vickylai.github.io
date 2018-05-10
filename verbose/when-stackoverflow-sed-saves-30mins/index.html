@@ -11,8 +11,7 @@
 <meta name="description" content="
 
 
-This week, I launched my new website and changed my Twitter username to match. I was about to spend time going through all my old blog posts to find and update the URLs when this very future blog post popped up on my screen like Clippy and shook its pixelated head disapprovingly.
-Here&rsquo;s a worthwhile new habit for you: anytime you find yourself going &ldquo;Ughhh I have to do that?
+How a quick search on StackOverflow saved me from a monotonous job, and an overview of sed.
 
 
 ">
@@ -27,15 +26,14 @@ That time 30 seconds, StackOverflow, and sed saved me 30 minutes
 <meta property="og:description" content="
 
 
-This week, I launched my new website and changed my Twitter username to match. I was about to spend time going through all my old blog posts to find and update the URLs when this very future blog post popped up on my screen like Clippy and shook its pixelated head disapprovingly.
-Here&rsquo;s a worthwhile new habit for you: anytime you find yourself going &ldquo;Ughhh I have to do that?
+How a quick search on StackOverflow saved me from a monotonous job, and an overview of sed.
 
 
 ">
 <meta property="og:image" content="
 
 
-https://vickylai.com/pixels/so.gif
+https://vickylai.com/
 
 
 ">
@@ -44,7 +42,7 @@ https://vickylai.com/pixels/so.gif
 <meta name="twitter:image" content="
 
 
-https://vickylai.com/pixels/so.gif
+https://vickylai.com/
 
 
 ">
@@ -83,11 +81,11 @@ src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
 
-</head><body><div id="top"></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu no-mobile"><p><a href="/verbose">verbose</a> &#183;
+</head><body><div id="top"></div><div id="logo"><img id="up" src="/img/vx50.png" width="25px"/></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu"><p><a href="/verbose">verbose</a> &#183;
 <a href="/#work">work</a>
 
 &#183; <a href="mailto:hello@vickylai.com">email</a>
-&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/so.gif"/></div><div id="content"><h1>That time 30 seconds, StackOverflow, and sed saved me 30 minutes</h1>Sat May 06, 2017 &#183; 309 words
+&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="content"><h1>That time 30 seconds, StackOverflow, and sed saved me 30 minutes</h1>Sat May 06, 2017 &#183; 2 min read
 
 <div><span id="tag"><a href="/tags/coding">coding</a></span><span id="tag"><a href="/tags/time-saver">time-saver</a></span></div><hr/>
 
@@ -107,11 +105,8 @@ crossorigin="anonymous"></script>
 <p>Sed is your friend. This amazingly powerful tool lives in your terminal and is available to be totally underused for things like finding and replacing strings in files. (I seem to have a habit of suggesting ways to totally underuse powerful tools - I previously outlined how to <a href="https://vickylai.io/verbose/create-desktop-notifications-cron/">use cron to create desktop notifications</a>, but I digress.)</p>
 
 <p>Run this command to search all the files in your current directory and replace a given string.</p>
-
-<pre><code class="language-sh">// to replace 'foo' with 'bar'
-$ sed -i -- 's/foo/bar/g' *
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">// to replace <span style="color:#a50">&#39;foo&#39;</span> with <span style="color:#a50">&#39;bar&#39;</span>
+$ sed -i -- <span style="color:#a50">&#39;s/foo/bar/g&#39;</span> *</code></pre></div>
 <p>The above is <strong>non-recursive</strong>, meaning it won&rsquo;t look in subdirectories. There are ways to do this recursively, as well as limit the search to specific file extensions: <a href="https://unix.stackexchange.com/questions/112023/how-can-i-replace-a-string-in-a-files">see the full answer on StackOverflow</a>.</p>
 
 <h2 id="break-it-down">Break it down:</h2>
@@ -124,7 +119,7 @@ $ sed -i -- 's/foo/bar/g' *
 <code>*</code> denotes all file types. (No more rhymes. What a tease.)</p>
 
 <p><a href="http://www.folkstalk.com/2012/01/sed-command-in-unix-examples.html">Here are some more examples</a> for using sed that you may find handy.</p>
-<p>Like this post? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2fwhen-stackoverflow-sed-saves-30mins%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/about-time/">About time</a></li><li><a href="/verbose/renaming-images/">Batch renaming images, including image resolution, with awk</a></li><li><a href="/verbose/build-from-scratch/">How to code a satellite algorithm and cook paella from scratch</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
+<p>Like this post? Questions? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2fwhen-stackoverflow-sed-saves-30mins%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/about-time/">About time</a></li><li><a href="/verbose/renaming-images/">Batch renaming images, including image resolution, with awk</a></li><li><a href="/verbose/build-from-scratch/">How to code a satellite algorithm and cook paella from scratch</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
 
 &#183; <a href="https://twitter.com/hivickylai">twitter</a>
 &#183; <a href="mailto:hello@vickylai.com" rel="noopener">email</a></p></div></div></div>

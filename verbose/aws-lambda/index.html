@@ -11,7 +11,7 @@
 <meta name="description" content="
 
 
-If you read About time, you&rsquo;ll know that I&rsquo;m a big believer in spending time now on building things that save time in the future. To this end I built a simple Twitter bot in Go that would occasionally post links to my articles and keep my account interesting even when I&rsquo;m too busy to use it. The tweets help drive traffic to my sites, and I don&rsquo;t have to lift a finger.
+How to save some time with automated link sharing on Twitter - for free!
 
 
 ">
@@ -26,7 +26,7 @@ Running a free Twitter bot on AWS Lambda
 <meta property="og:description" content="
 
 
-If you read About time, you&rsquo;ll know that I&rsquo;m a big believer in spending time now on building things that save time in the future. To this end I built a simple Twitter bot in Go that would occasionally post links to my articles and keep my account interesting even when I&rsquo;m too busy to use it. The tweets help drive traffic to my sites, and I don&rsquo;t have to lift a finger.
+How to save some time with automated link sharing on Twitter - for free!
 
 
 ">
@@ -81,11 +81,11 @@ src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
 
-</head><body><div id="top"></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu no-mobile"><p><a href="/verbose">verbose</a> &#183;
+</head><body><div id="top"></div><div id="logo"><img id="up" src="/img/vx50.png" width="25px"/></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu"><p><a href="/verbose">verbose</a> &#183;
 <a href="/#work">work</a>
 
 &#183; <a href="mailto:hello@vickylai.com">email</a>
-&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/lambda-doodle.png"/></div><div id="content"><h1>Running a free Twitter bot on AWS Lambda</h1>Mon Mar 05, 2018 &#183; 1159 words
+&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/lambda-doodle.png"/></div><div id="content"><h1>Running a free Twitter bot on AWS Lambda</h1>Mon Mar 05, 2018 &#183; 6 min read
 
 <div><span id="tag"><a href="/tags/aws">aws</a></span><span id="tag"><a href="/tags/free">free</a></span><span id="tag"><a href="/tags/config">config</a></span><span id="tag"><a href="/tags/cron">cron</a></span><span id="tag"><a href="/tags/go">go</a></span><span id="tag"><a href="/tags/twitter">twitter</a></span></div><hr/>
 
@@ -117,17 +117,11 @@ crossorigin="anonymous"></script>
 <h1 id="write-a-lambda-function">Write a Lambda function</h1>
 
 <p>I found this really straightforward to do in Go. First, grab the <a href="https://github.com/aws/aws-lambda-go">aws-lambda-go</a> library:</p>
-
-<pre><code class="language-bash">go get github.com/aws/aws-lambda-go/lambda
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">go get github.com/aws/aws-lambda-go/lambda</code></pre></div>
 <p>Then make this your <code>func main()</code>:</p>
-
-<pre><code class="language-go">func main() {
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a">func</span> main() {
 	lambda.Start(tweetFeed)
-}
-</code></pre>
-
+}</code></pre></div>
 <p>Where <code>tweetFeed</code> is the name of the function that makes everything happen. While I won&rsquo;t go into writing the whole Twitter bot here, you can view my code <a href="https://gist.github.com/hivickylai/7859dab68df87e28f40d6715d08383c7">on GitHub</a>.</p>
 
 <h1 id="setting-up-aws-lambda">Setting up AWS Lambda</h1>
@@ -167,14 +161,11 @@ crossorigin="anonymous"></script>
 <p>&hellip;Of course I&rsquo;m not going to do that manually every time I want to tweak my function. That&rsquo;s what <code>awscli</code> and this bash script is for!</p>
 
 <p><code>update.sh</code></p>
-
-<pre><code class="language-sh">go build &amp;&amp; \
-zip fcc-tweet.zip fcc-tweet &amp;&amp; \
-rm fcc-tweet &amp;&amp; \
-aws lambda update-function-code --function-name fcc-tweet --zip-file fileb://fcc-tweet.zip &amp;&amp; \
-rm fcc-tweet.zip
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">go build &amp;&amp; <span style="color:#a50">\
+</span><span style="color:#a50"></span>zip fcc-tweet.zip fcc-tweet &amp;&amp; <span style="color:#a50">\
+</span><span style="color:#a50"></span>rm fcc-tweet &amp;&amp; <span style="color:#a50">\
+</span><span style="color:#a50"></span>aws lambda update-function-code --function-name fcc-tweet --zip-file fileb://fcc-tweet.zip &amp;&amp; <span style="color:#a50">\
+</span><span style="color:#a50"></span>rm fcc-tweet.zip</code></pre></div>
 <p>Now whenever I make a tweak, I just run <code>bash update.sh</code>.</p>
 
 <p>If you&rsquo;re not already using <a href="https://aws.amazon.com/cli/">AWS Command Line Interface</a>, do <code>pip install awscli</code> and thank me later. Find instructions for getting set up and configured in a few minutes <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html">here</a> under <strong>Quick Configuration</strong>.</p>
@@ -242,7 +233,7 @@ rm fcc-tweet.zip
 <h1 id="watch-it-go">Watch it go</h1>
 
 <p>That&rsquo;s all you need to get your Lambda function up and running! Now you can sit back, relax, and do more important things than share your RSS links on Twitter.</p>
-<p>Like this post? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2faws-lambda%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/delete-old-tweets-ephemeral/">Why I&#39;m automatically deleting my old tweets using AWS Lambda</a></li><li><a href="/verbose/aws-new-domain/">Moving to a new domain without breaking old links: AWS &amp; Disqus</a></li><li><a href="/verbose/aws-static-site/">Hosting your static site with AWS S3, Route 53, and CloudFront</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
+<p>Like this post? Questions? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2faws-lambda%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/delete-old-tweets-ephemeral/">Why I&#39;m automatically deleting my old tweets using AWS Lambda</a></li><li><a href="/verbose/aws-new-domain/">Moving to a new domain without breaking old links: AWS &amp; Disqus</a></li><li><a href="/verbose/aws-static-site/">Hosting your static site with AWS S3, Route 53, and CloudFront</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
 
 &#183; <a href="https://twitter.com/hivickylai">twitter</a>
 &#183; <a href="mailto:hello@vickylai.com" rel="noopener">email</a></p></div></div></div>

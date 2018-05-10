@@ -11,10 +11,7 @@
 <meta name="description" content="
 
 
-I was having trouble understanding reduce() and recursion in JavaScript, so I wrote this article to explain it to myself (hey, look, recursion!). I hope you find my examples both helpful and delicious.
-Given an array with nested arrays:
-var arr = [1, [2], [3, [[4]]]]  We want to produce this:
-var flat = [1, 2, 3, 4]  Using for loops and if statements Naively, if we know the maximum number of nested arrays we&rsquo;ll encounter (there are 4 in this example), we can use for loops to iterate through each array item, then if statements to check if each item is in itself an array, and so on&hellip;
+An explanation of JavaScript reduce() method and recursive functions using delicious, attention-retaining apples.
 
 
 ">
@@ -29,10 +26,7 @@ Understanding Array.prototype.reduce() and recursion using apple pie
 <meta property="og:description" content="
 
 
-I was having trouble understanding reduce() and recursion in JavaScript, so I wrote this article to explain it to myself (hey, look, recursion!). I hope you find my examples both helpful and delicious.
-Given an array with nested arrays:
-var arr = [1, [2], [3, [[4]]]]  We want to produce this:
-var flat = [1, 2, 3, 4]  Using for loops and if statements Naively, if we know the maximum number of nested arrays we&rsquo;ll encounter (there are 4 in this example), we can use for loops to iterate through each array item, then if statements to check if each item is in itself an array, and so on&hellip;
+An explanation of JavaScript reduce() method and recursive functions using delicious, attention-retaining apples.
 
 
 ">
@@ -87,11 +81,11 @@ src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
 
-</head><body><div id="top"></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu no-mobile"><p><a href="/verbose">verbose</a> &#183;
+</head><body><div id="top"></div><div id="logo"><img id="up" src="/img/vx50.png" width="25px"/></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu"><p><a href="/verbose">verbose</a> &#183;
 <a href="/#work">work</a>
 
 &#183; <a href="mailto:hello@vickylai.com">email</a>
-&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/recursion-pie.jpg"/></div><div id="content"><h1>Understanding Array.prototype.reduce() and recursion using apple pie</h1>Thu May 18, 2017 &#183; 1115 words
+&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/recursion-pie.jpg"/></div><div id="content"><h1>Understanding Array.prototype.reduce() and recursion using apple pie</h1>Thu May 18, 2017 &#183; 6 min read
 
 <div><span id="tag"><a href="/tags/javascript">javascript</a></span><span id="tag"><a href="/tags/coding">coding</a></span><span id="tag"><a href="/tags/food">food</a></span></div><hr/>
 
@@ -99,60 +93,52 @@ crossorigin="anonymous"></script>
 <p>I was having trouble understanding <code>reduce()</code> and recursion in JavaScript, so I wrote this article to explain it to myself (hey, look, recursion!). I hope you find my examples both helpful and delicious.</p>
 
 <p>Given an array with nested arrays:</p>
-
-<pre><code class="language-js">var arr = [1, [2], [3, [[4]]]]
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#00a">var</span> arr = [<span style="color:#099">1</span>, [<span style="color:#099">2</span>], [<span style="color:#099">3</span>, [[<span style="color:#099">4</span>]]]]
+</code></pre></div>
 <p>We want to produce this:</p>
-
-<pre><code class="language-js">var flat = [1, 2, 3, 4]
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#00a">var</span> flat = [<span style="color:#099">1</span>, <span style="color:#099">2</span>, <span style="color:#099">3</span>, <span style="color:#099">4</span>]
+</code></pre></div>
 <h1 id="using-for-loops-and-if-statements">Using for loops and if statements</h1>
 
 <p>Naively, if we know the maximum number of nested arrays we&rsquo;ll encounter (there are 4 in this example), we can use <code>for</code> loops to iterate through each array item, then <code>if</code> statements to check if each item is in itself an array, and so on&hellip;</p>
-
-<pre><code class="language-js">function flatten() {
-    var flat = [];
-    for (var i=0; i&lt;arr.length; i++) {
-    if (Array.isArray(arr[i])) {
-        for (var ii=0; ii&lt;arr[i].length; ii++) {
-        if (Array.isArray(arr[i][ii])) {
-            for (var iii=0; iii&lt;arr[i][ii].length; iii++) {
-            for (var iiii=0; iiii&lt;arr[i][ii][iii].length; iiii++) {
-                if (Array.isArray(arr[i][ii][iii])) {
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#00a">function</span> flatten() {
+    <span style="color:#00a">var</span> flat = [];
+    <span style="color:#00a">for</span> (<span style="color:#00a">var</span> i=<span style="color:#099">0</span>; i&lt;arr.length; i++) {
+    <span style="color:#00a">if</span> (<span style="color:#0aa">Array</span>.isArray(arr[i])) {
+        <span style="color:#00a">for</span> (<span style="color:#00a">var</span> ii=<span style="color:#099">0</span>; ii&lt;arr[i].length; ii++) {
+        <span style="color:#00a">if</span> (<span style="color:#0aa">Array</span>.isArray(arr[i][ii])) {
+            <span style="color:#00a">for</span> (<span style="color:#00a">var</span> iii=<span style="color:#099">0</span>; iii&lt;arr[i][ii].length; iii++) {
+            <span style="color:#00a">for</span> (<span style="color:#00a">var</span> iiii=<span style="color:#099">0</span>; iiii&lt;arr[i][ii][iii].length; iiii++) {
+                <span style="color:#00a">if</span> (<span style="color:#0aa">Array</span>.isArray(arr[i][ii][iii])) {
                 flat.push(arr[i][ii][iii][iiii]);
-                } else {
+                } <span style="color:#00a">else</span> {
                 flat.push(arr[i][ii][iii]);
                 }
             }
             }
-        } else {
+        } <span style="color:#00a">else</span> {
             flat.push(arr[i][ii]);
         }
         }
-    } else {
+    } <span style="color:#00a">else</span> {
     flat.push(arr[i]);
     }
     }
 }
 
-// [1, 2, 3, 4]
-</code></pre>
-
+<span style="color:#aaa;font-style:italic">// [1, 2, 3, 4]
+</span><span style="color:#aaa;font-style:italic"></span></code></pre></div>
 <p>&hellip;Which works, but of course looks ridiculous. Besides looking ridiculous, a) it only works if we know how many nested arrays we&rsquo;ll process, b) it&rsquo;s hard to read and harder to understand, and c) can you imagine having to debug this mess?! (Gee, I think there&rsquo;s an extra <code>i</code> somewhere.)</p>
 
 <h1 id="using-reduce">Using reduce</h1>
 
 <p>JavaScript has a couple methods we can use to make our code a little less ridiculous. One of these is <code>reduce()</code> and it looks like this:</p>
-
-<pre><code class="language-js">var flat = arr.reduce(function(done,curr){
-    return done.concat(curr);
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#00a">var</span> flat = arr.reduce(<span style="color:#00a">function</span>(done,curr){
+    <span style="color:#00a">return</span> done.concat(curr);
 }, []);
 
-// [ 1, 2, 3, [ [ 4 ] ] ]
-</code></pre>
-
+<span style="color:#aaa;font-style:italic">// [ 1, 2, 3, [ [ 4 ] ] ]
+</span><span style="color:#aaa;font-style:italic"></span></code></pre></div>
 <p>It&rsquo;s a lot less code, but we haven&rsquo;t taken care of some of the nested arrays. Let&rsquo;s first walk through <code>reduce()</code> together and examine what it does to see how we&rsquo;ll correct this.</p>
 
 <blockquote>
@@ -187,20 +173,18 @@ crossorigin="anonymous"></script>
 </ol>
 
 <p>A recursive reduce function that accomplishes this is:</p>
-
-<pre><code class="language-js">function flatten(arr) {
-  if (Array.isArray(arr)) {
-  return arr.reduce(function(done,curr){
-    return done.concat(flatten(curr));
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#00a">function</span> flatten(arr) {
+  <span style="color:#00a">if</span> (<span style="color:#0aa">Array</span>.isArray(arr)) {
+  <span style="color:#00a">return</span> arr.reduce(<span style="color:#00a">function</span>(done,curr){
+    <span style="color:#00a">return</span> done.concat(flatten(curr));
     }, []);
-  } else {
-    return arr;
+  } <span style="color:#00a">else</span> {
+    <span style="color:#00a">return</span> arr;
   }
 }
 
-// [ 1, 2, 3, 4 ]
-</code></pre>
-
+<span style="color:#aaa;font-style:italic">// [ 1, 2, 3, 4 ]
+</span><span style="color:#aaa;font-style:italic"></span></code></pre></div>
 <p>Bear with me and I&rsquo;ll explain.</p>
 
 <blockquote>
@@ -231,7 +215,7 @@ crossorigin="anonymous"></script>
 
 <p><img src="/pixels/recursion-adams-apples.jpg#center" alt="Adam's apple pie factory, &quot;Adam's Apples.&quot;" />
 <p class="has-text-centered img-caption">+1 for you if you saw that one coming.</p></p>
-<p>Like this post? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2freduce-recursion-with-pie%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/javascript-closures/">Making sandwiches with closures in JavaScript</a></li><li><a href="/verbose/iterating-objects-arrays/">Iterating over objects and arrays: frequent errors</a></li><li><a href="/verbose/build-from-scratch/">How to code a satellite algorithm and cook paella from scratch</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
+<p>Like this post? Questions? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2freduce-recursion-with-pie%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/javascript-closures/">Making sandwiches with closures in JavaScript</a></li><li><a href="/verbose/iterating-objects-arrays/">Iterating over objects and arrays: frequent errors</a></li><li><a href="/verbose/build-from-scratch/">How to code a satellite algorithm and cook paella from scratch</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
 
 &#183; <a href="https://twitter.com/hivickylai">twitter</a>
 &#183; <a href="mailto:hello@vickylai.com" rel="noopener">email</a></p></div></div></div>

@@ -8,7 +8,7 @@
     <language>en-us</language>
     <managingEditor>hello@vickylai.com (Vicky Lai)</managingEditor>
     <webMaster>hello@vickylai.com (Vicky Lai)</webMaster>
-    <lastBuildDate>Sun, 08 Apr 2018 17:15:40 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 09 May 2018 21:00:35 -0400</lastBuildDate>
     
 	<atom:link href="https://vickylai.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -16,7 +16,7 @@
     <item>
       <title>Algorithms</title>
       <link>https://vickylai.com/tags/algorithms/</link>
-      <pubDate>Sun, 08 Apr 2018 17:15:40 -0400</pubDate>
+      <pubDate>Wed, 09 May 2018 21:00:35 -0400</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
       <guid>https://vickylai.com/tags/algorithms/</guid>
       <description></description>
@@ -70,7 +70,7 @@
     <item>
       <title>Data</title>
       <link>https://vickylai.com/tags/data/</link>
-      <pubDate>Sun, 08 Apr 2018 17:15:40 -0400</pubDate>
+      <pubDate>Wed, 09 May 2018 21:00:35 -0400</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
       <guid>https://vickylai.com/tags/data/</guid>
       <description></description>
@@ -115,7 +115,7 @@
     <item>
       <title>Go</title>
       <link>https://vickylai.com/tags/go/</link>
-      <pubDate>Thu, 12 Apr 2018 10:51:15 -0500</pubDate>
+      <pubDate>Wed, 09 May 2018 21:00:35 -0400</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
       <guid>https://vickylai.com/tags/go/</guid>
       <description></description>

@@ -11,9 +11,7 @@
 <meta name="description" content="
 
 
-From now on, my tweets are ephemeral. Here&rsquo;s why I&rsquo;m deleting all my old tweets and the AWS Lambda function that does it for free.
-Click here to skip to the code part.
-Stuff and opinions I&rsquo;ve only been a one-bag nomad for a little over a year and a half. Before that, I lived as most people do in an apartment or a house. I owned furniture, more clothing than I strictly needed, and enough &ldquo;stuff&rdquo; to fill at least a few moving boxes.
+From now on, my tweets are ephemeral. Here&#39;s why I&#39;m deleting all my old tweets and the AWS Lambda function that does it for free.
 
 
 ">
@@ -28,9 +26,7 @@ Why I&#39;m automatically deleting my old tweets using AWS Lambda
 <meta property="og:description" content="
 
 
-From now on, my tweets are ephemeral. Here&rsquo;s why I&rsquo;m deleting all my old tweets and the AWS Lambda function that does it for free.
-Click here to skip to the code part.
-Stuff and opinions I&rsquo;ve only been a one-bag nomad for a little over a year and a half. Before that, I lived as most people do in an apartment or a house. I owned furniture, more clothing than I strictly needed, and enough &ldquo;stuff&rdquo; to fill at least a few moving boxes.
+From now on, my tweets are ephemeral. Here&#39;s why I&#39;m deleting all my old tweets and the AWS Lambda function that does it for free.
 
 
 ">
@@ -85,11 +81,11 @@ src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
 
-</head><body><div id="top"></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu no-mobile"><p><a href="/verbose">verbose</a> &#183;
+</head><body><div id="top"></div><div id="logo"><img id="up" src="/img/vx50.png" width="25px"/></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu"><p><a href="/verbose">verbose</a> &#183;
 <a href="/#work">work</a>
 
 &#183; <a href="mailto:hello@vickylai.com">email</a>
-&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/ephemeral.jpg"/></div><div id="content"><h1>Why I&#39;m automatically deleting my old tweets using AWS Lambda</h1>Thu Apr 12, 2018 &#183; 1360 words
+&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/ephemeral.jpg"/></div><div id="content"><h1>Why I&#39;m automatically deleting my old tweets using AWS Lambda</h1>Thu Apr 12, 2018 &#183; 7 min read
 
 <div><span id="tag"><a href="/tags/api">api</a></span><span id="tag"><a href="/tags/aws">aws</a></span><span id="tag"><a href="/tags/free">free</a></span><span id="tag"><a href="/tags/go">go</a></span><span id="tag"><a href="/tags/life">life</a></span><span id="tag"><a href="/tags/time-saver">time-saver</a></span><span id="tag"><a href="/tags/twitter">twitter</a></span></div><hr/>
 
@@ -125,52 +121,46 @@ crossorigin="anonymous"></script>
 <p>If you look at my Twitter profile page today, you&rsquo;ll see fewer tweets there than you have fingers (I hope). I&rsquo;m using <a href="https://github.com/hivickylai/ephemeral">ephemeral</a> - a lightweight utility I wrote for use on <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> - to delete all my tweets older than a few days. I&rsquo;m doing this for the same reason that I don&rsquo;t hang on to stuff that I no longer use - that stuff isn&rsquo;t relevant to me anymore. It doesn&rsquo;t represent me, either.</p>
 
 <p>The code that makes up ephemeral is written in Go. AWS Lambda creates an environment for each Lambda function, so ephemeral utilizes environment variables for your private Twitter API keys and the maximum age of the tweets you want to keep, represented in hours, like <code>72h</code>.</p>
-
-<pre><code class="language-go">var (
-	consumerKey       = getenv(&quot;TWITTER_CONSUMER_KEY&quot;)
-	consumerSecret    = getenv(&quot;TWITTER_CONSUMER_SECRET&quot;)
-	accessToken       = getenv(&quot;TWITTER_ACCESS_TOKEN&quot;)
-	accessTokenSecret = getenv(&quot;TWITTER_ACCESS_TOKEN_SECRET&quot;)
-	maxTweetAge       = getenv(&quot;MAX_TWEET_AGE&quot;)
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a">var</span> (
+	consumerKey       = getenv(<span style="color:#a50">&#34;TWITTER_CONSUMER_KEY&#34;</span>)
+	consumerSecret    = getenv(<span style="color:#a50">&#34;TWITTER_CONSUMER_SECRET&#34;</span>)
+	accessToken       = getenv(<span style="color:#a50">&#34;TWITTER_ACCESS_TOKEN&#34;</span>)
+	accessTokenSecret = getenv(<span style="color:#a50">&#34;TWITTER_ACCESS_TOKEN_SECRET&#34;</span>)
+	maxTweetAge       = getenv(<span style="color:#a50">&#34;MAX_TWEET_AGE&#34;</span>)
 	logger            = log.New()
 )
 
-func getenv(name string) string {
+<span style="color:#00a">func</span> getenv(name <span style="color:#0aa">string</span>) <span style="color:#0aa">string</span> {
 	v := os.Getenv(name)
-	if v == &quot;&quot; {
-		panic(&quot;missing required environment variable &quot; + name)
+	<span style="color:#00a">if</span> v == <span style="color:#a50">&#34;&#34;</span> {
+		<span style="color:#0aa">panic</span>(<span style="color:#a50">&#34;missing required environment variable &#34;</span> + name)
 	}
-	return v
-}
-</code></pre>
-
+	<span style="color:#00a">return</span> v
+}</code></pre></div>
 <p>The program uses the <a href="https://github.com/ChimeraCoder/anaconda">anaconda</a> library. It fetches your timeline up to the Twitter API&rsquo;s limit of 200 tweets per request, then compares each tweet&rsquo;s date of creation to your <code>MAX_TWEET_AGE</code> variable to decide whether it&rsquo;s old enough to be deleted. After deleting all the expired tweets, the Lambda function terminates.</p>
-
-<pre><code class="language-go">func deleteFromTimeline(api *anaconda.TwitterApi, ageLimit time.Duration) {
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a">func</span> deleteFromTimeline(api *anaconda.TwitterApi, ageLimit time.Duration) {
 	timeline, err := getTimeline(api)
 
-	if err != nil {
-		log.Error(&quot;Could not get timeline&quot;)
+	<span style="color:#00a">if</span> err != <span style="color:#00a">nil</span> {
+		log.Error(<span style="color:#a50">&#34;Could not get timeline&#34;</span>)
 	}
-	for _, t := range timeline {
+	<span style="color:#00a">for</span> _, t := <span style="color:#00a">range</span> timeline {
 		createdTime, err := t.CreatedAtTime()
-		if err != nil {
-			log.Error(&quot;Couldn't parse time &quot;, err)
-		} else {
-			if time.Since(createdTime) &gt; ageLimit {
-				_, err := api.DeleteTweet(t.Id, true)
-				log.Info(&quot;DELETED: Age - &quot;, time.Since(createdTime).Round(1*time.Minute), &quot; - &quot;, t.Text)
-				if err != nil {
-					log.Error(&quot;Failed to delete! &quot;, err)
+		<span style="color:#00a">if</span> err != <span style="color:#00a">nil</span> {
+			log.Error(<span style="color:#a50">&#34;Couldn&#39;t parse time &#34;</span>, err)
+		} <span style="color:#00a">else</span> {
+			<span style="color:#00a">if</span> time.Since(createdTime) &gt; ageLimit {
+				_, err := api.DeleteTweet(t.Id, <span style="color:#00a">true</span>)
+				log.Info(<span style="color:#a50">&#34;DELETED: Age - &#34;</span>, time.Since(createdTime).Round(<span style="color:#099">1</span>*time.Minute), <span style="color:#a50">&#34; - &#34;</span>, t.Text)
+				<span style="color:#00a">if</span> err != <span style="color:#00a">nil</span> {
+					log.Error(<span style="color:#a50">&#34;Failed to delete! &#34;</span>, err)
 				}
 			}
 		}
 	}
-	log.Info(&quot;No more tweets to delete.&quot;)
+	log.Info(<span style="color:#a50">&#34;No more tweets to delete.&#34;</span>)
 
-}
-</code></pre>
-
+}</code></pre></div>
 <p>Read the full code <a href="https://github.com/hivickylai/ephemeral/blob/master/main.go">here</a>.</p>
 
 <p>For a use case like this, AWS Lambda has a free tier that costs nothing. If you&rsquo;re any level of developer, it&rsquo;s an extremely useful tool to become familiar with. For a full walkthrough with screenshots of how to set up a Lambda function that tweets for you, you can read <a href="https://vickylai.com/verbose/aws-lambda/">this article</a>. The set up for ephemeral is the same, it just has an opposite function. :)</p>
@@ -184,7 +174,7 @@ func getenv(name string) string {
 <p>In anticipation of the question, let me say that yes, I do use Twitter besides just as a bucket for my Lambda functions to fill and empty. It has its benefits, most related to what I perceive to be its original intended purpose: to be a means of near-instant communication for short, digestable pieces of information reaching a widespread pool of people.</p>
 
 <p>I use it as a way to keep tabs on what&rsquo;s happening <em>right now.</em> I use it to comment on, joke about, and commiserate with things tweeted by the people I follow <em>right now.</em> By keeping my timeline restricted to only the most recent few days, I feel like I&rsquo;m using Twitter more like it was meant to be used: a way to join the conversation and see what&rsquo;s happening in the world <em>right now</em> - instead of just another place to amass more &ldquo;stuff.&rdquo;</p>
-<p>Like this post? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2fdelete-old-tweets-ephemeral%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/aws-lambda/">Running a free Twitter bot on AWS Lambda</a></li><li><a href="/verbose/aws-static-site/">Hosting your static site with AWS S3, Route 53, and CloudFront</a></li><li><a href="/verbose/about-time/">About time</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
+<p>Like this post? Questions? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2fdelete-old-tweets-ephemeral%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/aws-lambda/">Running a free Twitter bot on AWS Lambda</a></li><li><a href="/verbose/aws-static-site/">Hosting your static site with AWS S3, Route 53, and CloudFront</a></li><li><a href="/verbose/about-time/">About time</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
 
 &#183; <a href="https://twitter.com/hivickylai">twitter</a>
 &#183; <a href="mailto:hello@vickylai.com" rel="noopener">email</a></p></div></div></div>

@@ -11,7 +11,7 @@
 <meta name="description" content="
 
 
-In my last post I talked about moving from Windows 10 to running i3 on Linux, built up from Debian Base System. Among other things, this change has taught me about the benefits of using basic tools and running a minimal, lightweight system. You can achieve a lot of functionality with just command line tools and simple utilities. One example I&rsquo;d like to illustrate in this post is setting up desktop notifications.
+How you can use tools your Linux system already has to create custom desktop notifications.
 
 
 ">
@@ -26,7 +26,7 @@ How I created custom desktop notifications using terminal and cron
 <meta property="og:description" content="
 
 
-In my last post I talked about moving from Windows 10 to running i3 on Linux, built up from Debian Base System. Among other things, this change has taught me about the benefits of using basic tools and running a minimal, lightweight system. You can achieve a lot of functionality with just command line tools and simple utilities. One example I&rsquo;d like to illustrate in this post is setting up desktop notifications.
+How you can use tools your Linux system already has to create custom desktop notifications.
 
 
 ">
@@ -81,11 +81,11 @@ src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
 
-</head><body><div id="top"></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu no-mobile"><p><a href="/verbose">verbose</a> &#183;
+</head><body><div id="top"></div><div id="logo"><img id="up" src="/img/vx50.png" width="25px"/></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu"><p><a href="/verbose">verbose</a> &#183;
 <a href="/#work">work</a>
 
 &#183; <a href="mailto:hello@vickylai.com">email</a>
-&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/dunstnotif.png"/></div><div id="content"><h1>How I created custom desktop notifications using terminal and cron</h1>Tue Feb 21, 2017 &#183; 1073 words
+&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/dunstnotif.png"/></div><div id="content"><h1>How I created custom desktop notifications using terminal and cron</h1>Tue Feb 21, 2017 &#183; 6 min read
 
 <div><span id="tag"><a href="/tags/linux">linux</a></span><span id="tag"><a href="/tags/config">config</a></span><span id="tag"><a href="/tags/cron">cron</a></span><span id="tag"><a href="/tags/time-saver">time-saver</a></span></div><hr/>
 
@@ -99,11 +99,8 @@ crossorigin="anonymous"></script>
 <h1 id="battery-status-low-battery-notification">Battery status/low battery notification</h1>
 
 <p>I was looking for a simple, versatile set up to create notifications for my battery status without having to rely on separate, standalone GUI apps or services. In my search I came across a simple one-line cron task that seemed to be the perfect fit. I adapted it to my purpose and it looks like this:</p>
-
-<pre><code class="language-conf"># m h  dom mon dow   command
-*/5 * * * * acpi --battery | awk -F, '/Discharging/ { if (int($2) &lt; 20) print }' | xargs -ri env DISPLAY=:0 notify-send -u critical -i &quot;/usr/share/icons/Paper/16x16/status/xfce-battery-critical.png&quot; -t 3000 &quot;{}\nBattery low!&quot;
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-conf" data-lang="conf"># m h  dom mon dow   command
+*/5 * * * * acpi --battery | awk -F, &#39;/Discharging/ { if (int($2) &lt; 20) print }&#39; | xargs -ri env DISPLAY=:0 notify-send -u critical -i &#34;/usr/share/icons/Paper/16x16/status/xfce-battery-critical.png&#34; -t 3000 &#34;{}\nBattery low!&#34;</code></pre></div>
 <blockquote>
 <p><em>Psst&hellip; <a href="https://crontab.guru/">here&rsquo;s a great tool</a> for formatting your crontab times.</em></p>
 </blockquote>
@@ -134,15 +131,12 @@ Run the following utility in the specified display, in this case, the first disp
 Shows a desktop notification with <code>-u critical</code> (critical urgency), <code>-i</code> (the specified icon), <code>-t 3000</code> (display time/expires after 3000 milliseconds), and finally <code>{}</code> (the output of awk, replaced by xargs).</p>
 
 <p>Not bad for a one-liner! I made a few modifications for different states of my battery. Here they all are in my crontab:</p>
-
-<pre><code class="language-conf"># m h  dom mon dow   command
-*/5 * * * * acpi --battery | awk -F, '/Discharging/ { if ( (int($2) &lt; 30) &amp;&amp; (int($2) &gt; 15) ) print }' | xargs -ri env DISPLAY=:0 notify-send -a &quot;Battery status&quot; -u normal -i &quot;/usr/share/icons/Paper/16x16/status/xfce-battery-low.png&quot; -t 3000 &quot;{}\nBattery low!&quot;
-*/5 * * * * acpi --battery | awk -F, '/Discharging/ { if (int($2) &lt; 15) print }' | xargs -ri env DISPLAY=:0 notify-send -a &quot;Battery status&quot; -u critical -i &quot;/usr/share/icons/Paper/16x16/status/xfce-battery-critical.png&quot; -t 3000 &quot;{}\nSeriously, plug me in.&quot;
-*/60 * * * * acpi --battery | awk -F, '/Discharging/ { if (int($2) &gt; 30) print }' | xargs -ri env DISPLAY=:0 notify-send -a &quot;Battery status&quot; -u normal -i &quot;/usr/share/icons/Paper/16x16/status/xfce-battery-ok.png&quot; &quot;{}&quot;
-*/60 * * * * acpi --battery | awk -F, '/Charging/ { print }' | xargs -ri env DISPLAY=:0 notify-send -a &quot;Battery status&quot; -u normal -i &quot;/usr/share/icons/Paper/16x16/status/xfce-battery-ok-charging.png&quot; &quot;{}&quot;
-*/60 * * * * acpi --battery | awk -F, '/Charging/ { if (int($2) == 100) print }' | xargs -ri env DISPLAY=:0 notify-send -a &quot;Battery status&quot; -u normal -i &quot;/usr/share/icons/Paper/16x16/status/xfce-battery-full-charging.png&quot; &quot;Fully charged.&quot;
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-conf" data-lang="conf"># m h  dom mon dow   command
+*/5 * * * * acpi --battery | awk -F, &#39;/Discharging/ { if ( (int($2) &lt; 30) &amp;&amp; (int($2) &gt; 15) ) print }&#39; | xargs -ri env DISPLAY=:0 notify-send -a &#34;Battery status&#34; -u normal -i &#34;/usr/share/icons/Paper/16x16/status/xfce-battery-low.png&#34; -t 3000 &#34;{}\nBattery low!&#34;
+*/5 * * * * acpi --battery | awk -F, &#39;/Discharging/ { if (int($2) &lt; 15) print }&#39; | xargs -ri env DISPLAY=:0 notify-send -a &#34;Battery status&#34; -u critical -i &#34;/usr/share/icons/Paper/16x16/status/xfce-battery-critical.png&#34; -t 3000 &#34;{}\nSeriously, plug me in.&#34;
+*/60 * * * * acpi --battery | awk -F, &#39;/Discharging/ { if (int($2) &gt; 30) print }&#39; | xargs -ri env DISPLAY=:0 notify-send -a &#34;Battery status&#34; -u normal -i &#34;/usr/share/icons/Paper/16x16/status/xfce-battery-ok.png&#34; &#34;{}&#34;
+*/60 * * * * acpi --battery | awk -F, &#39;/Charging/ { print }&#39; | xargs -ri env DISPLAY=:0 notify-send -a &#34;Battery status&#34; -u normal -i &#34;/usr/share/icons/Paper/16x16/status/xfce-battery-ok-charging.png&#34; &#34;{}&#34;
+*/60 * * * * acpi --battery | awk -F, &#39;/Charging/ { if (int($2) == 100) print }&#39; | xargs -ri env DISPLAY=:0 notify-send -a &#34;Battery status&#34; -u normal -i &#34;/usr/share/icons/Paper/16x16/status/xfce-battery-full-charging.png&#34; &#34;Fully charged.&#34;</code></pre></div>
 <p>By the way, you can open your crontab in the editor of your choice by accessing it as root from the <code>/var/spool/cron/crontabs/</code> directory. It&rsquo;s generally best practice however to make changes to your crontab with the command <code>crontab -e</code>.</p>
 
 <p>You can see that each notification makes use of the <code>{}</code> placeholder that tells xargs to put its input there - except for the last one. This is interesting because in this case, we&rsquo;re only using <code>xargs -ri</code> as a kind of switch to present the notification. The actual information that was the input for xargs is not needed in the output in order to create a notification.</p>
@@ -186,7 +180,7 @@ Create the desktop notification including the output.</p>
 <p>I hope this post has given you some idea about the endless possibilities of these simple utilities. Questions or issues? Let me know on Twitter: <a href="https://twitter.com/hivickylai">@hivickylai</a>.</p>
 
 <p>Thanks for reading!</p>
-<p>Like this post? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2fcreate-desktop-notifications-cron%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/renaming-images/">Batch renaming images, including image resolution, with awk</a></li><li><a href="/verbose/turn-unity-into-tiling-windows-manager/">How I turned Unity into a tiling window manager</a></li><li><a href="/verbose/same-dropbox-dual-boot/">How I set up a single Dropbox folder on my dual-boot Windows and Linux system</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
+<p>Like this post? Questions? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2fcreate-desktop-notifications-cron%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/renaming-images/">Batch renaming images, including image resolution, with awk</a></li><li><a href="/verbose/turn-unity-into-tiling-windows-manager/">How I turned Unity into a tiling window manager</a></li><li><a href="/verbose/same-dropbox-dual-boot/">How I set up a single Dropbox folder on my dual-boot Windows and Linux system</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
 
 &#183; <a href="https://twitter.com/hivickylai">twitter</a>
 &#183; <a href="mailto:hello@vickylai.com" rel="noopener">email</a></p></div></div></div>

@@ -11,8 +11,7 @@
 <meta name="description" content="
 
 
-Here&rsquo;s some complaining a quick overview of some code that has confounded me more than once. I&rsquo;m told even very experienced developers encounter these situations regularly, so if you find yourself on your third cup of coffee scratching your head over why your code is doing exactly what you told it to do (and not what you want it to do), maybe this post can help you.
-The example code is JavaScript, since that&rsquo;s what I&rsquo;ve been working in lately, but I believe the concepts to be pretty universal.
+A quick reference to why your code isn&#39;t working, or some errors I frequently make with iteration when the coffee wears off.
 
 
 ">
@@ -27,8 +26,7 @@ Iterating over objects and arrays: frequent errors
 <meta property="og:description" content="
 
 
-Here&rsquo;s some complaining a quick overview of some code that has confounded me more than once. I&rsquo;m told even very experienced developers encounter these situations regularly, so if you find yourself on your third cup of coffee scratching your head over why your code is doing exactly what you told it to do (and not what you want it to do), maybe this post can help you.
-The example code is JavaScript, since that&rsquo;s what I&rsquo;ve been working in lately, but I believe the concepts to be pretty universal.
+A quick reference to why your code isn&#39;t working, or some errors I frequently make with iteration when the coffee wears off.
 
 
 ">
@@ -83,11 +81,11 @@ src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
 
-</head><body><div id="top"></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu no-mobile"><p><a href="/verbose">verbose</a> &#183;
+</head><body><div id="top"></div><div id="logo"><img id="up" src="/img/vx50.png" width="25px"/></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu"><p><a href="/verbose">verbose</a> &#183;
 <a href="/#work">work</a>
 
 &#183; <a href="mailto:hello@vickylai.com">email</a>
-&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/iteration-breakfast.jpg"/></div><div id="content"><h1>Iterating over objects and arrays: frequent errors</h1>Tue May 16, 2017 &#183; 856 words
+&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/iteration-breakfast.jpg"/></div><div id="content"><h1>Iterating over objects and arrays: frequent errors</h1>Tue May 16, 2017 &#183; 5 min read
 
 <div><span id="tag"><a href="/tags/coding">coding</a></span><span id="tag"><a href="/tags/javascript">javascript</a></span><span id="tag"><a href="/tags/food">food</a></span></div><hr/>
 
@@ -207,129 +205,98 @@ crossorigin="anonymous"></script>
 <h1 id="objects-a-name-objects-a">Objects <a name="objects"></a></h1>
 
 <p>Given a breakfast object that looks like this:</p>
-
-<pre><code class="language-js">var breakfast = {
-    'eggs': 2,
-    'waffles': 2,
-    'fruit': {
-        'blueberries': 5,
-        'banana': 1,
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#00a">var</span> breakfast = {
+    <span style="color:#a50">&#39;eggs&#39;</span>: <span style="color:#099">2</span>,
+    <span style="color:#a50">&#39;waffles&#39;</span>: <span style="color:#099">2</span>,
+    <span style="color:#a50">&#39;fruit&#39;</span>: {
+        <span style="color:#a50">&#39;blueberries&#39;</span>: <span style="color:#099">5</span>,
+        <span style="color:#a50">&#39;banana&#39;</span>: <span style="color:#099">1</span>,
     },
-    'coffee': 1
+    <span style="color:#a50">&#39;coffee&#39;</span>: <span style="color:#099">1</span>
 }
-</code></pre>
-
+</code></pre></div>
 <p>Or like this:
 <img src="/pixels/iteration-breakfast.jpg#center" alt="Breakfast object." /></p>
 
 <h2 id="iterate-over-object-properties">Iterate over object properties</h2>
 
 <p>We can iterate through each breakfast item using a for loop as follows:</p>
-
-<pre><code class="language-js">for (item in breakfast) {
-    console.log('item: ', item);
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#00a">for</span> (item <span style="color:#00a">in</span> breakfast) {
+    console.log(<span style="color:#a50">&#39;item: &#39;</span>, item);
 }
-</code></pre>
-
+</code></pre></div>
 <p>This produces:</p>
-
-<pre><code class="language-sh">item: eggs
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">item: eggs
 item: waffles
 item: fruit
-item: coffee
-</code></pre>
-
+item: coffee</code></pre></div>
 <h2 id="get-object-property-value">Get object property value</h2>
 
 <p>We can access the value of the property or nested properties (in this example, the number of items) like this:</p>
-
-<pre><code class="language-js">console.log('How many waffles? ', breakfast['waffles'])
-console.log('How many bananas? ', breakfast['fruit']['banana'])
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">console.log(<span style="color:#a50">&#39;How many waffles? &#39;</span>, breakfast[<span style="color:#a50">&#39;waffles&#39;</span>])
+console.log(<span style="color:#a50">&#39;How many bananas? &#39;</span>, breakfast[<span style="color:#a50">&#39;fruit&#39;</span>][<span style="color:#a50">&#39;banana&#39;</span>])
+</code></pre></div>
 <p>Or equivalent syntax:</p>
-
-<pre><code class="language-js">console.log('How many waffles? ', breakfast.waffles)
-console.log('How many bananas? ', breakfast.fruit.banana)
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">console.log(<span style="color:#a50">&#39;How many waffles? &#39;</span>, breakfast.waffles)
+console.log(<span style="color:#a50">&#39;How many bananas? &#39;</span>, breakfast.fruit.banana)
+</code></pre></div>
 <p>This produces:</p>
-
-<pre><code class="language-sh">How many waffles?  2
-How many bananas?  1
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">How many waffles?  <span style="color:#099">2</span>
+How many bananas?  <span style="color:#099">1</span></code></pre></div>
 <h2 id="get-object-property-from-the-value">Get object property from the value</h2>
 
 <p>If instead I want to access the property via the value, for example, to find out which items are served in twos, I can do so by iterating like this:</p>
-
-<pre><code class="language-js">for (item in breakfast) {
-    if (breakfast[item] == 2) {
-        console.log('Two of: ', item);
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#00a">for</span> (item <span style="color:#00a">in</span> breakfast) {
+    <span style="color:#00a">if</span> (breakfast[item] == <span style="color:#099">2</span>) {
+        console.log(<span style="color:#a50">&#39;Two of: &#39;</span>, item);
     }
 }
-</code></pre>
-
+</code></pre></div>
 <p>Which gives us:</p>
-
-<pre><code class="language-sh">Two of:  eggs
-Two of:  waffles
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">Two of:  eggs
+Two of:  waffles</code></pre></div>
 <h2 id="alter-nested-property-values">Alter nested property values</h2>
 
 <p>Say I want to increase the number of fruits in breakfast, because sugar is bad for me and I like things that are bad for me. I can do that like this:</p>
-
-<pre><code class="language-js">var fruits: breakfast['fruit'];
-for (f in fruits) {
-    fruits[f] += 1;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#00a">var</span> fruits: breakfast[<span style="color:#a50">&#39;fruit&#39;</span>];
+<span style="color:#00a">for</span> (f <span style="color:#00a">in</span> fruits) {
+    fruits[f] += <span style="color:#099">1</span>;
 }
 console.log(fruits);
-</code></pre>
-
+</code></pre></div>
 <p>Which gives us:</p>
-
-<pre><code class="language-sh">{ blueberries: 6, banana: 2 }
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">{ blueberries: <span style="color:#099">6</span>, banana: <span style="color:#099">2</span> }</code></pre></div>
 <h1 id="arrays-a-name-arrays-a">Arrays <a name="arrays"></a></h1>
 
 <p>Given an array of waffles that looks like this:</p>
-
-<pre><code class="language-js">var wafflesIAte = [ 1, 3, 2, 0, 5, 2, 11 ];
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#00a">var</span> wafflesIAte = [ <span style="color:#099">1</span>, <span style="color:#099">3</span>, <span style="color:#099">2</span>, <span style="color:#099">0</span>, <span style="color:#099">5</span>, <span style="color:#099">2</span>, <span style="color:#099">11</span> ];
+</code></pre></div>
 <p>Or like this:
 <img src="/pixels/iteration-waffles.jpg#center" alt="Waffle array." /></p>
 
 <h2 id="iterate-through-array-items">Iterate through array items</h2>
 
 <p>We can iterate through each item in the array using a for loop:</p>
-
-<pre><code class="language-js">for (var i = 0; i &lt; wafflesIAte.length; i++) {
-    console.log('array index: ', i);
-    console.log('item from array: ', wafflesIAte[i]);
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#00a">for</span> (<span style="color:#00a">var</span> i = <span style="color:#099">0</span>; i &lt; wafflesIAte.length; i++) {
+    console.log(<span style="color:#a50">&#39;array index: &#39;</span>, i);
+    console.log(<span style="color:#a50">&#39;item from array: &#39;</span>, wafflesIAte[i]);
 }
-</code></pre>
-
+</code></pre></div>
 <p>This produces:</p>
-
-<pre><code class="language-sh">array index:  0
-item from array:  1
-array index:  1
-item from array:  3
-array index:  2
-item from array:  2
-array index:  3
-item from array:  0
-array index:  4
-item from array:  5
-array index:  5
-item from array:  2
-array index:  6
-item from array:  11
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">array index:  <span style="color:#099">0</span>
+item from array:  <span style="color:#099">1</span>
+array index:  <span style="color:#099">1</span>
+item from array:  <span style="color:#099">3</span>
+array index:  <span style="color:#099">2</span>
+item from array:  <span style="color:#099">2</span>
+array index:  <span style="color:#099">3</span>
+item from array:  <span style="color:#099">0</span>
+array index:  <span style="color:#099">4</span>
+item from array:  <span style="color:#099">5</span>
+array index:  <span style="color:#099">5</span>
+item from array:  <span style="color:#099">2</span>
+array index:  <span style="color:#099">6</span>
+item from array:  <span style="color:#099">11</span></code></pre></div>
 <p>Some things to remember:
 <code>i</code> in the above context is a placeholder; we could substitute anything we like (<code>x</code>, <code>n</code>, <code>underpants</code>, etc). It simply denotes each instance of the iteration.</p>
 
@@ -348,21 +315,16 @@ item from array:  11
 <p>Remember that <code>wafflesIAte.length</code> and the index of the last item in the array are different. The former is 7, the latter is <code>6</code>.</p>
 
 <p>When incrementing <code>i</code>, remember that <code>[i+1]</code> and <code>[i]+1</code> are different:</p>
-
-<pre><code class="language-js">console.log('[i+1] gives next array index: ', wafflesIAte[0+1]);
-console.log('[i]+1 gives index value + 1: ', wafflesIAte[0]+1);
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">console.log(<span style="color:#a50">&#39;[i+1] gives next array index: &#39;</span>, wafflesIAte[<span style="color:#099">0</span>+<span style="color:#099">1</span>]);
+console.log(<span style="color:#a50">&#39;[i]+1 gives index value + 1: &#39;</span>, wafflesIAte[<span style="color:#099">0</span>]+<span style="color:#099">1</span>);
+</code></pre></div>
 <p>Produces:</p>
-
-<pre><code class="language-sh">[i+1] gives next array index:  3
-[i]+1 gives index value + 1:  2
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">[i+1] gives next array index:  <span style="color:#099">3</span>
+[i]+1 gives index value + <span style="color:#099">1</span>:  <span style="color:#099">2</span></code></pre></div>
 <p>&nbsp;</p>
 
 <p>That&rsquo;s all for now! If you have a correction, best practice, or another common error for me to add, please let me know!</p>
-<p>Like this post? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2fiterating-objects-arrays%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/javascript-closures/">Making sandwiches with closures in JavaScript</a></li><li><a href="/verbose/reduce-recursion-with-pie/">Understanding Array.prototype.reduce() and recursion using apple pie</a></li><li><a href="/verbose/build-from-scratch/">How to code a satellite algorithm and cook paella from scratch</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
+<p>Like this post? Questions? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2fiterating-objects-arrays%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/javascript-closures/">Making sandwiches with closures in JavaScript</a></li><li><a href="/verbose/reduce-recursion-with-pie/">Understanding Array.prototype.reduce() and recursion using apple pie</a></li><li><a href="/verbose/build-from-scratch/">How to code a satellite algorithm and cook paella from scratch</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
 
 &#183; <a href="https://twitter.com/hivickylai">twitter</a>
 &#183; <a href="mailto:hello@vickylai.com" rel="noopener">email</a></p></div></div></div>

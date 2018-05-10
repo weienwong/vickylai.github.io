@@ -8,10 +8,20 @@
     <language>en-us</language>
     <managingEditor>hello@vickylai.com (Vicky Lai)</managingEditor>
     <webMaster>hello@vickylai.com (Vicky Lai)</webMaster>
-    <lastBuildDate>Thu, 12 Apr 2018 10:51:15 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 09 May 2018 21:00:35 -0400</lastBuildDate>
     
 	<atom:link href="https://vickylai.com/verbose/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Knapsack problem algorithms for my real-life carry-on knapsack</title>
+      <link>https://vickylai.com/verbose/knapsack-go-approaches/</link>
+      <pubDate>Wed, 09 May 2018 21:00:35 -0400</pubDate>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/knapsack-go-approaches/</guid>
+      <description>The knapsack problem I&amp;rsquo;m a nomad and live out of one carry-on bag. This means that the total weight of all my worldly possessions must fall under airline cabin baggage weight limits - usually 10kg. On some smaller airlines, however, this weight limit drops to 7kg. Occasionally, I have to decide not to bring something with me to adjust to the smaller weight limit.
+As a practical exercise, deciding what to leave behind (or get rid of altogether) entails laying out all my things and choosing which ones to keep.</description>
+    </item>
     
     <item>
       <title>Why I&#39;m automatically deleting my old tweets using AWS Lambda</title>
@@ -22,16 +32,6 @@
       <description>From now on, my tweets are ephemeral. Here&amp;rsquo;s why I&amp;rsquo;m deleting all my old tweets and the AWS Lambda function that does it for free.
 Click here to skip to the code part.
 Stuff and opinions I&amp;rsquo;ve only been a one-bag nomad for a little over a year and a half. Before that, I lived as most people do in an apartment or a house. I owned furniture, more clothing than I strictly needed, and enough &amp;ldquo;stuff&amp;rdquo; to fill at least a few moving boxes.</description>
-    </item>
-    
-    <item>
-      <title>Solving the Knapsack Problem in Go for my real-life carry-on bag</title>
-      <link>https://vickylai.com/verbose/packing-problem/packing-carry-on/</link>
-      <pubDate>Sun, 08 Apr 2018 17:15:40 -0400</pubDate>
-      <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/packing-problem/packing-carry-on/</guid>
-      <description>I&amp;rsquo;m a nomad and live out of one carry-on bag. This means that the total weight of all my worldly possessions must fall under airline cabin baggage weight limits - usually 10kg. On some smaller airlines, however, this weight limit drops to 7kg. Occasionally, I have to decide not to bring something with me to adjust to the smaller weight limit.
-As a practical exercise, deciding what to leave behind (or get rid of altogether) entails laying out all my things and choosing which ones to keep.</description>
     </item>
     
     <item>
@@ -89,7 +89,7 @@ It&amp;rsquo;s made me think, which I must admit, I at first didn&amp;rsquo;t li
       <author>hello@vickylai.com (Vicky Lai)</author>
       <guid>https://vickylai.com/verbose/renaming-images/</guid>
       <description>The most recent item on my list of &amp;ldquo;Geeky things I did that made me feel pretty awesome&amp;rdquo; is an hour&amp;rsquo;s adventure that culminated in this code:
-$ file IMG* | awk &#39;BEGIN{a=0} {print substr($1, 1, length($1)-5),a++&amp;quot;_&amp;quot;substr($8,1, length($8)-1)}&#39; | while read fn fr; do echo $(rename -v &amp;quot;s/$fn/img_$fr/g&amp;quot; *); done IMG_20170808_172653_425.jpg renamed as img_0_4032x3024.jpg IMG_20170808_173020_267.jpg renamed as img_1_3024x3506.jpg IMG_20170808_173130_616.jpg renamed as img_2_3024x3779.jpg IMG_20170808_173221_425.jpg renamed as img_3_3024x3780.jpg IMG_20170808_173417_059.jpg renamed as img_4_2956x2980.</description>
+$ file IMG* | awk &amp;#39;BEGIN{a=0} {print substr($1, 1, length($1)-5),a++&amp;#34;_&amp;#34;substr($8,1, length($8)-1)}&amp;#39; | while read fn fr; do echo $(rename -v &amp;#34;s/$fn/img_$fr/g&amp;#34; *); done IMG_20170808_172653_425.jpg renamed as img_0_4032x3024.jpg IMG_20170808_173020_267.jpg renamed as img_1_3024x3506.jpg IMG_20170808_173130_616.jpg renamed as img_2_3024x3779.jpg IMG_20170808_173221_425.jpg renamed as img_3_3024x3780.jpg IMG_20170808_173417_059.jpg renamed as img_4_2956x2980.</description>
     </item>
     
     <item>

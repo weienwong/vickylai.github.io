@@ -11,9 +11,7 @@
 <meta name="description" content="
 
 
-What if I told you that by the end of this article, you&rsquo;ll be able to calculate the orbital period of satellites around Earth using their average altitudes and&hellip; You tuned out already, didn&rsquo;t you?
-Okay, how about this: I&rsquo;m going to teach you how to make paella!
-And you&rsquo;ll have written a function that does the stuff I mentioned above, just like I did for this freeCodeCamp challenge.
+A guide to expertly tackling seemingly complicated problems that you&#39;d rather never tackle in the first place.
 
 
 ">
@@ -28,9 +26,7 @@ How to code a satellite algorithm and cook paella from scratch
 <meta property="og:description" content="
 
 
-What if I told you that by the end of this article, you&rsquo;ll be able to calculate the orbital period of satellites around Earth using their average altitudes and&hellip; You tuned out already, didn&rsquo;t you?
-Okay, how about this: I&rsquo;m going to teach you how to make paella!
-And you&rsquo;ll have written a function that does the stuff I mentioned above, just like I did for this freeCodeCamp challenge.
+A guide to expertly tackling seemingly complicated problems that you&#39;d rather never tackle in the first place.
 
 
 ">
@@ -85,11 +81,11 @@ src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
 
-</head><body><div id="top"></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu no-mobile"><p><a href="/verbose">verbose</a> &#183;
+</head><body><div id="top"></div><div id="logo"><img id="up" src="/img/vx50.png" width="25px"/></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu"><p><a href="/verbose">verbose</a> &#183;
 <a href="/#work">work</a>
 
 &#183; <a href="mailto:hello@vickylai.com">email</a>
-&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/solve-paella.jpg"/></div><div id="content"><h1>How to code a satellite algorithm and cook paella from scratch</h1>Fri Sep 08, 2017 &#183; 1431 words
+&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/solve-paella.jpg"/></div><div id="content"><h1>How to code a satellite algorithm and cook paella from scratch</h1>Fri Sep 08, 2017 &#183; 7 min read
 
 <div><span id="tag"><a href="/tags/algorithms">algorithms</a></span><span id="tag"><a href="/tags/coding">coding</a></span><span id="tag"><a href="/tags/food">food</a></span></div><hr/>
 
@@ -194,10 +190,8 @@ crossorigin="anonymous"></script>
 <p>*<strong>T*, the orbital period, equals 2 multiplied by Pi, in turn multiplied by the square root of the radius, <em>r</em> cubed, divided by the gravitational mass, <em>GM</em>.</strong></p>
 
 <p>JavaScript has a <code>Math.PI</code> property, as well as <code>Math.sqrt()</code> function and <code>Math.pow()</code> function. Using those combined with simple calculation, we can represent this equation in a single line assigned to a variable:</p>
-
-<pre><code class="language-js">var orbitalPeriod = 2 * Math.PI * (Math.sqrt(Math.pow((earthRadius + avgAlt), 3) / GM));
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#00a">var</span> orbitalPeriod = <span style="color:#099">2</span> * <span style="color:#0aa">Math</span>.PI * (<span style="color:#0aa">Math</span>.sqrt(<span style="color:#0aa">Math</span>.pow((earthRadius + avgAlt), <span style="color:#099">3</span>) <span style="color:#f00;background-color:#faa">/ GM));</span>
+</code></pre></div>
 <p>From the inside out:</p>
 
 <ol>
@@ -212,27 +206,25 @@ crossorigin="anonymous"></script>
 <p>Believe it or not, we&rsquo;re already most of the way there.</p>
 
 <p>The next MIQ for this challenge is to take the arguments object, extract the information we need, and return the result of our equation in the required format. There are a multitude of ways to do this, but I&rsquo;m happy with a straightforward <code>for</code> loop:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#00a">function</span> orbitalPeriod(arr) {
+  <span style="color:#00a">var</span> resultArr = [];
 
-<pre><code class="language-js">function orbitalPeriod(arr) {
-  var resultArr = [];
-
-  for (var teapot = 0; teapot &lt; arguments[0].length; teapot++) {
-    var GM = 398600.4418;
-    var earthRadius = 6367.4447;
-    var avgAlt = arguments[0][teapot]['avgAlt'];
-    var name = arguments[0][teapot]['name'];
-    var orbitalPeriod = 2 * Math.PI * (Math.sqrt(Math.pow((earthRadius + avgAlt), 3) / GM));
-    var result = {
+  <span style="color:#00a">for</span> (<span style="color:#00a">var</span> teapot = <span style="color:#099">0</span>; teapot &lt; arguments[<span style="color:#099">0</span>].length; teapot++) {
+    <span style="color:#00a">var</span> GM = <span style="color:#099">398600.4418</span>;
+    <span style="color:#00a">var</span> earthRadius = <span style="color:#099">6367.4447</span>;
+    <span style="color:#00a">var</span> avgAlt = arguments[<span style="color:#099">0</span>][teapot][<span style="color:#a50">&#39;avgAlt&#39;</span>];
+    <span style="color:#00a">var</span> name = arguments[<span style="color:#099">0</span>][teapot][<span style="color:#a50">&#39;name&#39;</span>];
+    <span style="color:#00a">var</span> orbitalPeriod = <span style="color:#099">2</span> * <span style="color:#0aa">Math</span>.PI * (<span style="color:#0aa">Math</span>.sqrt(<span style="color:#0aa">Math</span>.pow((earthRadius + avgAlt), <span style="color:#099">3</span>) <span style="color:#f00;background-color:#faa">/ GM));</span>
+    <span style="color:#00a">var</span> result = {
       name: name,
-      orbitalPeriod: Math.round(orbitalPeriod)
+      orbitalPeriod: <span style="color:#0aa">Math</span>.round(orbitalPeriod)
     }
     resultArr.push(result);
   }
 
-  return resultArr;
+  <span style="color:#00a">return</span> resultArr;
 }
-</code></pre>
-
+</code></pre></div>
 <p>If you need a refresher on iterating through arrays, have a look at my <a href="https://vickylai.io/verbose/iterating-objects-arrays/">article on iterating, featuring breakfast arrays</a>! (5 minutes read)</p>
 
 <p>Don&rsquo;t look now, but you just gained the ability to calculate the orbital period of satellites. You could even do it <em>while</em> making paella, if you wanted to. Seriously. Put it on your resume.</p>
@@ -244,7 +236,7 @@ crossorigin="anonymous"></script>
 <p><img src="/pixels/solve-miq-bowl.png#center" alt="Bowl of MIQs." /></p>
 
 <p>Thanks for reading!</p>
-<p>Like this post? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2fbuild-from-scratch%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/javascript-closures/">Making sandwiches with closures in JavaScript</a></li><li><a href="/verbose/reduce-recursion-with-pie/">Understanding Array.prototype.reduce() and recursion using apple pie</a></li><li><a href="/verbose/iterating-objects-arrays/">Iterating over objects and arrays: frequent errors</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
+<p>Like this post? Questions? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2fbuild-from-scratch%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/javascript-closures/">Making sandwiches with closures in JavaScript</a></li><li><a href="/verbose/reduce-recursion-with-pie/">Understanding Array.prototype.reduce() and recursion using apple pie</a></li><li><a href="/verbose/iterating-objects-arrays/">Iterating over objects and arrays: frequent errors</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
 
 &#183; <a href="https://twitter.com/hivickylai">twitter</a>
 &#183; <a href="mailto:hello@vickylai.com" rel="noopener">email</a></p></div></div></div>

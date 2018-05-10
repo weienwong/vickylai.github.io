@@ -11,9 +11,7 @@
 <meta name="description" content="
 
 
-Let me preface this by saying that I&rsquo;ve always been interested in finding out how things work. If a thing does something, I want to know why, how, and if I can customize it.
-
-It should come as no surprise that Windows 10 drove me crazy.
+An overview of challenges I encountered setting up Linux using a Debian base system.
 
 
 ">
@@ -28,9 +26,7 @@ How a lifelong Windows user switched to Linux... the hard way
 <meta property="og:description" content="
 
 
-Let me preface this by saying that I&rsquo;ve always been interested in finding out how things work. If a thing does something, I want to know why, how, and if I can customize it.
-
-It should come as no surprise that Windows 10 drove me crazy.
+An overview of challenges I encountered setting up Linux using a Debian base system.
 
 
 ">
@@ -85,11 +81,11 @@ src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
 
-</head><body><div id="top"></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu no-mobile"><p><a href="/verbose">verbose</a> &#183;
+</head><body><div id="top"></div><div id="logo"><img id="up" src="/img/vx50.png" width="25px"/></div><div class="blog-menu-mobile"><a href="/verbose">verbose</a> &#183;<a href="https://vickylai.com/">vickylai.com</a></div><div class="blog-menu"><p><a href="/verbose">verbose</a> &#183;
 <a href="/#work">work</a>
 
 &#183; <a href="mailto:hello@vickylai.com">email</a>
-&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/screenshot-asakusa-stats.png"/></div><div id="content"><h1>How a lifelong Windows user switched to Linux... the hard way</h1>Mon Feb 06, 2017 &#183; 1469 words
+&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/screenshot-asakusa-stats.png"/></div><div id="content"><h1>How a lifelong Windows user switched to Linux... the hard way</h1>Mon Feb 06, 2017 &#183; 7 min read
 
 <div><span id="tag"><a href="/tags/linux">linux</a></span><span id="tag"><a href="/tags/config">config</a></span></div><hr/>
 <p>Let me preface this by saying that I&rsquo;ve always been interested in finding out how things work. If a thing does something, I want to know why, how, and if I can customize it.</p>
@@ -145,15 +141,12 @@ crossorigin="anonymous"></script>
 <h1 id="where-the-heck-do-all-these-config-files-go">Where the heck do all these config files go?</h1>
 
 <p>I found some differing file paths. The below are mine and work:</p>
-
-<pre><code class="language-conf">systemd event handlers:   /etc/systemd/logind.conf
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-conf" data-lang="conf">systemd event handlers:   /etc/systemd/logind.conf
 For URxvt:                ~/.Xdefaults
 For i3wm:                 ~/.config/i3/config 
 For i3bar:                ~/.config/i3status/config/i3status.conf
 For dunst:                ~/.config/dunst/dunstrc 
-for Compton:              ~/.config/compton.conf
-</code></pre>
-
+for Compton:              ~/.config/compton.conf</code></pre></div>
 <h1 id="i-picked-a-stupid-user-name-how-do-i-change-it">I picked a stupid user name, how do I change it?</h1>
 
 <p>This was a fun one. Turns out changing my user name messed up a whole bunch of stuff that I then had to go fix/reinstall, among them:</p>
@@ -167,34 +160,28 @@ for Compton:              ~/.config/compton.conf
 <p>To avoid the hassle I experienced, change your user name before you set up most of your programs. If it&rsquo;s too late for that, just be aware that many programs involving a filepath with <code>/home/oldusername/...</code> are affected.</p>
 
 <p>To change your user name via the terminal, login as root, then:</p>
-
-<pre><code class="language-sh">$ killall -u oldusername
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ killall -u oldusername
 $ id oldusername
-&gt;&gt;&gt; uid=1000(oldusername) gid=1000(oldusername) groups=1000(oldusername),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),108(netdev)
-# change login name
-$ usermod -l newusername oldusername
-# change group name
-$ groupmod -n newusername oldusername 
-# modify home directory
-$ usermod -d /home/newusername -m newusername
-# add comment with full name
-$ usermod -c &quot;New Full Name&quot; newusername 
-# check that &quot;newusername&quot; replaces &quot;oldusername&quot; in all fields
-$ id newusername 
-&gt;&gt;&gt; uid=1000(newusername) gid=1000(newusername) groups=1000(newusername),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),108(netdev)
-</code></pre>
-
+&gt;&gt;&gt; <span style="color:#a00">uid</span>=<span style="color:#099">1000</span>(oldusername) <span style="color:#a00">gid</span>=<span style="color:#099">1000</span>(oldusername) <span style="color:#a00">groups</span>=<span style="color:#099">1000</span>(oldusername),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),108(netdev)
+<span style="color:#aaa;font-style:italic"># change login name
+</span><span style="color:#aaa;font-style:italic"></span>$ usermod -l newusername oldusername
+<span style="color:#aaa;font-style:italic"># change group name
+</span><span style="color:#aaa;font-style:italic"></span>$ groupmod -n newusername oldusername 
+<span style="color:#aaa;font-style:italic"># modify home directory
+</span><span style="color:#aaa;font-style:italic"></span>$ usermod -d /home/newusername -m newusername
+<span style="color:#aaa;font-style:italic"># add comment with full name
+</span><span style="color:#aaa;font-style:italic"></span>$ usermod -c <span style="color:#a50">&#34;New Full Name&#34;</span> newusername 
+<span style="color:#aaa;font-style:italic"># check that &#34;newusername&#34; replaces &#34;oldusername&#34; in all fields
+</span><span style="color:#aaa;font-style:italic"></span>$ id newusername 
+&gt;&gt;&gt; <span style="color:#a00">uid</span>=<span style="color:#099">1000</span>(newusername) <span style="color:#a00">gid</span>=<span style="color:#099">1000</span>(newusername) <span style="color:#a00">groups</span>=<span style="color:#099">1000</span>(newusername),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),108(netdev)</code></pre></div>
 <p>If you previously set your background image in i3 and it disappears, don&rsquo;t forget to check the filepath in your config file.</p>
 
 <h1 id="how-do-i-get-networkmanager-and-dropbox-to-start-automatically">How do I get NetworkManager and Dropbox to start automatically?</h1>
 
 <p>Dropbox for Linux supposedly has an autostart setting where you can type <code>dropbox autostart y</code> into a terminal and it&rsquo;ll listen. This didn&rsquo;t work for me. Instead, I added any applications I wanted to start automatically upon login to my i3 config file with this syntax:</p>
-
-<pre><code class="language-conf"># start apps automatically
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-conf" data-lang="conf"># start apps automatically
 exec --no-startup-id /usr/bin/nm-applet
-exec --no-startup-id dropbox start
-</code></pre>
-
+exec --no-startup-id dropbox start</code></pre></div>
 <p>In the above, <code>exec</code> is &ldquo;execute&rdquo;, <code>--no-startup-id</code> basically saves you from watching your cursor do the spinny loading thing, and the last component of the command is the filepath to the program or the syntax to start it, as if typing it into the terminal.</p>
 
 <h1 id="how-do-i-set-up-openvpn-with-networkmanager">How do I set up OpenVPN with NetworkManager?</h1>
@@ -252,7 +239,7 @@ bindsym $mod+F10 exec amixer -q sset Master toggle
 
 <p>I hope you&rsquo;ve found this post useful! Questions or issues? Let me know on Twitter: <a href="https://twitter.com/hivickylai">@hivickylai</a>.</p>
 
-<p>Thanks for reading!</p><p>Like this post? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2fhow-windows-user-switched-to-linux%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/turn-unity-into-tiling-windows-manager/">How I turned Unity into a tiling window manager</a></li><li><a href="/verbose/same-dropbox-dual-boot/">How I set up a single Dropbox folder on my dual-boot Windows and Linux system</a></li><li><a href="/verbose/create-desktop-notifications-cron/">How I created custom desktop notifications using terminal and cron</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
+<p>Thanks for reading!</p><p>Like this post? Questions? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2fhow-windows-user-switched-to-linux%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/turn-unity-into-tiling-windows-manager/">How I turned Unity into a tiling window manager</a></li><li><a href="/verbose/same-dropbox-dual-boot/">How I set up a single Dropbox folder on my dual-boot Windows and Linux system</a></li><li><a href="/verbose/create-desktop-notifications-cron/">How I created custom desktop notifications using terminal and cron</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/hivickylai">github</a>
 
 &#183; <a href="https://twitter.com/hivickylai">twitter</a>
 &#183; <a href="mailto:hello@vickylai.com" rel="noopener">email</a></p></div></div></div>
