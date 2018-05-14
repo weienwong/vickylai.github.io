@@ -162,114 +162,114 @@ crossorigin="anonymous"></script>
 <h2 id="reading-in-a-file">Reading in a file</h2>
 
 <p>Before we can begin thinking about how to solve the knapsack problem, we have to solve the problem of reading in and storing our data. Thankfully, the Go standard library&rsquo;s <code>io/ioutil</code> package makes the first part straightforward.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a">package</span> main
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
-<span style="color:#00a">import</span> (
-    <span style="color:#a50">&#34;fmt&#34;</span>
-    <span style="color:#a50">&#34;io/ioutil&#34;</span>
-)
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&#34;fmt&#34;</span>
+    <span class="s">&#34;io/ioutil&#34;</span>
+<span class="p">)</span>
 
-<span style="color:#00a">func</span> check(e <span style="color:#0aa">error</span>) {
-    <span style="color:#00a">if</span> e != <span style="color:#00a">nil</span> {
-        <span style="color:#0aa">panic</span>(e)
-    }
-}
+<span class="kd">func</span> <span class="nx">check</span><span class="p">(</span><span class="nx">e</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="nx">e</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+        <span class="nb">panic</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 
-<span style="color:#00a">func</span> readItems(path <span style="color:#0aa">string</span>) {
-	dat, err := ioutil.ReadFile(path)
-	check(err)
-    fmt.Print(<span style="color:#0aa">string</span>(dat))
-}</code></pre></div>
+<span class="kd">func</span> <span class="nx">readItems</span><span class="p">(</span><span class="nx">path</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">dat</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadFile</span><span class="p">(</span><span class="nx">path</span><span class="p">)</span>
+	<span class="nx">check</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">dat</span><span class="p">))</span>
+<span class="p">}</span></code></pre></div>
 <p>The <code>ReadFile()</code> function takes a file path and returns the file&rsquo;s contents and an error (<code>nil</code> if the call is successful) so we&rsquo;ve also created a <code>check()</code> function to handle any errors that might be returned. In a real-world application we probably would want to do something more sophisticated than <code>panic</code>, but that&rsquo;s not important right now.</p>
 
 <h2 id="creating-a-struct">Creating a struct</h2>
 
 <p>Now that we&rsquo;ve got our data, we should probably do something with it. Since we&rsquo;re working with real-life items and a real-life bag, let&rsquo;s create some types to represent them and make it easier to conceptualize our program. A <code>struct</code> in Go is a typed collection of fields. Here are our two types:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a">type</span> item <span style="color:#00a">struct</span> {
-	name          <span style="color:#0aa">string</span>
-	worth, weight <span style="color:#0aa">int</span>
-}
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">item</span> <span class="kd">struct</span> <span class="p">{</span>
+	<span class="nx">name</span>          <span class="kt">string</span>
+	<span class="nx">worth</span><span class="p">,</span> <span class="nx">weight</span> <span class="kt">int</span>
+<span class="p">}</span>
 
-<span style="color:#00a">type</span> bag <span style="color:#00a">struct</span> {
-	bagWeight, currItemsWeight, maxItemsWeight, totalWeight <span style="color:#0aa">int</span>
-	items                                                   []item
-}</code></pre></div>
+<span class="kd">type</span> <span class="nx">bag</span> <span class="kd">struct</span> <span class="p">{</span>
+	<span class="nx">bagWeight</span><span class="p">,</span> <span class="nx">currItemsWeight</span><span class="p">,</span> <span class="nx">maxItemsWeight</span><span class="p">,</span> <span class="nx">totalWeight</span> <span class="kt">int</span>
+	<span class="nx">items</span>                                                   <span class="p">[]</span><span class="nx">item</span>
+<span class="p">}</span></code></pre></div>
 <p>It is helpful to use field names that are very descriptive. You can see that the structs are set up just as we&rsquo;ve described the things they represent. An <code>item</code> has a <code>name</code> (string), and a <code>worth</code> and <code>weight</code> (integers). A <code>bag</code> has several fields of type <code>int</code> representing its attributes, and also has the ability to hold <code>items</code>, represented in the struct as a slice of <code>item</code> type thingamabobbers.</p>
 
 <h2 id="parsing-and-storing-our-data">Parsing and storing our data</h2>
 
 <p>Several comprehensive Go packages exist that we could use to parse our CSV data&hellip; but where&rsquo;s the fun in that? Let&rsquo;s go basic with some string splitting and a for loop. Here&rsquo;s our updated <code>readItems()</code> function:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a">func</span> readItems(path <span style="color:#0aa">string</span>) []item {
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nx">readItems</span><span class="p">(</span><span class="nx">path</span> <span class="kt">string</span><span class="p">)</span> <span class="p">[]</span><span class="nx">item</span> <span class="p">{</span>
 	
-	dat, err := ioutil.ReadFile(path)
-	check(err)
+	<span class="nx">dat</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadFile</span><span class="p">(</span><span class="nx">path</span><span class="p">)</span>
+	<span class="nx">check</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
 
-	lines := strings.Split(<span style="color:#0aa">string</span>(dat), <span style="color:#a50">&#34;\n&#34;</span>)
+	<span class="nx">lines</span> <span class="o">:=</span> <span class="nx">strings</span><span class="p">.</span><span class="nx">Split</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">dat</span><span class="p">),</span> <span class="s">&#34;\n&#34;</span><span class="p">)</span>
 
-	itemList := <span style="color:#0aa">make</span>([]item, <span style="color:#099">0</span>)
+	<span class="nx">itemList</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="nx">item</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 
-	<span style="color:#00a">for</span> i, v := <span style="color:#00a">range</span> lines {
-		<span style="color:#00a">if</span> i == <span style="color:#099">0</span> {
-			<span style="color:#00a">continue</span>
-		}
-		s := strings.Split(v, <span style="color:#a50">&#34;,&#34;</span>)
-		newItemWorth, _ := strconv.Atoi(s[<span style="color:#099">1</span>])
-		newItemWeight, _ := strconv.Atoi(s[<span style="color:#099">2</span>])
-		newItem := item{name: s[<span style="color:#099">0</span>], worth: newItemWorth, weight: newItemWeight}
-		itemList = <span style="color:#0aa">append</span>(itemList, newItem)
-	}
-	<span style="color:#00a">return</span> itemList
-}</code></pre></div>
+	<span class="k">for</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">v</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">lines</span> <span class="p">{</span>
+		<span class="k">if</span> <span class="nx">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+			<span class="k">continue</span>
+		<span class="p">}</span>
+		<span class="nx">s</span> <span class="o">:=</span> <span class="nx">strings</span><span class="p">.</span><span class="nx">Split</span><span class="p">(</span><span class="nx">v</span><span class="p">,</span> <span class="s">&#34;,&#34;</span><span class="p">)</span>
+		<span class="nx">newItemWorth</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">strconv</span><span class="p">.</span><span class="nx">Atoi</span><span class="p">(</span><span class="nx">s</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+		<span class="nx">newItemWeight</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">strconv</span><span class="p">.</span><span class="nx">Atoi</span><span class="p">(</span><span class="nx">s</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+		<span class="nx">newItem</span> <span class="o">:=</span> <span class="nx">item</span><span class="p">{</span><span class="nx">name</span><span class="p">:</span> <span class="nx">s</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">worth</span><span class="p">:</span> <span class="nx">newItemWorth</span><span class="p">,</span> <span class="nx">weight</span><span class="p">:</span> <span class="nx">newItemWeight</span><span class="p">}</span>
+		<span class="nx">itemList</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">itemList</span><span class="p">,</span> <span class="nx">newItem</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nx">itemList</span>
+<span class="p">}</span></code></pre></div>
 <p>Using <code>strings.Split</code>, we split our <code>dat</code> on newlines. We then create an empty <code>itemList</code> to hold our items.</p>
 
 <p>In our for loop, we skip the first line of our CSV file (the headers) then iterate over each line. We use <code>strconv.Atoi</code> (read &ldquo;A to i&rdquo;) to convert the values for each item&rsquo;s worth and weight into integers. We then create a <code>newItem</code> with these field values and append it to the <code>itemList</code>. Finally, we return <code>itemList</code>.</p>
 
 <p>Here&rsquo;s what our set up looks like so far:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a">package</span> main
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
-<span style="color:#00a">import</span> (
-	<span style="color:#a50">&#34;io/ioutil&#34;</span>
-	<span style="color:#a50">&#34;strconv&#34;</span>
-	<span style="color:#a50">&#34;strings&#34;</span>
-)
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;io/ioutil&#34;</span>
+	<span class="s">&#34;strconv&#34;</span>
+	<span class="s">&#34;strings&#34;</span>
+<span class="p">)</span>
 
-<span style="color:#00a">type</span> item <span style="color:#00a">struct</span> {
-	name          <span style="color:#0aa">string</span>
-	worth, weight <span style="color:#0aa">int</span>
-}
+<span class="kd">type</span> <span class="nx">item</span> <span class="kd">struct</span> <span class="p">{</span>
+	<span class="nx">name</span>          <span class="kt">string</span>
+	<span class="nx">worth</span><span class="p">,</span> <span class="nx">weight</span> <span class="kt">int</span>
+<span class="p">}</span>
 
-<span style="color:#00a">type</span> bag <span style="color:#00a">struct</span> {
-	bagWeight, currItemsWeight, maxItemsWeight, totalWeight, totalWorth <span style="color:#0aa">int</span>
-	items                                                               []item
-}
+<span class="kd">type</span> <span class="nx">bag</span> <span class="kd">struct</span> <span class="p">{</span>
+	<span class="nx">bagWeight</span><span class="p">,</span> <span class="nx">currItemsWeight</span><span class="p">,</span> <span class="nx">maxItemsWeight</span><span class="p">,</span> <span class="nx">totalWeight</span><span class="p">,</span> <span class="nx">totalWorth</span> <span class="kt">int</span>
+	<span class="nx">items</span>                                                               <span class="p">[]</span><span class="nx">item</span>
+<span class="p">}</span>
 
-<span style="color:#00a">func</span> check(e <span style="color:#0aa">error</span>) {
-	<span style="color:#00a">if</span> e != <span style="color:#00a">nil</span> {
-		<span style="color:#0aa">panic</span>(e)
-	}
-}
+<span class="kd">func</span> <span class="nx">check</span><span class="p">(</span><span class="nx">e</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="nx">e</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nb">panic</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span>
+	<span class="p">}</span>
+<span class="p">}</span>
 
-<span style="color:#00a">func</span> readItems(path <span style="color:#0aa">string</span>) []item {
+<span class="kd">func</span> <span class="nx">readItems</span><span class="p">(</span><span class="nx">path</span> <span class="kt">string</span><span class="p">)</span> <span class="p">[]</span><span class="nx">item</span> <span class="p">{</span>
 
-	dat, err := ioutil.ReadFile(path)
-	check(err)
+	<span class="nx">dat</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadFile</span><span class="p">(</span><span class="nx">path</span><span class="p">)</span>
+	<span class="nx">check</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
 
-	lines := strings.Split(<span style="color:#0aa">string</span>(dat), <span style="color:#a50">&#34;\n&#34;</span>)
+	<span class="nx">lines</span> <span class="o">:=</span> <span class="nx">strings</span><span class="p">.</span><span class="nx">Split</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">dat</span><span class="p">),</span> <span class="s">&#34;\n&#34;</span><span class="p">)</span>
 
-	itemList := <span style="color:#0aa">make</span>([]item, <span style="color:#099">0</span>)
+	<span class="nx">itemList</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="nx">item</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 
-	<span style="color:#00a">for</span> i, v := <span style="color:#00a">range</span> lines {
-		<span style="color:#00a">if</span> i == <span style="color:#099">0</span> {
-			<span style="color:#00a">continue</span> <span style="color:#aaa;font-style:italic">// skip the headers on the first line
-</span><span style="color:#aaa;font-style:italic"></span>		}
-		s := strings.Split(v, <span style="color:#a50">&#34;,&#34;</span>)
-		newItemWorth, _ := strconv.Atoi(s[<span style="color:#099">1</span>])
-		newItemWeight, _ := strconv.Atoi(s[<span style="color:#099">2</span>])
-		newItem := item{name: s[<span style="color:#099">0</span>], worth: newItemWorth, weight: newItemWeight}
-		itemList = <span style="color:#0aa">append</span>(itemList, newItem)
-	}
-	<span style="color:#00a">return</span> itemList
-}</code></pre></div>
+	<span class="k">for</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">v</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">lines</span> <span class="p">{</span>
+		<span class="k">if</span> <span class="nx">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+			<span class="k">continue</span> <span class="c1">// skip the headers on the first line
+</span><span class="c1"></span>		<span class="p">}</span>
+		<span class="nx">s</span> <span class="o">:=</span> <span class="nx">strings</span><span class="p">.</span><span class="nx">Split</span><span class="p">(</span><span class="nx">v</span><span class="p">,</span> <span class="s">&#34;,&#34;</span><span class="p">)</span>
+		<span class="nx">newItemWorth</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">strconv</span><span class="p">.</span><span class="nx">Atoi</span><span class="p">(</span><span class="nx">s</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+		<span class="nx">newItemWeight</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">strconv</span><span class="p">.</span><span class="nx">Atoi</span><span class="p">(</span><span class="nx">s</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+		<span class="nx">newItem</span> <span class="o">:=</span> <span class="nx">item</span><span class="p">{</span><span class="nx">name</span><span class="p">:</span> <span class="nx">s</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">worth</span><span class="p">:</span> <span class="nx">newItemWorth</span><span class="p">,</span> <span class="nx">weight</span><span class="p">:</span> <span class="nx">newItemWeight</span><span class="p">}</span>
+		<span class="nx">itemList</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">itemList</span><span class="p">,</span> <span class="nx">newItem</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nx">itemList</span>
+<span class="p">}</span></code></pre></div>
 <p>Now that we&rsquo;ve got our data structures set up, let&rsquo;s get packing (🥁) on the first approach.</p>
 
 <h1 id="greedy-algorithm">Greedy algorithm</h1>
@@ -295,20 +295,20 @@ crossorigin="anonymous"></script>
 </ul>
 
 <p>The first one is just a docs lookup away. Here&rsquo;s how we sort a slice in Go:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">sort.Slice(is, <span style="color:#00a">func</span>(i, j <span style="color:#0aa">int</span>) <span style="color:#0aa">bool</span> {
-    <span style="color:#00a">return</span> is[i].worth &gt; is[j].worth
-})</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">sort</span><span class="p">.</span><span class="nx">Slice</span><span class="p">(</span><span class="nx">is</span><span class="p">,</span> <span class="kd">func</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">j</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">is</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">worth</span> <span class="p">&gt;</span> <span class="nx">is</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">worth</span>
+<span class="p">})</span></code></pre></div>
 <p>The <code>sort.Slice()</code> function orders our items according to the less function we provide. In this case, it will order the highest worth items before the lowest worth items.</p>
 
 <p>Given that we don&rsquo;t want to put an item in the bag if it doesn&rsquo;t fit, we&rsquo;ll complete the last two tasks in reverse. First, we&rsquo;ll check to see if the item fits. If so, it goes in the bag.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a">func</span> (b *bag) addItem(i item) <span style="color:#0aa">error</span> {
-	<span style="color:#00a">if</span> b.currItemsWeight+i.weight &lt;= b.maxItemsWeight {
-		b.currItemsWeight += i.weight
-		b.items = <span style="color:#0aa">append</span>(b.items, i)
-		<span style="color:#00a">return</span> <span style="color:#00a">nil</span>
-	}
-	<span style="color:#00a">return</span> errors.New(<span style="color:#a50">&#34;could not fit item&#34;</span>)
-}</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">b</span> <span class="o">*</span><span class="nx">bag</span><span class="p">)</span> <span class="nx">addItem</span><span class="p">(</span><span class="nx">i</span> <span class="nx">item</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="nx">b</span><span class="p">.</span><span class="nx">currItemsWeight</span><span class="o">+</span><span class="nx">i</span><span class="p">.</span><span class="nx">weight</span> <span class="o">&lt;=</span> <span class="nx">b</span><span class="p">.</span><span class="nx">maxItemsWeight</span> <span class="p">{</span>
+		<span class="nx">b</span><span class="p">.</span><span class="nx">currItemsWeight</span> <span class="o">+=</span> <span class="nx">i</span><span class="p">.</span><span class="nx">weight</span>
+		<span class="nx">b</span><span class="p">.</span><span class="nx">items</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">b</span><span class="p">.</span><span class="nx">items</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span>
+		<span class="k">return</span> <span class="kc">nil</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nx">errors</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="s">&#34;could not fit item&#34;</span><span class="p">)</span>
+<span class="p">}</span></code></pre></div>
 <p>Notice the <code>*</code> in our first line there. That indicates that <code>bag</code> is a pointer receiver (as opposed to a value receiver). It&rsquo;s a concept that can be slightly confusing if you&rsquo;re new to Go. Here are <a href="https://github.com/golang/go/wiki/CodeReviewComments#receiver-type">some things to consider</a> that might help you decide when to use a value receiver and when to use a pointer receiver. For the purposes of our <code>addItem()</code> function, this case applies:</p>
 
 <blockquote>
@@ -318,29 +318,29 @@ crossorigin="anonymous"></script>
 <p>Our use of a pointer receiver tells our function we want to operate on <em>this specific bag in particular</em>, not a new bag. It&rsquo;s important because without it, every item would always fit in a newly created bag! A little detail like this can make the difference between code that works and code that keeps you up until 4am chugging Red Bull and muttering to yourself. (Go to bed on time even if your code doesn&rsquo;t work - you&rsquo;ll thank me later.)</p>
 
 <p>Now that we&rsquo;ve got our components, let&rsquo;s put together our greedy algorithm:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a">func</span> greedy(is []item, b bag) {
-	sort.Slice(is, <span style="color:#00a">func</span>(i, j <span style="color:#0aa">int</span>) <span style="color:#0aa">bool</span> {
-		<span style="color:#00a">return</span> is[i].worth &gt; is[j].worth
-	})
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nx">greedy</span><span class="p">(</span><span class="nx">is</span> <span class="p">[]</span><span class="nx">item</span><span class="p">,</span> <span class="nx">b</span> <span class="nx">bag</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">sort</span><span class="p">.</span><span class="nx">Slice</span><span class="p">(</span><span class="nx">is</span><span class="p">,</span> <span class="kd">func</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">j</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="nx">is</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">worth</span> <span class="p">&gt;</span> <span class="nx">is</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">worth</span>
+	<span class="p">})</span>
 
-	<span style="color:#00a">for</span> i := <span style="color:#00a">range</span> is {
-		b.addItem(is[i])
-	}
+	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">is</span> <span class="p">{</span>
+		<span class="nx">b</span><span class="p">.</span><span class="nx">addItem</span><span class="p">(</span><span class="nx">is</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+	<span class="p">}</span>
 
-	b.totalWeight = b.bagWeight + b.currItemsWeight
+	<span class="nx">b</span><span class="p">.</span><span class="nx">totalWeight</span> <span class="p">=</span> <span class="nx">b</span><span class="p">.</span><span class="nx">bagWeight</span> <span class="o">+</span> <span class="nx">b</span><span class="p">.</span><span class="nx">currItemsWeight</span>
 
-	<span style="color:#00a">for</span> _, v := <span style="color:#00a">range</span> b.items {
-		b.totalWorth += v.worth
-	}
-}</code></pre></div>
+	<span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">v</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">b</span><span class="p">.</span><span class="nx">items</span> <span class="p">{</span>
+		<span class="nx">b</span><span class="p">.</span><span class="nx">totalWorth</span> <span class="o">+=</span> <span class="nx">v</span><span class="p">.</span><span class="nx">worth</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
 <p>Then in our <code>main()</code> function, we&rsquo;ll create our bag, read in our data, and call our greedy algorithm. Here&rsquo;s what it looks like, all set up and ready to go:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a">func</span> main() {
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
 
-	minaal := bag{bagWeight: <span style="color:#099">1415</span>, currItemsWeight: <span style="color:#099">0</span>, maxItemsWeight: <span style="color:#099">5585</span>}
-	itemList := readItems(<span style="color:#a50">&#34;objects.csv&#34;</span>)
+	<span class="nx">minaal</span> <span class="o">:=</span> <span class="nx">bag</span><span class="p">{</span><span class="nx">bagWeight</span><span class="p">:</span> <span class="mi">1415</span><span class="p">,</span> <span class="nx">currItemsWeight</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">maxItemsWeight</span><span class="p">:</span> <span class="mi">5585</span><span class="p">}</span>
+	<span class="nx">itemList</span> <span class="o">:=</span> <span class="nx">readItems</span><span class="p">(</span><span class="s">&#34;objects.csv&#34;</span><span class="p">)</span>
 
-	greedy(itemList, minaal)
-}</code></pre></div>
+	<span class="nx">greedy</span><span class="p">(</span><span class="nx">itemList</span><span class="p">,</span> <span class="nx">minaal</span><span class="p">)</span>
+<span class="p">}</span></code></pre></div>
 <h2 id="greedy-algorithm-results">Greedy algorithm results</h2>
 
 <p>So how does this algorithm do when it comes to efficiently packing our bag to maximize its total worth? Here&rsquo;s the result:</p>
@@ -555,20 +555,20 @@ crossorigin="anonymous"></script>
 <p class="has-text-centered img-caption">The empty knapsackian multiverse.</p></p>
 
 <p>In Go, we can create this matrix as a slice of slices.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">matrix := <span style="color:#0aa">make</span>([][]<span style="color:#0aa">int</span>, numItems+<span style="color:#099">1</span>) <span style="color:#aaa;font-style:italic">// rows representing items
-</span><span style="color:#aaa;font-style:italic"></span><span style="color:#00a">for</span> i := <span style="color:#00a">range</span> matrix {
-	matrix[i] = <span style="color:#0aa">make</span>([]<span style="color:#0aa">int</span>, capacity+<span style="color:#099">1</span>) <span style="color:#aaa;font-style:italic">// columns representing grams of weight
-</span><span style="color:#aaa;font-style:italic"></span>}</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">matrix</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([][]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">numItems</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// rows representing items
+</span><span class="c1"></span><span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">matrix</span> <span class="p">{</span>
+	<span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">capacity</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// columns representing grams of weight
+</span><span class="c1"></span><span class="p">}</span></code></pre></div>
 <p>We&rsquo;ve padded the rows and columns by <code>1</code> so that the indicies match the item and weight numbers.</p>
 
 <p>Now that we&rsquo;ve created our matrix, we&rsquo;ll fill it by looping over the rows and the columns:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#aaa;font-style:italic">// loop through table rows
-</span><span style="color:#aaa;font-style:italic"></span><span style="color:#00a">for</span> i := <span style="color:#099">1</span>; i &lt;= numItems; i++ {
-	<span style="color:#aaa;font-style:italic">// loop through table columns
-</span><span style="color:#aaa;font-style:italic"></span>	<span style="color:#00a">for</span> w := <span style="color:#099">1</span>; w &lt;= capacity; w++ {
-		<span style="color:#aaa;font-style:italic">// do stuff in each element
-</span><span style="color:#aaa;font-style:italic"></span>	}
-}</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// loop through table rows
+</span><span class="c1"></span><span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">numItems</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+	<span class="c1">// loop through table columns
+</span><span class="c1"></span>	<span class="k">for</span> <span class="nx">w</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">w</span> <span class="o">&lt;=</span> <span class="nx">capacity</span><span class="p">;</span> <span class="nx">w</span><span class="o">++</span> <span class="p">{</span>
+		<span class="c1">// do stuff in each element
+</span><span class="c1"></span>	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
 <p>Then for each element, we&rsquo;ll calculate the worth value to ascribe to it. We do this with code that represents the following:</p>
 
 <blockquote>
@@ -583,18 +583,18 @@ crossorigin="anonymous"></script>
 <p>In other words, as our algorithm considers one of the items, we&rsquo;re asking it to decide whether this item added to the bag would produce a higher total worth than the last item it added to the bag, at the bag&rsquo;s current total weight. If this current item is a better choice, put it in - if not, leave it out.</p>
 
 <p>Here&rsquo;s the code that accomplishes this:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#aaa;font-style:italic">// if weight of item matching this index can fit at the current capacity column...
-</span><span style="color:#aaa;font-style:italic"></span><span style="color:#00a">if</span> is[i-<span style="color:#099">1</span>].weight &lt;= w {
-	<span style="color:#aaa;font-style:italic">// worth of this subset without this item
-</span><span style="color:#aaa;font-style:italic"></span>	valueOne := <span style="color:#0aa">float64</span>(matrix[i-<span style="color:#099">1</span>][w])
-	<span style="color:#aaa;font-style:italic">// worth of this subset without the previous item, and this item instead
-</span><span style="color:#aaa;font-style:italic"></span>	valueTwo := <span style="color:#0aa">float64</span>(is[i-<span style="color:#099">1</span>].worth + matrix[i-<span style="color:#099">1</span>][w-is[i-<span style="color:#099">1</span>].weight])
-	<span style="color:#aaa;font-style:italic">// take maximum of either valueOne or valueTwo
-</span><span style="color:#aaa;font-style:italic"></span>	matrix[i][w] = <span style="color:#0aa">int</span>(math.Max(valueOne, valueTwo))
-<span style="color:#aaa;font-style:italic">// if the new worth is not more, carry over the previous worth
-</span><span style="color:#aaa;font-style:italic"></span>} <span style="color:#00a">else</span> {
-	matrix[i][w] = matrix[i-<span style="color:#099">1</span>][w]
-}</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// if weight of item matching this index can fit at the current capacity column...
+</span><span class="c1"></span><span class="k">if</span> <span class="nx">is</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="nx">weight</span> <span class="o">&lt;=</span> <span class="nx">w</span> <span class="p">{</span>
+	<span class="c1">// worth of this subset without this item
+</span><span class="c1"></span>	<span class="nx">valueOne</span> <span class="o">:=</span> <span class="nb">float64</span><span class="p">(</span><span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="nx">w</span><span class="p">])</span>
+	<span class="c1">// worth of this subset without the previous item, and this item instead
+</span><span class="c1"></span>	<span class="nx">valueTwo</span> <span class="o">:=</span> <span class="nb">float64</span><span class="p">(</span><span class="nx">is</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="nx">worth</span> <span class="o">+</span> <span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="nx">w</span><span class="o">-</span><span class="nx">is</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="nx">weight</span><span class="p">])</span>
+	<span class="c1">// take maximum of either valueOne or valueTwo
+</span><span class="c1"></span>	<span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">w</span><span class="p">]</span> <span class="p">=</span> <span class="nb">int</span><span class="p">(</span><span class="nx">math</span><span class="p">.</span><span class="nx">Max</span><span class="p">(</span><span class="nx">valueOne</span><span class="p">,</span> <span class="nx">valueTwo</span><span class="p">))</span>
+<span class="c1">// if the new worth is not more, carry over the previous worth
+</span><span class="c1"></span><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	<span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">w</span><span class="p">]</span> <span class="p">=</span> <span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="nx">w</span><span class="p">]</span>
+<span class="p">}</span></code></pre></div>
 <p>This process of comparing item combinations will continue until every item has been considered at every possible stage of the bag&rsquo;s increasing total weight. When all the above have been considered, we&rsquo;ll have enumerated the solution space - filled the matrix - with all possible total worth values.</p>
 
 <p>We&rsquo;ll have a big chart of numbers, and in the last column at the last row we&rsquo;ll have our highest possible value.</p>
@@ -616,76 +616,76 @@ crossorigin="anonymous"></script>
 </ol>
 
 <p>The nature of the action we&rsquo;re trying to achieve lends itself well to a recursive function. If you recall from <a href="https://vickylai.com/verbose/reduce-recursion-with-pie/">my previous article about making apple pie</a>, recursive functions are simply functions that call themselves under certain conditions. Here&rsquo;s what it looks like:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a">func</span> checkItem(b *bag, i <span style="color:#0aa">int</span>, w <span style="color:#0aa">int</span>, is []item, matrix [][]<span style="color:#0aa">int</span>) {
-	<span style="color:#00a">if</span> i &lt;= <span style="color:#099">0</span> || w &lt;= <span style="color:#099">0</span> {
-		<span style="color:#00a">return</span>
-	}
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nx">checkItem</span><span class="p">(</span><span class="nx">b</span> <span class="o">*</span><span class="nx">bag</span><span class="p">,</span> <span class="nx">i</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">w</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">is</span> <span class="p">[]</span><span class="nx">item</span><span class="p">,</span> <span class="nx">matrix</span> <span class="p">[][]</span><span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">w</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="p">{</span>
+		<span class="k">return</span>
+	<span class="p">}</span>
 
-	pick := matrix[i][w]
-	<span style="color:#00a">if</span> pick != matrix[i-<span style="color:#099">1</span>][w] {
-		b.addItem(is[i-<span style="color:#099">1</span>])
-		checkItem(b, i-<span style="color:#099">1</span>, w-is[i-<span style="color:#099">1</span>].weight, is, matrix)
-	} <span style="color:#00a">else</span> {
-		checkItem(b, i-<span style="color:#099">1</span>, w, is, matrix)
-	}
-}</code></pre></div>
+	<span class="nx">pick</span> <span class="o">:=</span> <span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">w</span><span class="p">]</span>
+	<span class="k">if</span> <span class="nx">pick</span> <span class="o">!=</span> <span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="nx">w</span><span class="p">]</span> <span class="p">{</span>
+		<span class="nx">b</span><span class="p">.</span><span class="nx">addItem</span><span class="p">(</span><span class="nx">is</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+		<span class="nx">checkItem</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span> <span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nx">w</span><span class="o">-</span><span class="nx">is</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="nx">weight</span><span class="p">,</span> <span class="nx">is</span><span class="p">,</span> <span class="nx">matrix</span><span class="p">)</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+		<span class="nx">checkItem</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span> <span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nx">w</span><span class="p">,</span> <span class="nx">is</span><span class="p">,</span> <span class="nx">matrix</span><span class="p">)</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
 <p>Our <code>checkItem()</code> function calls itself if the condition we described in step 4 is true. If step 3 is true, it also calls itself, but with different arguments.</p>
 
 <p>Recursive functions require a base case. In this example, we want the function to stop once we run out of values of worth to compare. Thus our base case is when either <code>i</code> or <code>w</code> are <code>0</code>.</p>
 
 <p>Here&rsquo;s how the dynamic programming approach looks when it&rsquo;s all put together:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a">func</span> checkItem(b *bag, i <span style="color:#0aa">int</span>, w <span style="color:#0aa">int</span>, is []item, matrix [][]<span style="color:#0aa">int</span>) {
-	<span style="color:#00a">if</span> i &lt;= <span style="color:#099">0</span> || w &lt;= <span style="color:#099">0</span> {
-		<span style="color:#00a">return</span>
-	}
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nx">checkItem</span><span class="p">(</span><span class="nx">b</span> <span class="o">*</span><span class="nx">bag</span><span class="p">,</span> <span class="nx">i</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">w</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">is</span> <span class="p">[]</span><span class="nx">item</span><span class="p">,</span> <span class="nx">matrix</span> <span class="p">[][]</span><span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">w</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="p">{</span>
+		<span class="k">return</span>
+	<span class="p">}</span>
 
-	pick := matrix[i][w]
-	<span style="color:#00a">if</span> pick != matrix[i-<span style="color:#099">1</span>][w] {
-		b.addItem(is[i-<span style="color:#099">1</span>])
-		checkItem(b, i-<span style="color:#099">1</span>, w-is[i-<span style="color:#099">1</span>].weight, is, matrix)
-	} <span style="color:#00a">else</span> {
-		checkItem(b, i-<span style="color:#099">1</span>, w, is, matrix)
-	}
-}
+	<span class="nx">pick</span> <span class="o">:=</span> <span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">w</span><span class="p">]</span>
+	<span class="k">if</span> <span class="nx">pick</span> <span class="o">!=</span> <span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="nx">w</span><span class="p">]</span> <span class="p">{</span>
+		<span class="nx">b</span><span class="p">.</span><span class="nx">addItem</span><span class="p">(</span><span class="nx">is</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+		<span class="nx">checkItem</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span> <span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nx">w</span><span class="o">-</span><span class="nx">is</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="nx">weight</span><span class="p">,</span> <span class="nx">is</span><span class="p">,</span> <span class="nx">matrix</span><span class="p">)</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+		<span class="nx">checkItem</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span> <span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nx">w</span><span class="p">,</span> <span class="nx">is</span><span class="p">,</span> <span class="nx">matrix</span><span class="p">)</span>
+	<span class="p">}</span>
+<span class="p">}</span>
 
-<span style="color:#00a">func</span> dynamic(is []item, b *bag) *bag {
-	numItems := <span style="color:#0aa">len</span>(is)          <span style="color:#aaa;font-style:italic">// number of items in knapsack
-</span><span style="color:#aaa;font-style:italic"></span>	capacity := b.maxItemsWeight <span style="color:#aaa;font-style:italic">// capacity of knapsack
-</span><span style="color:#aaa;font-style:italic"></span>
-	<span style="color:#aaa;font-style:italic">// create the empty matrix
-</span><span style="color:#aaa;font-style:italic"></span>	matrix := <span style="color:#0aa">make</span>([][]<span style="color:#0aa">int</span>, numItems+<span style="color:#099">1</span>) <span style="color:#aaa;font-style:italic">// rows representing items
-</span><span style="color:#aaa;font-style:italic"></span>	<span style="color:#00a">for</span> i := <span style="color:#00a">range</span> matrix {
-		matrix[i] = <span style="color:#0aa">make</span>([]<span style="color:#0aa">int</span>, capacity+<span style="color:#099">1</span>) <span style="color:#aaa;font-style:italic">// columns representing grams of weight
-</span><span style="color:#aaa;font-style:italic"></span>	}
+<span class="kd">func</span> <span class="nx">dynamic</span><span class="p">(</span><span class="nx">is</span> <span class="p">[]</span><span class="nx">item</span><span class="p">,</span> <span class="nx">b</span> <span class="o">*</span><span class="nx">bag</span><span class="p">)</span> <span class="o">*</span><span class="nx">bag</span> <span class="p">{</span>
+	<span class="nx">numItems</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">is</span><span class="p">)</span>          <span class="c1">// number of items in knapsack
+</span><span class="c1"></span>	<span class="nx">capacity</span> <span class="o">:=</span> <span class="nx">b</span><span class="p">.</span><span class="nx">maxItemsWeight</span> <span class="c1">// capacity of knapsack
+</span><span class="c1"></span>
+	<span class="c1">// create the empty matrix
+</span><span class="c1"></span>	<span class="nx">matrix</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([][]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">numItems</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// rows representing items
+</span><span class="c1"></span>	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">matrix</span> <span class="p">{</span>
+		<span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">capacity</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// columns representing grams of weight
+</span><span class="c1"></span>	<span class="p">}</span>
 
-	<span style="color:#aaa;font-style:italic">// loop through table rows
-</span><span style="color:#aaa;font-style:italic"></span>	<span style="color:#00a">for</span> i := <span style="color:#099">1</span>; i &lt;= numItems; i++ {
-		<span style="color:#aaa;font-style:italic">// loop through table columns
-</span><span style="color:#aaa;font-style:italic"></span>		<span style="color:#00a">for</span> w := <span style="color:#099">1</span>; w &lt;= capacity; w++ {
+	<span class="c1">// loop through table rows
+</span><span class="c1"></span>	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">numItems</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+		<span class="c1">// loop through table columns
+</span><span class="c1"></span>		<span class="k">for</span> <span class="nx">w</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">w</span> <span class="o">&lt;=</span> <span class="nx">capacity</span><span class="p">;</span> <span class="nx">w</span><span class="o">++</span> <span class="p">{</span>
 
-			<span style="color:#aaa;font-style:italic">// if weight of item matching this index can fit at the current capacity column...
-</span><span style="color:#aaa;font-style:italic"></span>			<span style="color:#00a">if</span> is[i-<span style="color:#099">1</span>].weight &lt;= w {
-				<span style="color:#aaa;font-style:italic">// worth of this subset without this item
-</span><span style="color:#aaa;font-style:italic"></span>				valueOne := <span style="color:#0aa">float64</span>(matrix[i-<span style="color:#099">1</span>][w])
-				<span style="color:#aaa;font-style:italic">// worth of this subset without the previous item, and this item instead
-</span><span style="color:#aaa;font-style:italic"></span>				valueTwo := <span style="color:#0aa">float64</span>(is[i-<span style="color:#099">1</span>].worth + matrix[i-<span style="color:#099">1</span>][w-is[i-<span style="color:#099">1</span>].weight])
-				<span style="color:#aaa;font-style:italic">// take maximum of either valueOne or valueTwo
-</span><span style="color:#aaa;font-style:italic"></span>				matrix[i][w] = <span style="color:#0aa">int</span>(math.Max(valueOne, valueTwo))
-			<span style="color:#aaa;font-style:italic">// if the new worth is not more, carry over the previous worth
-</span><span style="color:#aaa;font-style:italic"></span>			} <span style="color:#00a">else</span> {
-				matrix[i][w] = matrix[i-<span style="color:#099">1</span>][w]
-			}
-		}
-	}
+			<span class="c1">// if weight of item matching this index can fit at the current capacity column...
+</span><span class="c1"></span>			<span class="k">if</span> <span class="nx">is</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="nx">weight</span> <span class="o">&lt;=</span> <span class="nx">w</span> <span class="p">{</span>
+				<span class="c1">// worth of this subset without this item
+</span><span class="c1"></span>				<span class="nx">valueOne</span> <span class="o">:=</span> <span class="nb">float64</span><span class="p">(</span><span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="nx">w</span><span class="p">])</span>
+				<span class="c1">// worth of this subset without the previous item, and this item instead
+</span><span class="c1"></span>				<span class="nx">valueTwo</span> <span class="o">:=</span> <span class="nb">float64</span><span class="p">(</span><span class="nx">is</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="nx">worth</span> <span class="o">+</span> <span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="nx">w</span><span class="o">-</span><span class="nx">is</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="nx">weight</span><span class="p">])</span>
+				<span class="c1">// take maximum of either valueOne or valueTwo
+</span><span class="c1"></span>				<span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">w</span><span class="p">]</span> <span class="p">=</span> <span class="nb">int</span><span class="p">(</span><span class="nx">math</span><span class="p">.</span><span class="nx">Max</span><span class="p">(</span><span class="nx">valueOne</span><span class="p">,</span> <span class="nx">valueTwo</span><span class="p">))</span>
+			<span class="c1">// if the new worth is not more, carry over the previous worth
+</span><span class="c1"></span>			<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+				<span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">w</span><span class="p">]</span> <span class="p">=</span> <span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="nx">w</span><span class="p">]</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
 
-	checkItem(b, numItems, capacity, is, matrix)
+	<span class="nx">checkItem</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span> <span class="nx">numItems</span><span class="p">,</span> <span class="nx">capacity</span><span class="p">,</span> <span class="nx">is</span><span class="p">,</span> <span class="nx">matrix</span><span class="p">)</span>
 
-	<span style="color:#aaa;font-style:italic">// add other statistics to the bag
-</span><span style="color:#aaa;font-style:italic"></span>	b.totalWorth = matrix[numItems][capacity]
-	b.totalWeight = b.bagWeight + b.currItemsWeight
+	<span class="c1">// add other statistics to the bag
+</span><span class="c1"></span>	<span class="nx">b</span><span class="p">.</span><span class="nx">totalWorth</span> <span class="p">=</span> <span class="nx">matrix</span><span class="p">[</span><span class="nx">numItems</span><span class="p">][</span><span class="nx">capacity</span><span class="p">]</span>
+	<span class="nx">b</span><span class="p">.</span><span class="nx">totalWeight</span> <span class="p">=</span> <span class="nx">b</span><span class="p">.</span><span class="nx">bagWeight</span> <span class="o">+</span> <span class="nx">b</span><span class="p">.</span><span class="nx">currItemsWeight</span>
 
-	<span style="color:#00a">return</span> b
-}</code></pre></div>
+	<span class="k">return</span> <span class="nx">b</span>
+<span class="p">}</span></code></pre></div>
 <h2 id="dynamic-programming-results">Dynamic programming results</h2>
 
 <p>We expect that the dynamic programming approach will give us a more optimized solution than the greedy algorithm. So did it? Here are the results:</p>
@@ -917,16 +917,16 @@ crossorigin="anonymous"></script>
 <h2 id="input-sort-order">Input sort order</h2>
 
 <p>While testing my dynamic programming solution, I implemented the <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle algorithm</a> on the input before passing it into my function, just to ensure that the answer wasn&rsquo;t somehow dependent on the sort order of the input. Here&rsquo;s what the shuffle looks like in Go:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">rand.Seed(time.Now().UnixNano())
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">rand</span><span class="p">.</span><span class="nx">Seed</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">().</span><span class="nx">UnixNano</span><span class="p">())</span>
 
-<span style="color:#00a">for</span> i := <span style="color:#00a">range</span> itemList {
-	j := rand.Intn(i + <span style="color:#099">1</span>)
-	itemList[i], itemList[j] = itemList[j], itemList[i]
-}</code></pre></div>
+<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">itemList</span> <span class="p">{</span>
+	<span class="nx">j</span> <span class="o">:=</span> <span class="nx">rand</span><span class="p">.</span><span class="nx">Intn</span><span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+	<span class="nx">itemList</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="nx">itemList</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="p">=</span> <span class="nx">itemList</span><span class="p">[</span><span class="nx">j</span><span class="p">],</span> <span class="nx">itemList</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+<span class="p">}</span></code></pre></div>
 <p>Of course I then realized that Go 1.10 now has a built-in shuffle&hellip; it works precisely the same way and looks like this:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">rand.Shuffle(<span style="color:#0aa">len</span>(itemList), <span style="color:#00a">func</span>(i, j <span style="color:#0aa">int</span>) {
-	itemList[i], itemList[j] = itemList[j], itemList[i]
-})</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">rand</span><span class="p">.</span><span class="nx">Shuffle</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nx">itemList</span><span class="p">),</span> <span class="kd">func</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">j</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">itemList</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="nx">itemList</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="p">=</span> <span class="nx">itemList</span><span class="p">[</span><span class="nx">j</span><span class="p">],</span> <span class="nx">itemList</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+<span class="p">})</span></code></pre></div>
 <p>So did the order in which the items were processed affect the outcome? Well&hellip;</p>
 
 <h3 id="suddenly-a-rogue-weight-appears">Suddenly&hellip; a rogue weight appears!</h3>
@@ -1176,30 +1176,30 @@ crossorigin="anonymous"></script>
 <h2 id="go-benchmarking">Go benchmarking</h2>
 
 <p>The Go standard library&rsquo;s <code>testing</code> package makes it straightforward for us to <a href="https://golang.org/pkg/testing/#hdr-Benchmarks">benchmark</a> these two approaches. We can find out how long it takes each algorithm to run, and how much memory each uses. Here&rsquo;s a simple <code>main_test.go</code> file:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a">package</span> main
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
-<span style="color:#00a">import</span> (
-	<span style="color:#a50">&#34;testing&#34;</span>
-)
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;testing&#34;</span>
+<span class="p">)</span>
 
-<span style="color:#00a">func</span> Benchmark_greedy(b *testing.B) {
-	itemList := readItems(<span style="color:#a50">&#34;objects.csv&#34;</span>)
-	<span style="color:#00a">for</span> i := <span style="color:#099">0</span>; i &lt; b.N; i++ {
-		minaal := bag{bagWeight: <span style="color:#099">1415</span>, currItemsWeight: <span style="color:#099">0</span>, maxItemsWeight: <span style="color:#099">5585</span>}
-		greedy(itemList, minaal)
-	}
-}
+<span class="kd">func</span> <span class="nx">Benchmark_greedy</span><span class="p">(</span><span class="nx">b</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">B</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">itemList</span> <span class="o">:=</span> <span class="nx">readItems</span><span class="p">(</span><span class="s">&#34;objects.csv&#34;</span><span class="p">)</span>
+	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">b</span><span class="p">.</span><span class="nx">N</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+		<span class="nx">minaal</span> <span class="o">:=</span> <span class="nx">bag</span><span class="p">{</span><span class="nx">bagWeight</span><span class="p">:</span> <span class="mi">1415</span><span class="p">,</span> <span class="nx">currItemsWeight</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">maxItemsWeight</span><span class="p">:</span> <span class="mi">5585</span><span class="p">}</span>
+		<span class="nx">greedy</span><span class="p">(</span><span class="nx">itemList</span><span class="p">,</span> <span class="nx">minaal</span><span class="p">)</span>
+	<span class="p">}</span>
+<span class="p">}</span>
 
-<span style="color:#00a">func</span> Benchmark_dynamic(b *testing.B) {
-	itemList := readItems(<span style="color:#a50">&#34;objects.csv&#34;</span>)
-	<span style="color:#00a">for</span> i := <span style="color:#099">0</span>; i &lt; b.N; i++ {
-		minaal := bag{bagWeight: <span style="color:#099">1415</span>, currItemsWeight: <span style="color:#099">0</span>, maxItemsWeight: <span style="color:#099">5585</span>}
-		dynamic(itemList, &amp;minaal)
-	}
-}</code></pre></div>
+<span class="kd">func</span> <span class="nx">Benchmark_dynamic</span><span class="p">(</span><span class="nx">b</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">B</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">itemList</span> <span class="o">:=</span> <span class="nx">readItems</span><span class="p">(</span><span class="s">&#34;objects.csv&#34;</span><span class="p">)</span>
+	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">b</span><span class="p">.</span><span class="nx">N</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+		<span class="nx">minaal</span> <span class="o">:=</span> <span class="nx">bag</span><span class="p">{</span><span class="nx">bagWeight</span><span class="p">:</span> <span class="mi">1415</span><span class="p">,</span> <span class="nx">currItemsWeight</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">maxItemsWeight</span><span class="p">:</span> <span class="mi">5585</span><span class="p">}</span>
+		<span class="nx">dynamic</span><span class="p">(</span><span class="nx">itemList</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">minaal</span><span class="p">)</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
 <p>We can run <code>go test -bench=. -benchmem</code> to see these results:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">Benchmark_greedy-4       <span style="color:#099">1000000</span>              <span style="color:#099">1619</span> ns/op            <span style="color:#099">2128</span> B/op          <span style="color:#099">9</span> allocs/op
-Benchmark_dynamic-4         <span style="color:#099">1000</span>           <span style="color:#099">1545322</span> ns/op         <span style="color:#099">2020332</span> B/op         <span style="color:#099">49</span> allocs/op</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">Benchmark_greedy-4       <span class="m">1000000</span>              <span class="m">1619</span> ns/op            <span class="m">2128</span> B/op          <span class="m">9</span> allocs/op
+Benchmark_dynamic-4         <span class="m">1000</span>           <span class="m">1545322</span> ns/op         <span class="m">2020332</span> B/op         <span class="m">49</span> allocs/op</code></pre></div>
 <h3 id="greedy-algorithm-performance">Greedy algorithm performance</h3>
 
 <p>After running the greedy algorithm 1,000,000 times, the speed of the algorithm was reliably measured to be 0.001619 milliseconds (translation: very fast). It required 2128 Bytes or 2-ish kilobytes of memory and 9 distinct memory allocations per iteration.</p>

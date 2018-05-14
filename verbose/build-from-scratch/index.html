@@ -190,7 +190,7 @@ crossorigin="anonymous"></script>
 <p>*<strong>T*, the orbital period, equals 2 multiplied by Pi, in turn multiplied by the square root of the radius, <em>r</em> cubed, divided by the gravitational mass, <em>GM</em>.</strong></p>
 
 <p>JavaScript has a <code>Math.PI</code> property, as well as <code>Math.sqrt()</code> function and <code>Math.pow()</code> function. Using those combined with simple calculation, we can represent this equation in a single line assigned to a variable:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#00a">var</span> orbitalPeriod = <span style="color:#099">2</span> * <span style="color:#0aa">Math</span>.PI * (<span style="color:#0aa">Math</span>.sqrt(<span style="color:#0aa">Math</span>.pow((earthRadius + avgAlt), <span style="color:#099">3</span>) <span style="color:#f00;background-color:#faa">/ GM));</span>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">orbitalPeriod</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span> <span class="o">*</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">((</span><span class="nx">earthRadius</span> <span class="o">+</span> <span class="nx">avgAlt</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span> <span class="err">/ GM));</span>
 </code></pre></div>
 <p>From the inside out:</p>
 
@@ -206,24 +206,24 @@ crossorigin="anonymous"></script>
 <p>Believe it or not, we&rsquo;re already most of the way there.</p>
 
 <p>The next MIQ for this challenge is to take the arguments object, extract the information we need, and return the result of our equation in the required format. There are a multitude of ways to do this, but I&rsquo;m happy with a straightforward <code>for</code> loop:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#00a">function</span> orbitalPeriod(arr) {
-  <span style="color:#00a">var</span> resultArr = [];
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">orbitalPeriod</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">resultArr</span> <span class="o">=</span> <span class="p">[];</span>
 
-  <span style="color:#00a">for</span> (<span style="color:#00a">var</span> teapot = <span style="color:#099">0</span>; teapot &lt; arguments[<span style="color:#099">0</span>].length; teapot++) {
-    <span style="color:#00a">var</span> GM = <span style="color:#099">398600.4418</span>;
-    <span style="color:#00a">var</span> earthRadius = <span style="color:#099">6367.4447</span>;
-    <span style="color:#00a">var</span> avgAlt = arguments[<span style="color:#099">0</span>][teapot][<span style="color:#a50">&#39;avgAlt&#39;</span>];
-    <span style="color:#00a">var</span> name = arguments[<span style="color:#099">0</span>][teapot][<span style="color:#a50">&#39;name&#39;</span>];
-    <span style="color:#00a">var</span> orbitalPeriod = <span style="color:#099">2</span> * <span style="color:#0aa">Math</span>.PI * (<span style="color:#0aa">Math</span>.sqrt(<span style="color:#0aa">Math</span>.pow((earthRadius + avgAlt), <span style="color:#099">3</span>) <span style="color:#f00;background-color:#faa">/ GM));</span>
-    <span style="color:#00a">var</span> result = {
-      name: name,
-      orbitalPeriod: <span style="color:#0aa">Math</span>.round(orbitalPeriod)
-    }
-    resultArr.push(result);
-  }
+  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">teapot</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">teapot</span> <span class="o">&lt;</span> <span class="nx">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">length</span><span class="p">;</span> <span class="nx">teapot</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">GM</span> <span class="o">=</span> <span class="mf">398600.4418</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">earthRadius</span> <span class="o">=</span> <span class="mf">6367.4447</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">avgAlt</span> <span class="o">=</span> <span class="nx">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="nx">teapot</span><span class="p">][</span><span class="s1">&#39;avgAlt&#39;</span><span class="p">];</span>
+    <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="nx">teapot</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">];</span>
+    <span class="kd">var</span> <span class="nx">orbitalPeriod</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span> <span class="o">*</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">((</span><span class="nx">earthRadius</span> <span class="o">+</span> <span class="nx">avgAlt</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span> <span class="err">/ GM));</span>
+    <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">name</span><span class="o">:</span> <span class="nx">name</span><span class="p">,</span>
+      <span class="nx">orbitalPeriod</span><span class="o">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">orbitalPeriod</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="nx">resultArr</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+  <span class="p">}</span>
 
-  <span style="color:#00a">return</span> resultArr;
-}
+  <span class="k">return</span> <span class="nx">resultArr</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
 <p>If you need a refresher on iterating through arrays, have a look at my <a href="https://vickylai.io/verbose/iterating-objects-arrays/">article on iterating, featuring breakfast arrays</a>! (5 minutes read)</p>
 

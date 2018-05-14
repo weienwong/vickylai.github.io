@@ -99,7 +99,7 @@ crossorigin="anonymous"></script>
 <h1 id="battery-status-low-battery-notification">Battery status/low battery notification</h1>
 
 <p>I was looking for a simple, versatile set up to create notifications for my battery status without having to rely on separate, standalone GUI apps or services. In my search I came across a simple one-line cron task that seemed to be the perfect fit. I adapted it to my purpose and it looks like this:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-conf" data-lang="conf"># m h  dom mon dow   command
+<div class="highlight"><pre class="chroma"><code class="language-conf" data-lang="conf"># m h  dom mon dow   command
 */5 * * * * acpi --battery | awk -F, &#39;/Discharging/ { if (int($2) &lt; 20) print }&#39; | xargs -ri env DISPLAY=:0 notify-send -u critical -i &#34;/usr/share/icons/Paper/16x16/status/xfce-battery-critical.png&#34; -t 3000 &#34;{}\nBattery low!&#34;</code></pre></div>
 <blockquote>
 <p><em>Psst&hellip; <a href="https://crontab.guru/">here&rsquo;s a great tool</a> for formatting your crontab times.</em></p>
@@ -131,7 +131,7 @@ Run the following utility in the specified display, in this case, the first disp
 Shows a desktop notification with <code>-u critical</code> (critical urgency), <code>-i</code> (the specified icon), <code>-t 3000</code> (display time/expires after 3000 milliseconds), and finally <code>{}</code> (the output of awk, replaced by xargs).</p>
 
 <p>Not bad for a one-liner! I made a few modifications for different states of my battery. Here they all are in my crontab:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-conf" data-lang="conf"># m h  dom mon dow   command
+<div class="highlight"><pre class="chroma"><code class="language-conf" data-lang="conf"># m h  dom mon dow   command
 */5 * * * * acpi --battery | awk -F, &#39;/Discharging/ { if ( (int($2) &lt; 30) &amp;&amp; (int($2) &gt; 15) ) print }&#39; | xargs -ri env DISPLAY=:0 notify-send -a &#34;Battery status&#34; -u normal -i &#34;/usr/share/icons/Paper/16x16/status/xfce-battery-low.png&#34; -t 3000 &#34;{}\nBattery low!&#34;
 */5 * * * * acpi --battery | awk -F, &#39;/Discharging/ { if (int($2) &lt; 15) print }&#39; | xargs -ri env DISPLAY=:0 notify-send -a &#34;Battery status&#34; -u critical -i &#34;/usr/share/icons/Paper/16x16/status/xfce-battery-critical.png&#34; -t 3000 &#34;{}\nSeriously, plug me in.&#34;
 */60 * * * * acpi --battery | awk -F, &#39;/Discharging/ { if (int($2) &gt; 30) print }&#39; | xargs -ri env DISPLAY=:0 notify-send -a &#34;Battery status&#34; -u normal -i &#34;/usr/share/icons/Paper/16x16/status/xfce-battery-ok.png&#34; &#34;{}&#34;

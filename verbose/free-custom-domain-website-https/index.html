@@ -133,11 +133,11 @@ crossorigin="anonymous"></script>
 <p>Once you&rsquo;re comfortable with the way GitHub works generally, setting up a site by following <a href="https://pages.github.com/">the guide on GitHub Pages</a> is no big deal. If you followed the Hugo Quickstart Guide up to Step 11, you&rsquo;ll want to jump to Step 12 after creating the repository on GitHub.</p>
 
 <p>In case it&rsquo;s not clear, once you set up your new repository on GitHub called <em>yourusername</em>.github.io, grab the HTTPS link at the top. From there it&rsquo;s just a few simple commands to create the git repository for your site and push it to your new web address:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#aaa;font-style:italic"># from yoursite/public folder:
-</span><span style="color:#aaa;font-style:italic"></span>$ git init
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># from yoursite/public folder:
+</span><span class="c1"></span>$ git init
 $ git remote add origin &lt;paste that https url here!&gt;
 $ git add --all
-$ git commit -m <span style="color:#a50">&#34;Initial commit.&#34;</span>
+$ git commit -m <span class="s2">&#34;Initial commit.&#34;</span>
 $ git push origin master</code></pre></div>
 <p>Have a little celebration - your site is already up at <code>https://yourusername.github.io</code>! Now for the pizza-de-resiliance: the custom domain.</p>
 
@@ -159,15 +159,15 @@ $ git push origin master</code></pre></div>
 <p><a href="https://www.cloudflare.com/">Sign up with Cloudflare</a> and follow their set up guide. The site will collect your custom domain&rsquo;s DNS settings and set everything up automagically. Once the set up is complete, Cloudflare provides you with two new nameserver addresses. Go to your domain registrar&rsquo;s DNS settings and change the Domain Name Servers to the ones Cloudflare gives you.</p>
 
 <p>In your <code>config.toml</code>, <code>config.yaml</code>, or <code>config.json</code> file, ensure these lines are present:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">baseURL = <span style="color:#a50">&#34;https://yourname.com/&#34;</span>
-canonifyURLs = <span style="color:#00a">true</span>
-enforce_ssl = www.yoursite.com</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;https://yourname.com/&#34;</span>
+<span class="nx">canonifyURLs</span> <span class="p">=</span> <span class="kc">true</span>
+<span class="nx">enforce_ssl</span> <span class="p">=</span> <span class="nx">www</span><span class="p">.</span><span class="nx">yoursite</span><span class="p">.</span><span class="nx">com</span></code></pre></div>
 <p>To redirect users to HTTPS, add this script to the top of your <code>&lt;head&gt;</code> file:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#1e90ff;font-weight:bold">script</span> <span style="color:#1e90ff">type</span>=<span style="color:#a50">&#34;text/javascript&#34;</span>&gt;
-    <span style="color:#00a">var</span> host = <span style="color:#a50">&#34;yourname.com&#34;</span>;
-    <span style="color:#00a">if</span> ((host == <span style="color:#0aa">window</span>.location.host) &amp;&amp; (<span style="color:#0aa">window</span>.location.protocol != <span style="color:#a50">&#34;https:&#34;</span>))
-        <span style="color:#0aa">window</span>.location.protocol = <span style="color:#a50">&#34;https&#34;</span>;
-&lt;/<span style="color:#1e90ff;font-weight:bold">script</span>&gt;</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span><span class="p"></span><span class="p">&gt;</span>
+    <span class="kd">var</span> <span class="nx">host</span> <span class="o">=</span> <span class="s2">&#34;yourname.com&#34;</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">((</span><span class="nx">host</span> <span class="o">==</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">host</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">!=</span> <span class="s2">&#34;https:&#34;</span><span class="p">))</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">=</span> <span class="s2">&#34;https&#34;</span><span class="p">;</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">script</span><span class="p">&gt;</span></code></pre></div>
 <p>&nbsp;</p>
 
 <p>That&rsquo;s pretty much it! In a couple hours or so, your site will be up and running at <code>https://yourname.com</code>.</p>

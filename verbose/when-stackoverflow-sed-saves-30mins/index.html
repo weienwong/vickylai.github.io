@@ -105,8 +105,8 @@ crossorigin="anonymous"></script>
 <p>Sed is your friend. This amazingly powerful tool lives in your terminal and is available to be totally underused for things like finding and replacing strings in files. (I seem to have a habit of suggesting ways to totally underuse powerful tools - I previously outlined how to <a href="https://vickylai.io/verbose/create-desktop-notifications-cron/">use cron to create desktop notifications</a>, but I digress.)</p>
 
 <p>Run this command to search all the files in your current directory and replace a given string.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">// to replace <span style="color:#a50">&#39;foo&#39;</span> with <span style="color:#a50">&#39;bar&#39;</span>
-$ sed -i -- <span style="color:#a50">&#39;s/foo/bar/g&#39;</span> *</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">// to replace <span class="s1">&#39;foo&#39;</span> with <span class="s1">&#39;bar&#39;</span>
+$ sed -i -- <span class="s1">&#39;s/foo/bar/g&#39;</span> *</code></pre></div>
 <p>The above is <strong>non-recursive</strong>, meaning it won&rsquo;t look in subdirectories. There are ways to do this recursively, as well as limit the search to specific file extensions: <a href="https://unix.stackexchange.com/questions/112023/how-can-i-replace-a-string-in-a-files">see the full answer on StackOverflow</a>.</p>
 
 <h2 id="break-it-down">Break it down:</h2>

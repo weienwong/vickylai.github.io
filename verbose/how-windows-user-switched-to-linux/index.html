@@ -141,7 +141,7 @@ crossorigin="anonymous"></script>
 <h1 id="where-the-heck-do-all-these-config-files-go">Where the heck do all these config files go?</h1>
 
 <p>I found some differing file paths. The below are mine and work:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-conf" data-lang="conf">systemd event handlers:   /etc/systemd/logind.conf
+<div class="highlight"><pre class="chroma"><code class="language-conf" data-lang="conf">systemd event handlers:   /etc/systemd/logind.conf
 For URxvt:                ~/.Xdefaults
 For i3wm:                 ~/.config/i3/config 
 For i3bar:                ~/.config/i3status/config/i3status.conf
@@ -160,26 +160,26 @@ for Compton:              ~/.config/compton.conf</code></pre></div>
 <p>To avoid the hassle I experienced, change your user name before you set up most of your programs. If it&rsquo;s too late for that, just be aware that many programs involving a filepath with <code>/home/oldusername/...</code> are affected.</p>
 
 <p>To change your user name via the terminal, login as root, then:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ killall -u oldusername
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">$ killall -u oldusername
 $ id oldusername
-&gt;&gt;&gt; <span style="color:#a00">uid</span>=<span style="color:#099">1000</span>(oldusername) <span style="color:#a00">gid</span>=<span style="color:#099">1000</span>(oldusername) <span style="color:#a00">groups</span>=<span style="color:#099">1000</span>(oldusername),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),108(netdev)
-<span style="color:#aaa;font-style:italic"># change login name
-</span><span style="color:#aaa;font-style:italic"></span>$ usermod -l newusername oldusername
-<span style="color:#aaa;font-style:italic"># change group name
-</span><span style="color:#aaa;font-style:italic"></span>$ groupmod -n newusername oldusername 
-<span style="color:#aaa;font-style:italic"># modify home directory
-</span><span style="color:#aaa;font-style:italic"></span>$ usermod -d /home/newusername -m newusername
-<span style="color:#aaa;font-style:italic"># add comment with full name
-</span><span style="color:#aaa;font-style:italic"></span>$ usermod -c <span style="color:#a50">&#34;New Full Name&#34;</span> newusername 
-<span style="color:#aaa;font-style:italic"># check that &#34;newusername&#34; replaces &#34;oldusername&#34; in all fields
-</span><span style="color:#aaa;font-style:italic"></span>$ id newusername 
-&gt;&gt;&gt; <span style="color:#a00">uid</span>=<span style="color:#099">1000</span>(newusername) <span style="color:#a00">gid</span>=<span style="color:#099">1000</span>(newusername) <span style="color:#a00">groups</span>=<span style="color:#099">1000</span>(newusername),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),108(netdev)</code></pre></div>
+&gt;&gt;&gt; <span class="nv">uid</span><span class="o">=</span><span class="m">1000</span><span class="o">(</span>oldusername<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span><span class="m">1000</span><span class="o">(</span>oldusername<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span><span class="m">1000</span><span class="o">(</span>oldusername<span class="o">)</span>,24<span class="o">(</span>cdrom<span class="o">)</span>,25<span class="o">(</span>floppy<span class="o">)</span>,27<span class="o">(</span>sudo<span class="o">)</span>,29<span class="o">(</span>audio<span class="o">)</span>,30<span class="o">(</span>dip<span class="o">)</span>,44<span class="o">(</span>video<span class="o">)</span>,46<span class="o">(</span>plugdev<span class="o">)</span>,108<span class="o">(</span>netdev<span class="o">)</span>
+<span class="c1"># change login name
+</span><span class="c1"></span>$ usermod -l newusername oldusername
+<span class="c1"># change group name
+</span><span class="c1"></span>$ groupmod -n newusername oldusername 
+<span class="c1"># modify home directory
+</span><span class="c1"></span>$ usermod -d /home/newusername -m newusername
+<span class="c1"># add comment with full name
+</span><span class="c1"></span>$ usermod -c <span class="s2">&#34;New Full Name&#34;</span> newusername 
+<span class="c1"># check that &#34;newusername&#34; replaces &#34;oldusername&#34; in all fields
+</span><span class="c1"></span>$ id newusername 
+&gt;&gt;&gt; <span class="nv">uid</span><span class="o">=</span><span class="m">1000</span><span class="o">(</span>newusername<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span><span class="m">1000</span><span class="o">(</span>newusername<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span><span class="m">1000</span><span class="o">(</span>newusername<span class="o">)</span>,24<span class="o">(</span>cdrom<span class="o">)</span>,25<span class="o">(</span>floppy<span class="o">)</span>,27<span class="o">(</span>sudo<span class="o">)</span>,29<span class="o">(</span>audio<span class="o">)</span>,30<span class="o">(</span>dip<span class="o">)</span>,44<span class="o">(</span>video<span class="o">)</span>,46<span class="o">(</span>plugdev<span class="o">)</span>,108<span class="o">(</span>netdev<span class="o">)</span></code></pre></div>
 <p>If you previously set your background image in i3 and it disappears, don&rsquo;t forget to check the filepath in your config file.</p>
 
 <h1 id="how-do-i-get-networkmanager-and-dropbox-to-start-automatically">How do I get NetworkManager and Dropbox to start automatically?</h1>
 
 <p>Dropbox for Linux supposedly has an autostart setting where you can type <code>dropbox autostart y</code> into a terminal and it&rsquo;ll listen. This didn&rsquo;t work for me. Instead, I added any applications I wanted to start automatically upon login to my i3 config file with this syntax:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-conf" data-lang="conf"># start apps automatically
+<div class="highlight"><pre class="chroma"><code class="language-conf" data-lang="conf"># start apps automatically
 exec --no-startup-id /usr/bin/nm-applet
 exec --no-startup-id dropbox start</code></pre></div>
 <p>In the above, <code>exec</code> is &ldquo;execute&rdquo;, <code>--no-startup-id</code> basically saves you from watching your cursor do the spinny loading thing, and the last component of the command is the filepath to the program or the syntax to start it, as if typing it into the terminal.</p>
