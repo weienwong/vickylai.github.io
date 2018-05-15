@@ -13,11 +13,16 @@
         <atom:link href="https://vickylai.com/index.xml" rel="self" type="application/rss+xml" />
     
     
+    
+    
+    
+    
+    
+    
+    
     <item>
       <title>
-        
             Knapsack problem algorithms for my real-life carry-on knapsack
-        
       </title>
       <link>https://vickylai.com/verbose/knapsack-go-approaches/</link>
       <pubDate>Wed, 09 May 2018 21:00:35 -0400</pubDate>
@@ -27,11 +32,11 @@
 As a practical exercise, deciding what to leave behind (or get rid of altogether) entails laying out all my things and choosing which ones to keep.</description>
     </item>
     
+    
+    
     <item>
       <title>
-        
             Why I&#39;m automatically deleting my old tweets using AWS Lambda
-        
       </title>
       <link>https://vickylai.com/verbose/delete-old-tweets-ephemeral/</link>
       <pubDate>Thu, 12 Apr 2018 10:51:15 -0500</pubDate>
@@ -42,11 +47,13 @@ Click here to skip to the code part.
 Stuff and opinions I’ve only been a one-bag nomad for a little over a year and a half. Before that, I lived as most people do in an apartment or a house. I owned furniture, more clothing than I strictly needed, and enough “stuff” to fill at least a few moving boxes.</description>
     </item>
     
+    
+    
+    
+    
     <item>
       <title>
-        
             Running a free Twitter bot on AWS Lambda
-        
       </title>
       <link>https://vickylai.com/verbose/aws-lambda/</link>
       <pubDate>Mon, 05 Mar 2018 10:29:15 -0500</pubDate>
@@ -55,11 +62,11 @@ Stuff and opinions I’ve only been a one-bag nomad for a little over a year and
       <description>If you read About time, you’ll know that I’m a big believer in spending time now on building things that save time in the future. To this end I built a simple Twitter bot in Go that would occasionally post links to my articles and keep my account interesting even when I’m too busy to use it. The tweets help drive traffic to my sites, and I don’t have to lift a finger.</description>
     </item>
     
+    
+    
     <item>
       <title>
-        
             Moving to a new domain without breaking old links: AWS &amp; Disqus
-        
       </title>
       <link>https://vickylai.com/verbose/aws-new-domain/</link>
       <pubDate>Wed, 10 Jan 2018 08:56:20 -0500</pubDate>
@@ -69,11 +76,11 @@ Stuff and opinions I’ve only been a one-bag nomad for a little over a year and
 After some months of regular posting I felt I was ready to commit (short courtship, I know, but we’re all adults here) and I bought a dedicated domain, herOneBag.</description>
     </item>
     
+    
+    
     <item>
       <title>
-        
             A unicode substitution cipher algorithm
-        
       </title>
       <link>https://vickylai.com/verbose/unicode-cipher/</link>
       <pubDate>Sat, 06 Jan 2018 20:00:28 -0500</pubDate>
@@ -82,11 +89,11 @@ After some months of regular posting I felt I was ready to commit (short courtsh
       <description>Full transparency: I occasionally waste time messing around on Twitter. (Gasp! Shock!) One of the ways I waste time messing around on Twitter is by writing my name in my profile with different unicode character “fonts,” 𝖑𝖎𝖐𝖊 𝖙𝖍𝖎𝖘 𝖔𝖓𝖊. I previously did this by searching for different unicode characters on Google, then one-by-one copying and pasting them into the “Name” field on my Twitter profile. Since this method of wasting time was a bit of a time waster, I decided (in true programmer fashion) to write a tool that would help me save some time while wasting it.</description>
     </item>
     
+    
+    
     <item>
       <title>
-        
             Hosting your static site with AWS S3, Route 53, and CloudFront
-        
       </title>
       <link>https://vickylai.com/verbose/aws-static-site/</link>
       <pubDate>Wed, 13 Dec 2017 20:46:12 -0500</pubDate>
@@ -96,11 +103,11 @@ After some months of regular posting I felt I was ready to commit (short courtsh
  Static site in Amazon Web Services S3 bucket Route 53 handling the DNS CloudFront for distribution and a custom SSL certificate  I set all that up most of a year ago.</description>
     </item>
     
+    
+    
     <item>
       <title>
-        
             About time
-        
       </title>
       <link>https://vickylai.com/verbose/about-time/</link>
       <pubDate>Wed, 22 Nov 2017 14:05:14 -0500</pubDate>
@@ -110,11 +117,11 @@ After some months of regular posting I felt I was ready to commit (short courtsh
 It’s made me think, which I must admit, I at first didn’t like. See, when I wake up in the morning (and subsequently wake up my computer) the first thing I do is go on Twitter to catch up on everything I missed while I was asleep. All this before my first coffee, mind you.</description>
     </item>
     
+    
+    
     <item>
       <title>
-        
             Batch renaming images, including image resolution, with awk
-        
       </title>
       <link>https://vickylai.com/verbose/renaming-images/</link>
       <pubDate>Mon, 20 Nov 2017 13:59:30 -0500</pubDate>
@@ -124,11 +131,13 @@ It’s made me think, which I must admit, I at first didn’t like. See, when I 
 $ file IMG* | awk &#39;BEGIN{a=0} {print substr($1, 1, length($1)-5),a&#43;&#43;&#34;_&#34;substr($8,1, length($8)-1)}&#39; | while read fn fr; do echo $(rename -v &#34;s/$fn/img_$fr/g&#34; *); done IMG_20170808_172653_425.jpg renamed as img_0_4032x3024.jpg IMG_20170808_173020_267.jpg renamed as img_1_3024x3506.jpg IMG_20170808_173130_616.jpg renamed as img_2_3024x3779.jpg IMG_20170808_173221_425.jpg renamed as img_3_3024x3780.jpg IMG_20170808_173417_059.jpg renamed as img_4_2956x2980.</description>
     </item>
     
+    
+    
+    
+    
     <item>
       <title>
-        
             How to code a satellite algorithm and cook paella from scratch
-        
       </title>
       <link>https://vickylai.com/verbose/build-from-scratch/</link>
       <pubDate>Fri, 08 Sep 2017 16:50:24 -0400</pubDate>
@@ -139,11 +148,11 @@ Okay, how about this: I’m going to teach you how to make paella!
 And you’ll have written a function that does the stuff I mentioned above, just like I did for this freeCodeCamp challenge.</description>
     </item>
     
+    
+    
     <item>
       <title>
-        
             Making sandwiches with closures in JavaScript
-        
       </title>
       <link>https://vickylai.com/verbose/javascript-closures/</link>
       <pubDate>Sun, 28 May 2017 09:16:35 +0700</pubDate>
@@ -153,11 +162,11 @@ And you’ll have written a function that does the stuff I mentioned above, just
 Luckily, you know of a nearby sandwich shop that delivers. They have the ability and ingredients to make any kind of sandwich in the world, and all you have to do is order through their app.</description>
     </item>
     
+    
+    
     <item>
       <title>
-        
             Understanding Array.prototype.reduce() and recursion using apple pie
-        
       </title>
       <link>https://vickylai.com/verbose/reduce-recursion-with-pie/</link>
       <pubDate>Thu, 18 May 2017 11:40:06 +0700</pubDate>
@@ -169,11 +178,11 @@ var arr = [1, [2], [3, [[4]]]]  We want to produce this:
 var flat = [1, 2, 3, 4]  Using for loops and if statements Naively, if we know the maximum number of nested arrays we’ll encounter (there are 4 in this example), we can use for loops to iterate through each array item, then if statements to check if each item is in itself an array, and so on…</description>
     </item>
     
+    
+    
     <item>
       <title>
-        
             Iterating over objects and arrays: frequent errors
-        
       </title>
       <link>https://vickylai.com/verbose/iterating-objects-arrays/</link>
       <pubDate>Tue, 16 May 2017 10:46:46 +0700</pubDate>
@@ -183,11 +192,11 @@ var flat = [1, 2, 3, 4]  Using for loops and if statements Naively, if we know t
 The example code is JavaScript, since that’s what I’ve been working in lately, but I believe the concepts to be pretty universal.</description>
     </item>
     
+    
+    
     <item>
       <title>
-        
             That time 30 seconds, StackOverflow, and sed saved me 30 minutes
-        
       </title>
       <link>https://vickylai.com/verbose/when-stackoverflow-sed-saves-30mins/</link>
       <pubDate>Sat, 06 May 2017 20:04:53 +0800</pubDate>
@@ -197,11 +206,11 @@ The example code is JavaScript, since that’s what I’ve been working in latel
 Here’s a worthwhile new habit for you: anytime you find yourself going “Ughhh I have to do that?</description>
     </item>
     
+    
+    
     <item>
       <title>
-        
             Top free resources for developing coding superpowers
-        
       </title>
       <link>https://vickylai.com/verbose/free-resources-for-coding-superpowers/</link>
       <pubDate>Thu, 27 Apr 2017 08:14:09 +0800</pubDate>
@@ -211,11 +220,11 @@ Here’s a worthwhile new habit for you: anytime you find yourself going “Ughh
 Here’s a quick list of resources that you should definitely look at first if you’re hoping to gain some coding superpowers for free.</description>
     </item>
     
+    
+    
     <item>
       <title>
-        
             Things you need to know about becoming a Data Scientist
-        
       </title>
       <link>https://vickylai.com/verbose/to-be-a-data-scientist/</link>
       <pubDate>Fri, 31 Mar 2017 13:19:19 +0900</pubDate>
@@ -224,6 +233,111 @@ Here’s a quick list of resources that you should definitely look at first if y
       <description>I recently attended a panel discussion hosted by General Assembly in Singapore entitled, “So you want to be a Data Scientist/Analyst”. The panel featured professionals in different stages of their careers and offered a wealth of information to an audience of hopefuls, including tips on how to land a job as a data scientist, and stories debunking myths that color this field.
 The panelists Misrab Faizullah-Khan - VP of Data Science, GO_JEK</description>
     </item>
+    
+    
+    
+    <item>
+      <title>
+            How I turned Unity into a tiling window manager
+      </title>
+      <link>https://vickylai.com/verbose/turn-unity-into-tiling-windows-manager/</link>
+      <pubDate>Wed, 22 Mar 2017 16:10:10 +0800</pubDate>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/turn-unity-into-tiling-windows-manager/</guid>
+      <description>After a long and loving battle experience using i3 as my workhorse window manager on my old laptop, I’ve decided to mainly use Unity on my new laptop instead. I’m a huge fan of tiling window managers as a result of my i3 experience, however, the time it took to configure everything is longer than I wanted to spend getting set up before getting to work with my new laptop.</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>
+            How I set up a single Dropbox folder on my dual-boot Windows and Linux system
+      </title>
+      <link>https://vickylai.com/verbose/same-dropbox-dual-boot/</link>
+      <pubDate>Fri, 17 Mar 2017 10:58:01 +0800</pubDate>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/same-dropbox-dual-boot/</guid>
+      <description>I’ve now set up two different laptops to dual-boot Windows 10 and different Linux distributions. Here’s how to ensure you maintain one Dropbox folder over both operating systems.
+Assuming Windows was there first:
+ Mount the Windows drive in Linux Install Dropbox in Linux Sign in to link to Dropbox Immediately change Dropbox folder location to the mounted drive (same Dropbox folder as Windows)  Get it right the first time Dropbox will automatically set up your Dropbox folder when you run it the first time.</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>
+            How I created custom desktop notifications using terminal and cron
+      </title>
+      <link>https://vickylai.com/verbose/create-desktop-notifications-cron/</link>
+      <pubDate>Tue, 21 Feb 2017 10:48:38 +0700</pubDate>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/create-desktop-notifications-cron/</guid>
+      <description>In my last post I talked about moving from Windows 10 to running i3 on Linux, built up from Debian Base System. Among other things, this change has taught me about the benefits of using basic tools and running a minimal, lightweight system. You can achieve a lot of functionality with just command line tools and simple utilities. One example I’d like to illustrate in this post is setting up desktop notifications.</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>
+            How a lifelong Windows user switched to Linux... the hard way
+      </title>
+      <link>https://vickylai.com/verbose/how-windows-user-switched-to-linux/</link>
+      <pubDate>Mon, 06 Feb 2017 14:23:59 +0700</pubDate>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/how-windows-user-switched-to-linux/</guid>
+      <description>&lt;p&gt;Let me preface this by saying that I’ve always been interested in finding out how things work. If a thing does something, I want to know why, how, and if I can customize it.&lt;/p&gt;
+
+&lt;p&gt;It should come as no surprise that Windows 10 drove me crazy.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>
+            How I ditched WordPress and set up my custom domain HTTPS site for (almost) free
+      </title>
+      <link>https://vickylai.com/verbose/free-custom-domain-website-https/</link>
+      <pubDate>Sat, 28 Jan 2017 13:16:17 +0700</pubDate>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/free-custom-domain-website-https/</guid>
+      <description>&lt;p&gt;I got annoyed with WordPress.com. While using the service has its pros (like https and a mobile responsive website, and being very visual and beginner-friendly) it’s limiting. For someone who’s comfortable enough to be tweaking CSS but who’s not interested in creating their own theme (or paying upwards of $50 for one), I felt I wasn’t really the type of consumer WordPress.com was suited to.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>
+            Fundamentals of programming: iterations in Python
+      </title>
+      <link>https://vickylai.com/verbose/python-programming-fundamentals-iterations/</link>
+      <pubDate>Wed, 18 Jan 2017 21:58:28 +0700</pubDate>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/python-programming-fundamentals-iterations/</guid>
+      <description>I’ve been working in Python 3 for about a week, and so far greatly enjoy it. To me, learning code syntax (and programming in general) amounts to an amalgamation of lego blocks: once it’s understood what a certain color of block does, it’s straightforward to combine them to create the structure you’re looking for.
+That said, some blocks can be a little confusing at first. I found documentation relating to iteration in Python to be a little hard to digest, mostly because of subtle differences in terminology: iteration, iterator, iterating, iterable… it’s enough to make your eyes glaze over.</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>
+            I&#39;ve been a back-end coder for a week: here&#39;s how I made a Twitter stream
+      </title>
+      <link>https://vickylai.com/verbose/how-i-made-a-twitter-stream/</link>
+      <pubDate>Fri, 06 Jan 2017 16:39:29 +0700</pubDate>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/how-i-made-a-twitter-stream/</guid>
+      <description>This post covers my initial adventures in exploring Twitter’s Streaming API. I’ll talk about:
+ Getting started making a Twitter Streaming program using a template Problems arising from programming in Python with Windows 10 and Unicode Refining the search function  You can follow along with my template on Github.
+1. Getting started If you’re new to Twitter’s Streaming API like I was this morning, here it is from the top.</description>
+    </item>
+    
+    
+    
+    
+    
+    
+    
     
   </channel>
 </rss>
