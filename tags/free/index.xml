@@ -26,10 +26,10 @@ Stuff and opinions I&amp;rsquo;ve only been a one-bag nomad for a little over a 
     
     <item>
       <title>Running a free Twitter bot on AWS Lambda</title>
-      <link>https://vickylai.com/verbose/aws-lambda/</link>
+      <link>https://vickylai.com/verbose/free-twitter-bot-aws-lambda/</link>
       <pubDate>Mon, 05 Mar 2018 10:29:15 -0500</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/aws-lambda/</guid>
+      <guid>https://vickylai.com/verbose/free-twitter-bot-aws-lambda/</guid>
       <description>If you read About time, you&amp;rsquo;ll know that I&amp;rsquo;m a big believer in spending time now on building things that save time in the future. To this end I built a simple Twitter bot in Go that would occasionally post links to my articles and keep my account interesting even when I&amp;rsquo;m too busy to use it. The tweets help drive traffic to my sites, and I don&amp;rsquo;t have to lift a finger.</description>
     </item>
     
