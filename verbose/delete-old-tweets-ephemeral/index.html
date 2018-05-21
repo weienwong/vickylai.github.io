@@ -118,7 +118,7 @@ https://vickylai.com/pixels/ephemeral.jpg
 
 <h1 id="ephemeral-tweets">Ephemeral tweets</h1>
 
-<p>If you look at my Twitter profile page today, you&rsquo;ll see fewer tweets there than you have fingers (I hope). I&rsquo;m using <a href="https://github.com/hivickylai/ephemeral">ephemeral</a> - a lightweight utility I wrote for use on <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> - to delete all my tweets older than a few days. I&rsquo;m doing this for the same reason that I don&rsquo;t hang on to stuff that I no longer use - that stuff isn&rsquo;t relevant to me anymore. It doesn&rsquo;t represent me, either.</p>
+<p>If you look at my Twitter profile page today, you&rsquo;ll see fewer tweets there than you have fingers (I hope). I&rsquo;m using <a href="https://github.com/vickylai/ephemeral">ephemeral</a> - a lightweight utility I wrote for use on <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> - to delete all my tweets older than a few days. I&rsquo;m doing this for the same reason that I don&rsquo;t hang on to stuff that I no longer use - that stuff isn&rsquo;t relevant to me anymore. It doesn&rsquo;t represent me, either.</p>
 
 <p>The code that makes up ephemeral is written in Go. AWS Lambda creates an environment for each Lambda function, so ephemeral utilizes environment variables for your private Twitter API keys and the maximum age of the tweets you want to keep, represented in hours, like <code>72h</code>.</p>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="p">(</span>
@@ -161,9 +161,9 @@ https://vickylai.com/pixels/ephemeral.jpg
 	<span class="nx">log</span><span class="p">.</span><span class="nx">Info</span><span class="p">(</span><span class="s">&#34;No more tweets to delete.&#34;</span><span class="p">)</span>
 
 <span class="p">}</span></code></pre></div>
-<p>Read the full code <a href="https://github.com/hivickylai/ephemeral/blob/master/main.go">here</a>.</p>
+<p>Read the full code <a href="https://github.com/vickylai/ephemeral/blob/master/main.go">here</a>.</p>
 
-<p>For a use case like this, AWS Lambda has a free tier that costs nothing. If you&rsquo;re any level of developer, it&rsquo;s an extremely useful tool to become familiar with. For a full walkthrough with screenshots of how to set up a Lambda function that tweets for you, you can read <a href="https://vickylai.com/verbose/aws-lambda/">this article</a>. The set up for ephemeral is the same, it just has an opposite function. :)</p>
+<p>For a use case like this, AWS Lambda has a free tier that costs nothing. If you&rsquo;re any level of developer, it&rsquo;s an extremely useful tool to become familiar with. For a full walkthrough with screenshots of how to set up a Lambda function that tweets for you, you can read <a href="https://vickylai.com/verbose/free-twitter-bot-aws-lambda/">this article</a>. The set up for ephemeral is the same, it just has an opposite function. :)</p>
 
 <p>I forked ephemeral from Adam Drake&rsquo;s <a href="https://github.com/adamdrake/harold">Harold</a>, a Twitter tool that has many useful functions beyond keeping your timeline trimmed. If you have more than 200 tweets to delete at first pass, please use Harold to do that first. You can run Harold with the <code>deletetimeline</code> flag from your terminal.</p>
 
