@@ -87,7 +87,10 @@ https://vickylai.com/pixels/knapsack-doodle.png
 &#183; <a href="mailto:hello@vickylai.com">email</a>
 &#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/knapsack-doodle.png"/></div><div id="content"><h1>Knapsack problem algorithms for my real-life carry-on knapsack</h1>Wed May 09, 2018 &#183; 23 min read
 
-<div><span id="tag"><a href="/tags/algorithms">algorithms</a></span><span id="tag"><a href="/tags/data">data</a></span><span id="tag"><a href="/tags/go">go</a></span></div><hr/> <h2>Jump to section...</h2><nav id="TableOfContents">
+<div><span id="tag"><a href="/tags/algorithms">algorithms</a></span>
+
+&#183; <span id="tag"><a href="/tags/data">data</a></span>
+&#183; <span id="tag"><a href="/tags/go">go</a></span></div><hr/> <h2>Jump to section...</h2><nav id="TableOfContents">
 <ul>
 <li><a href="#the-knapsack-problem">The knapsack problem</a></li>
 <li><a href="#the-set-up">The set up</a></li>
@@ -544,7 +547,7 @@ https://vickylai.com/pixels/knapsack-doodle.png
 <p>To use dynamic programming to find the optimal recipe for packing our bag, we&rsquo;ll need to:</p>
 
 <ol>
-<li>Create a matrix representing all subsets of the items (the solution space) with columns representing items and rows representing the bag&rsquo;s remaining weight capacity</li>
+<li>Create a matrix representing all subsets of the items (the solution space) with rows representing items and columns representing the bag&rsquo;s remaining weight capacity</li>
 <li>Loop through the matrix and calculate the worth that can be obtained by each combination of items at each stage of the bag&rsquo;s capacity</li>
 <li>Examine the completed matrix to determine which items to add to the bag in order to produce the maximum possible worth for the bag in total</li>
 </ol>
@@ -1262,8 +1265,9 @@ Benchmark_dynamic-4         <span class="m">1000</span>           <span class="m
 <p>On top of choosing an appropriate approach to solving the knapsack problem in general, it is helpful to design our algorithm in a way that translates the practicalities of a scenario into code.</p>
 
 <p>There are many considerations for better algorithm design beyond the scope of this introductory post that I plan to cover (some of) in later articles. A future algorithm may very well decide my bag&rsquo;s contents on the next trip, but we&rsquo;re not quite there yet. Stay tuned!</p>
-<p>Like this post? Questions? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2fknapsack-go-approaches%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/delete-old-tweets-ephemeral/">Why I&#39;m automatically deleting my old tweets using AWS Lambda</a></li><li><a href="/verbose/free-twitter-bot-aws-lambda/">Running a free Twitter bot on AWS Lambda</a></li><li><a href="/verbose/unicode-cipher/">A unicode substitution cipher algorithm</a></li></ul></div><div class="footer"><a href="/"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/></a><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34; This is where I put all the words that don&#39;t fit on Twitter.<div id="menu"><p><a href="https://github.com/vickylai">github</a>
+<p>Like this post? Questions? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2fknapsack-go-approaches%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/delete-old-tweets-ephemeral/">Why I&#39;m automatically deleting my old tweets using AWS Lambda</a></li><li><a href="/verbose/free-twitter-bot-aws-lambda/">Running a free Twitter bot on AWS Lambda</a></li><li><a href="/verbose/unicode-cipher/">A unicode substitution cipher algorithm</a></li></ul></div><div class="footer"><img id="blog-avatar" src="/img/purple-avatar-v2.png" width="120px"/><div id="bio">I&#39;m a nomadic developer who geeks out over 90s stuff and drinks too much coffee. My dream title is &#34;Lead Easter Egg Developer.&#34;<div id="menu"><p><a href="https://github.com/vickylai">github</a>
 
+&#183; <a href="https://mastodon.social/@vickylai">mastodon</a>
 &#183; <a href="https://twitter.com/hivickylai">twitter</a>
 &#183; <a href="mailto:hello@vickylai.com" rel="noopener">email</a></p></div></div></div>
 <script>
