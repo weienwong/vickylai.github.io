@@ -8,10 +8,20 @@
     <language>en-us</language>
     <managingEditor>hello@vickylai.com (Vicky Lai)</managingEditor>
     <webMaster>hello@vickylai.com (Vicky Lai)</webMaster>
-    <lastBuildDate>Fri, 08 Sep 2017 16:50:24 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 30 May 2018 14:08:28 -0400</lastBuildDate>
     
 	<atom:link href="https://vickylai.com/tags/food/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A coffee-break introduction to time complexity of algorithms</title>
+      <link>https://vickylai.com/verbose/introduction-time-complexity/</link>
+      <pubDate>Wed, 30 May 2018 14:08:28 -0400</pubDate>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/introduction-time-complexity/</guid>
+      <description>Just like writing your very first for loop, understanding time complexity is an integral milestone to learning how to write efficient complex programs. Think of it as having a superpower that allows you to know exactly what type of program might be the most efficient in a particular situation - before even running a single line of code.
+The fundamental concepts of complexity analysis are well worth studying. You&amp;rsquo;ll be able to better understand how the code you&amp;rsquo;re writing will interact with the program&amp;rsquo;s input, and as a result, you&amp;rsquo;ll spend a lot less wasted time writing slow and problematic code.</description>
+    </item>
     
     <item>
       <title>How to code a satellite algorithm and cook paella from scratch</title>

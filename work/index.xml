@@ -13,51 +13,52 @@
     
     
     <item>
-      <title>Apply by API</title>
+      <title>ApplyByAPI.com</title>
       <link>https://vickylai.com/work/aba/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
       <guid>https://vickylai.com/work/aba/</guid>
-      <description>ApplyByAPI.com A relevant, automated, and effective pre-screening tool for hiring technical candidates. ApplyByAPI is built to be a scalable solution that greatly reduces human time and effort spent on the hiring process.
+      <description>A relevant, automated, and effective pre-screening tool for hiring technical candidates. ApplyByAPI is built to be a scalable solution that greatly reduces human time and effort spent on the hiring process.
 Python, Django, AWS, Stripe API, jQuery</description>
     </item>
     
     <item>
-      <title>Introduction</title>
+      <title>Themes for Hugo</title>
       <link>https://vickylai.com/work/hugo-introduction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
       <guid>https://vickylai.com/work/hugo-introduction/</guid>
-      <description>Themes for Hugo Responsive, full-featured, and customizable themes for the popular static site generator Hugo. Focused on minimalism and adaptability. Open source on GitHub.
+      <description>Responsive, full-featured, and customizable themes for the popular static site generator Hugo. Focused on minimalism and adaptability. Open source on GitHub.
 Pug, Sass, gulp/Node.js, jQuery</description>
     </item>
     
     <item>
-      <title>Simon</title>
+      <title>A post-apocalyptic Simon game</title>
       <link>https://vickylai.com/work/simon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
       <guid>https://vickylai.com/work/simon/</guid>
-      <description>A post-apocalyptic Simon game A reinvention of the classic Simon game with an RPG theme, implemented in JavaScript as a finite-state machine. Offers a choice of play modes with custom CSS effects.</description>
+      <description>A reinvention of the classic Simon game with an RPG theme, implemented in JavaScript as a finite-state machine. Offers a choice of play modes with custom CSS effects.</description>
     </item>
     
     <item>
-      <title>Fancy Unicode</title>
+      <title>A substitution cipher unicode converter</title>
       <link>https://vickylai.com/work/fancy-unicode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
       <guid>https://vickylai.com/work/fancy-unicode/</guid>
-      <description>A substitution cipher unicode converter A single-page app that instantly converts plain-looking letters into their fancier extended unicode character representations. It uses an algorithm based on the Caesar cipher from classical cryptography. Further details in this article.</description>
+      <description>A single-page app that instantly converts plain-looking letters into their fancier extended unicode character representations. It uses an algorithm based on the Caesar cipher from classical cryptography. Further details in this article.</description>
     </item>
     
     <item>
-      <title>Moji Munchi</title>
-      <link>https://vickylai.com/work/moji-munchi/</link>
+      <title>More open source projects on GitHub</title>
+      <link>https://vickylai.com/work/github-projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/work/moji-munchi/</guid>
-      <description>Automated meal decisions with emojis and Google Maps Randomly generated food emojis suggest what to eat and where to get it near your current location.
-jQuery, W3C geolocation API, Google Maps API</description>
+      <guid>https://vickylai.com/work/github-projects/</guid>
+      <description>ephemeral A function for AWS Lambda that continuously deletes Tweets from your Twitter timeline according to a configurable expiry time. Read the accompanying article.
+Go, Twitter API, AWS Lambda
+acme-gallery A neat starter package that automagically creates a pure CSS gallery web page from a folder of image files.</description>
     </item>
     
   </channel>

@@ -20,6 +20,18 @@
     
     
     
+    <item>
+      <title>
+            A coffee-break introduction to time complexity of algorithms
+      </title>
+      <link>https://vickylai.com/verbose/introduction-time-complexity/</link>
+      <pubDate>Wed, 30 May 2018 14:08:28 -0400</pubDate>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/introduction-time-complexity/</guid>
+      <description>Just like writing your very first for loop, understanding time complexity is an integral milestone to learning how to write efficient complex programs. Think of it as having a superpower that allows you to know exactly what type of program might be the most efficient in a particular situation - before even running a single line of code.
+The fundamental concepts of complexity analysis are well worth studying. You’ll be able to better understand how the code you’re writing will interact with the program’s input, and as a result, you’ll spend a lot less wasted time writing slow and problematic code.</description>
+    </item>
+    
     
     
     <item>
