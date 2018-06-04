@@ -115,7 +115,7 @@ After some months of regular posting I felt I was ready to commit (short courtsh
       <pubDate>Wed, 13 Dec 2017 20:46:12 -0500</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
       <guid>https://vickylai.com/verbose/aws-static-site/</guid>
-      <description>Some time ago I decided to stop freeloading on GitHub pages and move my static page for vickylai.com to Amazon Web Services (AWS). It turns out that I’m still mostly freeloading (yay free tier) so it amounted to a learning experience. Here are the components that let me host and serve the site at my custom domain with HTTPS.
+      <description>Some time ago I decided to stop freeloading on GitHub pages and move one of my sites to Amazon Web Services (AWS). It turns out that I’m still mostly freeloading (yay free tier) so it amounted to a learning experience. Here are the components that let me host and serve the site at my custom domain with HTTPS.
  Static site in Amazon Web Services S3 bucket Route 53 handling the DNS CloudFront for distribution and a custom SSL certificate  I set all that up most of a year ago.</description>
     </item>
     

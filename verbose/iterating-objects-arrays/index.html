@@ -66,40 +66,37 @@
 <a href="/#work">work</a>
 
 &#183; <a href="mailto:hello@vickylai.com">email</a>
-&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/iteration-breakfast.jpg"/></div><div id="content"><h1>Iterating over objects and arrays: frequent errors</h1><p id="date">Tue May 16, 2017 &#183; 5 min read</p>
+&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/iteration-breakfast.jpg"/></div><div id="content"><h1>Iterating over objects and arrays: frequent errors</h1><p id="date">Tue May 16, 2017 &#183; 4 min read</p>
 <div><span id="tag"><a href="/tags/coding">coding</a></span>
 
 &#183; <span id="tag"><a href="/tags/javascript">javascript</a></span>
-&#183; <span id="tag"><a href="/tags/food">food</a></span></div><hr id="accent-hr"/>
+&#183; <span id="tag"><a href="/tags/food">food</a></span></div><hr id="accent-hr"/> <div class="dropdown"><input type="checkbox" id="toc-toggle"/><label for="toc-toggle" id="toggle"><p class="toc-title">Jump to section... <span class="dropdown-icon">⚓</span></p></label><nav id="TableOfContents">
+<ul>
+<li><a href="#quick-reference-for-equivalent-statements">Quick reference for equivalent statements</a></li>
+<li><a href="#quick-reference-for-logical-statements">Quick reference for logical statements</a></li>
+<li><a href="#objects">Objects</a>
+<ul>
+<li><a href="#iterate-over-object-properties">Iterate over object properties</a></li>
+<li><a href="#get-object-property-value">Get object property value</a></li>
+<li><a href="#get-object-property-from-the-value">Get object property from the value</a></li>
+<li><a href="#alter-nested-property-values">Alter nested property values</a></li>
+</ul></li>
+<li><a href="#arrays">Arrays</a>
+<ul>
+<li><a href="#iterate-through-array-items">Iterate through array items</a></li>
+<li><a href="#access-array-item-by-index">Access array item by index</a></li>
+<li><a href="#ways-to-get-mixed-up-over-arrays">Ways to get mixed up over arrays</a></li>
+</ul></li>
+<li><a href="#practice-makes-better">Practice makes&hellip; better.</a></li>
+</ul>
+</nav> </div>
 
 
 <p>Here&rsquo;s <del>some complaining</del> a quick overview of some code that has confounded me more than once. I&rsquo;m told even very experienced developers encounter these situations regularly, so if you find yourself on your third cup of coffee scratching your head over why your code is doing exactly what you told it to do (and not what you <em>want</em> it to do), maybe this post can help you.</p>
 
-<p>The example code is JavaScript, since that&rsquo;s what I&rsquo;ve been working in lately, but I believe the concepts to be pretty universal. (This article&rsquo;s original title was &ldquo;JavaScript Sucks&rdquo; but I decided I didn&rsquo;t want to invite <em>that</em> debate&hellip;)</p>
+<p>The example code is JavaScript, since that&rsquo;s what I&rsquo;ve been working in lately, but I believe the concepts to be pretty universal.</p>
 
-<p><strong>Contents</strong></p>
-
-<ul>
-<li><a href="/verbose/iterating-objects-arrays#equivalent">Quick reference for equivalent statements</a></li>
-<li><a href="/verbose/iterating-objects-arrays#logical">Quick reference for logical statements</a></li>
-<li><a href="/verbose/iterating-objects-arrays#objects">Objects</a>
-
-<ul>
-<li>Iterate over object properties</li>
-<li>Get object property value</li>
-<li>Get object property from the value</li>
-<li>Alter nested property values</li>
-</ul></li>
-<li><a href="/verbose/iterating-objects-arrays#arrays">Arrays</a>
-
-<ul>
-<li>Iterate through array items</li>
-<li>Access array item by index</li>
-<li>Ways to get mixed up over arrays</li>
-</ul></li>
-</ul>
-
-<h1 id="quick-reference-for-equivalent-statements-a-name-equivalent-a">Quick reference for equivalent statements <a name="equivalent"></a></h1>
+<h1 id="quick-reference-for-equivalent-statements">Quick reference for equivalent statements</h1>
 
 <table>
 <thead>
@@ -142,7 +139,7 @@
 </tbody>
 </table>
 
-<h1 id="quick-reference-for-logical-statements-a-name-logical-a">Quick reference for logical statements <a name="logical"></a></h1>
+<h1 id="quick-reference-for-logical-statements">Quick reference for logical statements</h1>
 
 <table>
 <thead>
@@ -185,7 +182,7 @@
 </tbody>
 </table>
 
-<h1 id="objects-a-name-objects-a">Objects <a name="objects"></a></h1>
+<h1 id="objects">Objects</h1>
 
 <p>Given a breakfast object that looks like this:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">breakfast</span> <span class="o">=</span> <span class="p">{</span>
@@ -249,7 +246,7 @@ Two of:  waffles</code></pre></div>
 </code></pre></div>
 <p>Which gives us:</p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="o">{</span> blueberries: <span class="m">6</span>, banana: <span class="m">2</span> <span class="o">}</span></code></pre></div>
-<h1 id="arrays-a-name-arrays-a">Arrays <a name="arrays"></a></h1>
+<h1 id="arrays">Arrays</h1>
 
 <p>Given an array of waffles that looks like this:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">wafflesIAte</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span> <span class="p">];</span>
@@ -304,9 +301,11 @@ item from array:  <span class="m">11</span></code></pre></div>
 <p>Produces:</p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="o">[</span>i+1<span class="o">]</span> gives next array index:  <span class="m">3</span>
 <span class="o">[</span>i<span class="o">]</span>+1 gives index value + <span class="m">1</span>:  <span class="m">2</span></code></pre></div>
-<p>&nbsp;</p>
+<h1 id="practice-makes-better">Practice makes&hellip; better.</h1>
 
-<p>That&rsquo;s all for now! If you have a correction, best practice, or another common error for me to add, please let me know!</p>
+<p>The more often you code and correct your errors, the better you&rsquo;ll remember it next time!</p>
+
+<p>That&rsquo;s all for now. If you have a correction, best practice, or another common error for me to add, please let me know!</p>
 <p>Like this post? Questions? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2fiterating-objects-arrays%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr id="accent-hr"/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/javascript-closures/">Making sandwiches with closures in JavaScript</a></li><li><a href="/verbose/reduce-recursion-with-pie/">Understanding Array.prototype.reduce() and recursion using apple pie</a></li><li><a href="/verbose/build-from-scratch/">How to code a satellite algorithm and cook paella from scratch</a></li></ul></div><div class="footer"><img id="bio-avatar" src="/img/purple-avatar-v2.png" width="120px"/><div id="bio"> <strong>Vicky Lai</strong><p>I&#39;m a freelance full stack developer with an entrepreneurial background and keen interest in building technology for social good.</p><div id="bio-menu"><p><a href="https://github.com/vickylai">github</a>
 
 &#183; <a href="https://mastodon.social/@vickylai">mastodon</a>

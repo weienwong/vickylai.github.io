@@ -73,7 +73,7 @@
 &#183; <span id="tag"><a href="/tags/free">free</a></span></div><hr id="accent-hr"/>
 
 
-<p>Some time ago I decided to stop freeloading on GitHub pages and move my static page for <a href="https://vickylai.com">vickylai.com</a> to Amazon Web Services (AWS). It turns out that I&rsquo;m still mostly freeloading (yay free tier) so it amounted to a learning experience. Here are the components that let me host and serve the site at my custom domain with HTTPS.</p>
+<p>Some time ago I decided to stop freeloading on GitHub pages and move one of my sites to Amazon Web Services (AWS). It turns out that I&rsquo;m still mostly freeloading (yay free tier) so it amounted to a learning experience. Here are the components that let me host and serve the site at my custom domain with HTTPS.</p>
 
 <ul>
 <li>Static site in Amazon Web Services S3 bucket</li>
@@ -81,9 +81,9 @@
 <li>CloudFront for distribution and a custom SSL certificate</li>
 </ul>
 
-<p>I set all that up most of a year ago. At the time, I found the AWS documentation to be rather fragmented and inconvenient to follow - it was hard to find what you were looking for without knowing what a specific setting might be called, or where it was, or if it existed at all. When I recently set up a new site and stumbled through this process again, I didn&rsquo;t find it any easier. Hopefully this post can help to collect the relevant information into a more easily followed process and save future me (and you) some time.</p>
+<p>I set all that up most of a year ago. At the time, I found the AWS documentation to be rather fragmented and inconvenient to follow - it was hard to find what you were looking for without knowing what a specific setting might be called, or where it was, or if it existed at all. When I recently set up a new site and stumbled through this process again, I didn&rsquo;t find it any easier. Hopefully this post can help to collect the relevant information into a more easily followed process and serve as an accompanying guide to save future me (and you) some time.</p>
 
-<p>Rather than replace existing documentation, this post is meant to accompany it. Think of me as your cool tech-savvy friend on the phone with you at 4am, troubleshooting your website. (Please don&rsquo;t actually call me at 4am.) I&rsquo;ll walk through the set up while providing links for the documentation that was ultimately helpful (mostly so I can find it again later&hellip;).</p>
+<p>Rather than replace existing documentation, this post is meant to supplement it. Think of me as your cool tech-savvy friend on the phone with you at 4am, troubleshooting your website. (Please don&rsquo;t actually call me at 4am.) I&rsquo;ll walk through the set up while providing links for the documentation that was ultimately helpful (mostly so I can find it again later&hellip;).</p>
 
 <h1 id="hosting-a-static-site-with-amazon-s3-and-a-custom-domain">Hosting a static site with Amazon S3 and a custom domain</h1>
 
@@ -171,7 +171,7 @@
 <li>Wait. Sometimes changes take up to 48hrs to propogate. ¯\_(ツ)_/¯</li>
 </ol>
 
-<p>Failing all that, if you&rsquo;re still having trouble, you can always <a href="https://twitter.com/hivickylai">ask me!</a> Just don&rsquo;t call me at 4am. I&rsquo;m sleeping.</p>
+<p>Failing all that, if you&rsquo;re still having trouble, you can always ask me! Just don&rsquo;t call me at 4am. I&rsquo;m sleeping.</p>
 <p>Like this post? Questions? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2faws-static-site%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr id="accent-hr"/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/free-custom-domain-website-https/">How I ditched WordPress and set up my custom domain HTTPS site for (almost) free</a></li><li><a href="/verbose/delete-old-tweets-ephemeral/">Why I&#39;m automatically deleting my old tweets using AWS Lambda</a></li><li><a href="/verbose/free-twitter-bot-aws-lambda/">Running a free Twitter bot on AWS Lambda</a></li></ul></div><div class="footer"><img id="bio-avatar" src="/img/purple-avatar-v2.png" width="120px"/><div id="bio"> <strong>Vicky Lai</strong><p>I&#39;m a freelance full stack developer with an entrepreneurial background and keen interest in building technology for social good.</p><div id="bio-menu"><p><a href="https://github.com/vickylai">github</a>
 
 &#183; <a href="https://mastodon.social/@vickylai">mastodon</a>
