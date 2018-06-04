@@ -34,11 +34,11 @@ Stuff and opinions I&amp;rsquo;ve only been a one-bag nomad for a little over a 
     </item>
     
     <item>
-      <title>I&#39;ve been a back-end coder for a week: here&#39;s how I made a Twitter stream</title>
-      <link>https://vickylai.com/verbose/how-i-made-a-twitter-stream/</link>
+      <title>The basics of streaming with Twitter API</title>
+      <link>https://vickylai.com/verbose/basics-streaming-twitter-api/</link>
       <pubDate>Fri, 06 Jan 2017 16:39:29 +0700</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/how-i-made-a-twitter-stream/</guid>
+      <guid>https://vickylai.com/verbose/basics-streaming-twitter-api/</guid>
       <description>This post covers my initial adventures in exploring Twitter&amp;rsquo;s Streaming API. I&amp;rsquo;ll talk about:
  Getting started making a Twitter Streaming program using a template Problems arising from programming in Python with Windows 10 and Unicode Refining the search function  You can follow along with my template on Github.
 1. Getting started If you&amp;rsquo;re new to Twitter&amp;rsquo;s Streaming API like I was this morning, here it is from the top.</description>

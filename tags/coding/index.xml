@@ -87,13 +87,13 @@ The example code is JavaScript, since that&amp;rsquo;s what I&amp;rsquo;ve been 
     </item>
     
     <item>
-      <title>That time 30 seconds, StackOverflow, and sed saved me 30 minutes</title>
-      <link>https://vickylai.com/verbose/when-stackoverflow-sed-saves-30mins/</link>
+      <title>How to replace a string in a dozen old blog posts with one sed terminal command</title>
+      <link>https://vickylai.com/verbose/replace-string-sed-command/</link>
       <pubDate>Sat, 06 May 2017 20:04:53 +0800</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/when-stackoverflow-sed-saves-30mins/</guid>
-      <description>This week, I launched my new website and changed my Twitter username to match. I was about to spend time going through all my old blog posts to find and update the URLs when this very future blog post popped up on my screen like Clippy and shook its pixelated head disapprovingly.
-Here&amp;rsquo;s a worthwhile new habit for you: anytime you find yourself going &amp;ldquo;Ughhh I have to do that?</description>
+      <guid>https://vickylai.com/verbose/replace-string-sed-command/</guid>
+      <description>June 1, 2018: This post was previously titled &amp;ldquo;That time 30 seconds, StackOverflow, and sed saved me 30 minutes&amp;rdquo; and has since been revised and updated with more examples and a couple new doodles. It&amp;rsquo;s better now.
+I&amp;rsquo;ve had more than a few usernames, URLs, and Twitter handles over the years. Whether it was changing to something that better reflected my current interests or briefly getting caught up in the &amp;ldquo;.</description>
     </item>
     
     <item>

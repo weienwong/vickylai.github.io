@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-us" >
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="referrer" content="no-referrer">
+        <meta name="description" content="
+        
+            Getting started with Twitter&#39;s Streaming API on Windows 10 with Python.
+        
+        ">
+
+        <meta property="og:title" content="The basics of streaming with Twitter API">
+        <meta property="og:description" content="
+        
+            Getting started with Twitter&#39;s Streaming API on Windows 10 with Python.
+        
+        ">
+        <meta property="og:image" content="
+        
+            https://vickylai.com/img/card.png
+        
+        ">
+        <meta property="og:url" content="https://vickylai.com/verbose/basics-streaming-twitter-api/">
+
+        <meta name="twitter:image" content="
+        
+            https://vickylai.com/img/card.png
+        
+        ">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <title>
+        
+            The basics of streaming with Twitter API
+        
+        </title>
+
+        <link rel="canonical" href="https://vickylai.com/verbose/basics-streaming-twitter-api/">
+        
+        <link rel="stylesheet" href="/css/style.css">
+        
+        <link rel="shortcut icon" href="/img/logo.ico" id="favicon">
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98623582-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-98623582-1');
+        </script>
+        
+        
+        <script src="/js/mode.js"></script>
+    </head><body><div id="top"></div><div id="logo"><img id="up" src="/img/vx50.png" width="25px"/><img id="night" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG8AAABvCAYAAADixZ5gAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATISURBVHhe7d1pqK1THMfxYx4yT5FIkpCbKGXqoiSSMubexL0lt3uTUpLppUJkFqIoETKEeEGU4QVJCCFJxAtkzCzT99e9O6ftf85&#43;9rPXetba&#43;/l96/PmKp2zVvvsZ1jPeuacc84555xzzjnnnHPOObe29bAUd2A7/YOrv61wMT7BP3gIrvJ2xrX4AZq0gUPgKm0zXI4fMX/S5BW4SjsVn2J40gaWwVXWDngQ0YQN/AJ9Kl1FHYMvEU3YfI/DVZIO/S/Dn4gma9g5cBW0KR5FNEmRv7ATXOG2xguIJmkhPsqsoB3xJqIJWsx1cAXTJ&#43;51RJMzymlwhdocLyKamCb2hiuQjiofQTQpTfyBDeEKpEtd0aQ09SFcgY5H0/O4hTwP13E6svwC0YSM4wG4jhvnJHwxt8F12JmIJqKNa&#43;A6agt8jmgi2rgKrqOuQDQJbfmT11G74VdEk9CWv/M66kZEEzCJ&#43;&#43;Eyp7vhPyOagEk8AZe51N91Ay/BZWwDpDzCnE8n&#43;i5jugwWDXwq28BlSquYo0FPxQttM7UJogWyKa2Ay9CxiAY8pTvhMnQTogFP6SO4DL2LaMBT2x0uYboIPenN1qZWwiXsSEQDncOTcAm7ANFA56CFSLo77xJ1K6KBzuV8uEQ9hWiQc9GiXZeotxENck6HwyXoa0QDnNPTcAnKfVks8jcOgpuwaHC7oGWFboL08Eg0sF3Qp&#43;8ouJatj2hgu/IeNoJrWY41K&#43;O4BK5lKZ5FmMRP8LN7LdOtmmhQu/QGtEGBGzM96B8NaNduhxuzexENZglnwI2RNsGJBrIEHTwdDdcw7dIQDWQp32MJXIP2QzSIJX2GPeFGpBP1EhenR9Hq7f3hRvQwogEs7VscAbdI5yEavBpoj86T4BZoH0QDVwtdxL4evg66QO8gGria6IKC134GXYRowGrzDc6FDrTcunaFNjSNBqxGr&#43;JAuHU9g2igaqWV3no7yh7ofbkfsMxFi3nvRu9vLbXdDLUG&#43;rOvHeR1aqFnDnvXKYgGZtrowEarwbVOZmPkbBdUcTFBR3ElFuLmpLsVz&#43;JSHIZtMUl7QbevtG/2YKxOQBXptoxOjIcHYZboJR7advkuXAm9ZWwNzsbp0ONoq6B/1yRpp9/X8B2G/1/Poaruw/APaf&#43;ng6XqbmHp9Wm6txb9wPYfbTxUZXp9TPQD21pad1r1Ua02fYt&#43;8L7TQVD1d/z1zPoHiH6BPtPBzFR0AEqvrK7J1O0fehx&#43;R/TL9IleM5D7pD9L2jR81s//FqOV3Xqf0tR2IaJfbNbpSoo2k5369GXd1cY7NdAr52ZqC5KTkXoj8Rrp0pde0j9zLcVXiH7pWXAPpvLgpGlaPqE9pKNfflr9htXoRXo33tWYhSPR93Ewepf&#43;jHa1/WNqugt/A3r9En4tjNUywhL7u7T1MrwSbV56rY2edtX3RzRgNdBdgWXQa1VdkA5o9OdIGwdEA1jCW9CkeeFuw3R1Qts1llqdpgdWtDrAm9ZN2L7QuhFduci5Slvfu49hObaES9z20HLDW6AHSbRkL5qIUXSa8jG0blNvlz4Ufr13gXQdUesgz4JWdGkFlz6pN0MruXROqWV8&#43;m8nQkeKM3kJyznnnHPOOeecc8455&#43;pvbu5fjNkvXpWc9JIAAAAASUVORK5CYII=" width="25px"/><img id="day" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAX2SURBVHhe7ZxbaBxVGMcj9YqgUhARvEWL4oP1UrDeNV6wUq3UID4UbKpUqilSEAVBwYJB6YO0FKWp0NCkZk2yS1BKivUhT/ZBFBXBvvmYYpW2XkqVFuPvq9/A7MnZzW4yM2d25vvBn9mdc&#43;ac7/y/mdm5bpdhGIZhGIZhGC1Tq9WunJiY2IiW6ywjK0ZGRi4ZHx&#43;fwfxZdAat1CIjC8bGxh5T8yO9o0VGFpCA1U4C3tMiIwssAYGxBATGEhAYS0BgLAGBsQQExhLQgKGhoQtrtdpdnKVeqrNSIesETE1NXUAf909OTl6ms/LH9PT0uRj/tRrya7VavVeLEifLBMg1J8b1o/ZzlL67tShfENgtMUNmCfqPtJKQVQLU/MPxvvj&#43;mhbnC71A9osTbCpJqFQqNzr9bNCixGhg/r9pbtmLRoIT0&#43;NBo9/TCJp2&#43;&#43;nre6Y7BwcHz9PZidDIfLa8zVolv2SZhDRoZD7Tfq2Sf8RsMT0&#43;CPme9yQUwvyITktCocyP6JQkFNL8iEZJQLm4l6tHb8U0P8KXBAb5pRa3jBztcCRyE1rD8hvQS7S1ke9rmd4&#43;PDx8sVZtGZbbGsUkKpz5EZ4kfKZFTcHcpZjyCvUPoL9iy88R9U4zPcT0Lfq7XptoCvVfjS1fTPMjGNxydJCBfs7J1HU62wvGd1N3F3X/FnPalZq5n3bu1ia9yPUr6g2iQ&#43;gZnV1e9MLX1oUa70oSgUZGR0ev0C6MRrC2LsO0b1wTE9IRdks92pXhgvl3sqb&#43;5jEuMdH&#43;adSnXRoRmLMS/Rk3Ky3JLonpJu3akKMVDDkaNykDnWGLW60hlBf5wWWN/NZjUBY6RvKv1VDKCSbUnQRlLZL/hYZSPmTXgwGJHGouRsTRqyGVCwa/yzUjhFgJfpidnT1HwyoH/AAuZfCnXDNCia3gUQ2tHJCAl31GhBJbwYiGVg4YtFxY85oRQiTgOFqi4RUbeX6IQTe9qhlCJGCFhlhsKpXKzT4DQovd4osaYr6QkxX5kWpH8tyOLj4HBrrGZ0AOtE1DnEOtVrvVN85Goq1HErn6Kg2hfzTAduW9scGm3uepmwd9rCHWQbxveurOK5Y7ycrW9F7EvNDQXrfhNvSdNlNH3o6AYvpEQ6yD&#43;T879drRTm1mYdDAC06D7ehDbaYO2dd66uZBQxpiHczf49RrWYz1OW1m4bBP62VzGkDvt6G&#43;Ro8LEtizbqA50XYNsQ5MvIiyTZ4xNtMAy63SJvIFwd3mDDwvKu7N&#43;Djy6AhJkKcXfCaE1EMaYvEhAV95DAipU7Kr0fCKDwN&#43;2zEgqFghpjS0csDa1s2g5d6s15CsRSzrNLTywMD3u0aEEObPyMNZGlZ54PRe3qYMvhUQwxYNqXxgwD7XkCyF&#43;YeTfr2po5ALVhhxxDUmI8k/bd2joZQXfpAfVjN8JqUm&#43;n1dQzAwZH3GvwcfaddGBAmQly1S3xLoZzcqx&#43;3HdqlWq09h0jHXtCSE6fJg7hvaldEITLoGww66Bi5SP9HufdpFeZF/G&#43;HHbzOGPKmzGkK9tZgmb8L7DG1JLD&#43;DtqDztVkvbHkPSD2mLb3W1JF4XgWd9xFxeWJN77HuY9njsWWbSR74OkD9da2c4RLXHdQ/&#43;9vDMqn9wUhQfO/hok&#43;1uCVYfglawZYhd9S28Xk303G0h887mPZjXg/lbV3VpH7dLVLaKlYSfObzXQ45n9YqQSG&#43;q4jlhBNfMZLQxPxc3X0Ss8V0J87OTkKnmB9RqCR0mvkRhUhCp5of0dFJyNJ8DOmh3b1yFKOzEqMjkyDH3ARZd&#43;KUlvmVSuVq2o0/Mpn4Xwz4koBOkPBlWiVfEHBvPNi0zBdo9wmnrwEtSpQGW8IHWpwvWDPkRvvZl&#43;7EfL6n9gd3tJ3Z/4Z6krBei/IHxjxIgNvFIJ2VClkmQGCXd4Os&#43;ej50r3Q5yPrBBgOloDAWAICYwkIjCUgMJaAwFgCAmMJCAwJWOUk4F0tMrKABFzOWenJKAHVavVxLTKyovb/4&#43;07SMbiXwU1DMMwDMMwDMPIjK6u/wD&#43;dHqz7NmcyQAAAABJRU5ErkJggg==" width="25px"/></div><div class="menu-mobile"><a href="/verbose">verbose</a> &#183;
+<a href="https://vickylai.com/">vickylai.com</a></div><div class="menu no-mobile"><p><a href="/verbose">verbose</a> &#183;
+
+<a href="/#work">work</a>
+
+&#183; <a href="mailto:hello@vickylai.com">email</a>
+&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="content"><h1>The basics of streaming with Twitter API</h1><p id="date">Fri Jan 06, 2017 &#183; 5 min read</p>
+<div><span id="tag"><a href="/tags/api">api</a></span>
+
+&#183; <span id="tag"><a href="/tags/python">python</a></span>
+&#183; <span id="tag"><a href="/tags/twitter">twitter</a></span></div><hr id="accent-hr"/>
+
+
+<p>This post covers my initial adventures in exploring Twitter&rsquo;s Streaming API. I&rsquo;ll talk about:</p>
+
+<ol>
+<li>Getting started making a Twitter Streaming program using a template</li>
+<li>Problems arising from programming in Python with Windows 10 and Unicode</li>
+<li>Refining the search function</li>
+</ol>
+
+<p>You can follow along with <a href="https://github.com/vickylai/twitter-stream-template">my template on Github</a>.</p>
+
+<h1 id="1-getting-started">1. Getting started</h1>
+
+<p>If you&rsquo;re new to Twitter&rsquo;s Streaming API like I was this morning, here it is from the top.</p>
+
+<p>Twitter&rsquo;s <a href="https://dev.twitter.com/streaming/public">Streaming API</a> basically enables you to continually load a stream of tweets based on search parameters of your choosing, as they&rsquo;re created in real time. Using a little Python script run from the Windows 10 command line, you can have these tweets display (print) as they&rsquo;re retrieved, while your script is running. The stream will continually update until you stop the script, which from the terminal is achieved with <code>ctrl+c</code>.</p>
+
+<p>I started with <a href="https://github.com/adamdrake/twitterstreamtemplate">@adamdrake&rsquo;s twitterstreamtemplate on Github</a>, which makes use of queuing in Python (still a concept I&rsquo;m just getting familiar with, but <a href="https://www.troyfawkes.com/learn-python-multithreading-queues-basics/">this article</a> has a nice basic overview of it). <a href="https://twython.readthedocs.io/en/latest/usage/starting_out.html#starting-out">The Twython 3.4.0 documentation</a> was also very helpful.</p>
+
+<p>The Twitter API requires authentication, for which you&rsquo;ll need to register an application with Twitter. You can do this here: <a href="https://dev.twitter.com/apps">https://dev.twitter.com/apps</a>. Don&rsquo;t worry too much about its name or description if you&rsquo;re just tinkering, like I am. Once you&rsquo;ve registered, you can obtain your new credentials (<code>consumer_key</code>, <code>consumer_secret</code>, <code>token</code>, and <code>token_secret</code>) from the Keys and Access Tokens tab.</p>
+
+<p>Input your credentials in the appropriate places:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Input your credentials below  </span>
+<span class="n">consumer_key</span> <span class="o">=</span> <span class="sa"></span><span class="s1">&#39;xxx&#39;</span>  
+<span class="n">consumer_secret</span> <span class="o">=</span> <span class="sa"></span><span class="s1">&#39;xxx&#39;</span>  
+<span class="n">token</span> <span class="o">=</span> <span class="sa"></span><span class="s1">&#39;xxx&#39;</span>  
+<span class="n">token_secret</span> <span class="o">=</span> <span class="sa"></span><span class="s1">&#39;xxx&#39;</span>  </code></pre></div>
+<p>You can set parameters to find specific tweets, or just show a sample stream. The relevant lines are:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># stream.statuses.filter(track=&#39;twitter&#39;, language=&#39;en&#39;)  </span>
+<span class="n">stream</span><span class="o">.</span><span class="n">statuses</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="sa"></span><span class="s1">&#39;en&#39;</span><span class="p">)</span>  </code></pre></div>
+<p>As written, it&rsquo;ll show you the sample stream. Switch the commented lines if you want to set your own search parameters. (More on that below.)</p>
+
+<h1 id="2-hiccups-windows-10-python-and-unicode">2. Hiccups: Windows 10, Python, and Unicode</h1>
+
+<p>My first pass at this program consisted of two goals: 1) successfully pull up a stream of tweets based on my search parameters, and 2) print them. The relevant line for achieving the second goal is:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>  </code></pre></div>
+<p>I opened up the terminal and typed <code>python tweet_stream.py</code> to run the program. After a brief pause it returned this error:</p>
+<div class="highlight"><pre class="chroma"><code class="language-system" data-lang="system">return codecs.charmap_encode(input,self.errors,encoding_map)[0]  
+UnicodeEncodeError: &#39;charmap&#39; codec can&#39;t encode characters in position 1270-1271: character maps to &lt;undefined&gt;  </code></pre></div>
+<p>The short explanation is that Windows 10 doesn&rsquo;t play well with Python&rsquo;s default output encoding, UTF-8. (I&rsquo;m making my way through <a href="https://docs.python.org/3.6/howto/unicode.html">Python&rsquo;s documentation on Unicode</a>, which is rather long but truly fascinating to me.)</p>
+
+<p>I explored installing a Linux shell with updated Python so I could use Bash. While that&rsquo;s a good eventual idea for programming in general, it&rsquo;s definitely a big diversion from the topic at hand. Instead, I implemented a program-specific fix using a much faster and less complicated method: convert the tweets to ASCII before they display in the Windows 10 terminal.</p>
+
+<p>This is achieved by changing the encoding of the tweet text:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="n">tweet</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span><span class="sa"></span><span class="s1">&#39;ignore&#39;</span><span class="p">))</span></code></pre></div>
+<p>The above displays the text of the tweets using ASCII encoding, and ignores any characters it can&rsquo;t encode. Instead of <code>ignore</code>, you could also use other handlers to indicate errors. Python documentation gives an example of what these different handlers do <a href="https://docs.python.org/3.6/howto/unicode.html#converting-to-bytes">here</a>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">u</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="sa"></span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>  
+<span class="sa">b</span><span class="s1">&#39;abcd&#39;</span>  
+<span class="o">&gt;&gt;&gt;</span> <span class="n">u</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="sa"></span><span class="s1">&#39;replace&#39;</span><span class="p">)</span>  
+<span class="sa">b</span><span class="s1">&#39;?abcd?&#39;</span>  
+<span class="o">&gt;&gt;&gt;</span> <span class="n">u</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="sa"></span><span class="s1">&#39;xmlcharrefreplace&#39;</span><span class="p">)</span> <span class="c1"># inserts XML character reference  </span>
+<span class="sa">b</span><span class="s1">&#39;&amp;#40960;abcd&amp;#1972;&#39;</span>  
+<span class="o">&gt;&gt;&gt;</span> <span class="n">u</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="sa"></span><span class="s1">&#39;backslashreplace&#39;</span><span class="p">)</span> <span class="c1"># inserts a \uNNNN escape sequence  </span>
+<span class="sa">b</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">ua000abcd</span><span class="se">\\</span><span class="s1">u07b4&#39;</span>  
+<span class="o">&gt;&gt;&gt;</span> <span class="n">u</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="sa"></span><span class="s1">&#39;namereplace&#39;</span><span class="p">)</span> <span class="c1"># inserts a \N{...} escape sequence  </span>
+<span class="sa">b</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">N{YI SYLLABLE IT}abcd</span><span class="se">\\</span><span class="s1">u07b4&#39;</span>  </code></pre></div>
+<p>Now running the program with the Windows 10 terminal should give you&hellip; a <em>lot</em> of tweets. (It&rsquo;ll keep going until you stop the program using <code>ctrl+c</code>. On a couple occassions when my program wasn&rsquo;t finding many tweets, <code>ctrl+c</code> didn&rsquo;t seem to work. I hit it a few more times in succession before it seemed to sync up with the program actually doing something, and stopped the operation.)</p>
+
+<h1 id="3-refining-the-search-function">3. Refining the search function</h1>
+
+<p>To retrieve a stream of tweets filtered by your search parameters, you&rsquo;ll want to alter this line of code:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">stream</span><span class="o">.</span><span class="n">statuses</span><span class="o">.</span><span class="nb">filter</span><span class="p">(</span><span class="n">track</span><span class="o">=</span><span class="sa"></span><span class="s1">&#39;twitter&#39;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="sa"></span><span class="s1">&#39;en&#39;</span><span class="p">)</span></code></pre></div>
+<p>The <code>track</code> parameter is what lets you filter your tweets by keywords, hashtags, user mentions, and urls. In the above example, it will search for tweets containing the keyword &ldquo;twitter&rdquo;. You can find its accepted phrases <a href="https://dev.twitter.com/streaming/overview/request-parameters#track">here</a>. Note that the phrases don&rsquo;t work like search engine phrases - characters in the tweet must exactly match the search phrase, and punctuation within the quotes will be considered part of the phrase. For example, &ldquo;café&rdquo; will not find &ldquo;cafe&rdquo; or vice versa, and &ldquo;hello,&rdquo; is a different phrase than &ldquo;hello&rdquo;.</p>
+
+<p>The <code>language</code> parameter in the example above limits the search results to tweets written in English. There are further parameters you can use to filter your results, such as follow (which limits your stream to searching the timelines of the users you specify) and location (which can allow you to filter by geolocated tweets). Find the full list of parameters and their values <a href="https://dev.twitter.com/streaming/overview/request-parameters">here</a>.</p>
+
+<p>I intended to use the <code>track</code> parameter to find tweets containing any one of a list of hashtags. I started out with the code below:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">stream</span><span class="o">.</span><span class="n">statuses</span><span class="o">.</span><span class="nb">filter</span><span class="p">(</span><span class="n">track</span><span class="o">=</span><span class="sa"></span><span class="s1">&#39;#coding,#programming,#travel&#39;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="sa"></span><span class="s1">&#39;en&#39;</span><span class="p">)</span>  </code></pre></div>
+<p>Note that the comma separators will cause the program to find tweets that contain any of those search terms: #coding OR #programming, etc. If you want to have your search find tweets containing all your search terms, use spaces only.</p>
+
+<p>The track function is pretty literal, and thus not very intuitive. For example, my &ldquo;#programming&rdquo; phrase called up tweets that were related to computer programming as well as television programming. While you could set other parameters that omit certain words, it&rsquo;s not long before such an approach turns into a very lengthy guessing game. A cleaner (and faster) approach is to choose more specific search phrases, for example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">stream</span><span class="o">.</span><span class="n">statuses</span><span class="o">.</span><span class="nb">filter</span><span class="p">(</span><span class="n">track</span><span class="o">=</span><span class="sa"></span><span class="s1">&#39;#coding,#python,#digitalnomad,#laptoplifestyle&#39;</span><span class="p">,</span>  <span class="n">language</span><span class="o">=</span><span class="sa"></span><span class="s1">&#39;en&#39;</span><span class="p">)</span>  </code></pre></div>
+<p>Your keywords will vary depending on what you want your stream to display. The <a href="https://twitter.com/search-advanced">Twitter Advanced Search page</a> is a good resource for trying out different combinations before running your script.</p>
+
+<p>I hope you find this overview of my first Twitter streaming script useful! Thanks for reading!</p>
+<p>Like this post? Questions? <a href="https://twitter.com/intent/tweet?text=@hivickylai:%20I%20just%20read%20https%3a%2f%2fvickylai.com%2fverbose%2fbasics-streaming-twitter-api%2f%20and..." onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet me about it!</a></p></div><div class="go-center"><hr id="accent-hr"/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/delete-old-tweets-ephemeral/">Why I&#39;m automatically deleting my old tweets using AWS Lambda</a></li><li><a href="/verbose/python-programming-fundamentals-iterations/">Fundamentals of programming: iterations in Python</a></li><li><a href="/verbose/free-twitter-bot-aws-lambda/">Running a free Twitter bot on AWS Lambda</a></li></ul></div><div class="footer"><img id="bio-avatar" src="/img/purple-avatar-v2.png" width="120px"/><div id="bio"> <strong>Vicky Lai</strong><p>I&#39;m a freelance full stack developer with an entrepreneurial background and keen interest in building technology for social good.</p><div id="bio-menu"><p><a href="https://github.com/vickylai">github</a>
+
+&#183; <a href="https://mastodon.social/@vickylai">mastodon</a>
+&#183; <a href="https://twitter.com/hivickylai">twitter</a>
+&#183; <a href="mailto:hello@vickylai.com" rel="noopener">email</a></p></div></div></div><script>
+    scrollTo = (element) => {
+        window.scroll({
+            behavior: 'smooth',
+            left: 0,
+            top: element.offsetTop
+        });
+    }
+
+    document.getElementById("up").addEventListener('click', () => {
+        scrollTo(document.getElementById("top"));
+    });
+</script></div></body>

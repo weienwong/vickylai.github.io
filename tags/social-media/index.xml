@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Api on VickyLai.com</title>
-    <link>https://vickylai.com/tags/api/</link>
-    <description>Recent content in Api on VickyLai.com</description>
+    <title>Social Media on VickyLai.com</title>
+    <link>https://vickylai.com/tags/social-media/</link>
+    <description>Recent content in Social Media on VickyLai.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>hello@vickylai.com (Vicky Lai)</managingEditor>
     <webMaster>hello@vickylai.com (Vicky Lai)</webMaster>
     <lastBuildDate>Thu, 12 Apr 2018 10:51:15 -0500</lastBuildDate>
     
-	<atom:link href="https://vickylai.com/tags/api/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vickylai.com/tags/social-media/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -25,14 +25,13 @@ Stuff and opinions I&amp;rsquo;ve only been a one-bag nomad for a little over a 
     </item>
     
     <item>
-      <title>The basics of streaming with Twitter API</title>
-      <link>https://vickylai.com/verbose/basics-streaming-twitter-api/</link>
-      <pubDate>Fri, 06 Jan 2017 16:39:29 +0700</pubDate>
+      <title>About time</title>
+      <link>https://vickylai.com/verbose/about-time/</link>
+      <pubDate>Wed, 22 Nov 2017 14:05:14 -0500</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/basics-streaming-twitter-api/</guid>
-      <description>This post covers my initial adventures in exploring Twitter&amp;rsquo;s Streaming API. I&amp;rsquo;ll talk about:
- Getting started making a Twitter Streaming program using a template Problems arising from programming in Python with Windows 10 and Unicode Refining the search function  You can follow along with my template on Github.
-1. Getting started If you&amp;rsquo;re new to Twitter&amp;rsquo;s Streaming API like I was this morning, here it is from the top.</description>
+      <guid>https://vickylai.com/verbose/about-time/</guid>
+      <description>This morning I read an article that&amp;rsquo;s been making the rounds lately: Modern Media Is a DoS Attack on Your Free Will.
+It&amp;rsquo;s made me think, which I must admit, I at first didn&amp;rsquo;t like. See, when I wake up in the morning (and subsequently wake up my computer) the first thing I do is go on Twitter to catch up on everything I missed while I was asleep. All this before my first coffee, mind you.</description>
     </item>
     
   </channel>

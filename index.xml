@@ -20,6 +20,8 @@
     
     
     
+    
+    
     <item>
       <title>
             A coffee-break introduction to time complexity of algorithms
@@ -147,8 +149,6 @@ $ file IMG* | awk &#39;BEGIN{a=0} {print substr($1, 1, length($1)-5),a&#43;&#43;
     
     
     
-    
-    
     <item>
       <title>
             How to code a satellite algorithm and cook paella from scratch
@@ -210,14 +210,14 @@ The example code is JavaScript, since that’s what I’ve been working in latel
     
     <item>
       <title>
-            That time 30 seconds, StackOverflow, and sed saved me 30 minutes
+            How to replace a string in a dozen old blog posts with one sed terminal command
       </title>
-      <link>https://vickylai.com/verbose/when-stackoverflow-sed-saves-30mins/</link>
+      <link>https://vickylai.com/verbose/replace-string-sed-command/</link>
       <pubDate>Sat, 06 May 2017 20:04:53 +0800</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/when-stackoverflow-sed-saves-30mins/</guid>
-      <description>This week, I launched my new website and changed my Twitter username to match. I was about to spend time going through all my old blog posts to find and update the URLs when this very future blog post popped up on my screen like Clippy and shook its pixelated head disapprovingly.
-Here’s a worthwhile new habit for you: anytime you find yourself going “Ughhh I have to do that?</description>
+      <guid>https://vickylai.com/verbose/replace-string-sed-command/</guid>
+      <description>June 1, 2018: This post was previously titled “That time 30 seconds, StackOverflow, and sed saved me 30 minutes” and has since been revised and updated with more examples and a couple new doodles. It’s better now.
+I’ve had more than a few usernames, URLs, and Twitter handles over the years. Whether it was changing to something that better reflected my current interests or briefly getting caught up in the “.</description>
     </item>
     
     
@@ -335,12 +335,12 @@ That said, some blocks can be a little confusing at first. I found documentation
     
     <item>
       <title>
-            I&#39;ve been a back-end coder for a week: here&#39;s how I made a Twitter stream
+            The basics of streaming with Twitter API
       </title>
-      <link>https://vickylai.com/verbose/how-i-made-a-twitter-stream/</link>
+      <link>https://vickylai.com/verbose/basics-streaming-twitter-api/</link>
       <pubDate>Fri, 06 Jan 2017 16:39:29 +0700</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/how-i-made-a-twitter-stream/</guid>
+      <guid>https://vickylai.com/verbose/basics-streaming-twitter-api/</guid>
       <description>This post covers my initial adventures in exploring Twitter’s Streaming API. I’ll talk about:
  Getting started making a Twitter Streaming program using a template Problems arising from programming in Python with Windows 10 and Unicode Refining the search function  You can follow along with my template on Github.
 1. Getting started If you’re new to Twitter’s Streaming API like I was this morning, here it is from the top.</description>
