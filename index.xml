@@ -20,6 +20,19 @@
     
     
     
+    <item>
+      <title>
+            Adorable bookmarklets want to help delete your social media data
+      </title>
+      <link>https://vickylai.com/verbose/bookmarklets-delete-social-media-data/</link>
+      <pubDate>Thu, 14 Jun 2018 13:12:02 -0400</pubDate>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/bookmarklets-delete-social-media-data/</guid>
+      <description>A little while ago I wrote about a Lambda function I called ephemeral for deleting my old tweets. While it’s a great project for someone familiar with or wanting to learn to use Lambda, it isn’t simple for a non-technical person to set up. There are services out there that will delete your tweets for you, but require your access credentials. There didn’t seem to be anything that provided convenience without also requiring authentication.</description>
+    </item>
+    
+    
+    
     
     
     <item>
@@ -33,6 +46,8 @@
       <description>Just like writing your very first for loop, understanding time complexity is an integral milestone to learning how to write efficient complex programs. Think of it as having a superpower that allows you to know exactly what type of program might be the most efficient in a particular situation - before even running a single line of code.
 The fundamental concepts of complexity analysis are well worth studying. You’ll be able to better understand how the code you’re writing will interact with the program’s input, and as a result, you’ll spend a lot less wasted time writing slow and problematic code.</description>
     </item>
+    
+    
     
     
     
@@ -271,9 +286,9 @@ The panelists Misrab Faizullah-Khan - VP of Data Science, GO_JEK</description>
       <pubDate>Fri, 17 Mar 2017 10:58:01 +0800</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
       <guid>https://vickylai.com/verbose/same-dropbox-dual-boot/</guid>
-      <description>I’ve now set up two different laptops to dual-boot Windows 10 and different Linux distributions. Here’s how to ensure you maintain one Dropbox folder over both operating systems.
-Assuming Windows was there first:
- Mount the Windows drive in Linux Install Dropbox in Linux Sign in to link to Dropbox Immediately change Dropbox folder location to the mounted drive (same Dropbox folder as Windows)  Get it right the first time Dropbox will automatically set up your Dropbox folder when you run it the first time.</description>
+      <description>June 14, 2018: Ben Newhouse, former head of Sync at Dropbox, was kind enough to inform me that this set up might have unintended ill effects on your Dropbox data:
+ Dropbox on Windows and Linux maintain metadata on each OS differently, so they’ll confuse each other. This will likely break things like version tracking and comments and as this isn’t a supported configuration probably worse.
+ I’ve personally moved away from using Dropbox (and for that matter, dual-boot) since writing this article.</description>
     </item>
     
     

@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
     dayButton.addEventListener('click', () => {
         setTheme({
             'background': '#fff',
-            'body-text': '#444',
+            'body-text': '#555',
             'highlight-background': '#f5f6f7',
-            'links-hover': '#444',
+            'links-hover': '#555',
             'accent': '#8b809e',
             'img-opacity': '1',
             'day-button': 'none',

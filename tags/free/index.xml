@@ -8,10 +8,19 @@
     <language>en-us</language>
     <managingEditor>hello@vickylai.com (Vicky Lai)</managingEditor>
     <webMaster>hello@vickylai.com (Vicky Lai)</webMaster>
-    <lastBuildDate>Thu, 12 Apr 2018 10:51:15 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 14 Jun 2018 13:12:02 -0400</lastBuildDate>
     
 	<atom:link href="https://vickylai.com/tags/free/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Adorable bookmarklets want to help delete your social media data</title>
+      <link>https://vickylai.com/verbose/bookmarklets-delete-social-media-data/</link>
+      <pubDate>Thu, 14 Jun 2018 13:12:02 -0400</pubDate>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/bookmarklets-delete-social-media-data/</guid>
+      <description>A little while ago I wrote about a Lambda function I called ephemeral for deleting my old tweets. While it&amp;rsquo;s a great project for someone familiar with or wanting to learn to use Lambda, it isn&amp;rsquo;t simple for a non-technical person to set up. There are services out there that will delete your tweets for you, but require your access credentials. There didn&amp;rsquo;t seem to be anything that provided convenience without also requiring authentication.</description>
+    </item>
     
     <item>
       <title>Why I&#39;m automatically deleting my old tweets using AWS Lambda</title>
