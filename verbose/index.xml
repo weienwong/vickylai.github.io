@@ -8,10 +8,19 @@
     <language>en-us</language>
     <managingEditor>hello@vickylai.com (Vicky Lai)</managingEditor>
     <webMaster>hello@vickylai.com (Vicky Lai)</webMaster>
-    <lastBuildDate>Thu, 14 Jun 2018 13:12:02 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 02 Jul 2018 10:08:41 -0400</lastBuildDate>
     
 	<atom:link href="https://vickylai.com/verbose/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to set up a short feedback loop as a solo coder</title>
+      <link>https://vickylai.com/verbose/short-feedback-loop/</link>
+      <pubDate>Mon, 02 Jul 2018 10:08:41 -0400</pubDate>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/short-feedback-loop/</guid>
+      <description>I&amp;rsquo;ve spent the last couple years as a solo freelance developer. Comparing this experience to previously working in companies, I&amp;rsquo;ve noticed that those of us who work alone can have fewer iterative opportunities for improvement than developers who work on teams. Integral to having opportunities to improve is the concept of a short feedback loop: a process of incorporating new learning from observation and previous experience continuously over a short period of time.</description>
+    </item>
     
     <item>
       <title>Adorable bookmarklets want to help delete your social media data</title>
