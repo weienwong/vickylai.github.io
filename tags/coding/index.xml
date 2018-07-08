@@ -15,19 +15,19 @@
     
     <item>
       <title>How to set up a short feedback loop as a solo coder</title>
-      <link>https://vickylai.com/verbose/short-feedback-loop/</link>
+      <link>https://vickylai.com/verbose/how-to-set-up-a-short-feedback-loop-as-a-solo-coder/</link>
       <pubDate>Mon, 02 Jul 2018 10:08:41 -0400</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/short-feedback-loop/</guid>
+      <guid>https://vickylai.com/verbose/how-to-set-up-a-short-feedback-loop-as-a-solo-coder/</guid>
       <description>I&amp;rsquo;ve spent the last couple years as a solo freelance developer. Comparing this experience to previously working in companies, I&amp;rsquo;ve noticed that those of us who work alone can have fewer iterative opportunities for improvement than developers who work on teams. Integral to having opportunities to improve is the concept of a short feedback loop: a process of incorporating new learning from observation and previous experience continuously over a short period of time.</description>
     </item>
     
     <item>
       <title>A coffee-break introduction to time complexity of algorithms</title>
-      <link>https://vickylai.com/verbose/introduction-time-complexity/</link>
+      <link>https://vickylai.com/verbose/a-coffee-break-introduction-to-time-complexity-of-algorithms/</link>
       <pubDate>Wed, 30 May 2018 14:08:28 -0400</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/introduction-time-complexity/</guid>
+      <guid>https://vickylai.com/verbose/a-coffee-break-introduction-to-time-complexity-of-algorithms/</guid>
       <description>Just like writing your very first for loop, understanding time complexity is an integral milestone to learning how to write efficient complex programs. Think of it as having a superpower that allows you to know exactly what type of program might be the most efficient in a particular situation - before even running a single line of code.
 The fundamental concepts of complexity analysis are well worth studying. You&amp;rsquo;ll be able to better understand how the code you&amp;rsquo;re writing will interact with the program&amp;rsquo;s input, and as a result, you&amp;rsquo;ll spend a lot less wasted time writing slow and problematic code.</description>
     </item>
@@ -44,20 +44,20 @@ It&amp;rsquo;s made me think, which I must admit, I at first didn&amp;rsquo;t li
     
     <item>
       <title>Batch renaming images, including image resolution, with awk</title>
-      <link>https://vickylai.com/verbose/renaming-images/</link>
+      <link>https://vickylai.com/verbose/batch-renaming-images-including-image-resolution-with-awk/</link>
       <pubDate>Mon, 20 Nov 2017 13:59:30 -0500</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/renaming-images/</guid>
+      <guid>https://vickylai.com/verbose/batch-renaming-images-including-image-resolution-with-awk/</guid>
       <description>The most recent item on my list of &amp;ldquo;Geeky things I did that made me feel pretty awesome&amp;rdquo; is an hour&amp;rsquo;s adventure that culminated in this code:
 $ file IMG* | awk &amp;#39;BEGIN{a=0} {print substr($1, 1, length($1)-5),a++&amp;#34;_&amp;#34;substr($8,1, length($8)-1)}&amp;#39; | while read fn fr; do echo $(rename -v &amp;#34;s/$fn/img_$fr/g&amp;#34; *); done IMG_20170808_172653_425.jpg renamed as img_0_4032x3024.jpg IMG_20170808_173020_267.jpg renamed as img_1_3024x3506.jpg IMG_20170808_173130_616.jpg renamed as img_2_3024x3779.jpg IMG_20170808_173221_425.jpg renamed as img_3_3024x3780.jpg IMG_20170808_173417_059.jpg renamed as img_4_2956x2980.</description>
     </item>
     
     <item>
       <title>How to code a satellite algorithm and cook paella from scratch</title>
-      <link>https://vickylai.com/verbose/build-from-scratch/</link>
+      <link>https://vickylai.com/verbose/how-to-code-a-satellite-algorithm-and-cook-paella-from-scratch/</link>
       <pubDate>Fri, 08 Sep 2017 16:50:24 -0400</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/build-from-scratch/</guid>
+      <guid>https://vickylai.com/verbose/how-to-code-a-satellite-algorithm-and-cook-paella-from-scratch/</guid>
       <description>What if I told you that by the end of this article, you&amp;rsquo;ll be able to calculate the orbital period of satellites around Earth using their average altitudes and&amp;hellip; You tuned out already, didn&amp;rsquo;t you?
 Okay, how about this: I&amp;rsquo;m going to teach you how to make paella!
 And you&amp;rsquo;ll have written a function that does the stuff I mentioned above, just like I did for this freeCodeCamp challenge.</description>
@@ -65,20 +65,20 @@ And you&amp;rsquo;ll have written a function that does the stuff I mentioned abo
     
     <item>
       <title>Making sandwiches with closures in JavaScript</title>
-      <link>https://vickylai.com/verbose/javascript-closures/</link>
+      <link>https://vickylai.com/verbose/making-sandwiches-with-closures-in-javascript/</link>
       <pubDate>Sun, 28 May 2017 09:16:35 +0700</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/javascript-closures/</guid>
+      <guid>https://vickylai.com/verbose/making-sandwiches-with-closures-in-javascript/</guid>
       <description>Say you&amp;rsquo;re having a little coding get-together, and you need some sandwiches. You happen to know that everyone prefers a different type of sandwich, like chicken, ham, or peanut butter and mayo. You could make all these sandwiches yourself, but that would be tedious and boring.
 Luckily, you know of a nearby sandwich shop that delivers. They have the ability and ingredients to make any kind of sandwich in the world, and all you have to do is order through their app.</description>
     </item>
     
     <item>
       <title>Understanding Array.prototype.reduce() and recursion using apple pie</title>
-      <link>https://vickylai.com/verbose/reduce-recursion-with-pie/</link>
+      <link>https://vickylai.com/verbose/understanding-array-prototype-reduce-and-recursion-using-apple-pie/</link>
       <pubDate>Thu, 18 May 2017 11:40:06 +0700</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/reduce-recursion-with-pie/</guid>
+      <guid>https://vickylai.com/verbose/understanding-array-prototype-reduce-and-recursion-using-apple-pie/</guid>
       <description>I was having trouble understanding reduce() and recursion in JavaScript, so I wrote this article to explain it to myself (hey, look, recursion!). I hope you find my examples both helpful and delicious.
 Given an array with nested arrays:
 var arr = [1, [2], [3, [[4]]]]  We want to produce this:
@@ -87,40 +87,40 @@ var flat = [1, 2, 3, 4]  Using for loops and if statements Naively, if we know t
     
     <item>
       <title>Iterating over objects and arrays: frequent errors</title>
-      <link>https://vickylai.com/verbose/iterating-objects-arrays/</link>
+      <link>https://vickylai.com/verbose/iterating-over-objects-and-arrays-frequent-errors/</link>
       <pubDate>Tue, 16 May 2017 10:46:46 +0700</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/iterating-objects-arrays/</guid>
+      <guid>https://vickylai.com/verbose/iterating-over-objects-and-arrays-frequent-errors/</guid>
       <description>Here&amp;rsquo;s some complaining a quick overview of some code that has confounded me more than once. I&amp;rsquo;m told even very experienced developers encounter these situations regularly, so if you find yourself on your third cup of coffee scratching your head over why your code is doing exactly what you told it to do (and not what you want it to do), maybe this post can help you.
 The example code is JavaScript, since that&amp;rsquo;s what I&amp;rsquo;ve been working in lately, but I believe the concepts to be pretty universal.</description>
     </item>
     
     <item>
       <title>How to replace a string in a dozen old blog posts with one sed terminal command</title>
-      <link>https://vickylai.com/verbose/replace-string-sed-command/</link>
+      <link>https://vickylai.com/verbose/how-to-replace-a-string-in-a-dozen-old-blog-posts-with-one-sed-terminal-command/</link>
       <pubDate>Sat, 06 May 2017 20:04:53 +0800</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/replace-string-sed-command/</guid>
+      <guid>https://vickylai.com/verbose/how-to-replace-a-string-in-a-dozen-old-blog-posts-with-one-sed-terminal-command/</guid>
       <description>June 1, 2018: This post was previously titled &amp;ldquo;That time 30 seconds, StackOverflow, and sed saved me 30 minutes&amp;rdquo; and has since been revised and updated with more examples and a couple new doodles. It&amp;rsquo;s better now.
 I&amp;rsquo;ve had more than a few usernames, URLs, and Twitter handles over the years. Whether it was changing to something that better reflected my current interests or briefly getting caught up in the &amp;ldquo;.</description>
     </item>
     
     <item>
       <title>Top free resources for developing coding superpowers</title>
-      <link>https://vickylai.com/verbose/free-resources-for-coding-superpowers/</link>
+      <link>https://vickylai.com/verbose/top-free-resources-for-developing-coding-superpowers/</link>
       <pubDate>Thu, 27 Apr 2017 08:14:09 +0800</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/free-resources-for-coding-superpowers/</guid>
+      <guid>https://vickylai.com/verbose/top-free-resources-for-developing-coding-superpowers/</guid>
       <description>I&amp;rsquo;m frequently asked for my opinion on how to get started on being a freelance developer. If you&amp;rsquo;re hoping to live the life of a remote working digital nomad, whichever career you choose, having a little coding expertise in your back pocket will be a big benefit.
 Here&amp;rsquo;s a quick list of resources that you should definitely look at first if you&amp;rsquo;re hoping to gain some coding superpowers for free.</description>
     </item>
     
     <item>
-      <title>Fundamentals of programming: iterations in Python</title>
-      <link>https://vickylai.com/verbose/python-programming-fundamentals-iterations/</link>
+      <title>Iterations in Python: for loop, list comprehension, and map</title>
+      <link>https://vickylai.com/verbose/iterations-in-python-for-loop-list-comprehension-and-map/</link>
       <pubDate>Wed, 18 Jan 2017 21:58:28 +0700</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/python-programming-fundamentals-iterations/</guid>
+      <guid>https://vickylai.com/verbose/iterations-in-python-for-loop-list-comprehension-and-map/</guid>
       <description>I&amp;rsquo;ve been working in Python 3 for about a week, and so far greatly enjoy it. To me, learning code syntax (and programming in general) amounts to an amalgamation of lego blocks: once it&amp;rsquo;s understood what a certain color of block does, it&amp;rsquo;s straightforward to combine them to create the structure you&amp;rsquo;re looking for.
 That said, some blocks can be a little confusing at first. I found documentation relating to iteration in Python to be a little hard to digest, mostly because of subtle differences in terminology: iteration, iterator, iterating, iterable&amp;hellip; it&amp;rsquo;s enough to make your eyes glaze over.</description>
     </item>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nerdy on VickyLai.com</title>
+    <link>https://vickylai.com/tags/nerdy/</link>
+    <description>Recent content in Nerdy on VickyLai.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>hello@vickylai.com (Vicky Lai)</managingEditor>
+    <webMaster>hello@vickylai.com (Vicky Lai)</webMaster>
+    <lastBuildDate>Sat, 06 Jan 2018 20:00:28 -0500</lastBuildDate>
+    
+	<atom:link href="https://vickylai.com/tags/nerdy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A unicode substitution cipher algorithm</title>
+      <link>https://vickylai.com/verbose/a-unicode-substitution-cipher-algorithm/</link>
+      <pubDate>Sat, 06 Jan 2018 20:00:28 -0500</pubDate>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/a-unicode-substitution-cipher-algorithm/</guid>
+      <description>Full transparency: I occasionally waste time messing around on Twitter. (Gasp! Shock!) One of the ways I waste time messing around on Twitter is by writing my name in my profile with different unicode character &amp;ldquo;fonts,&amp;rdquo; 𝖑𝖎𝖐𝖊 𝖙𝖍𝖎𝖘 𝖔𝖓𝖊. I previously did this by searching for different unicode characters on Google, then one-by-one copying and pasting them into the &amp;ldquo;Name&amp;rdquo; field on my Twitter profile. Since this method of wasting time was a bit of a time waster, I decided (in true programmer fashion) to write a tool that would help me save some time while wasting it.</description>
+    </item>
+    
+  </channel>
+</rss>

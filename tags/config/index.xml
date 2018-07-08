@@ -15,38 +15,38 @@
     
     <item>
       <title>Running a free Twitter bot on AWS Lambda</title>
-      <link>https://vickylai.com/verbose/free-twitter-bot-aws-lambda/</link>
+      <link>https://vickylai.com/verbose/running-a-free-twitter-bot-on-aws-lambda/</link>
       <pubDate>Mon, 05 Mar 2018 10:29:15 -0500</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/free-twitter-bot-aws-lambda/</guid>
+      <guid>https://vickylai.com/verbose/running-a-free-twitter-bot-on-aws-lambda/</guid>
       <description>If you read About time, you&amp;rsquo;ll know that I&amp;rsquo;m a big believer in spending time now on building things that save time in the future. To this end I built a simple Twitter bot in Go that would occasionally post links to my articles and keep my account interesting even when I&amp;rsquo;m too busy to use it. The tweets help drive traffic to my sites, and I don&amp;rsquo;t have to lift a finger.</description>
     </item>
     
     <item>
-      <title>Moving to a new domain without breaking old links: AWS &amp; Disqus</title>
-      <link>https://vickylai.com/verbose/aws-new-domain/</link>
+      <title>Moving to a new domain without breaking old links with AWS &amp; Disqus</title>
+      <link>https://vickylai.com/verbose/moving-to-a-new-domain-without-breaking-old-links-with-aws-disqus/</link>
       <pubDate>Wed, 10 Jan 2018 08:56:20 -0500</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/aws-new-domain/</guid>
+      <guid>https://vickylai.com/verbose/moving-to-a-new-domain-without-breaking-old-links-with-aws-disqus/</guid>
       <description>I started blogging about my nomadic travels last year, and so far the habit has stuck. Like all side projects, I won&amp;rsquo;t typically invest heavily in setting up web properties before I can be reasonably certain that such an investment is worth my time or enjoyment. In other words: don&amp;rsquo;t buy the domain until you&amp;rsquo;ve proven to yourself that you&amp;rsquo;ll stick with it!
 After some months of regular posting I felt I was ready to commit (short courtship, I know, but we&amp;rsquo;re all adults here) and I bought a dedicated domain, herOneBag.</description>
     </item>
     
     <item>
       <title>How I turned Unity into a tiling window manager</title>
-      <link>https://vickylai.com/verbose/turn-unity-into-tiling-windows-manager/</link>
+      <link>https://vickylai.com/verbose/how-i-turned-unity-into-a-tiling-window-manager/</link>
       <pubDate>Wed, 22 Mar 2017 16:10:10 +0800</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/turn-unity-into-tiling-windows-manager/</guid>
+      <guid>https://vickylai.com/verbose/how-i-turned-unity-into-a-tiling-window-manager/</guid>
       <description>After a long and loving battle experience using i3 as my workhorse window manager on my old laptop, I&amp;rsquo;ve decided to mainly use Unity on my new laptop instead. I&amp;rsquo;m a huge fan of tiling window managers as a result of my i3 experience, however, the time it took to configure everything is longer than I wanted to spend getting set up before getting to work with my new laptop.</description>
     </item>
     
     <item>
       <title>How I set up a single Dropbox folder on my dual-boot Windows and Linux system</title>
-      <link>https://vickylai.com/verbose/same-dropbox-dual-boot/</link>
+      <link>https://vickylai.com/verbose/how-i-set-up-a-single-dropbox-folder-on-my-dual-boot-windows-and-linux-system/</link>
       <pubDate>Fri, 17 Mar 2017 10:58:01 +0800</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/same-dropbox-dual-boot/</guid>
+      <guid>https://vickylai.com/verbose/how-i-set-up-a-single-dropbox-folder-on-my-dual-boot-windows-and-linux-system/</guid>
       <description>June 14, 2018: Ben Newhouse, former head of Sync at Dropbox, was kind enough to inform me that this set up might have unintended ill effects on your Dropbox data:
  Dropbox on Windows and Linux maintain metadata on each OS differently, so they&amp;rsquo;ll confuse each other. This will likely break things like version tracking and comments and as this isn&amp;rsquo;t a supported configuration probably worse.
  I&amp;rsquo;ve personally moved away from using Dropbox (and for that matter, dual-boot) since writing this article.</description>
@@ -54,19 +54,19 @@ After some months of regular posting I felt I was ready to commit (short courtsh
     
     <item>
       <title>How I created custom desktop notifications using terminal and cron</title>
-      <link>https://vickylai.com/verbose/create-desktop-notifications-cron/</link>
+      <link>https://vickylai.com/verbose/how-i-created-custom-desktop-notifications-using-terminal-and-cron/</link>
       <pubDate>Tue, 21 Feb 2017 10:48:38 +0700</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/create-desktop-notifications-cron/</guid>
+      <guid>https://vickylai.com/verbose/how-i-created-custom-desktop-notifications-using-terminal-and-cron/</guid>
       <description>In my last post I talked about moving from Windows 10 to running i3 on Linux, built up from Debian Base System. Among other things, this change has taught me about the benefits of using basic tools and running a minimal, lightweight system. You can achieve a lot of functionality with just command line tools and simple utilities. One example I&amp;rsquo;d like to illustrate in this post is setting up desktop notifications.</description>
     </item>
     
     <item>
       <title>How a lifelong Windows user switched to Linux... the hard way</title>
-      <link>https://vickylai.com/verbose/how-windows-user-switched-to-linux/</link>
+      <link>https://vickylai.com/verbose/how-a-lifelong-windows-user-switched-to-linux-the-hard-way/</link>
       <pubDate>Mon, 06 Feb 2017 14:23:59 +0700</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/how-windows-user-switched-to-linux/</guid>
+      <guid>https://vickylai.com/verbose/how-a-lifelong-windows-user-switched-to-linux-the-hard-way/</guid>
       <description>&lt;p&gt;Let me preface this by saying that I&amp;rsquo;ve always been interested in finding out how things work. If a thing does something, I want to know why, how, and if I can customize it.&lt;/p&gt;
 
 &lt;p&gt;It should come as no surprise that Windows 10 drove me crazy.&lt;/p&gt;</description>

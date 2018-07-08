@@ -15,10 +15,10 @@
     
     <item>
       <title>Why I&#39;m automatically deleting my old tweets using AWS Lambda</title>
-      <link>https://vickylai.com/verbose/delete-old-tweets-ephemeral/</link>
+      <link>https://vickylai.com/verbose/why-im-automatically-deleting-my-old-tweets-using-aws-lambda/</link>
       <pubDate>Thu, 12 Apr 2018 10:51:15 -0500</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/delete-old-tweets-ephemeral/</guid>
+      <guid>https://vickylai.com/verbose/why-im-automatically-deleting-my-old-tweets-using-aws-lambda/</guid>
       <description>From now on, my tweets are ephemeral. Here’s why I’m deleting all my old tweets, and the AWS Lambda function I’m using to do all this for free.
 Click here to skip to the code part.
 Stuff and opinions I&amp;rsquo;ve only been a one-bag nomad for a little over a year and a half. Before that, I lived as most people do in an apartment or a house. I owned furniture, more clothing than I strictly needed, and enough &amp;ldquo;stuff&amp;rdquo; to fill at least a few moving boxes.</description>
@@ -26,29 +26,29 @@ Stuff and opinions I&amp;rsquo;ve only been a one-bag nomad for a little over a 
     
     <item>
       <title>Running a free Twitter bot on AWS Lambda</title>
-      <link>https://vickylai.com/verbose/free-twitter-bot-aws-lambda/</link>
+      <link>https://vickylai.com/verbose/running-a-free-twitter-bot-on-aws-lambda/</link>
       <pubDate>Mon, 05 Mar 2018 10:29:15 -0500</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/free-twitter-bot-aws-lambda/</guid>
+      <guid>https://vickylai.com/verbose/running-a-free-twitter-bot-on-aws-lambda/</guid>
       <description>If you read About time, you&amp;rsquo;ll know that I&amp;rsquo;m a big believer in spending time now on building things that save time in the future. To this end I built a simple Twitter bot in Go that would occasionally post links to my articles and keep my account interesting even when I&amp;rsquo;m too busy to use it. The tweets help drive traffic to my sites, and I don&amp;rsquo;t have to lift a finger.</description>
     </item>
     
     <item>
-      <title>Moving to a new domain without breaking old links: AWS &amp; Disqus</title>
-      <link>https://vickylai.com/verbose/aws-new-domain/</link>
+      <title>Moving to a new domain without breaking old links with AWS &amp; Disqus</title>
+      <link>https://vickylai.com/verbose/moving-to-a-new-domain-without-breaking-old-links-with-aws-disqus/</link>
       <pubDate>Wed, 10 Jan 2018 08:56:20 -0500</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/aws-new-domain/</guid>
+      <guid>https://vickylai.com/verbose/moving-to-a-new-domain-without-breaking-old-links-with-aws-disqus/</guid>
       <description>I started blogging about my nomadic travels last year, and so far the habit has stuck. Like all side projects, I won&amp;rsquo;t typically invest heavily in setting up web properties before I can be reasonably certain that such an investment is worth my time or enjoyment. In other words: don&amp;rsquo;t buy the domain until you&amp;rsquo;ve proven to yourself that you&amp;rsquo;ll stick with it!
 After some months of regular posting I felt I was ready to commit (short courtship, I know, but we&amp;rsquo;re all adults here) and I bought a dedicated domain, herOneBag.</description>
     </item>
     
     <item>
       <title>Hosting your static site with AWS S3, Route 53, and CloudFront</title>
-      <link>https://vickylai.com/verbose/aws-static-site/</link>
+      <link>https://vickylai.com/verbose/hosting-your-static-site-with-aws-s3-route-53-and-cloudfront/</link>
       <pubDate>Wed, 13 Dec 2017 20:46:12 -0500</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/aws-static-site/</guid>
+      <guid>https://vickylai.com/verbose/hosting-your-static-site-with-aws-s3-route-53-and-cloudfront/</guid>
       <description>Some time ago I decided to stop freeloading on GitHub pages and move one of my sites to Amazon Web Services (AWS). It turns out that I&amp;rsquo;m still mostly freeloading (yay free tier) so it amounted to a learning experience. Here are the components that let me host and serve the site at my custom domain with HTTPS.
  Static site in Amazon Web Services S3 bucket Route 53 handling the DNS CloudFront for distribution and a custom SSL certificate  I set all that up most of a year ago.</description>
     </item>

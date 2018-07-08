@@ -15,29 +15,29 @@
     
     <item>
       <title>Batch renaming images, including image resolution, with awk</title>
-      <link>https://vickylai.com/verbose/renaming-images/</link>
+      <link>https://vickylai.com/verbose/batch-renaming-images-including-image-resolution-with-awk/</link>
       <pubDate>Mon, 20 Nov 2017 13:59:30 -0500</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/renaming-images/</guid>
+      <guid>https://vickylai.com/verbose/batch-renaming-images-including-image-resolution-with-awk/</guid>
       <description>The most recent item on my list of &amp;ldquo;Geeky things I did that made me feel pretty awesome&amp;rdquo; is an hour&amp;rsquo;s adventure that culminated in this code:
 $ file IMG* | awk &amp;#39;BEGIN{a=0} {print substr($1, 1, length($1)-5),a++&amp;#34;_&amp;#34;substr($8,1, length($8)-1)}&amp;#39; | while read fn fr; do echo $(rename -v &amp;#34;s/$fn/img_$fr/g&amp;#34; *); done IMG_20170808_172653_425.jpg renamed as img_0_4032x3024.jpg IMG_20170808_173020_267.jpg renamed as img_1_3024x3506.jpg IMG_20170808_173130_616.jpg renamed as img_2_3024x3779.jpg IMG_20170808_173221_425.jpg renamed as img_3_3024x3780.jpg IMG_20170808_173417_059.jpg renamed as img_4_2956x2980.</description>
     </item>
     
     <item>
       <title>How I turned Unity into a tiling window manager</title>
-      <link>https://vickylai.com/verbose/turn-unity-into-tiling-windows-manager/</link>
+      <link>https://vickylai.com/verbose/how-i-turned-unity-into-a-tiling-window-manager/</link>
       <pubDate>Wed, 22 Mar 2017 16:10:10 +0800</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/turn-unity-into-tiling-windows-manager/</guid>
+      <guid>https://vickylai.com/verbose/how-i-turned-unity-into-a-tiling-window-manager/</guid>
       <description>After a long and loving battle experience using i3 as my workhorse window manager on my old laptop, I&amp;rsquo;ve decided to mainly use Unity on my new laptop instead. I&amp;rsquo;m a huge fan of tiling window managers as a result of my i3 experience, however, the time it took to configure everything is longer than I wanted to spend getting set up before getting to work with my new laptop.</description>
     </item>
     
     <item>
       <title>How I set up a single Dropbox folder on my dual-boot Windows and Linux system</title>
-      <link>https://vickylai.com/verbose/same-dropbox-dual-boot/</link>
+      <link>https://vickylai.com/verbose/how-i-set-up-a-single-dropbox-folder-on-my-dual-boot-windows-and-linux-system/</link>
       <pubDate>Fri, 17 Mar 2017 10:58:01 +0800</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/same-dropbox-dual-boot/</guid>
+      <guid>https://vickylai.com/verbose/how-i-set-up-a-single-dropbox-folder-on-my-dual-boot-windows-and-linux-system/</guid>
       <description>June 14, 2018: Ben Newhouse, former head of Sync at Dropbox, was kind enough to inform me that this set up might have unintended ill effects on your Dropbox data:
  Dropbox on Windows and Linux maintain metadata on each OS differently, so they&amp;rsquo;ll confuse each other. This will likely break things like version tracking and comments and as this isn&amp;rsquo;t a supported configuration probably worse.
  I&amp;rsquo;ve personally moved away from using Dropbox (and for that matter, dual-boot) since writing this article.</description>
@@ -45,19 +45,19 @@ $ file IMG* | awk &amp;#39;BEGIN{a=0} {print substr($1, 1, length($1)-5),a++&amp
     
     <item>
       <title>How I created custom desktop notifications using terminal and cron</title>
-      <link>https://vickylai.com/verbose/create-desktop-notifications-cron/</link>
+      <link>https://vickylai.com/verbose/how-i-created-custom-desktop-notifications-using-terminal-and-cron/</link>
       <pubDate>Tue, 21 Feb 2017 10:48:38 +0700</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/create-desktop-notifications-cron/</guid>
+      <guid>https://vickylai.com/verbose/how-i-created-custom-desktop-notifications-using-terminal-and-cron/</guid>
       <description>In my last post I talked about moving from Windows 10 to running i3 on Linux, built up from Debian Base System. Among other things, this change has taught me about the benefits of using basic tools and running a minimal, lightweight system. You can achieve a lot of functionality with just command line tools and simple utilities. One example I&amp;rsquo;d like to illustrate in this post is setting up desktop notifications.</description>
     </item>
     
     <item>
       <title>How a lifelong Windows user switched to Linux... the hard way</title>
-      <link>https://vickylai.com/verbose/how-windows-user-switched-to-linux/</link>
+      <link>https://vickylai.com/verbose/how-a-lifelong-windows-user-switched-to-linux-the-hard-way/</link>
       <pubDate>Mon, 06 Feb 2017 14:23:59 +0700</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/how-windows-user-switched-to-linux/</guid>
+      <guid>https://vickylai.com/verbose/how-a-lifelong-windows-user-switched-to-linux-the-hard-way/</guid>
       <description>&lt;p&gt;Let me preface this by saying that I&amp;rsquo;ve always been interested in finding out how things work. If a thing does something, I want to know why, how, and if I can customize it.&lt;/p&gt;
 
 &lt;p&gt;It should come as no surprise that Windows 10 drove me crazy.&lt;/p&gt;</description>

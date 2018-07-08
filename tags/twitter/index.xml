@@ -15,10 +15,10 @@
     
     <item>
       <title>Why I&#39;m automatically deleting my old tweets using AWS Lambda</title>
-      <link>https://vickylai.com/verbose/delete-old-tweets-ephemeral/</link>
+      <link>https://vickylai.com/verbose/why-im-automatically-deleting-my-old-tweets-using-aws-lambda/</link>
       <pubDate>Thu, 12 Apr 2018 10:51:15 -0500</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/delete-old-tweets-ephemeral/</guid>
+      <guid>https://vickylai.com/verbose/why-im-automatically-deleting-my-old-tweets-using-aws-lambda/</guid>
       <description>From now on, my tweets are ephemeral. Here’s why I’m deleting all my old tweets, and the AWS Lambda function I’m using to do all this for free.
 Click here to skip to the code part.
 Stuff and opinions I&amp;rsquo;ve only been a one-bag nomad for a little over a year and a half. Before that, I lived as most people do in an apartment or a house. I owned furniture, more clothing than I strictly needed, and enough &amp;ldquo;stuff&amp;rdquo; to fill at least a few moving boxes.</description>
@@ -26,19 +26,19 @@ Stuff and opinions I&amp;rsquo;ve only been a one-bag nomad for a little over a 
     
     <item>
       <title>Running a free Twitter bot on AWS Lambda</title>
-      <link>https://vickylai.com/verbose/free-twitter-bot-aws-lambda/</link>
+      <link>https://vickylai.com/verbose/running-a-free-twitter-bot-on-aws-lambda/</link>
       <pubDate>Mon, 05 Mar 2018 10:29:15 -0500</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/free-twitter-bot-aws-lambda/</guid>
+      <guid>https://vickylai.com/verbose/running-a-free-twitter-bot-on-aws-lambda/</guid>
       <description>If you read About time, you&amp;rsquo;ll know that I&amp;rsquo;m a big believer in spending time now on building things that save time in the future. To this end I built a simple Twitter bot in Go that would occasionally post links to my articles and keep my account interesting even when I&amp;rsquo;m too busy to use it. The tweets help drive traffic to my sites, and I don&amp;rsquo;t have to lift a finger.</description>
     </item>
     
     <item>
       <title>The basics of streaming with Twitter API</title>
-      <link>https://vickylai.com/verbose/basics-streaming-twitter-api/</link>
+      <link>https://vickylai.com/verbose/the-basics-of-streaming-with-twitter-api/</link>
       <pubDate>Fri, 06 Jan 2017 16:39:29 +0700</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/basics-streaming-twitter-api/</guid>
+      <guid>https://vickylai.com/verbose/the-basics-of-streaming-with-twitter-api/</guid>
       <description>This post covers my initial adventures in exploring Twitter&amp;rsquo;s Streaming API. I&amp;rsquo;ll talk about:
  Getting started making a Twitter Streaming program using a template Problems arising from programming in Python with Windows 10 and Unicode Refining the search function  You can follow along with my template on Github.
 1. Getting started If you&amp;rsquo;re new to Twitter&amp;rsquo;s Streaming API like I was this morning, here it is from the top.</description>

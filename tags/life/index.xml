@@ -15,19 +15,19 @@
     
     <item>
       <title>How to set up a short feedback loop as a solo coder</title>
-      <link>https://vickylai.com/verbose/short-feedback-loop/</link>
+      <link>https://vickylai.com/verbose/how-to-set-up-a-short-feedback-loop-as-a-solo-coder/</link>
       <pubDate>Mon, 02 Jul 2018 10:08:41 -0400</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/short-feedback-loop/</guid>
+      <guid>https://vickylai.com/verbose/how-to-set-up-a-short-feedback-loop-as-a-solo-coder/</guid>
       <description>I&amp;rsquo;ve spent the last couple years as a solo freelance developer. Comparing this experience to previously working in companies, I&amp;rsquo;ve noticed that those of us who work alone can have fewer iterative opportunities for improvement than developers who work on teams. Integral to having opportunities to improve is the concept of a short feedback loop: a process of incorporating new learning from observation and previous experience continuously over a short period of time.</description>
     </item>
     
     <item>
       <title>Why I&#39;m automatically deleting my old tweets using AWS Lambda</title>
-      <link>https://vickylai.com/verbose/delete-old-tweets-ephemeral/</link>
+      <link>https://vickylai.com/verbose/why-im-automatically-deleting-my-old-tweets-using-aws-lambda/</link>
       <pubDate>Thu, 12 Apr 2018 10:51:15 -0500</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/delete-old-tweets-ephemeral/</guid>
+      <guid>https://vickylai.com/verbose/why-im-automatically-deleting-my-old-tweets-using-aws-lambda/</guid>
       <description>From now on, my tweets are ephemeral. Here’s why I’m deleting all my old tweets, and the AWS Lambda function I’m using to do all this for free.
 Click here to skip to the code part.
 Stuff and opinions I&amp;rsquo;ve only been a one-bag nomad for a little over a year and a half. Before that, I lived as most people do in an apartment or a house. I owned furniture, more clothing than I strictly needed, and enough &amp;ldquo;stuff&amp;rdquo; to fill at least a few moving boxes.</description>
@@ -45,10 +45,10 @@ It&amp;rsquo;s made me think, which I must admit, I at first didn&amp;rsquo;t li
     
     <item>
       <title>Things you need to know about becoming a Data Scientist</title>
-      <link>https://vickylai.com/verbose/to-be-a-data-scientist/</link>
+      <link>https://vickylai.com/verbose/things-you-need-to-know-about-becoming-a-data-scientist/</link>
       <pubDate>Fri, 31 Mar 2017 13:19:19 +0900</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/to-be-a-data-scientist/</guid>
+      <guid>https://vickylai.com/verbose/things-you-need-to-know-about-becoming-a-data-scientist/</guid>
       <description>I recently attended a panel discussion hosted by General Assembly in Singapore entitled, &amp;ldquo;So you want to be a Data Scientist/Analyst&amp;rdquo;. The panel featured professionals in different stages of their careers and offered a wealth of information to an audience of hopefuls, including tips on how to land a job as a data scientist, and stories debunking myths that color this field.
 The panelists Misrab Faizullah-Khan - VP of Data Science, GO_JEK</description>
     </item>

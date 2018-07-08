@@ -14,31 +14,31 @@
     
     
     <item>
-      <title>Moving to a new domain without breaking old links: AWS &amp; Disqus</title>
-      <link>https://vickylai.com/verbose/aws-new-domain/</link>
+      <title>Moving to a new domain without breaking old links with AWS &amp; Disqus</title>
+      <link>https://vickylai.com/verbose/moving-to-a-new-domain-without-breaking-old-links-with-aws-disqus/</link>
       <pubDate>Wed, 10 Jan 2018 08:56:20 -0500</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/aws-new-domain/</guid>
+      <guid>https://vickylai.com/verbose/moving-to-a-new-domain-without-breaking-old-links-with-aws-disqus/</guid>
       <description>I started blogging about my nomadic travels last year, and so far the habit has stuck. Like all side projects, I won&amp;rsquo;t typically invest heavily in setting up web properties before I can be reasonably certain that such an investment is worth my time or enjoyment. In other words: don&amp;rsquo;t buy the domain until you&amp;rsquo;ve proven to yourself that you&amp;rsquo;ll stick with it!
 After some months of regular posting I felt I was ready to commit (short courtship, I know, but we&amp;rsquo;re all adults here) and I bought a dedicated domain, herOneBag.</description>
     </item>
     
     <item>
       <title>Hosting your static site with AWS S3, Route 53, and CloudFront</title>
-      <link>https://vickylai.com/verbose/aws-static-site/</link>
+      <link>https://vickylai.com/verbose/hosting-your-static-site-with-aws-s3-route-53-and-cloudfront/</link>
       <pubDate>Wed, 13 Dec 2017 20:46:12 -0500</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/aws-static-site/</guid>
+      <guid>https://vickylai.com/verbose/hosting-your-static-site-with-aws-s3-route-53-and-cloudfront/</guid>
       <description>Some time ago I decided to stop freeloading on GitHub pages and move one of my sites to Amazon Web Services (AWS). It turns out that I&amp;rsquo;m still mostly freeloading (yay free tier) so it amounted to a learning experience. Here are the components that let me host and serve the site at my custom domain with HTTPS.
  Static site in Amazon Web Services S3 bucket Route 53 handling the DNS CloudFront for distribution and a custom SSL certificate  I set all that up most of a year ago.</description>
     </item>
     
     <item>
       <title>How I ditched WordPress and set up my custom domain HTTPS site for (almost) free</title>
-      <link>https://vickylai.com/verbose/free-custom-domain-website-https/</link>
+      <link>https://vickylai.com/verbose/how-i-ditched-wordpress-and-set-up-my-custom-domain-https-site-for-almost-free/</link>
       <pubDate>Sat, 28 Jan 2017 13:16:17 +0700</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/free-custom-domain-website-https/</guid>
+      <guid>https://vickylai.com/verbose/how-i-ditched-wordpress-and-set-up-my-custom-domain-https-site-for-almost-free/</guid>
       <description>&lt;p&gt;I got annoyed with WordPress.com. While using the service has its pros (like https and a mobile responsive website, and being very visual and beginner-friendly) it&amp;rsquo;s limiting. For someone who&amp;rsquo;s comfortable enough to be tweaking CSS but who&amp;rsquo;s not interested in creating their own theme (or paying upwards of $50 for one), I felt I wasn&amp;rsquo;t really the type of consumer WordPress.com was suited to.&lt;/p&gt;</description>
     </item>
     

@@ -15,20 +15,20 @@
     
     <item>
       <title>A coffee-break introduction to time complexity of algorithms</title>
-      <link>https://vickylai.com/verbose/introduction-time-complexity/</link>
+      <link>https://vickylai.com/verbose/a-coffee-break-introduction-to-time-complexity-of-algorithms/</link>
       <pubDate>Wed, 30 May 2018 14:08:28 -0400</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/introduction-time-complexity/</guid>
+      <guid>https://vickylai.com/verbose/a-coffee-break-introduction-to-time-complexity-of-algorithms/</guid>
       <description>Just like writing your very first for loop, understanding time complexity is an integral milestone to learning how to write efficient complex programs. Think of it as having a superpower that allows you to know exactly what type of program might be the most efficient in a particular situation - before even running a single line of code.
 The fundamental concepts of complexity analysis are well worth studying. You&amp;rsquo;ll be able to better understand how the code you&amp;rsquo;re writing will interact with the program&amp;rsquo;s input, and as a result, you&amp;rsquo;ll spend a lot less wasted time writing slow and problematic code.</description>
     </item>
     
     <item>
       <title>How to code a satellite algorithm and cook paella from scratch</title>
-      <link>https://vickylai.com/verbose/build-from-scratch/</link>
+      <link>https://vickylai.com/verbose/how-to-code-a-satellite-algorithm-and-cook-paella-from-scratch/</link>
       <pubDate>Fri, 08 Sep 2017 16:50:24 -0400</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/build-from-scratch/</guid>
+      <guid>https://vickylai.com/verbose/how-to-code-a-satellite-algorithm-and-cook-paella-from-scratch/</guid>
       <description>What if I told you that by the end of this article, you&amp;rsquo;ll be able to calculate the orbital period of satellites around Earth using their average altitudes and&amp;hellip; You tuned out already, didn&amp;rsquo;t you?
 Okay, how about this: I&amp;rsquo;m going to teach you how to make paella!
 And you&amp;rsquo;ll have written a function that does the stuff I mentioned above, just like I did for this freeCodeCamp challenge.</description>
@@ -36,20 +36,20 @@ And you&amp;rsquo;ll have written a function that does the stuff I mentioned abo
     
     <item>
       <title>Making sandwiches with closures in JavaScript</title>
-      <link>https://vickylai.com/verbose/javascript-closures/</link>
+      <link>https://vickylai.com/verbose/making-sandwiches-with-closures-in-javascript/</link>
       <pubDate>Sun, 28 May 2017 09:16:35 +0700</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/javascript-closures/</guid>
+      <guid>https://vickylai.com/verbose/making-sandwiches-with-closures-in-javascript/</guid>
       <description>Say you&amp;rsquo;re having a little coding get-together, and you need some sandwiches. You happen to know that everyone prefers a different type of sandwich, like chicken, ham, or peanut butter and mayo. You could make all these sandwiches yourself, but that would be tedious and boring.
 Luckily, you know of a nearby sandwich shop that delivers. They have the ability and ingredients to make any kind of sandwich in the world, and all you have to do is order through their app.</description>
     </item>
     
     <item>
       <title>Understanding Array.prototype.reduce() and recursion using apple pie</title>
-      <link>https://vickylai.com/verbose/reduce-recursion-with-pie/</link>
+      <link>https://vickylai.com/verbose/understanding-array-prototype-reduce-and-recursion-using-apple-pie/</link>
       <pubDate>Thu, 18 May 2017 11:40:06 +0700</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/reduce-recursion-with-pie/</guid>
+      <guid>https://vickylai.com/verbose/understanding-array-prototype-reduce-and-recursion-using-apple-pie/</guid>
       <description>I was having trouble understanding reduce() and recursion in JavaScript, so I wrote this article to explain it to myself (hey, look, recursion!). I hope you find my examples both helpful and delicious.
 Given an array with nested arrays:
 var arr = [1, [2], [3, [[4]]]]  We want to produce this:
@@ -58,10 +58,10 @@ var flat = [1, 2, 3, 4]  Using for loops and if statements Naively, if we know t
     
     <item>
       <title>Iterating over objects and arrays: frequent errors</title>
-      <link>https://vickylai.com/verbose/iterating-objects-arrays/</link>
+      <link>https://vickylai.com/verbose/iterating-over-objects-and-arrays-frequent-errors/</link>
       <pubDate>Tue, 16 May 2017 10:46:46 +0700</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/iterating-objects-arrays/</guid>
+      <guid>https://vickylai.com/verbose/iterating-over-objects-and-arrays-frequent-errors/</guid>
       <description>Here&amp;rsquo;s some complaining a quick overview of some code that has confounded me more than once. I&amp;rsquo;m told even very experienced developers encounter these situations regularly, so if you find yourself on your third cup of coffee scratching your head over why your code is doing exactly what you told it to do (and not what you want it to do), maybe this post can help you.
 The example code is JavaScript, since that&amp;rsquo;s what I&amp;rsquo;ve been working in lately, but I believe the concepts to be pretty universal.</description>
     </item>

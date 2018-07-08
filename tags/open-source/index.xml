@@ -15,19 +15,19 @@
     
     <item>
       <title>Adorable bookmarklets want to help delete your social media data</title>
-      <link>https://vickylai.com/verbose/bookmarklets-delete-social-media-data/</link>
+      <link>https://vickylai.com/verbose/adorable-bookmarklets-want-to-help-delete-your-social-media-data/</link>
       <pubDate>Thu, 14 Jun 2018 13:12:02 -0400</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/bookmarklets-delete-social-media-data/</guid>
+      <guid>https://vickylai.com/verbose/adorable-bookmarklets-want-to-help-delete-your-social-media-data/</guid>
       <description>A little while ago I wrote about a Lambda function I called ephemeral for deleting my old tweets. While it&amp;rsquo;s a great project for someone familiar with or wanting to learn to use Lambda, it isn&amp;rsquo;t simple for a non-technical person to set up. There are services out there that will delete your tweets for you, but require your access credentials. There didn&amp;rsquo;t seem to be anything that provided convenience without also requiring authentication.</description>
     </item>
     
     <item>
       <title>Why I&#39;m automatically deleting my old tweets using AWS Lambda</title>
-      <link>https://vickylai.com/verbose/delete-old-tweets-ephemeral/</link>
+      <link>https://vickylai.com/verbose/why-im-automatically-deleting-my-old-tweets-using-aws-lambda/</link>
       <pubDate>Thu, 12 Apr 2018 10:51:15 -0500</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/delete-old-tweets-ephemeral/</guid>
+      <guid>https://vickylai.com/verbose/why-im-automatically-deleting-my-old-tweets-using-aws-lambda/</guid>
       <description>From now on, my tweets are ephemeral. Here’s why I’m deleting all my old tweets, and the AWS Lambda function I’m using to do all this for free.
 Click here to skip to the code part.
 Stuff and opinions I&amp;rsquo;ve only been a one-bag nomad for a little over a year and a half. Before that, I lived as most people do in an apartment or a house. I owned furniture, more clothing than I strictly needed, and enough &amp;ldquo;stuff&amp;rdquo; to fill at least a few moving boxes.</description>
@@ -35,10 +35,10 @@ Stuff and opinions I&amp;rsquo;ve only been a one-bag nomad for a little over a 
     
     <item>
       <title>A unicode substitution cipher algorithm</title>
-      <link>https://vickylai.com/verbose/unicode-cipher/</link>
+      <link>https://vickylai.com/verbose/a-unicode-substitution-cipher-algorithm/</link>
       <pubDate>Sat, 06 Jan 2018 20:00:28 -0500</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
-      <guid>https://vickylai.com/verbose/unicode-cipher/</guid>
+      <guid>https://vickylai.com/verbose/a-unicode-substitution-cipher-algorithm/</guid>
       <description>Full transparency: I occasionally waste time messing around on Twitter. (Gasp! Shock!) One of the ways I waste time messing around on Twitter is by writing my name in my profile with different unicode character &amp;ldquo;fonts,&amp;rdquo; 𝖑𝖎𝖐𝖊 𝖙𝖍𝖎𝖘 𝖔𝖓𝖊. I previously did this by searching for different unicode characters on Google, then one-by-one copying and pasting them into the &amp;ldquo;Name&amp;rdquo; field on my Twitter profile. Since this method of wasting time was a bit of a time waster, I decided (in true programmer fashion) to write a tool that would help me save some time while wasting it.</description>
     </item>
     
