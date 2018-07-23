@@ -8,10 +8,20 @@
     <language>en-us</language>
     <managingEditor>hello@vickylai.com (Vicky Lai)</managingEditor>
     <webMaster>hello@vickylai.com (Vicky Lai)</webMaster>
-    <lastBuildDate>Mon, 02 Jul 2018 10:08:41 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 23 Jul 2018 09:38:09 -0400</lastBuildDate>
     
 	<atom:link href="https://vickylai.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>An automatic interactive pre-commit checklist, in the style of infomercials</title>
+      <link>https://vickylai.com/verbose/interactive-pre-commit-hook-checklist/</link>
+      <pubDate>Mon, 23 Jul 2018 09:38:09 -0400</pubDate>
+      <author>hello@vickylai.com (Vicky Lai)</author>
+      <guid>https://vickylai.com/verbose/interactive-pre-commit-hook-checklist/</guid>
+      <description>What&amp;rsquo;s that, you say? You&amp;rsquo;ve become tired of regular old boring paper checklists? Well, my friend, today is your lucky day! You, yes, you, can become the proud owner of a brand-spanking-new automatic interactive pre-commit hook checklist! You&amp;rsquo;re gonna love this! Your life will be so much easier! Just wait until your friends see you.
+What&amp;rsquo;s a pre-commit hook? Did you know that nearly 1 out of 5 coders are too embarrassed to ask this question?</description>
+    </item>
     
     <item>
       <title>How to set up a short feedback loop as a solo coder</title>

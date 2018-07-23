@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-us" >
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="referrer" content="no-referrer">
+        <meta name="description" content="
+        
+            I&#39;m a freelance full stack developer with an entrepreneurial background and keen interest in building technology for social good. I&#39;m writing an [e-book](/book).
+        
+        ">
+
+        <meta property="og:title" content="An automatic interactive pre-commit checklist, in the style of infomercials">
+        <meta property="og:description" content="
+        
+            I&#39;m a freelance full stack developer with an entrepreneurial background and keen interest in building technology for social good. I&#39;m writing an [e-book](/book).
+        
+        ">
+        <meta property="og:image" content="
+        
+            https://vickylai.com/pixels/precommit-infomercial.png
+        
+        ">
+        <meta property="og:url" content="https://vickylai.com/verbose/interactive-pre-commit-hook-checklist/">
+
+        <meta name="twitter:image" content="
+        
+            https://vickylai.com/pixels/precommit-infomercial.png
+        
+        ">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <title>
+        
+            An automatic interactive pre-commit checklist, in the style of infomercials
+        
+        </title>
+
+        <link rel="canonical" href="https://vickylai.com/verbose/interactive-pre-commit-hook-checklist/">
+        
+        <link rel="stylesheet" href="/css/style.css">
+        
+        <link rel="shortcut icon" href="/img/logo.ico" id="favicon">
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98623582-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-98623582-1');
+        </script>
+        
+        
+        <script src="/js/mode.js"></script>
+    </head><body><div id="top"></div><div id="logo"><img id="up" src="/img/logo.png" width="25px"/><img id="night" src="/img/moon.svg" width="25px"/><img id="day" src="/img/day.svg" width="25px"/></div><div class="menu-mobile"><a href="/verbose">verbose</a> &#183;
+<a href="https://vickylai.com/">vickylai.com</a></div><div class="menu no-mobile"><p><a href="/verbose">verbose</a>
+
+&#183; <a href="/#work">work</a>
+&#183; <a href="mailto:hello@vickylai.com">email</a>
+&#183; <a href="https://vickylai.com/">vickylai.com</a></p></div><div class="wrap contain"><div id="featuredimg"><img src="/pixels/precommit-infomercial.png"/></div><div id="content"><h1>An automatic interactive pre-commit checklist, in the style of infomercials</h1><p id="date">Mon Jul 23, 2018 &#183; 3 min read</p>
+<div><span id="tag"><a href="/tags/coding">coding</a></span>
+
+&#183; <span id="tag"><a href="/tags/config">config</a></span>
+&#183; <span id="tag"><a href="/tags/git">git</a></span></div></div><hr id="accent-hr"/><div id="content">
+
+
+<p>What&rsquo;s that, you say? You&rsquo;ve become tired of regular old boring <em>paper checklists?</em> Well, my friend, today is your lucky day! You, yes, <em>you,</em> can become the proud owner of a brand-spanking-new <em>automatic interactive pre-commit hook checklist!</em> You&rsquo;re gonna love this! Your life will be so much easier! Just wait until your friends see you.</p>
+
+<h1 id="what-s-a-pre-commit-hook">What&rsquo;s a pre-commit hook?</h1>
+
+<p>Did you know that nearly <em>1 out of 5 coders</em> are too embarrassed to ask this question? Don&rsquo;t worry, it&rsquo;s perfectly normal. In the next 60 seconds we&rsquo;ll tell you all you need to know to pre-commit with confidence.</p>
+
+<p>A <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">Git hook</a> is a feature of Git that triggers custom scripts at useful moments. They can be used for all kinds of reasons to help you automate your work, and best of all, you already have them! In every repository that you initialize with <code>git init</code>, you&rsquo;ll have a set of example scripts living in <code>.git/hooks</code>. They all end with <code>.sample</code> and activating them is as easy as renaming the file to remove the <code>.sample</code> part.</p>
+
+<p>Git hooks are not copied when a repository is cloned, so you can make them as personal as you like.</p>
+
+<p>The useful moment in particular that we&rsquo;ll talk about today is the <em>pre-commit</em>. This hook is run after you do <code>git commit</code>, and before you write a commit message. Exiting this hook with a non-zero status will abort the commit, which makes it extremely useful for last-minute quality checks. Or, a bit of fun. Why not both!</p>
+
+<h1 id="how-do-i-get-a-pre-commit-checklist">How do I get a pre-commit checklist?</h1>
+
+<p>I only want the best for my family and my commits, and that&rsquo;s why I choose an interactive pre-commit checklist. Not only is it fun to use, it helps to keep my projects safe from unexpected off-spec mistakes!</p>
+
+<p>It&rsquo;s so easy! I just write a bash script that can read user input, and plop it into <code>.git/hooks</code> as a file named <code>pre-commit</code>. Then I do <code>chmod +x .git/hooks/pre-commit</code> to make it executable, and I&rsquo;m done!</p>
+
+<p>Oh look, here comes an example bash script now!</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/sh
+</span><span class="cp"></span>  
+<span class="nb">echo</span> <span class="s2">&#34;Would you like to play a game?&#34;</span>
+
+<span class="c1"># Read user input, assign stdin to keyboard
+</span><span class="c1"></span><span class="nb">exec</span> &lt; /dev/tty
+
+<span class="k">while</span> <span class="nb">read</span> -p <span class="s2">&#34;Have you double checked that only relevant files were added? (Y/n) &#34;</span> yn<span class="p">;</span> <span class="k">do</span>
+    <span class="k">case</span> <span class="nv">$yn</span> in
+        <span class="o">[</span>Yy<span class="o">]</span> <span class="o">)</span> break<span class="p">;;</span>
+        <span class="o">[</span>Nn<span class="o">]</span> <span class="o">)</span> <span class="nb">echo</span> <span class="s2">&#34;Please ensure the right files were added!&#34;</span><span class="p">;</span> <span class="nb">exit</span> <span class="m">1</span><span class="p">;;</span>
+        * <span class="o">)</span> <span class="nb">echo</span> <span class="s2">&#34;Please answer y (yes) or n (no):&#34;</span> <span class="o">&amp;&amp;</span> <span class="k">continue</span><span class="p">;</span>
+    <span class="k">esac</span>
+<span class="k">done</span>
+<span class="k">while</span> <span class="nb">read</span> -p <span class="s2">&#34;Has the documentation been updated? (Y/n) &#34;</span> yn<span class="p">;</span> <span class="k">do</span>
+    <span class="k">case</span> <span class="nv">$yn</span> in
+        <span class="o">[</span>Yy<span class="o">]</span> <span class="o">)</span> break<span class="p">;;</span>
+        <span class="o">[</span>Nn<span class="o">]</span> <span class="o">)</span> <span class="nb">echo</span> <span class="s2">&#34;Please add or update the docs!&#34;</span><span class="p">;</span> <span class="nb">exit</span> <span class="m">1</span><span class="p">;;</span>
+        * <span class="o">)</span> <span class="nb">echo</span> <span class="s2">&#34;Please answer y (yes) or n (no):&#34;</span> <span class="o">&amp;&amp;</span> <span class="k">continue</span><span class="p">;</span>
+    <span class="k">esac</span>
+<span class="k">done</span>
+<span class="k">while</span> <span class="nb">read</span> -p <span class="s2">&#34;Do you know which issue or PR numbers to reference? (Y/n) &#34;</span> yn<span class="p">;</span> <span class="k">do</span>
+    <span class="k">case</span> <span class="nv">$yn</span> in
+        <span class="o">[</span>Yy<span class="o">]</span> <span class="o">)</span> break<span class="p">;;</span>
+        <span class="o">[</span>Nn<span class="o">]</span> <span class="o">)</span> <span class="nb">echo</span> <span class="s2">&#34;Better go check those tracking numbers!&#34;</span><span class="p">;</span> <span class="nb">exit</span> <span class="m">1</span><span class="p">;;</span>
+        * <span class="o">)</span> <span class="nb">echo</span> <span class="s2">&#34;Please answer y (yes) or n (no):&#34;</span> <span class="o">&amp;&amp;</span> <span class="k">continue</span><span class="p">;</span>
+    <span class="k">esac</span>
+<span class="k">done</span>
+
+<span class="nb">exec</span> &lt;<span class="p">&amp;</span>-</code></pre></div>
+<h1 id="take-my-money">Take my money!</h1>
+
+<p>Don&rsquo;t delay! Take advantage <em>right now</em> of this generous <em>one-time offer!</em> An interactive pre-commit hook checklist can be yours, today, for the low, low price of&hellip; free? Wait, who wrote this script?</p>
+</div><div class="go-center"><hr id="accent-hr"/></div><div class="related"><h2>An algorithm thinks these posts are related...</h2><ul> <li><a href="/verbose/how-to-set-up-a-short-feedback-loop-as-a-solo-coder/">How to set up a short feedback loop as a solo coder</a></li><li><a href="/verbose/a-coffee-break-introduction-to-time-complexity-of-algorithms/">A coffee-break introduction to time complexity of algorithms</a></li><li><a href="/verbose/running-a-free-twitter-bot-on-aws-lambda/">Running a free Twitter bot on AWS Lambda</a></li></ul></div><div class="footer"><img id="bio-avatar" src="/img/noir-avatar.png" width="120px"/><div id="bio"> <strong>Vicky Lai</strong><p>I&rsquo;m a freelance full stack developer with an entrepreneurial background and keen interest in building technology for social good. I&rsquo;m writing an <a href="/book">e-book</a>.</p><div id="bio-menu"><p><a href="https://github.com/vickylai">github</a>
+
+&#183; <a href="https://mastodon.technology/@vickylai">mastodon</a>
+&#183; <a href="https://twitter.com/hivickylai">twitter</a>
+&#183; <a href="https://dev.to/vickylai">dev.to</a>
+&#183; <a href="mailto:hello@vickylai.com" rel="noopener">email</a></p></div></div></div><script>
+    scrollTo = (element) => {
+        window.scroll({
+            behavior: 'smooth',
+            left: 0,
+            top: element.offsetTop
+        });
+    }
+
+    document.getElementById("up").addEventListener('click', () => {
+        scrollTo(document.getElementById("top"));
+    });
+</script></div></body>
