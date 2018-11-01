@@ -29,7 +29,7 @@ Python, Django, AWS, Stripe API, jQuery</description>
       <author>hello@vickylai.com (Vicky Lai)</author>
       <guid>https://vickylai.com/work/hugo-introduction/</guid>
       <description>Responsive, full-featured, and customizable themes for the popular static site generator Hugo. Focused on minimalism and adaptability. Open source on GitHub.
-Pug, Sass, gulp/Node.js, jQuery</description>
+SCSS, Go, Node.js, jQuery</description>
     </item>
     
     <item>
@@ -42,12 +42,12 @@ Pug, Sass, gulp/Node.js, jQuery</description>
     </item>
     
     <item>
-      <title>A substitution cipher unicode converter</title>
+      <title>A substitution cipher Unicode converter</title>
       <link>https://vickylai.com/work/fancy-unicode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
       <guid>https://vickylai.com/work/fancy-unicode/</guid>
-      <description>A single-page app that instantly converts plain-looking letters into their fancier extended unicode character representations. It uses an algorithm based on the Caesar cipher from classical cryptography. Further details in this article.</description>
+      <description>A single-page app that instantly converts plain-looking letters into their fancier extended Unicode character representations. It uses an algorithm based on the Caesar cipher from classical cryptography. Further details in this article.</description>
     </item>
     
     <item>
@@ -57,8 +57,9 @@ Pug, Sass, gulp/Node.js, jQuery</description>
       <author>hello@vickylai.com (Vicky Lai)</author>
       <guid>https://vickylai.com/work/github-projects/</guid>
       <description>ephemeral A function for AWS Lambda that continuously deletes Tweets from your Twitter timeline according to a configurable expiry time. Read the accompanying article.
-Go, Twitter API, AWS Lambda
-acme-gallery A neat starter package that automagically creates a pure CSS gallery web page from a folder of image files.</description>
+Go, AWS Lambda, Twitter API
+acme-gallery A neat starter package that automagically creates a pure CSS gallery web page from a folder of image files.
+SCSS, Pug, gulp/Node.js</description>
     </item>
     
   </channel>
