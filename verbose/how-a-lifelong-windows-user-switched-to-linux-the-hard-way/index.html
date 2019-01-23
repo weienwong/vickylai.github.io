@@ -158,7 +158,9 @@
 
 <p>It should come as no surprise that Windows 10 drove me crazy.</p>
 
-<p>Seemingly arbitrary updates that made for a long start-up process on any given day, surprise restarts that meant I&rsquo;d lose my session and thus my thought process from the day before, and the worst part was I never knew what purpose they served. Windows 10 was an impenetrable mysterious hunk of blue screens and decisions I had no part in.</p>
+<p>Seemingly arbitrary updates</p>
+
+<p>that made for a long start-up process on any given day, surprise restarts that meant I&rsquo;d lose my session and thus my thought process from the day before, and the worst part was I never knew what purpose they served. Windows 10 was an impenetrable mysterious hunk of blue screens and decisions I had no part in.</p>
 
 <p>Thankfully for me and others like me, there is an alternative. Well, there are several - many <a href="https://en.wikipedia.org/wiki/Linux_distribution">Linux distros</a> exist and the majority are familiar and totally usable when freshly installed. Perhaps one of the most well-known &ldquo;Windows-like&rdquo; distros is Ubuntu. It has a desktop similar to Windows 10 and is very graphical and geared generally towards those new to Linux.</p>
 
@@ -229,16 +231,16 @@ for Compton:              ~/.config/compton.conf</code></pre></div>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">$ killall -u oldusername
 $ id oldusername
 &gt;&gt;&gt; <span class="nv">uid</span><span class="o">=</span><span class="m">1000</span><span class="o">(</span>oldusername<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span><span class="m">1000</span><span class="o">(</span>oldusername<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span><span class="m">1000</span><span class="o">(</span>oldusername<span class="o">)</span>,24<span class="o">(</span>cdrom<span class="o">)</span>,25<span class="o">(</span>floppy<span class="o">)</span>,27<span class="o">(</span>sudo<span class="o">)</span>,29<span class="o">(</span>audio<span class="o">)</span>,30<span class="o">(</span>dip<span class="o">)</span>,44<span class="o">(</span>video<span class="o">)</span>,46<span class="o">(</span>plugdev<span class="o">)</span>,108<span class="o">(</span>netdev<span class="o">)</span>
-<span class="c1"># change login name
-</span><span class="c1"></span>$ usermod -l newusername oldusername
-<span class="c1"># change group name
-</span><span class="c1"></span>$ groupmod -n newusername oldusername 
-<span class="c1"># modify home directory
-</span><span class="c1"></span>$ usermod -d /home/newusername -m newusername
-<span class="c1"># add comment with full name
-</span><span class="c1"></span>$ usermod -c <span class="s2">&#34;New Full Name&#34;</span> newusername 
-<span class="c1"># check that &#34;newusername&#34; replaces &#34;oldusername&#34; in all fields
-</span><span class="c1"></span>$ id newusername 
+<span class="c1"># change login name</span>
+$ usermod -l newusername oldusername
+<span class="c1"># change group name</span>
+$ groupmod -n newusername oldusername 
+<span class="c1"># modify home directory</span>
+$ usermod -d /home/newusername -m newusername
+<span class="c1"># add comment with full name</span>
+$ usermod -c <span class="s2">&#34;New Full Name&#34;</span> newusername 
+<span class="c1"># check that &#34;newusername&#34; replaces &#34;oldusername&#34; in all fields</span>
+$ id newusername 
 &gt;&gt;&gt; <span class="nv">uid</span><span class="o">=</span><span class="m">1000</span><span class="o">(</span>newusername<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span><span class="m">1000</span><span class="o">(</span>newusername<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span><span class="m">1000</span><span class="o">(</span>newusername<span class="o">)</span>,24<span class="o">(</span>cdrom<span class="o">)</span>,25<span class="o">(</span>floppy<span class="o">)</span>,27<span class="o">(</span>sudo<span class="o">)</span>,29<span class="o">(</span>audio<span class="o">)</span>,30<span class="o">(</span>dip<span class="o">)</span>,44<span class="o">(</span>video<span class="o">)</span>,46<span class="o">(</span>plugdev<span class="o">)</span>,108<span class="o">(</span>netdev<span class="o">)</span></code></pre></div>
 <p>If you previously set your background image in i3 and it disappears, don&rsquo;t forget to check the filepath in your config file.</p>
 

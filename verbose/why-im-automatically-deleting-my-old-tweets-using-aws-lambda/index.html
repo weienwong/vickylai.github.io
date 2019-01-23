@@ -224,43 +224,43 @@
 
 <p>The code that makes up ephemeral is written in Go. AWS Lambda creates an environment for each Lambda function, so ephemeral utilizes environment variables for your private Twitter API keys and the maximum age of the tweets you want to keep, represented in hours, like <code>72h</code>.</p>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="p">(</span>
-	<span class="nx">consumerKey</span>       <span class="p">=</span> <span class="nx">getenv</span><span class="p">(</span><span class="s">&#34;TWITTER_CONSUMER_KEY&#34;</span><span class="p">)</span>
-	<span class="nx">consumerSecret</span>    <span class="p">=</span> <span class="nx">getenv</span><span class="p">(</span><span class="s">&#34;TWITTER_CONSUMER_SECRET&#34;</span><span class="p">)</span>
-	<span class="nx">accessToken</span>       <span class="p">=</span> <span class="nx">getenv</span><span class="p">(</span><span class="s">&#34;TWITTER_ACCESS_TOKEN&#34;</span><span class="p">)</span>
-	<span class="nx">accessTokenSecret</span> <span class="p">=</span> <span class="nx">getenv</span><span class="p">(</span><span class="s">&#34;TWITTER_ACCESS_TOKEN_SECRET&#34;</span><span class="p">)</span>
-	<span class="nx">maxTweetAge</span>       <span class="p">=</span> <span class="nx">getenv</span><span class="p">(</span><span class="s">&#34;MAX_TWEET_AGE&#34;</span><span class="p">)</span>
-	<span class="nx">logger</span>            <span class="p">=</span> <span class="nx">log</span><span class="p">.</span><span class="nx">New</span><span class="p">()</span>
+	<span class="nx">consumerKey</span>       <span class="p">=</span> <span class="nf">getenv</span><span class="p">(</span><span class="s">&#34;TWITTER_CONSUMER_KEY&#34;</span><span class="p">)</span>
+	<span class="nx">consumerSecret</span>    <span class="p">=</span> <span class="nf">getenv</span><span class="p">(</span><span class="s">&#34;TWITTER_CONSUMER_SECRET&#34;</span><span class="p">)</span>
+	<span class="nx">accessToken</span>       <span class="p">=</span> <span class="nf">getenv</span><span class="p">(</span><span class="s">&#34;TWITTER_ACCESS_TOKEN&#34;</span><span class="p">)</span>
+	<span class="nx">accessTokenSecret</span> <span class="p">=</span> <span class="nf">getenv</span><span class="p">(</span><span class="s">&#34;TWITTER_ACCESS_TOKEN_SECRET&#34;</span><span class="p">)</span>
+	<span class="nx">maxTweetAge</span>       <span class="p">=</span> <span class="nf">getenv</span><span class="p">(</span><span class="s">&#34;MAX_TWEET_AGE&#34;</span><span class="p">)</span>
+	<span class="nx">logger</span>            <span class="p">=</span> <span class="nx">log</span><span class="p">.</span><span class="nf">New</span><span class="p">()</span>
 <span class="p">)</span>
 
-<span class="kd">func</span> <span class="nx">getenv</span><span class="p">(</span><span class="nx">name</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
-	<span class="nx">v</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nx">Getenv</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">getenv</span><span class="p">(</span><span class="nx">name</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
+	<span class="nx">v</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nf">Getenv</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span>
 	<span class="k">if</span> <span class="nx">v</span> <span class="o">==</span> <span class="s">&#34;&#34;</span> <span class="p">{</span>
 		<span class="nb">panic</span><span class="p">(</span><span class="s">&#34;missing required environment variable &#34;</span> <span class="o">+</span> <span class="nx">name</span><span class="p">)</span>
 	<span class="p">}</span>
 	<span class="k">return</span> <span class="nx">v</span>
 <span class="p">}</span></code></pre></div>
 <p>The program uses the <a href="https://github.com/ChimeraCoder/anaconda">anaconda</a> library. It fetches your timeline up to the Twitter API&rsquo;s limit of 200 tweets per request, then compares each tweet&rsquo;s date of creation to your <code>MAX_TWEET_AGE</code> variable to decide whether it&rsquo;s old enough to be deleted. After deleting all the expired tweets, the Lambda function terminates.</p>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nx">deleteFromTimeline</span><span class="p">(</span><span class="nx">api</span> <span class="o">*</span><span class="nx">anaconda</span><span class="p">.</span><span class="nx">TwitterApi</span><span class="p">,</span> <span class="nx">ageLimit</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Duration</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">timeline</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">getTimeline</span><span class="p">(</span><span class="nx">api</span><span class="p">)</span>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">deleteFromTimeline</span><span class="p">(</span><span class="nx">api</span> <span class="o">*</span><span class="nx">anaconda</span><span class="p">.</span><span class="nx">TwitterApi</span><span class="p">,</span> <span class="nx">ageLimit</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Duration</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">timeline</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nf">getTimeline</span><span class="p">(</span><span class="nx">api</span><span class="p">)</span>
 
 	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-		<span class="nx">log</span><span class="p">.</span><span class="nx">Error</span><span class="p">(</span><span class="s">&#34;Could not get timeline&#34;</span><span class="p">)</span>
+		<span class="nx">log</span><span class="p">.</span><span class="nf">Error</span><span class="p">(</span><span class="s">&#34;Could not get timeline&#34;</span><span class="p">)</span>
 	<span class="p">}</span>
 	<span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">t</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">timeline</span> <span class="p">{</span>
-		<span class="nx">createdTime</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">t</span><span class="p">.</span><span class="nx">CreatedAtTime</span><span class="p">()</span>
+		<span class="nx">createdTime</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">t</span><span class="p">.</span><span class="nf">CreatedAtTime</span><span class="p">()</span>
 		<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-			<span class="nx">log</span><span class="p">.</span><span class="nx">Error</span><span class="p">(</span><span class="s">&#34;Couldn&#39;t parse time &#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+			<span class="nx">log</span><span class="p">.</span><span class="nf">Error</span><span class="p">(</span><span class="s">&#34;Couldn&#39;t parse time &#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
 		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-			<span class="k">if</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Since</span><span class="p">(</span><span class="nx">createdTime</span><span class="p">)</span> <span class="p">&gt;</span> <span class="nx">ageLimit</span> <span class="p">{</span>
-				<span class="nx">_</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">DeleteTweet</span><span class="p">(</span><span class="nx">t</span><span class="p">.</span><span class="nx">Id</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
-				<span class="nx">log</span><span class="p">.</span><span class="nx">Info</span><span class="p">(</span><span class="s">&#34;DELETED: Age - &#34;</span><span class="p">,</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Since</span><span class="p">(</span><span class="nx">createdTime</span><span class="p">).</span><span class="nx">Round</span><span class="p">(</span><span class="mi">1</span><span class="o">*</span><span class="nx">time</span><span class="p">.</span><span class="nx">Minute</span><span class="p">),</span> <span class="s">&#34; - &#34;</span><span class="p">,</span> <span class="nx">t</span><span class="p">.</span><span class="nx">Text</span><span class="p">)</span>
+			<span class="k">if</span> <span class="nx">time</span><span class="p">.</span><span class="nf">Since</span><span class="p">(</span><span class="nx">createdTime</span><span class="p">)</span> <span class="p">&gt;</span> <span class="nx">ageLimit</span> <span class="p">{</span>
+				<span class="nx">_</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">api</span><span class="p">.</span><span class="nf">DeleteTweet</span><span class="p">(</span><span class="nx">t</span><span class="p">.</span><span class="nx">Id</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+				<span class="nx">log</span><span class="p">.</span><span class="nf">Info</span><span class="p">(</span><span class="s">&#34;DELETED: Age - &#34;</span><span class="p">,</span> <span class="nx">time</span><span class="p">.</span><span class="nf">Since</span><span class="p">(</span><span class="nx">createdTime</span><span class="p">).</span><span class="nf">Round</span><span class="p">(</span><span class="mi">1</span><span class="o">*</span><span class="nx">time</span><span class="p">.</span><span class="nx">Minute</span><span class="p">),</span> <span class="s">&#34; - &#34;</span><span class="p">,</span> <span class="nx">t</span><span class="p">.</span><span class="nx">Text</span><span class="p">)</span>
 				<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-					<span class="nx">log</span><span class="p">.</span><span class="nx">Error</span><span class="p">(</span><span class="s">&#34;Failed to delete! &#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+					<span class="nx">log</span><span class="p">.</span><span class="nf">Error</span><span class="p">(</span><span class="s">&#34;Failed to delete! &#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
 				<span class="p">}</span>
 			<span class="p">}</span>
 		<span class="p">}</span>
 	<span class="p">}</span>
-	<span class="nx">log</span><span class="p">.</span><span class="nx">Info</span><span class="p">(</span><span class="s">&#34;No more tweets to delete.&#34;</span><span class="p">)</span>
+	<span class="nx">log</span><span class="p">.</span><span class="nf">Info</span><span class="p">(</span><span class="s">&#34;No more tweets to delete.&#34;</span><span class="p">)</span>
 
 <span class="p">}</span></code></pre></div>
 <p>Read the full code <a href="https://github.com/vickylai/ephemeral/blob/master/main.go">here</a>.</p>

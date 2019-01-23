@@ -185,8 +185,8 @@
 </span><span class="cp"></span>  
 <span class="nb">echo</span> <span class="s2">&#34;Would you like to play a game?&#34;</span>
 
-<span class="c1"># Read user input, assign stdin to keyboard
-</span><span class="c1"></span><span class="nb">exec</span> &lt; /dev/tty
+<span class="c1"># Read user input, assign stdin to keyboard</span>
+<span class="nb">exec</span> &lt; /dev/tty
 
 <span class="k">while</span> <span class="nb">read</span> -p <span class="s2">&#34;Have you double checked that only relevant files were added? (Y/n) &#34;</span> yn<span class="p">;</span> <span class="k">do</span>
     <span class="k">case</span> <span class="nv">$yn</span> in

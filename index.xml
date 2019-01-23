@@ -318,7 +318,8 @@ The panelists Misrab Faizullah-Khan - VP of Data Science, GO_JEK</description>
       <pubDate>Wed, 22 Mar 2017 16:10:10 +0800</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
       <guid>https://vickylai.com/verbose/how-i-turned-unity-into-a-tiling-window-manager/</guid>
-      <description>After a long and loving battle experience using i3 as my workhorse window manager on my old laptop, I’ve decided to mainly use Unity on my new laptop instead. I’m a huge fan of tiling window managers as a result of my i3 experience, however, the time it took to configure everything is longer than I wanted to spend getting set up before getting to work with my new laptop.</description>
+      <description>Since Ubuntu 17.10, a default installation of Ubuntu Desktop uses GNOME instead of Unity. In an upcoming post, I’ll give an overview of my Linux set up with Ubuntu 18.04 LTS.
+ After a long and loving battle experience using i3 as my workhorse window manager on my old laptop, I’ve decided to mainly use Unity on my new laptop instead. I’m a huge fan of tiling window managers as a result of my i3 experience, however, the time it took to configure everything is longer than I wanted to spend getting set up before getting to work with my new laptop.</description>
     </item>
     
     
@@ -331,9 +332,8 @@ The panelists Misrab Faizullah-Khan - VP of Data Science, GO_JEK</description>
       <pubDate>Fri, 17 Mar 2017 10:58:01 +0800</pubDate>
       <author>hello@vickylai.com (Vicky Lai)</author>
       <guid>https://vickylai.com/verbose/how-i-set-up-a-single-dropbox-folder-on-my-dual-boot-windows-and-linux-system/</guid>
-      <description>June 14, 2018: Ben Newhouse, former head of Sync at Dropbox, was kind enough to inform me that this set up might have unintended ill effects on your Dropbox data:
- Dropbox on Windows and Linux maintain metadata on each OS differently, so they’ll confuse each other. This will likely break things like version tracking and comments and as this isn’t a supported configuration probably worse.
- I’ve personally moved away from using Dropbox (and for that matter, dual-boot) since writing this article.</description>
+      <description>This article is deprecated, and this system no longer reliably works. In an upcoming post I’ll be sharing my new remote-sync set up, a less hackish system based on Git. In the meantime, you can check out the article that inspired me.
+ June 14, 2018: Ben Newhouse, former head of Sync at Dropbox, was kind enough to inform me that this set up might have unintended ill effects on your Dropbox data:</description>
     </item>
     
     
@@ -361,7 +361,9 @@ The panelists Misrab Faizullah-Khan - VP of Data Science, GO_JEK</description>
       <guid>https://vickylai.com/verbose/how-a-lifelong-windows-user-switched-to-linux-the-hard-way/</guid>
       <description>&lt;p&gt;Let me preface this by saying that I’ve always been interested in finding out how things work. If a thing does something, I want to know why, how, and if I can customize it.&lt;/p&gt;
 
-&lt;p&gt;It should come as no surprise that Windows 10 drove me crazy.&lt;/p&gt;</description>
+&lt;p&gt;It should come as no surprise that Windows 10 drove me crazy.&lt;/p&gt;
+
+&lt;p&gt;Seemingly arbitrary updates&lt;/p&gt;</description>
     </item>
     
     
